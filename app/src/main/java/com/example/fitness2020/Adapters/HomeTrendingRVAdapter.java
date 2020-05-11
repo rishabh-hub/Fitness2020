@@ -69,11 +69,11 @@ public class HomeTrendingRVAdapter extends RecyclerView.Adapter<HomeTrendingRVAd
         void populate(TrendingRvModel trendingRvModel)
         {
             if (code==1) {
-               // trendingimageView.setImageResource(trendingRvModel.getImageUrl());
+                trendingimageView.setImageResource(trendingRvModel.getImageUrl());
                 //uncomment these two when setting images
             }
             else {
-                //bannerImageview.setImageResource(trendingRvModel.getImageUrl());
+                bannerImageview.setImageResource(trendingRvModel.getImageUrl());
             }
             //Glide.with(itemView.getContext()).load(trendingRvModel.getImageUrl()).into(imageView);//using glide
             //here, the itemView.getContext thing is very important as otherwise, the image is loaded after fragment is destroyed or before fragment is created
