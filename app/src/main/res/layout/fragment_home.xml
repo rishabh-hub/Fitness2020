@@ -21,26 +21,31 @@
 <!--            >-->
     <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:id="@+id/home_search"
         android:queryHint="Search for workouts ,gyms etc"
         android:iconifiedByDefault="false"
         android:layout_marginVertical="3sp"
         android:layout_marginHorizontal="10sp"
+
         android:elevation="2sp"
         app:searchIcon="@drawable/ic_search_black_24dp"
         android:background="@drawable/bg_searchbar"
         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_search"
+        android:padding="3sp"
+        android:id="@+id/tab_bar">
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="30sp"
-        android:background="#ccc"
-        app:tabTextColor="#fff"
-        android:layout_below="@id/home_search"
+        android:background="#FFFFFF"
+        app:tabTextColor="#ccc"
         android:id="@+id/home_tab_layout"
-        app:tabIndicator="@drawable/tab_indicator_background"
         app:tabIndicatorColor="#7f00ff"
-        app:tabIndicatorHeight="5sp"
+        app:tabIndicatorHeight="3sp"
         app:tabSelectedTextColor="#7f00ff"
         >
         <com.google.android.material.tabs.TabItem
@@ -65,12 +70,14 @@
 
 
     </com.google.android.material.tabs.TabLayout>
+    </LinearLayout>
+
 
     <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/home_viewpager"
-        android:layout_below="@id/home_tab_layout"
+        android:layout_below="@id/tab_bar"
         >
         <FrameLayout
             android:layout_width="match_parent"
