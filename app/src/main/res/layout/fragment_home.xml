@@ -27,8 +27,7 @@
         android:iconifiedByDefault="false"
         android:layout_marginVertical="3sp"
         android:layout_marginHorizontal="10sp"
-
-        android:elevation="2sp"
+        android:elevation="3dp"
         app:searchIcon="@drawable/ic_search_black_24dp"
         android:background="@drawable/bg_searchbar"
         />
@@ -41,12 +40,11 @@
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="30sp"
-        android:background="#FFFFFF"
-        app:tabTextColor="#ccc"
+        app:tabTextColor="@color/colorPrimaryDark"
         android:id="@+id/home_tab_layout"
-        app:tabIndicatorColor="#7f00ff"
+        app:tabIndicatorColor="@color/colorPrimary"
         app:tabIndicatorHeight="3sp"
-        app:tabSelectedTextColor="#7f00ff"
+        app:tabSelectedTextColor="@color/colorPrimary"
         >
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"

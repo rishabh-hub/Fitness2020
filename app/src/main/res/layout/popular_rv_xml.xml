@@ -35,6 +35,7 @@
             android:fontFamily="@font/qcbold"
             android:id="@+id/popular_rv_xml_name"
             android:text="Name of gym"
+            android:textColor="#000"
             android:padding="1sp"
             android:textSize="14sp"
             />
@@ -67,6 +68,7 @@
             android:id="@+id/popular_rv_xml_recommended"
             android:text="Recommended"
             android:textSize="10sp"
+            android:textColor="@color/colorPrimary"
             android:padding="1sp"
             android:layout_below="@id/popular_rv_xml_address"
             />

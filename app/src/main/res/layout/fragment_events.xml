@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="EVENTS"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="50sp"
         android:id="@+id/events_tv"
         android:gravity="center"

@@ -9,6 +9,7 @@
         android:layout_height="wrap_content"
         android:text="PASSES"
         android:id="@+id/pass_tv"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="50sp"
         android:gravity="center"
         />

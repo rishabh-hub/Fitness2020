@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="VOUCHERS"
+        android:textColor="@color/colorPrimaryDark"
         android:id="@+id/vouchers_tv"
         android:textSize="50sp"
         android:gravity="center"
