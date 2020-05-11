@@ -78,10 +78,11 @@
         android:text="BOOK"
         android:gravity="center"
         android:layout_margin="5dp"
-        android:textColor="#000"
+        android:textColor="#fff"
         android:textSize="12sp"
         android:padding="1dp"
         android:background="@drawable/bg_button"
+        android:backgroundTint="@color/bookBtn"
         android:id="@+id/popular_rv_xml_book"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -103,6 +104,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_star_black_12dp"
             android:layout_gravity="center"
+            android:layout_margin="1dp"
             />
 
     <TextView
@@ -110,7 +112,7 @@
         android:layout_height="wrap_content"
         android:text="Rating"
         android:gravity="center"
-        android:textColor="#000"
+        android:textColor="#fff"
         android:textSize="12sp"
         android:padding="1dp"
         android:id="@+id/popular_rv_xml_rating"
