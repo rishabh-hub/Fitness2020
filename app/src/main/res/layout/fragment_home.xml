@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<!--    <ScrollView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:scrollbars="none"-->
+<!--        android:id="@+id/home_scrollvw"-->
+<!--        android:nestedScrollingEnabled="true"-->
+<!--        >-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            >-->
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/home_search"
+        android:queryHint="Search for workouts ,gyms etc"
+        android:iconifiedByDefault="false"
+        android:layout_marginVertical="3sp"
+        android:layout_marginHorizontal="10sp"
+        android:elevation="2sp"
+        app:searchIcon="@drawable/ic_search_black_24dp"
+        android:background="@drawable/bg_searchbar"
+        />
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:background="#ccc"
+        app:tabTextColor="#fff"
+        android:layout_below="@id/home_search"
+        android:id="@+id/home_tab_layout"
+        app:tabIndicator="@drawable/tab_indicator_background"
+        app:tabIndicatorColor="#7f00ff"
+        app:tabIndicatorHeight="5sp"
+        app:tabSelectedTextColor="#7f00ff"
+        >
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_tab_explore"
+            android:text="EXPLORE"
+            />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_tab_fitness_work"
+            android:text="Fitness@Work"
+            />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_tab_freetrials"
+            android:text="Free Trials"
+            />
+
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/home_viewpager"
+        android:layout_below="@id/home_tab_layout"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frameLayout"
+            />
+
+    </androidx.viewpager.widget.ViewPager>
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_below="@id/home_tab_layout"-->
+<!--                android:layout_marginTop="5sp"-->
+<!--                android:id="@+id/home_banner1_rv"-->
+<!--                />-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_below="@id/home_banner1_rv"-->
+<!--                android:layout_marginTop="5sp"-->
+<!--                android:id="@+id/home_activities_rv"-->
+<!--                />-->
+
+
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Trending"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textColor="#000"-->
+<!--        android:layout_below="@id/home_activities_rv"-->
+<!--        android:fontFamily="@font/qcregular"-->
+<!--        android:id="@+id/home_trending_tv"-->
+<!--        android:layout_marginTop="5sp"-->
+<!--        android:layout_marginStart="10sp"-->
+<!--        />-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:id="@+id/home_trending_rv"-->
+<!--        android:layout_below="@id/home_trending_tv"-->
+<!--        />-->
+
+<!--     <TextView-->
+<!--         android:layout_width="wrap_content"-->
+<!--         android:layout_height="wrap_content"-->
+<!--         android:text="Popular"-->
+<!--         android:textSize="20sp"-->
+<!--         android:textColor="#000"-->
+<!--         android:fontFamily="@font/qcregular"-->
+<!--         android:layout_below="@id/home_trending_rv"-->
+<!--         android:id="@+id/home_popular_tv"-->
+<!--         android:layout_marginVertical="3sp"-->
+<!--         android:layout_marginStart="10sp"-->
+<!--         />-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_below="@id/home_popular_tv"-->
+<!--        android:id="@+id/home_popular_rv"-->
+<!--        android:layout_marginTop="5sp"-->
+<!--        />-->
+
+<!--      <TextView-->
+<!--          android:layout_width="wrap_content"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:text="Some Category"-->
+<!--          android:textSize="20sp"-->
+<!--          android:textColor="#000"-->
+<!--          android:fontFamily="@font/qcregular"-->
+<!--          android:layout_below="@id/home_popular_rv"-->
+<!--          android:id="@+id/home_banner2_tv"-->
+<!--          android:layout_marginVertical="3sp"-->
+<!--          android:layout_marginStart="10sp"-->
+<!--          />-->
+
+<!--   <androidx.recyclerview.widget.RecyclerView-->
+<!--       android:layout_width="wrap_content"-->
+<!--       android:layout_height="wrap_content"-->
+<!--       android:orientation="horizontal"-->
+<!--       android:layout_below="@id/home_banner2_tv"-->
+<!--       android:layout_marginTop="5sp"-->
+<!--       android:id="@+id/home_banner2_rv"-->
+<!--    />-->
+
+
+</RelativeLayout>

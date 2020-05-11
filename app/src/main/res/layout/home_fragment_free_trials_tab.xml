@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:id="@+id/home_scrollvw"
+        android:nestedScrollingEnabled="true"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5sp"
+                android:id="@+id/home_banner1_rv"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/home_banner1_rv"
+                android:layout_marginTop="5sp"
+                android:id="@+id/home_activities_rv"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trending"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_below="@id/home_activities_rv"
+                android:fontFamily="@font/qcregular"
+                android:id="@+id/home_trending_tv"
+                android:layout_marginTop="5sp"
+                android:layout_marginStart="10sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/home_trending_rv"
+                android:layout_below="@id/home_trending_tv"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:fontFamily="@font/qcregular"
+                android:layout_below="@id/home_trending_rv"
+                android:id="@+id/home_popular_tv"
+                android:layout_marginVertical="3sp"
+                android:layout_marginStart="10sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/home_popular_tv"
+                android:id="@+id/home_popular_rv"
+                android:layout_marginTop="5sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Some Category"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:fontFamily="@font/qcregular"
+                android:layout_below="@id/home_popular_rv"
+                android:id="@+id/home_banner2_tv"
+                android:layout_marginVertical="3sp"
+                android:layout_marginStart="10sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/home_banner2_tv"
+                android:layout_marginTop="5sp"
+                android:id="@+id/home_banner2_rv"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
