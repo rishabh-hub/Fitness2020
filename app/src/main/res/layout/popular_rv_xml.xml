@@ -43,6 +43,7 @@
             android:fontFamily="@font/qcbolditalic"
             android:id="@+id/popular_rv_xml_cat"
             android:text="Type(i.e.gym)"
+            android:textColor="@color/colorPrimary"
             android:textSize="11sp"
             android:layout_below="@id/popular_rv_xml_name"
             />
