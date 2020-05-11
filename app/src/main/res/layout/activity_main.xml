@@ -67,7 +67,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/bottom_nav"
             android:background="#ffffff"
-            app:itemIconSize="25sp"
             app:menu="@menu/bottomnav_menu"
             android:layout_alignParentBottom="true"/>
 

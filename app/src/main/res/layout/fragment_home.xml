@@ -44,6 +44,7 @@
         android:id="@+id/home_tab_layout"
         app:tabIndicatorColor="@color/colorPrimary"
         app:tabIndicatorHeight="3sp"
+        app:tabMode="scrollable"
         app:tabSelectedTextColor="@color/colorPrimary"
         >
         <com.google.android.material.tabs.TabItem

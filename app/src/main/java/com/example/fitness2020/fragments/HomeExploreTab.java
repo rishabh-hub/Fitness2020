@@ -115,7 +115,7 @@ public class HomeExploreTab extends Fragment {
 
             trendingRvModels.add(new TrendingRvModel(R.mipmap.ic_launcher));
 
-            popularRvModels.add(new PopularRvModel(R.mipmap.ic_launcher,"Gym name","Category"," Gym Address","Recommended"));
+            popularRvModels.add(new PopularRvModel(R.mipmap.ic_launcher,"Gym name","Category"," Gym Address","Recommended","4.9"));
         }
 
     }

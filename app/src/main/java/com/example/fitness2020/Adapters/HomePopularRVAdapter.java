@@ -56,7 +56,7 @@ public class HomePopularRVAdapter extends RecyclerView.Adapter<HomePopularRVAdap
     public class HomePopularRVAdapterVH extends RecyclerView.ViewHolder
     {
         ImageView imageView;
-        TextView gymName,category,address,recommended;
+        TextView gymName,category,address,recommended,rating;
         Button bookButton;
 
         public HomePopularRVAdapterVH(@NonNull View itemView) {
@@ -67,6 +67,7 @@ public class HomePopularRVAdapter extends RecyclerView.Adapter<HomePopularRVAdap
             category=itemView.findViewById(R.id.popular_rv_xml_cat);
             address=itemView.findViewById(R.id.popular_rv_xml_address);
             recommended=itemView.findViewById(R.id.popular_rv_xml_recommended);
+            rating=itemView.findViewById(R.id.popular_rv_xml_rating);
 
         }
 
@@ -77,6 +78,7 @@ public class HomePopularRVAdapter extends RecyclerView.Adapter<HomePopularRVAdap
                 category.setText(popularRvModel.getCategory());
                 address.setText(popularRvModel.getGymAddress());
                 recommended.setText(popularRvModel.getRecommended());
+                rating.setText(popularRvModel.getRating());
         }
     }
 }

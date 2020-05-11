@@ -6,13 +6,15 @@ public class PopularRvModel {
     private String category;
     private String gymAddress;
     private String recommended;
+    private String rating;
 
-    public PopularRvModel(int id, String gymName, String category, String gymAddress,String recommended) {
+    public PopularRvModel(int id, String gymName, String category, String gymAddress,String recommended,String rating) {
         this.id = id;
         this.gymName = gymName;
         this.category = category;
         this.gymAddress = gymAddress;
         this.recommended=recommended;
+        this.rating=rating;
     }
 
     public int getId() {
@@ -49,6 +51,14 @@ public class PopularRvModel {
 
     public String getGymAddress() {
         return gymAddress;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 
     public void setGymAddress(String gymAddress) {
