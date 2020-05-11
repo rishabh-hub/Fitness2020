@@ -58,8 +58,23 @@
                 android:paddingHorizontal="8sp"
                 android:layout_below="@id/home_trending_rv"
                 android:gravity="fill"
-                android:id="@+id/home_fragment_explore_tab_activities"
-                >
+                android:id="@+id/home_fragment_explore_tab_activities">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/home_fragment_explore_tab_activities_btn">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
                 <androidx.cardview.widget.CardView
                     android:layout_width="40sp"
                     android:layout_height="40sp"
@@ -75,6 +90,13 @@
                         android:scaleType="centerCrop"
                         />
                 </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="40sp"
@@ -92,6 +114,13 @@
                         android:scaleType="centerCrop"
                         />
                 </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="40sp"
@@ -109,6 +138,13 @@
                         android:scaleType="centerCrop"
                         />
                 </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="40sp"
@@ -126,6 +162,10 @@
                         android:scaleType="centerCrop"
                         />
                 </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                </LinearLayout>
+                </RelativeLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
