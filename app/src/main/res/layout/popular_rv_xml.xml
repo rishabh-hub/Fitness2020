@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_margin="10sp"
+    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="80sp">
 
@@ -32,16 +33,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/qcbold"
+            android:fontFamily="@font/metropolisbold"
             android:id="@+id/popular_rv_xml_name"
+            android:gravity="center"
             android:text="Name of gym"
             android:textSize="14sp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/qcbolditalic"
+            android:fontFamily="@font/metropolisextrabolditalic"
             android:id="@+id/popular_rv_xml_cat"
+            android:gravity="center"
             android:text="Type(i.e.gym)"
             android:textColor="@color/colorPrimary"
             android:textSize="11sp"
@@ -51,7 +54,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/qcregular"
+            android:fontFamily="@font/metropolisregular"
+            android:gravity="center"
             android:id="@+id/popular_rv_xml_address"
             android:text="Address of gym"
             android:textSize="10sp"
@@ -61,7 +65,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/qcbold"
+            android:fontFamily="@font/metropolisbold"
+            android:gravity="center"
             android:id="@+id/popular_rv_xml_recommended"
             android:text="Recommended"
             android:textSize="10sp"
