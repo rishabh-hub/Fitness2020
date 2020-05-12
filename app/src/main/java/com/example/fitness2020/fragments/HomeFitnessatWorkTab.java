@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,8 +13,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitness2020.Adapters.HomePageClientAdapter;
 import com.example.fitness2020.Adapters.HomePopularRVAdapter;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
+import com.example.fitness2020.Models.ClientModel;
 import com.example.fitness2020.Models.PopularHorizontalRvModel;
 import com.example.fitness2020.Models.PopularRvModel;
 import com.example.fitness2020.Models.TrendingRvModel;
@@ -25,15 +28,9 @@ public class HomeFitnessatWorkTab extends Fragment {
 
     View view;
     Context context;
-    HomeTrendingRVAdapter adapter;
-    HomeTrendingRVAdapter banner2Adapter;
-    HomePopularRVAdapter homePopularRVAdapter;
-    RecyclerView trendingRv;
-    RecyclerView banner2Rv;
-    RecyclerView popularRv;
-    ArrayList<TrendingRvModel> trendingRvModels;
-    ArrayList<PopularRvModel> popularRvModels;
-    ArrayList<PopularHorizontalRvModel> popularHorizontalRvModels;
+   RecyclerView clientRV;
+   HomePageClientAdapter clientAdapter;
+   ArrayList<ClientModel> clients = new ArrayList<>();
 
     public HomeFitnessatWorkTab() {
     }
@@ -48,13 +45,19 @@ public class HomeFitnessatWorkTab extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.home_fragment_fitnessat_work_tab,container,false);
 
-//        trendingRv=view.findViewById(R.id.home_trending_rv);
-//        popularRv=view.findViewById(R.id.home_popular_rv);
-//        banner2Rv=view.findViewById(R.id.home_banner2_rv);
+        clientRV = view.findViewById(R.id.fitness_at_work_clients_rv);
 
-//        banner2Rv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
-//        popularRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
-//        trendingRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+
+        clientRV.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL,false));
+
+        for (int i = 0;i<10;i++)
+            clients.add(new ClientModel(R.drawable.ic_person_outline_black_24dp));
+
+
+
+        clientAdapter = new HomePageClientAdapter(clients,context);
+
+        clientRV.setAdapter(clientAdapter);
 
 //        popularRvModels=new ArrayList<>(3);
 //        trendingRvModels=new ArrayList<TrendingRvModel>(3);
@@ -77,18 +80,18 @@ public class HomeFitnessatWorkTab extends Fragment {
         return view;
     }
 
-    void addData()//when using api, add data from api here.
-    {
-        for(int i=0;i<4;i++)
-        {
-
-            trendingRvModels.add(new TrendingRvModel(R.mipmap.ic_launcher));
-
-            popularRvModels.add(new PopularRvModel(R.mipmap.ic_launcher,"Gym name","Category"," Gym Address","Recommended","4.9"));
-
-            popularHorizontalRvModels.add(new PopularHorizontalRvModel(R.drawable.trending_activity,"Gym name","Gym Category","Available on thi day from time -"));
-
-        }
-
-    }
+//    void addData()//when using api, add data from api here.
+//    {
+//        for(int i=0;i<4;i++)
+//        {
+//
+//            trendingRvModels.add(new TrendingRvModel(R.mipmap.ic_launcher));
+//
+//            popularRvModels.add(new PopularRvModel(R.mipmap.ic_launcher,"Gym name","Category"," Gym Address","Recommended","4.9"));
+//
+//            popularHorizontalRvModels.add(new PopularHorizontalRvModel(R.drawable.trending_activity,"Gym name","Gym Category","Available on thi day from time -"));
+//
+//        }
+//
+//    }
 }

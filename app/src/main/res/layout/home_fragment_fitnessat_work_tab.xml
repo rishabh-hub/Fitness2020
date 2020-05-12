@@ -149,7 +149,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_centerVertical="true"
                     android:text="**customised plans available for group workouts"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:fontFamily="@font/metropolisblack"/>
             </RelativeLayout>
 
