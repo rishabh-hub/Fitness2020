@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_height="match_parent">
 
@@ -17,90 +17,293 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
-
-            <androidx.recyclerview.widget.RecyclerView
+            <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5sp"
-                android:id="@+id/home_banner1_rv"
-                />
+                android:layout_margin="20dp"
+                android:id="@+id/home_fitness_at_work_video_container"
+                app:cardCornerRadius="40dp">
+            <VideoView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="wrap_content"
+                android:id="@+id/home_fitness_at_work_video"/>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@id/home_banner1_rv"
-                android:layout_marginTop="5sp"
-                android:id="@+id/home_activities_rv"
-                />
+                android:padding="5dp"
+                android:layout_below="@id/home_fitness_at_work_video_container"
+                android:id="@+id/fitness_at_work_feature_1">
+
+                <ImageView
+                    android:id="@+id/fitness_at_work_feature_1_icon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_people"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp" />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/fitness_at_work_feature_1_icon"
+                    android:id="@+id/fitness_at_work_feature_1_text"
+                    android:text="Access to 20+ fitness activities."
+                    android:textSize="14sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/metropolisblack"/>
 
 
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_below="@id/fitness_at_work_feature_1"
+                android:id="@+id/fitness_at_work_feature_2">
+
+                <ImageView
+                    android:id="@+id/fitness_at_work_feature_2_icon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_workout"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp" />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/fitness_at_work_feature_2_text"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/fitness_at_work_feature_2_icon"
+                    android:text="Live workouts everyday with top fitness talks."
+                    android:textSize="14sp"
+                    android:fontFamily="@font/metropolisblack"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_below="@id/fitness_at_work_feature_2"
+                android:id="@+id/fitness_at_work_feature_3">
+
+                <ImageView
+                    android:id="@+id/fitness_at_work_feature_3_icon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_food_and_restaurant"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp" />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fitness_at_work_feature_3_text"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/fitness_at_work_feature_3_icon"
+                    android:text="Special diet consulting and fitness talks."
+                    android:textSize="14sp"
+                    android:fontFamily="@font/metropolisblack"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_below="@id/fitness_at_work_feature_3"
+                android:id="@+id/fitness_at_work_feature_4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button"
+                    android:padding="5dp"
+                    android:textColor="#fff"
+                    android:textAlignment="center"
+                    android:id="@+id/fitness_at_work_feature_4_text"
+                    android:layout_centerInParent="true"
+                    android:text="Get started at ₹ 999/session"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/metropolisblack"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_below="@id/fitness_at_work_feature_4"
+                android:id="@+id/fitness_at_work_feature_5">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fitness_at_work_feature_5_text"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:text="**customised plans available for group workouts"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/metropolisblack"/>
+            </RelativeLayout>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Trending"
-                android:textSize="17sp"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_below="@id/home_activities_rv"
-                android:fontFamily="@font/qcregular"
-                android:id="@+id/home_trending_tv"
-                android:layout_marginTop="5sp"
-                android:layout_marginStart="10sp"
-                />
+                android:id="@+id/top_review_heading"
+                android:fontFamily="@font/metropolisblack"
+                android:layout_below="@id/fitness_at_work_feature_5"
+                android:text="Top Reviews"
+                android:padding="10dp"
+                android:textSize="17dp"/>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/home_trending_rv"
-                android:layout_below="@id/home_trending_tv"
-                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_below="@id/top_review_heading"
+                android:id="@+id/fitness_at_work_reviews">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/ic_left_arrow"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/review_left"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_toRightOf="@id/review_left"
+                    android:layout_toLeftOf="@id/review_right"
+                    android:id="@+id/fitness_at_work_reviews_rv"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="3dp"
+                    android:src="@drawable/ic_right_arrow"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/review_right"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Popular"
-                android:textSize="17sp"
-                android:textColor="@color/colorPrimaryDark"
-                android:fontFamily="@font/qcregular"
-                android:layout_below="@id/home_trending_rv"
-                android:id="@+id/home_popular_tv"
-                android:layout_marginVertical="3sp"
-                android:layout_marginStart="10sp"
-                />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_below="@id/home_popular_tv"
-                android:id="@+id/home_popular_rv"
-                android:layout_marginTop="5sp"
-                />
+            </RelativeLayout>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Some Category"
-                android:textSize="17sp"
-                android:textColor="#000"
-                android:fontFamily="@font/qcregular"
-                android:layout_below="@id/home_popular_rv"
-                android:id="@+id/home_banner2_tv"
-                android:layout_marginVertical="3sp"
-                android:layout_marginStart="10sp"
-                />
+                android:id="@+id/clients_heading"
+                android:layout_below="@id/fitness_at_work_reviews"
+                android:fontFamily="@font/metropolisblack"
+                android:text="Our Clients"
+                android:padding="10dp"
+                android:textSize="17dp"/>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@id/home_banner2_tv"
-                android:layout_marginTop="5sp"
-                android:id="@+id/home_banner2_rv"
-                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_below="@id/clients_heading"
+                android:id="@+id/fitness_at_work_clients">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/fitness_at_work_clients_rv"/>
+
+
+            </RelativeLayout>
+
+
+
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_marginTop="5sp"-->
+<!--                android:id="@+id/home_banner1_rv"-->
+<!--                />-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_below="@id/home_banner1_rv"-->
+<!--                android:layout_marginTop="5sp"-->
+<!--                android:id="@+id/home_activities_rv"-->
+<!--                />-->
+
+
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Trending"-->
+<!--                android:textSize="17sp"-->
+<!--                android:textColor="@color/colorPrimaryDark"-->
+<!--                android:layout_below="@id/home_activities_rv"-->
+<!--                android:fontFamily="@font/qcregular"-->
+<!--                android:id="@+id/home_trending_tv"-->
+<!--                android:layout_marginTop="5sp"-->
+<!--                android:layout_marginStart="10sp"-->
+<!--                />-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:id="@+id/home_trending_rv"-->
+<!--                android:layout_below="@id/home_trending_tv"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Popular"-->
+<!--                android:textSize="17sp"-->
+<!--                android:textColor="@color/colorPrimaryDark"-->
+<!--                android:fontFamily="@font/qcregular"-->
+<!--                android:layout_below="@id/home_trending_rv"-->
+<!--                android:id="@+id/home_popular_tv"-->
+<!--                android:layout_marginVertical="3sp"-->
+<!--                android:layout_marginStart="10sp"-->
+<!--                />-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_below="@id/home_popular_tv"-->
+<!--                android:id="@+id/home_popular_rv"-->
+<!--                android:layout_marginTop="5sp"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Some Category"-->
+<!--                android:textSize="17sp"-->
+<!--                android:textColor="#000"-->
+<!--                android:fontFamily="@font/qcregular"-->
+<!--                android:layout_below="@id/home_popular_rv"-->
+<!--                android:id="@+id/home_banner2_tv"-->
+<!--                android:layout_marginVertical="3sp"-->
+<!--                android:layout_marginStart="10sp"-->
+<!--                />-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_below="@id/home_banner2_tv"-->
+<!--                android:layout_marginTop="5sp"-->
+<!--                android:id="@+id/home_banner2_rv"-->
+<!--                />-->
 
         </RelativeLayout>
 
