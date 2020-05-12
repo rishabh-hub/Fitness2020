@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitness2020.Adapters.HomePopularRVAdapter;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
+import com.example.fitness2020.Models.PopularHorizontalRvModel;
 import com.example.fitness2020.Models.PopularRvModel;
 import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.R;
@@ -32,6 +33,7 @@ public class HomeFitnessatWorkTab extends Fragment {
     RecyclerView popularRv;
     ArrayList<TrendingRvModel> trendingRvModels;
     ArrayList<PopularRvModel> popularRvModels;
+    ArrayList<PopularHorizontalRvModel> popularHorizontalRvModels;
 
     public HomeFitnessatWorkTab() {
     }
@@ -56,12 +58,13 @@ public class HomeFitnessatWorkTab extends Fragment {
 
         popularRvModels=new ArrayList<>(3);
         trendingRvModels=new ArrayList<TrendingRvModel>(3);
+        popularHorizontalRvModels=new ArrayList<>(3);
 
         addData();
 
         homePopularRVAdapter=new HomePopularRVAdapter(popularRvModels,context);
-        adapter=new HomeTrendingRVAdapter(trendingRvModels,context,1);
-        banner2Adapter=new HomeTrendingRVAdapter(trendingRvModels,context,2);
+        adapter=new HomeTrendingRVAdapter(trendingRvModels,context,1,popularHorizontalRvModels);
+        banner2Adapter=new HomeTrendingRVAdapter(trendingRvModels,context,2,popularHorizontalRvModels);
 
 
         popularRv.setAdapter(homePopularRVAdapter);
@@ -82,6 +85,9 @@ public class HomeFitnessatWorkTab extends Fragment {
             trendingRvModels.add(new TrendingRvModel(R.mipmap.ic_launcher));
 
             popularRvModels.add(new PopularRvModel(R.mipmap.ic_launcher,"Gym name","Category"," Gym Address","Recommended","4.9"));
+
+            popularHorizontalRvModels.add(new PopularHorizontalRvModel(R.drawable.trending_activity,"Gym name","Gym Category","Available on thi day from time -"));
+
         }
 
     }
