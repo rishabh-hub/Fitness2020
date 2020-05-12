@@ -299,6 +299,7 @@
 
 
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -307,6 +308,7 @@
         android:id="@+id/home_trending_rv_1"
         android:layout_marginTop="5sp"
         />
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -321,20 +323,49 @@
                 android:layout_marginStart="10sp"
                 />
 
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_popular_tv"
+                android:id="@+id/home_banner2_rv_container">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    >
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@id/home_popular_tv"
+        android:layout_alignParentStart="true"
         android:layout_marginTop="5sp"
         android:id="@+id/home_banner2_rv"
         />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View More"
+                        android:textSize="11sp"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:layout_toRightOf="@id/home_banner2_rv"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/bg_textview"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginHorizontal="5sp"
+                        android:layout_marginVertical="13sp"
+                        android:id="@+id/home_fragment_explore_tab_more_popular_btn"
+                        />
+                </RelativeLayout>
 
+
+            </HorizontalScrollView>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_below="@id/home_banner2_rv"
+                android:layout_below="@id/home_banner2_rv_container"
                 android:id="@+id/home_popular_vertical_rv"
                 android:layout_marginTop="5sp"
                 />
