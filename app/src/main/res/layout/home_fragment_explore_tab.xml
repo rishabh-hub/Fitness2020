@@ -50,8 +50,16 @@
 <!--        android:id="@+id/home_activities_rv"-->
 <!--        />-->
             <!--Filters -->
-            <RelativeLayout
+            <HorizontalScrollView
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/home_fragment_explore_tab_activities_container"
+                android:fillViewport="true"
+                android:scrollbars="none"
+                android:layout_below="@id/home_trending_rv">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginVertical="8sp"
@@ -63,17 +71,20 @@
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_toLeftOf="@id/home_fragment_explore_tab_activities_btn">
+                    android:id="@+id/activity_container"
+                    android:layout_alignParentStart="true">
+
 
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:weightSum="4">
+                    >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:layout_marginHorizontal="5dp"
                         android:gravity="center">
                 <androidx.cardview.widget.CardView
                     android:layout_width="40sp"
@@ -85,10 +96,11 @@
                     >
                     <ImageView
                         android:layout_width="match_parent"
+                        android:tint="@color/colorPrimary"
                         android:layout_height="match_parent"
-                        android:src="@drawable/sports_activity"
+                        android:src="@drawable/ic_weightlifting"
+                        android:padding="7dp"
                         android:id="@+id/home_fragment_explore_tab_activities_cardvw_imgvw1"
-                        android:scaleType="fitXY"
                         />
                 </androidx.cardview.widget.CardView>
 
@@ -96,7 +108,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
                     android:gravity="center">
 
                 <androidx.cardview.widget.CardView
@@ -110,10 +122,11 @@
                     >
                     <ImageView
                         android:layout_width="match_parent"
+                        android:tint="@color/colorPrimary"
                         android:layout_height="match_parent"
-                        android:src="@drawable/sports_activity"
+                        android:src="@drawable/ic_exercise"
+                        android:padding="7dp"
                         android:id="@+id/home_fragment_explore_tab_activities_cardvw_imgvw2"
-                        android:scaleType="fitXY"
                         />
                 </androidx.cardview.widget.CardView>
                 </LinearLayout>
@@ -121,6 +134,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginHorizontal="5dp"
                     android:layout_weight="1"
                     android:gravity="center">
 
@@ -135,10 +149,11 @@
                     >
                     <ImageView
                         android:layout_width="match_parent"
+                        android:tint="@color/colorPrimary"
                         android:layout_height="match_parent"
-                        android:src="@drawable/sports_activity"
+                        android:src="@drawable/ic_weightlifting"
+                        android:padding="7dp"
                         android:id="@+id/home_fragment_explore_tab_activities_cardvw_imgvw3"
-                        android:scaleType="fitXY"
                         />
                 </androidx.cardview.widget.CardView>
                 </LinearLayout>
@@ -146,7 +161,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
                     android:gravity="center">
 
                 <androidx.cardview.widget.CardView
@@ -160,13 +175,90 @@
                     >
                     <ImageView
                         android:layout_width="match_parent"
+                        android:tint="@color/colorPrimary"
                         android:layout_height="match_parent"
-                        android:src="@drawable/sports_activity"
+                        android:src="@drawable/ic_exercise"
+                        android:padding="7dp"
                         android:id="@+id/home_fragment_explore_tab_activities_cardvw_imgvw4"
-                        android:scaleType="fitXY"
                         />
                 </androidx.cardview.widget.CardView>
                 </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:gravity="center">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            app:cardCornerRadius="20sp"
+                            android:layout_marginHorizontal="5sp"
+                            android:layout_marginVertical="2sp"
+                            android:layout_toEndOf="@id/home_fragment_explore_tab_activities_cardvw4"
+                            android:id="@+id/home_fragment_explore_tab_activities_cardvw5"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:tint="@color/colorPrimary"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_weightlifting"
+                                android:padding="7dp"
+                                android:id="@+id/home_fragment_explore_tab_activities_cardvw_imgvw5"
+                                />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:gravity="center">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            app:cardCornerRadius="20sp"
+                            android:layout_marginHorizontal="5sp"
+                            android:layout_marginVertical="2sp"
+                            android:layout_toEndOf="@id/home_fragment_explore_tab_activities_cardvw5"
+                            android:id="@+id/home_fragment_explore_tab_activities_cardvw6"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:tint="@color/colorPrimary"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_exercise"
+                                android:padding="7dp"
+                                android:id="@+id/home_fragment_explore_tab_activities_cardvw_imgvw6"
+                                />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:gravity="center">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            app:cardCornerRadius="20sp"
+                            android:layout_marginHorizontal="5sp"
+                            android:layout_marginVertical="2sp"
+                            android:layout_toEndOf="@id/home_fragment_explore_tab_activities_cardvw6"
+                            android:id="@+id/home_fragment_explore_tab_activities_cardvw7"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:tint="@color/colorPrimary"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_weightlifting"
+                                android:padding="7dp"
+                                android:id="@+id/home_fragment_explore_tab_activities_cardvw_imgvw7"
+                                />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
 
                 </LinearLayout>
                 </RelativeLayout>
@@ -178,17 +270,18 @@
                     android:textSize="11sp"
                     android:gravity="center"
                     android:padding="5dp"
+                    android:layout_toRightOf="@id/activity_container"
                     android:layout_marginRight="5dp"
                     android:background="@drawable/bg_textview"
                     android:textColor="@color/colorPrimary"
                     android:layout_marginHorizontal="2sp"
                     android:layout_marginVertical="13sp"
-                    android:layout_alignParentEnd="true"
                     android:id="@+id/home_fragment_explore_tab_activities_btn"
                     />
 
 
             </RelativeLayout>
+            </HorizontalScrollView>
 
 
             <Spinner
@@ -196,7 +289,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/filter_spinner"
                 android:elevation="5sp"
-                android:layout_below="@id/home_fragment_explore_tab_activities"
+                android:layout_below="@id/home_fragment_explore_tab_activities_container"
                 android:layout_alignParentRight="true"
                 android:layout_marginStart="5sp"
                 android:gravity="center"
