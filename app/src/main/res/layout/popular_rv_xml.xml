@@ -37,20 +37,23 @@
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/popular_rv_xml_name"
             android:text="Gym Name"
+            android:textColor="#000"
             android:textAlignment="viewStart"
             android:textSize="14sp"
             android:layout_margin="2dp"
+            android:padding="0.5dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/metropolisextrabolditalic"
             android:id="@+id/popular_rv_xml_cat"
-            android:gravity="center"
             android:text="Type(i.e.gym)"
             android:textColor="#656565"
             android:textSize="11sp"
             android:layout_margin="2dp"
+            android:padding="0.5dp"
+            android:textAlignment="viewStart"
             android:layout_below="@id/popular_rv_xml_name"
             />
 
@@ -64,6 +67,7 @@
             android:text="Address of gym"
             android:textSize="10sp"
             android:layout_margin="2dp"
+            android:padding="0.5dp"
             android:layout_below="@id/popular_rv_xml_cat"
             />
         <TextView
@@ -75,6 +79,7 @@
             android:text="Fitness Pass | 20 Points"
             android:textSize="10sp"
             android:layout_margin="2dp"
+            android:padding="0.5dp"
             android:layout_below="@id/popular_rv_xml_address"
             />
 
@@ -87,7 +92,7 @@
             android:text="Recommended"
             android:textSize="10sp"
             android:textColor="#FF004D"
-            android:padding="1sp"
+            android:padding="0.5dp"
             android:layout_marginTop="1dp"
             android:layout_margin="2dp"
             android:layout_below="@id/popular_rv_xml_points"
