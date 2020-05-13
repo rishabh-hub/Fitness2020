@@ -119,8 +119,8 @@ public class HomeExploreTab extends Fragment {
 
             trendingRvModels.add(new TrendingRvModel(R.drawable.trending_activity));
 
-            popularRvModels.add(new PopularRvModel(R.drawable.gym_photo,"One More Rep","Crossfit, Zumba, KickBoxing, Kids, Dance"," Gurukripa lane, Opposite SIES College Mumbai,Maharashtra ,400022","50 % OFF","4.9"));
-
+            popularRvModels.add(new PopularRvModel(R.drawable.gym_photo,"One More Rep","Crossfit, Zumba","Mumbai,Maharashtra ,400022","50 % OFF","4.9"));
+//            Gurukripa lane, Opposite SIES College
             popularHorizontalRvModels.add(new PopularHorizontalRvModel(R.drawable.trending_activity,"Gym name","Gym Category","Available on thi day from time -"));
         }
 

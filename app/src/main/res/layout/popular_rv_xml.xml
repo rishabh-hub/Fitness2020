@@ -21,6 +21,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:cardCornerRadius="15dp"
+        android:layout_marginRight="10dp"
         android:layout_centerVertical="true"
         android:id="@+id/popular_rv_xml_cardvw"
         >
@@ -42,18 +43,18 @@
             android:layout_toRightOf="@id/popular_rv_xml_cardvw"
             android:textAlignment="viewStart"
             android:textSize="14sp"
-            android:layout_margin="2dp"
+            android:layout_marginTop="2dp"
             android:padding="0.5dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/metropolisextrabolditalic"
+            android:fontFamily="@font/metropolisextrabold"
             android:id="@+id/popular_rv_xml_cat"
             android:text="Type(i.e.gym)"
             android:textColor="#656565"
-            android:textSize="11sp"
-            android:layout_margin="2dp"
+            android:textSize="10sp"
+            android:layout_margin="1dp"
             android:padding="0.5dp"
             android:textAlignment="viewStart"
             android:layout_below="@id/popular_rv_xml_name"
@@ -69,25 +70,33 @@
             android:textColor="@color/colorPrimaryDark"
             android:text="Address of gym"
             android:textSize="10sp"
-            android:layout_margin="2dp"
+            android:layout_margin="1dp"
             android:padding="0.5dp"
             android:layout_below="@id/popular_rv_xml_cat"
             android:layout_toRightOf="@id/popular_rv_xml_cardvw"
             />
 
     </RelativeLayout>
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="1dp"
+        android:background="#757373"
+        android:layout_above="@id/popular_rv_xml_points"
+        android:layout_alignStart="@id/popular_rv_xml_points"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"/>
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/qcregular"
             android:id="@+id/popular_rv_xml_points"
-            android:textColor="#C3A81E"
+            android:textColor="#D6B610"
             android:text="Fitness Pass | 20 Points"
             android:textSize="10sp"
-            android:layout_marginLeft="85dp"
+            android:layout_marginLeft="95dp"
             android:padding="0.5dp"
-            android:layout_below="@id/popular_rv_xml_text"
+            android:layout_alignBottom="@id/popular_rv_xml_text"
             />
 
         <TextView
@@ -98,11 +107,11 @@
             android:id="@+id/popular_rv_xml_recommended"
             android:text="Recommended"
             android:textSize="10sp"
-            android:textColor="#FF004D"
-            android:padding="0.5dp"
+            android:textColor="#DD2C00"
             android:layout_marginTop="1dp"
-            android:layout_marginLeft="85dp"
-            android:layout_below="@id/popular_rv_xml_points"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@id/popular_rv_xml_points"
+            android:layout_toRightOf="@id/popular_rv_xml_points"
             />
 
 
@@ -128,7 +137,7 @@
 <!--        />-->
 
     <LinearLayout
-        android:layout_width="50dp"
+        android:layout_width="35dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
@@ -144,7 +153,6 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_star_black_12dp"
             android:layout_gravity="center"
-            android:layout_margin="1dp"
             />
 
     <TextView
@@ -153,7 +161,7 @@
         android:text="Rating"
         android:gravity="center"
         android:textColor="#fff"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:padding="1dp"
         android:id="@+id/popular_rv_xml_rating"
         />
