@@ -17,24 +17,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:id="@+id/home_fitness_at_work_video_container"
-                app:cardCornerRadius="40dp">
-            <VideoView
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
 
-                android:id="@+id/home_fitness_at_work_video"/>
-            </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
+                    android:id="@+id/home_fitness_at_work_video_rv"/>
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:layout_below="@id/home_fitness_at_work_video_container"
+                android:layout_below="@id/home_fitness_at_work_video_rv"
                 android:id="@+id/fitness_at_work_feature_1">
 
                 <ImageView
@@ -217,93 +214,6 @@
 
 
             </RelativeLayout>
-
-
-
-
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal"-->
-<!--                android:layout_marginTop="5sp"-->
-<!--                android:id="@+id/home_banner1_rv"-->
-<!--                />-->
-
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal"-->
-<!--                android:layout_below="@id/home_banner1_rv"-->
-<!--                android:layout_marginTop="5sp"-->
-<!--                android:id="@+id/home_activities_rv"-->
-<!--                />-->
-
-
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Trending"-->
-<!--                android:textSize="17sp"-->
-<!--                android:textColor="@color/colorPrimaryDark"-->
-<!--                android:layout_below="@id/home_activities_rv"-->
-<!--                android:fontFamily="@font/qcregular"-->
-<!--                android:id="@+id/home_trending_tv"-->
-<!--                android:layout_marginTop="5sp"-->
-<!--                android:layout_marginStart="10sp"-->
-<!--                />-->
-
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal"-->
-<!--                android:id="@+id/home_trending_rv"-->
-<!--                android:layout_below="@id/home_trending_tv"-->
-<!--                />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Popular"-->
-<!--                android:textSize="17sp"-->
-<!--                android:textColor="@color/colorPrimaryDark"-->
-<!--                android:fontFamily="@font/qcregular"-->
-<!--                android:layout_below="@id/home_trending_rv"-->
-<!--                android:id="@+id/home_popular_tv"-->
-<!--                android:layout_marginVertical="3sp"-->
-<!--                android:layout_marginStart="10sp"-->
-<!--                />-->
-
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="vertical"-->
-<!--                android:layout_below="@id/home_popular_tv"-->
-<!--                android:id="@+id/home_popular_rv"-->
-<!--                android:layout_marginTop="5sp"-->
-<!--                />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Some Category"-->
-<!--                android:textSize="17sp"-->
-<!--                android:textColor="#000"-->
-<!--                android:fontFamily="@font/qcregular"-->
-<!--                android:layout_below="@id/home_popular_rv"-->
-<!--                android:id="@+id/home_banner2_tv"-->
-<!--                android:layout_marginVertical="3sp"-->
-<!--                android:layout_marginStart="10sp"-->
-<!--                />-->
-
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal"-->
-<!--                android:layout_below="@id/home_banner2_tv"-->
-<!--                android:layout_marginTop="5sp"-->
-<!--                android:id="@+id/home_banner2_rv"-->
-<!--                />-->
 
         </RelativeLayout>
 

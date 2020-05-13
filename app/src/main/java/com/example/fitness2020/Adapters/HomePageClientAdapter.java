@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitness2020.Models.ClientModel;
+import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.R;
 
 import java.util.ArrayList;

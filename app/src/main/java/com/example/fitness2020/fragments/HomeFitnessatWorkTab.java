@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitness2020.Adapters.FitnessVideoAdapter;
 import com.example.fitness2020.Adapters.HomePageClientAdapter;
 import com.example.fitness2020.Adapters.HomePopularRVAdapter;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
@@ -20,6 +21,7 @@ import com.example.fitness2020.Models.ClientModel;
 import com.example.fitness2020.Models.PopularHorizontalRvModel;
 import com.example.fitness2020.Models.PopularRvModel;
 import com.example.fitness2020.Models.TrendingRvModel;
+import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.R;
 
 import java.util.ArrayList;
@@ -28,8 +30,10 @@ public class HomeFitnessatWorkTab extends Fragment {
 
     View view;
     Context context;
-   RecyclerView clientRV;
+   RecyclerView clientRV,videoRV;
    HomePageClientAdapter clientAdapter;
+   FitnessVideoAdapter videoAdapter;
+   ArrayList<VideoModel> videoModels = new ArrayList<>();
    ArrayList<ClientModel> clients = new ArrayList<>();
 
     public HomeFitnessatWorkTab() {
@@ -46,9 +50,11 @@ public class HomeFitnessatWorkTab extends Fragment {
         view=inflater.inflate(R.layout.home_fragment_fitnessat_work_tab,container,false);
 
         clientRV = view.findViewById(R.id.fitness_at_work_clients_rv);
+        videoRV = view.findViewById(R.id.home_fitness_at_work_video_rv);
 
 
         clientRV.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL,false));
+        videoRV.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
 
         for (int i = 0;i<10;i++)
             clients.add(new ClientModel(R.drawable.ic_person_outline_black_24dp));
@@ -56,8 +62,10 @@ public class HomeFitnessatWorkTab extends Fragment {
 
 
         clientAdapter = new HomePageClientAdapter(clients,context);
+        videoAdapter = new FitnessVideoAdapter(videoModels,context);
 
         clientRV.setAdapter(clientAdapter);
+        videoRV.setAdapter(videoAdapter);
 
 //        popularRvModels=new ArrayList<>(3);
 //        trendingRvModels=new ArrayList<TrendingRvModel>(3);
