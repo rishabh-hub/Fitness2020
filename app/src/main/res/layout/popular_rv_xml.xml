@@ -7,6 +7,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:id="@+id/popular_rv_xml_text"
+        >
+
     <androidx.cardview.widget.CardView
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -22,15 +32,6 @@
         />
     </androidx.cardview.widget.CardView>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="5dp"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/popular_rv_xml_cardvw"
-        android:layout_toLeftOf="@id/popular_rv_xml_book"
-        android:id="@+id/popular_rv_xml_text"
-        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,6 +39,7 @@
             android:id="@+id/popular_rv_xml_name"
             android:text="Gym Name"
             android:textColor="#000"
+            android:layout_toRightOf="@id/popular_rv_xml_cardvw"
             android:textAlignment="viewStart"
             android:textSize="14sp"
             android:layout_margin="2dp"
@@ -55,6 +57,7 @@
             android:padding="0.5dp"
             android:textAlignment="viewStart"
             android:layout_below="@id/popular_rv_xml_name"
+            android:layout_toRightOf="@id/popular_rv_xml_cardvw"
             />
 
         <TextView
@@ -69,8 +72,12 @@
             android:layout_margin="2dp"
             android:padding="0.5dp"
             android:layout_below="@id/popular_rv_xml_cat"
+            android:layout_toRightOf="@id/popular_rv_xml_cardvw"
             />
-        <TextView
+
+    </RelativeLayout>
+
+    <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/qcregular"
@@ -78,9 +85,9 @@
             android:textColor="#C3A81E"
             android:text="Fitness Pass | 20 Points"
             android:textSize="10sp"
-            android:layout_margin="2dp"
+            android:layout_marginLeft="85dp"
             android:padding="0.5dp"
-            android:layout_below="@id/popular_rv_xml_address"
+            android:layout_below="@id/popular_rv_xml_text"
             />
 
         <TextView
@@ -94,32 +101,31 @@
             android:textColor="#FF004D"
             android:padding="0.5dp"
             android:layout_marginTop="1dp"
-            android:layout_margin="2dp"
+            android:layout_marginLeft="85dp"
             android:layout_below="@id/popular_rv_xml_points"
             />
 
 
-    </RelativeLayout>
 
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="23dp"
+<!--    <Button-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="23dp"-->
 
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
-        android:text="BOOK"
-        android:gravity="center"
-        android:layout_margin="5dp"
-        android:textColor="#fff"
-        android:textSize="12sp"
-        android:padding="1dp"
-        android:background="@drawable/bg_button"
-        android:backgroundTint="@color/bookBtn"
-        android:id="@+id/popular_rv_xml_book"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        />
+<!--        android:layout_marginStart="5dp"-->
+<!--        android:layout_marginEnd="5dp"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        android:text="BOOK"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_margin="5dp"-->
+<!--        android:textColor="#fff"-->
+<!--        android:textSize="12sp"-->
+<!--        android:padding="1dp"-->
+<!--        android:background="@drawable/bg_button"-->
+<!--        android:backgroundTint="@color/bookBtn"-->
+<!--        android:id="@+id/popular_rv_xml_book"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        />-->
 
     <LinearLayout
         android:layout_width="50dp"

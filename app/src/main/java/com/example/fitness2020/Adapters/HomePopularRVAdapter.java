@@ -39,13 +39,6 @@ public class HomePopularRVAdapter extends RecyclerView.Adapter<HomePopularRVAdap
 
         holder.populate(popularRvModels.get(position));
 
-        //Whatever happens on clicking a book button
-        holder.bookButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(holder.itemView.getContext(),"Clicked",Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     @Override
@@ -57,12 +50,10 @@ public class HomePopularRVAdapter extends RecyclerView.Adapter<HomePopularRVAdap
     {
         ImageView imageView;
         TextView gymName,category,address,recommended,rating;
-        Button bookButton;
 
         public HomePopularRVAdapterVH(@NonNull View itemView) {
             super(itemView);
             imageView=itemView.findViewById(R.id.popular_rv_xml_imgvw);
-            bookButton=itemView.findViewById(R.id.popular_rv_xml_book);
             gymName=itemView.findViewById(R.id.popular_rv_xml_name);
             category=itemView.findViewById(R.id.popular_rv_xml_cat);
             address=itemView.findViewById(R.id.popular_rv_xml_address);
