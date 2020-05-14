@@ -107,7 +107,7 @@
             android:id="@+id/popular_rv_xml_recommended"
             android:text="Recommended"
             android:textSize="10sp"
-            android:textColor="#DD2C00"
+            android:textColor="#228b22"
             android:layout_marginTop="1dp"
             android:layout_marginLeft="10dp"
             android:layout_alignBottom="@id/popular_rv_xml_points"

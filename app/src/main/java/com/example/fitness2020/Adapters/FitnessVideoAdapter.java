@@ -1,9 +1,11 @@
 package com.example.fitness2020.Adapters;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.MediaController;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
@@ -41,13 +43,15 @@ public class FitnessVideoAdapter extends RecyclerView.Adapter<FitnessVideoAdapte
 
     public class VideoVH extends RecyclerView.ViewHolder {
         VideoView videoView;
+        MediaController mediaController;
         public VideoVH(@NonNull View itemView) {
             super(itemView);
             videoView = itemView.findViewById(R.id.home_fitness_at_work_video);
+            mediaController=new MediaController(context);
         }
 
         public void populate(VideoModel videoModel) {
-//            videoView.setVideoURI();
+           // Uri uri=Uri.parse()
         }
     }
 }

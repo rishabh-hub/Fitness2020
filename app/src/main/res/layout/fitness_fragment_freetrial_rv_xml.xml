@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="120dp"
+            android:id="@+id/rv_item_cardview_1"
+            app:cardCornerRadius="30sp"
+            android:layout_margin="10sp"
+            app:cardElevation="1sp"
+            android:layout_height="100sp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rv_item_cardview1_imgvw"
+                android:scaleType="centerCrop"
+                android:background="#ccc"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:layout_below="@+id/rv_item_cardview_1"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="1dp"
+            android:fontFamily="@font/metropolisbold"
+            android:id="@+id/rv_item1_cardview_gym_name"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:fontFamily="@font/metropolissemibold"
+            android:layout_marginVertical="1dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_below="@+id/rv_item1_cardview_gym_name"
+            android:id="@+id/rv_item1_cardview_gym_address"
+            />
+
+
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/rv_item1"-->
+<!--        android:id="@+id/rv_item2"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        >-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="100sp"-->
+<!--            android:id="@+id/rv_item_cardview_2"-->
+<!--            app:cardCornerRadius="30sp"-->
+<!--            android:layout_margin="10sp"-->
+<!--            app:cardElevation="1sp"-->
+<!--            android:layout_height="80sp">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:id="@+id/banner2_rv_item_cardview2_imgvw"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:background="#ccc"-->
+<!--                />-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="10sp"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_below="@+id/rv_item_cardview_2"-->
+<!--            android:layout_marginHorizontal="10dp"-->
+<!--            android:layout_marginVertical="1dp"-->
+<!--            android:fontFamily="@font/metropolisbold"-->
+<!--            android:id="@+id/rv_item2_cardview2_gym_name"-->
+<!--            />-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="10sp"-->
+<!--            android:gravity="center"-->
+<!--            android:fontFamily="@font/metropolissemibold"-->
+<!--            android:layout_marginVertical="1dp"-->
+<!--            android:layout_marginHorizontal="10dp"-->
+<!--            android:layout_below="@+id/rv_item2_cardview2_gym_name"-->
+<!--            android:id="@+id/rv_item2_cardview2_gym_category"-->
+<!--            />-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="10sp"-->
+<!--            android:gravity="center"-->
+<!--            android:fontFamily="@font/metropolislight"-->
+<!--            android:layout_marginVertical="1dp"-->
+<!--            android:layout_marginHorizontal="10dp"-->
+<!--            android:layout_below="@+id/rv_item2_cardview2_gym_category"-->
+<!--            android:id="@+id/rv_item2_cardview2_gym_schedule"-->
+<!--            />-->
+
+<!--    </RelativeLayout>-->
+
+</RelativeLayout>
