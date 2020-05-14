@@ -10,11 +10,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.example.fitness2020.Adapters.FitnessFragmentFreeTrialAdapter;
 import com.example.fitness2020.Models.FitnessFragmentFreeTrialModel;
+import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
+import com.example.fitness2020.Models.PopularHorizontalRvModel;
+import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.R;
 
 import java.util.ArrayList;
@@ -23,9 +27,12 @@ public class PassFragment extends Fragment {
 
     View view;
     TextView textView;
+    RecyclerView fitnessPassRV;
+    ArrayList<PopularHorizontalRvModel> fitnessPassModels ;
+
     RecyclerView freeTrialRV;
     ArrayList<FitnessFragmentFreeTrialModel> fragmentFreeTrialModels;
-    FitnessFragmentFreeTrialAdapter fragmentFreeTrialAdapter;
+    FitnessFragmentFreeTrialAdapter fragmentFreeTrialAdapter,fitnessPassAdapter;
     Context context;
 
     public PassFragment() {
@@ -37,18 +44,24 @@ public class PassFragment extends Fragment {
         view=inflater.inflate(R.layout.fragment_pass,container,false);
 
         freeTrialRV=view.findViewById(R.id.pass_fragment_fitness_pass_rv);
+        fitnessPassRV = view.findViewById(R.id.fitness_pass_banner2_rv);
 
         freeTrialRV.setLayoutManager(new GridLayoutManager(context,2,GridLayoutManager.HORIZONTAL,false));
+        fitnessPassRV.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
 
         fragmentFreeTrialModels=new ArrayList<>(3);
+        fitnessPassModels = new ArrayList<>(3);
 
         addData();
 
-        fragmentFreeTrialAdapter=new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,context);
+        fragmentFreeTrialAdapter=new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,context,fitnessPassModels,1);
+        fitnessPassAdapter = new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,context,fitnessPassModels,0);
 
         freeTrialRV.setAdapter(fragmentFreeTrialAdapter);
+        fitnessPassRV.setAdapter(fitnessPassAdapter);
 
         fragmentFreeTrialAdapter.notifyDataSetChanged();
+        fitnessPassAdapter.notifyDataSetChanged();
 
         return view;
     }
@@ -59,6 +72,10 @@ public class PassFragment extends Fragment {
         {
             fragmentFreeTrialModels.add(new FitnessFragmentFreeTrialModel(R.drawable.trending_activity,"One More Rep","Mumbai,Maharashtra ,400022"));
 
+        }
+        for (int i=0;i<5;i++)
+        {
+            fitnessPassModels.add(new PopularHorizontalRvModel(R.drawable.trending_activity,"Gym name","Gym Category","Available on thi day from time -"));
         }
     }
 }

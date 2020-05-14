@@ -42,8 +42,9 @@ public class HomeTrendingRVAdapter extends RecyclerView.Adapter<HomeTrendingRVAd
             return new HomeTrendingRVAdapterVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.trending_rv_xml, parent, false));
         }
 
-        else{
+        else {
             return new HomeTrendingRVAdapterVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.banner2_rv_xml,parent,false));
+
         }
         }
 
