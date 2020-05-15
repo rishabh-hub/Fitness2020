@@ -80,6 +80,8 @@ public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<Fitnes
                 bannerGymCategory=itemView.findViewById(R.id.banner2_rv_item_cardview_gym_category);
                 bannerGymSchedule=itemView.findViewById(R.id.banner2_rv_item_cardview_gym_schedule);
             }
+
+
         }
 
         void populate(FitnessFragmentFreeTrialModel fitnessFragmentFreeTrialModel)

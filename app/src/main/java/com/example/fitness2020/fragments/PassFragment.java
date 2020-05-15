@@ -1,6 +1,7 @@
 package com.example.fitness2020.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,6 +36,7 @@ public class PassFragment extends Fragment {
     ArrayList<FitnessFragmentFreeTrialModel> fragmentFreeTrialModels;
     FitnessFragmentFreeTrialAdapter fragmentFreeTrialAdapter,fitnessPassAdapter;
     Context context;
+    CardView trialCard,workoutCard,validityCard;
 
     public PassFragment() {
     }
@@ -43,8 +46,7 @@ public class PassFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.fragment_pass,container,false);
 
-        freeTrialRV=view.findViewById(R.id.pass_fragment_fitness_pass_rv);
-        fitnessPassRV = view.findViewById(R.id.fitness_pass_banner2_rv);
+        attachId();
 
         freeTrialRV.setLayoutManager(new GridLayoutManager(context,2,GridLayoutManager.HORIZONTAL,false));
         fitnessPassRV.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
@@ -63,6 +65,13 @@ public class PassFragment extends Fragment {
         fragmentFreeTrialAdapter.notifyDataSetChanged();
         fitnessPassAdapter.notifyDataSetChanged();
 
+        trialCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent trialIntent =new Intent(context,TrialCardActivity.class);
+            }
+        });
+
         return view;
     }
 
@@ -77,5 +86,14 @@ public class PassFragment extends Fragment {
         {
             fitnessPassModels.add(new PopularHorizontalRvModel(R.drawable.trending_activity,"Gym name","Gym Category","Available on thi day from time -"));
         }
+    }
+
+    void attachId()
+    {
+        freeTrialRV=view.findViewById(R.id.pass_fragment_fitness_pass_rv);
+        fitnessPassRV = view.findViewById(R.id.fitness_pass_banner2_rv);
+        trialCard=view.findViewById(R.id.trial_card);
+        workoutCard=view.findViewById(R.id.workout_card);
+        validityCard=view.findViewById(R.id.validity_card);
     }
 }
