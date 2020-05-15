@@ -86,6 +86,14 @@ public class PassFragment extends Fragment {
             }
         });
 
+        validityCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent validityIntent =new Intent(getContext(),ValidityCardActivity.class);
+                startActivity(validityIntent);
+            }
+        });
+
         return view;
     }
 
