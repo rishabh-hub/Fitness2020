@@ -366,6 +366,24 @@
 
     </HorizontalScrollView>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:id="@+id/fitness_pass_video_rv_heading"
+        android:layout_below="@id/home_banner2_rv_container"
+        android:fontFamily="@font/metropolisbold"
+        android:text="Fitness Pass"
+        android:layout_margin="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/fitness_pass_video_rv_heading"
+        android:id="@+id/fitness_pass_video_rv"/>
+
 </RelativeLayout>
 
 </ScrollView>

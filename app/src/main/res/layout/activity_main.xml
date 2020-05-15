@@ -84,6 +84,6 @@
         android:id="@+id/main_nav"
         app:menu="@menu/side_drawer_menu"
         app:headerLayout="@layout/drawer_header_layout"
-        android:layout_gravity="start"/>
+        android:layout_gravity="right"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

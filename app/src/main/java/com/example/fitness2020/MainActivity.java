@@ -44,10 +44,10 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
         populateLocationSpinner();
         locationSpinner.setOnItemSelectedListener(this);
 
-        menuButton.setOnClickListener(new View.OnClickListener() {
+        userImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                drawerLayout.openDrawer(Gravity.LEFT);
+                drawerLayout.openDrawer(Gravity.RIGHT);
             }
         });
 
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
 
     public  void drawerClose(MenuItem menuItem)
     {
-        drawerLayout.closeDrawer(Gravity.LEFT);
+        drawerLayout.closeDrawer(Gravity.RIGHT);
     }
 
     @Override
