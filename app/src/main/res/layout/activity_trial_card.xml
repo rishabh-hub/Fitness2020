@@ -1,29 +1,421 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_gravity="center"
+    android:layout_marginTop="40dp"
     android:layout_height="match_parent"
     tools:context=".fragments.TrialCardActivity">
 
+
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/trial_card_imagerv"
         android:orientation="horizontal"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="5dp"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="17sp"
-        android:id="@+id/membership_faq_rv_heading"
+        android:gravity="center"
+        android:id="@+id/membership_heading"
         android:layout_below="@id/trial_card_imagerv"
         android:fontFamily="@font/metropolisbold"
+        android:text="Our Memberships"
+        android:layout_margin="10dp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_below="@id/membership_heading"
+    android:id="@+id/container_1"
+    android:gravity="center"
+    android:weightSum="2">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_textview"
+        android:layout_weight="1"
+        android:id="@+id/trial_membership_1">
+
+        <ImageView
+            android:id="@+id/trial_1_month_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_people"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_toRightOf="@id/trial_1_month_icon">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trial_1_month_text"
+            android:text="1 month"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/metropolisblack"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trial_1_month_text2"
+            android:text="₹200"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/metropolisblack"/>
+</LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_textview"
+        android:layout_below="@id/trial_membership_1"
+        android:id="@+id/trial_membership_2">
+
+        <ImageView
+            android:id="@+id/trial_2_month_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_workout"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_toRightOf="@id/trial_2_month_icon">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trial_2_month_text"
+            android:text="3 months"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/metropolisblack"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trial_2_month_text2"
+            android:text=" @ ₹450"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/metropolisblack"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/container_1"
+        android:id="@+id/container_2"
+        android:gravity="center"
+        android:weightSum="2">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_textview"
+        android:layout_weight="1"
+        android:id="@+id/trial_membership_3">
+
+        <ImageView
+            android:id="@+id/trial_3_month_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_food_and_restaurant"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_toRightOf="@id/trial_3_month_icon">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/trial_3_month_text"
+                android:text="6 months"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/metropolisblack"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/trial_3_month_text2"
+                android:text=" @ ₹600"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/metropolisblack"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_textview"
+        android:layout_below="@id/trial_membership_3"
+        android:id="@+id/trial_membership_4">
+
+        <ImageView
+            android:id="@+id/trial_4_month_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_food_and_restaurant"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_toRightOf="@id/trial_4_month_icon">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/trial_4_month_text"
+                android:text="1 year"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/metropolisblack"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/trial_4_month_text2"
+                android:text=" @ ₹1200"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/metropolisblack"/>
+        </LinearLayout>
+    </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:id="@+id/membership_benefit_heading"
+        android:layout_below="@id/container_2"
+        android:fontFamily="@font/metropolisbold"
+        android:text="Benefits"
+        android:layout_margin="10dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/membership_benefit_heading"
+        android:id="@+id/trial_benefit_1">
+
+        <ImageView
+            android:id="@+id/trial_1_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/bullet"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trial_1_text"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/trial_1_icon"
+            android:text="Unrestricted access to 20+ Fitness Activities"
+            android:textSize="14sp"
+            android:fontFamily="@font/metropolisblack"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/trial_benefit_1"
+        android:id="@+id/trial_benefit_2">
+
+        <ImageView
+            android:id="@+id/trial_2_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/bullet"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trial_2_text"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/trial_2_icon"
+            android:text="unlimited free trials with top Fitness Centers"
+            android:textSize="14sp"
+            android:fontFamily="@font/metropolisblack"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/trial_benefit_2"
+        android:id="@+id/trial_benefit_3">
+
+        <ImageView
+            android:id="@+id/trial_3_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/bullet"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trial_3_text"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/trial_3_icon"
+            android:text="Access to Live classes with top Fitness Centers."
+            android:textSize="14sp"
+            android:fontFamily="@font/metropolisblack"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/trial_benefit_3"
+        android:id="@+id/trial_benefit_4">
+
+        <ImageView
+            android:id="@+id/trial_4_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/bullet"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trial_4_text"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/trial_4_icon"
+            android:text="Save upto 60% on bookings"
+            android:textSize="14sp"
+            android:fontFamily="@font/metropolisblack"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/trial_benefit_4"
+        android:id="@+id/trial_benefit_5">
+
+        <ImageView
+            android:id="@+id/trial_5_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/bullet"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trial_5_text"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/trial_5_icon"
+            android:text="Estimated savings of upto Rs 5000  on this membership"
+            android:textSize="14sp"
+            android:fontFamily="@font/metropolisblack"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:id="@+id/membership_faq_rv_heading"
+        android:layout_below="@id/trial_benefit_5"
+        android:fontFamily="@font/metropolisbold"
         android:text="FAQs"
+        android:gravity="center"
         android:layout_margin="10dp"/>
 
 
@@ -38,3 +430,4 @@
         />
 
 </RelativeLayout>
+</ScrollView>
