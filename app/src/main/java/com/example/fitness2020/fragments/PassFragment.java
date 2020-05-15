@@ -68,7 +68,9 @@ public class PassFragment extends Fragment {
         trialCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent trialIntent =new Intent(context,TrialCardActivity.class);
+                Intent trialIntent =new Intent(getContext(),TrialCardActivity.class);
+
+                startActivity(trialIntent);
             }
         });
 
