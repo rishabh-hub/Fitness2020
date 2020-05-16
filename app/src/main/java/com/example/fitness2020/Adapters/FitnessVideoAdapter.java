@@ -1,12 +1,10 @@
 package com.example.fitness2020.Adapters;
 
 import android.content.Context;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.MediaController;
-import android.widget.VideoView;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -42,16 +40,19 @@ public class FitnessVideoAdapter extends RecyclerView.Adapter<FitnessVideoAdapte
     }
 
     public class VideoVH extends RecyclerView.ViewHolder {
-        VideoView videoView;
-        MediaController mediaController;
+
+        ImageView imageView;
+
         public VideoVH(@NonNull View itemView) {
             super(itemView);
-            videoView = itemView.findViewById(R.id.home_fitness_at_work_video);
-            mediaController=new MediaController(context);
+            imageView = itemView.findViewById(R.id.home_fitness_at_work_video);
+
         }
 
         public void populate(VideoModel videoModel) {
-           // Uri uri=Uri.parse()
+
+           // imageView.setImageResource(videoModel.getVideoImageResource());
+            //set the thumbnail image for the video here
         }
     }
 }

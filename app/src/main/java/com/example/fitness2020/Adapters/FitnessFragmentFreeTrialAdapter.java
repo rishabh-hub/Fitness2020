@@ -61,7 +61,7 @@ public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<Fitnes
     public class FitnessFragmentFreeTrialVH extends RecyclerView.ViewHolder
     {
         ImageView imageView;
-        TextView gymName,gymAddress;
+        TextView gymName,gymAddress,category;
         ImageView bannerImageview;
         TextView bannerGymName;
         TextView bannerGymCategory;
@@ -74,6 +74,7 @@ public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<Fitnes
                 imageView=itemView.findViewById(R.id.rv_item_cardview1_imgvw);
                 gymName=itemView.findViewById(R.id.rv_item1_cardview_gym_name);
                 gymAddress=itemView.findViewById(R.id.rv_item1_cardview_gym_address);
+                category=itemView.findViewById(R.id.rv_item1_cardview_category);
             }
             else {
                 bannerImageview = itemView.findViewById(R.id.banner2_rv_item_cardview_imgvw);
@@ -90,6 +91,7 @@ public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<Fitnes
             imageView.setImageResource(fitnessFragmentFreeTrialModel.getImageId());
             gymName.setText(fitnessFragmentFreeTrialModel.getGymName());
             gymAddress.setText(fitnessFragmentFreeTrialModel.getGymAddress());
+            category.setText(fitnessFragmentFreeTrialModel.getCategory());
         }
 
         public void populateBanner(PopularHorizontalRvModel popularHorizontalRvModel) {

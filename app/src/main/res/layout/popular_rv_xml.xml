@@ -91,7 +91,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/qcregular"
             android:id="@+id/popular_rv_xml_points"
-            android:textColor="#D6B610"
+            android:textColor="@color/colorPrimary"
             android:text="Fitness Pass | 20 Points"
             android:textSize="10sp"
             android:layout_marginLeft="95dp"

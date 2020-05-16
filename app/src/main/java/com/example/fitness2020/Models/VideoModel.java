@@ -1,17 +1,17 @@
 package com.example.fitness2020.Models;
 
 public class VideoModel {
-    private String videoResource;
+    private int videoImageResource;
 
-    public VideoModel(String videoResource) {
-        this.videoResource = videoResource;
+    public VideoModel(int videoImageResource) {
+        this.videoImageResource = videoImageResource;
     }
 
-    public String getVideoResource() {
-        return videoResource;
+    public int getVideoImageResource() {
+        return videoImageResource;
     }
 
-    public void setVideoResource(String videoResource) {
-        this.videoResource = videoResource;
+    public void setVideoImageResource(int videoImageResource) {
+        this.videoImageResource = videoImageResource;
     }
 }

@@ -5,11 +5,13 @@ public class FitnessFragmentFreeTrialModel {
     private int imageId;
     private String gymName;
     private String gymAddress;
+    private String category;
 
-    public FitnessFragmentFreeTrialModel(int imageId, String gymName, String gymAddress) {
+    public FitnessFragmentFreeTrialModel(int imageId, String gymName, String gymAddress,String category) {
         this.imageId = imageId;
         this.gymName = gymName;
         this.gymAddress = gymAddress;
+        this.category=category;
     }
 
     public int getImageId() {
@@ -34,5 +36,13 @@ public class FitnessFragmentFreeTrialModel {
 
     public void setGymAddress(String gymAddress) {
         this.gymAddress = gymAddress;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

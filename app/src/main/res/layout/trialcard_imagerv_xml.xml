@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:id="@+id/rv_item_trailcard_imgvw"
         android:scaleType="fitXY"
-        android:background="#ccc"
+        android:background="#000"
         />
 
 </androidx.cardview.widget.CardView>

@@ -101,12 +101,13 @@ public class PassFragment extends Fragment {
 
         for (int i = 0; i < 10; i++)
         {
-            fragmentFreeTrialModels.add(new FitnessFragmentFreeTrialModel(R.drawable.trending_activity,"One More Rep","Mumbai,Maharashtra ,400022"));
+            fragmentFreeTrialModels.add(new FitnessFragmentFreeTrialModel(R.drawable.trending_activity,"One More Rep","Mumbai,Maharashtra ,400022","Crossfit, Zumba"));
 
         }
         for (int i=0;i<5;i++)
         {
             fitnessPassModels.add(new PopularHorizontalRvModel(R.drawable.trending_activity,"Gym name","Gym Category","Available on thi day from time -"));
+            videos.add(new VideoModel(R.mipmap.ic_launcher));
         }
     }
 
