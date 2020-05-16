@@ -4,12 +4,14 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="3dp"
+    android:gravity="center"
     android:layout_marginHorizontal="3dp"
     android:layout_marginTop="3dp">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Question"
+        android:textAlignment="center"
         android:fontFamily="@font/metropolisblack"
         android:textSize="14sp"
         android:id="@+id/trial_card_faq_question"
@@ -18,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Answer"
+        android:textAlignment="center"
         android:textSize="12sp"
         android:fontFamily="@font/metropolislight"
         android:id="@+id/trial_card_faq_answer"/>

@@ -59,7 +59,7 @@ public class TrialCardActivity extends AppCompatActivity {
         for (int i=0;i<=5;i++)
         {
             imageModels.add(new TrendingRvModel(R.mipmap.ic_launcher));
-            faqs.add(new FaqModel("Q. Some Question about MemberShip?","Corresponding answer about MemberShip"));
+            faqs.add(new FaqModel("Q. Some Question about MemberShip?","A. Corresponding answer about MemberShip"));
         }
     }
 }

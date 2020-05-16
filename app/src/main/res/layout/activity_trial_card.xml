@@ -11,8 +11,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_gravity="center"
-    android:layout_marginTop="40dp"
     android:layout_height="match_parent"
     tools:context=".fragments.TrialCardActivity">
 
@@ -54,11 +52,12 @@
 
         <ImageView
             android:id="@+id/trial_1_month_icon"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
             android:layout_alignParentStart="true"
             android:layout_margin="5dp"
-            android:src="@drawable/ic_people"
+            android:src="@drawable/month_1"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp" />
         <LinearLayout
@@ -108,11 +107,12 @@
 
         <ImageView
             android:id="@+id/trial_2_month_icon"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
             android:layout_alignParentStart="true"
             android:layout_margin="5dp"
-            android:src="@drawable/ic_workout"
+            android:src="@drawable/month_3"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp" />
         <LinearLayout
@@ -137,7 +137,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/trial_2_month_text2"
-            android:text=" @ ₹450"
+            android:text="₹450"
             android:layout_weight="1"
             android:textColor="@color/colorPrimaryDark"
             android:gravity="center"
@@ -166,9 +166,10 @@
 
         <ImageView
             android:id="@+id/trial_3_month_icon"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@drawable/ic_food_and_restaurant"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/month_6"
             android:layout_alignParentStart="true"
             android:layout_margin="5dp"
             android:layout_marginStart="10dp"
@@ -196,7 +197,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/trial_3_month_text2"
-                android:text=" @ ₹600"
+                android:text="₹600"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -217,9 +218,10 @@
 
         <ImageView
             android:id="@+id/trial_4_month_icon"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@drawable/ic_food_and_restaurant"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/month_12"
             android:layout_alignParentStart="true"
             android:layout_margin="5dp"
             android:layout_marginStart="10dp"
@@ -247,7 +249,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/trial_4_month_text2"
-                android:text=" @ ₹1200"
+                android:text="₹1200"
                 android:layout_weight="1"
                 android:textColor="@color/colorPrimaryDark"
                 android:gravity="center"

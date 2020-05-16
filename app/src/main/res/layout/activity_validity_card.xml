@@ -1,29 +1,506 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ValidityCardActivity">
+    tools:context=".fragments.TrialCardActivity">
+
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/validity_card_imagerv"
         android:orientation="horizontal"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="5dp"
-        android:layout_alignParentStart="true"
         />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="17sp"
         android:gravity="center"
-        android:layout_margin="20dp"
-        android:fontFamily=""
-        android:id="@+id/validity_card_header_tv"
-        android:layout_below="@+id/validity_card_imagerv"
+        android:id="@+id/membership_heading"
+        android:layout_below="@id/validity_card_imagerv"
+        android:fontFamily="@font/metropolisbold"
+        android:text="Our Memberships"
+        android:layout_margin="10dp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:layout_below="@id/membership_heading"
+    android:id="@+id/container_1"
+    android:gravity="center"
+    android:weightSum="2">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_textview"
+        android:layout_weight="1"
+        android:id="@+id/validity_membership_1">
+
+        <ImageView
+            android:id="@+id/validity_1_month_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/month_1"
+            android:layout_marginStart="10dp"
+             />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="3"
+            android:layout_toRightOf="@id/validity_1_month_icon">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/validity_1_month_text"
+            android:text="1 month"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/metropolisblack"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/validity_1_month_text2"
+            android:text="10"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/metropolisblack"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/validity_1_month_text3"
+                android:text="points"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/metropolisblack"/>
+</LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_textview"
+        android:layout_below="@id/validity_membership_1"
+        android:id="@+id/validity_membership_2">
+
+        <ImageView
+            android:id="@+id/validity_2_month_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/month_3"
+            android:layout_marginStart="10dp"
+             />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="3"
+            android:layout_toRightOf="@id/validity_2_month_icon">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/validity_2_month_text"
+            android:text="3 months"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/metropolisblack"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/validity_2_month_text2"
+            android:text="20"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/metropolisblack"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/validity_2_month_text3"
+                android:text="points"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/metropolisblack"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/container_1"
+        android:id="@+id/container_2"
+        android:gravity="center"
+        android:weightSum="2">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_textview"
+        android:layout_weight="1"
+        android:id="@+id/validity_membership_3">
+
+        <ImageView
+            android:id="@+id/validity_3_month_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/month_6"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="3"
+            android:layout_toRightOf="@id/validity_3_month_icon">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/validity_3_month_text"
+                android:text="6 months"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/metropolisblack"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/validity_3_month_text2"
+                android:text="50"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/metropolisblack"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/validity_3_month_text3"
+                android:text="points"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/metropolisblack"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_textview"
+        android:layout_below="@id/validity_membership_3"
+        android:id="@+id/validity_membership_4">
+
+        <ImageView
+            android:id="@+id/validity_4_month_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/month_12"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_toRightOf="@id/validity_4_month_icon">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/validity_4_month_text"
+                android:text="1 year"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/metropolisblack"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/validity_4_month_text2"
+                android:text="100"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/metropolisblack"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/validity_4_month_text3"
+                android:text="points"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/metropolisblack"/>
+        </LinearLayout>
+    </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:id="@+id/membership_benefit_heading"
+        android:layout_below="@id/container_2"
+        android:fontFamily="@font/metropolisbold"
+        android:text="Benefits"
+        android:layout_margin="10dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/membership_benefit_heading"
+        android:id="@+id/validity_benefit_1">
+
+        <ImageView
+            android:id="@+id/validity_1_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/bullet"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/validity_1_text"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/validity_1_icon"
+            android:text="Unrestricted access to 20+ Fitness Activities"
+            android:textSize="14sp"
+            android:fontFamily="@font/metropolisblack"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/validity_benefit_1"
+        android:id="@+id/validity_benefit_2">
+
+        <ImageView
+            android:id="@+id/validity_2_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/bullet"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/validity_2_text"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/validity_2_icon"
+            android:text="Upto 150 free trials  with top fitness centres"
+            android:textSize="14sp"
+            android:fontFamily="@font/metropolisblack"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/validity_benefit_2"
+        android:id="@+id/trial_benefit_3">
+
+        <ImageView
+            android:id="@+id/trial_3_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/bullet"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trial_3_text"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/trial_3_icon"
+            android:text="Upto 100 fitness points usable with any of our fitness partner"
+            android:textSize="14sp"
+            android:fontFamily="@font/metropolisblack"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/trial_benefit_3"
+        android:id="@+id/trial_benefit_4">
+
+        <ImageView
+            android:id="@+id/trial_4_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/bullet"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trial_4_text"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/trial_4_icon"
+            android:text="Free trials and Fitness Points will have unlimited validity"
+            android:textSize="14sp"
+            android:fontFamily="@font/metropolisblack"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/trial_benefit_4"
+        android:id="@+id/trial_benefit_5">
+
+        <ImageView
+            android:id="@+id/trial_5_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/bullet"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trial_5_text"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/trial_5_icon"
+            android:text="Save upto 60% on bookings"
+            android:textSize="14sp"
+            android:fontFamily="@font/metropolisblack"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/trial_benefit_5"
+        android:id="@+id/trial_benefit_6">
+
+        <ImageView
+            android:id="@+id/trial_6_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/bullet"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trial_6_text"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/trial_6_icon"
+            android:text="Estimated Savings of upto Rs 7500 on this membership"
+            android:textSize="14sp"
+            android:fontFamily="@font/metropolisblack"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:id="@+id/membership_faq_rv_heading"
+        android:layout_below="@id/trial_benefit_6"
+        android:fontFamily="@font/metropolisbold"
+        android:text="FAQs"
+        android:gravity="center"
+        android:layout_margin="10dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/validity_card_faq_rv"
+        android:layout_below="@id/membership_faq_rv_heading"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
         />
 
 </RelativeLayout>
+</ScrollView>
