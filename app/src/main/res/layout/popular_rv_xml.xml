@@ -100,18 +100,20 @@
             />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="15dp"
             android:fontFamily="@font/metropolisbold"
             android:gravity="center"
+            android:textAlignment="center"
             android:id="@+id/popular_rv_xml_recommended"
             android:text="Recommended"
             android:textSize="10sp"
+            android:layout_marginLeft="5dp"
+            android:background="#fff"
             android:textColor="#228b22"
             android:layout_marginTop="1dp"
-            android:layout_marginLeft="10dp"
-            android:layout_alignBottom="@id/popular_rv_xml_points"
-            android:layout_toRightOf="@id/popular_rv_xml_points"
+            android:layout_marginBottom="10dp"
+            android:layout_alignBottom="@id/popular_rv_xml_text"
             />
 
 
