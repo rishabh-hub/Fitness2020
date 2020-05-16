@@ -6,6 +6,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -28,7 +29,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements  AdapterView.OnItemSelectedListener {
 
     FrameLayout frameLayout;
-    ImageView menuButton,userImage;
+    ImageView userImage;
     DrawerLayout drawerLayout;
     BottomNavigationView bottomNavigationView;
     Spinner locationSpinner;
@@ -77,7 +78,6 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
 
     void attachId()
     {
-        menuButton=findViewById(R.id.menu_button);
         frameLayout=findViewById(R.id.frame_layout);
         bottomNavigationView=findViewById(R.id.bottom_nav);
         drawerLayout=findViewById(R.id.drawer);
@@ -98,6 +98,12 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
     public  void drawerClose(MenuItem menuItem)
     {
         drawerLayout.closeDrawer(Gravity.RIGHT);
+    }
+
+    public void openProfile(MenuItem menuItem)
+    {
+        Intent profileIntent=new Intent(MainActivity.this,ProfileActivity.class);
+        startActivity(profileIntent);
     }
 
     @Override
