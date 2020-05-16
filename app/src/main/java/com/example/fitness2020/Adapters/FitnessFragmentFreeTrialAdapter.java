@@ -21,11 +21,11 @@ import java.util.ConcurrentModificationException;
 public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<FitnessFragmentFreeTrialAdapter.FitnessFragmentFreeTrialVH> {
 
     ArrayList<FitnessFragmentFreeTrialModel> fitnessFragmentFreeTrialModels;
-    ArrayList<PopularHorizontalRvModel> fitnessPassModels;
+    ArrayList<FitnessFragmentFreeTrialModel> fitnessPassModels;
     Context context;
     int code;
 
-    public FitnessFragmentFreeTrialAdapter(ArrayList<FitnessFragmentFreeTrialModel> fitnessFragmentFreeTrialModels, Context context,ArrayList<PopularHorizontalRvModel> fitnessPassModels,int code) {
+    public FitnessFragmentFreeTrialAdapter(ArrayList<FitnessFragmentFreeTrialModel> fitnessFragmentFreeTrialModels, Context context,ArrayList<FitnessFragmentFreeTrialModel> fitnessPassModels,int code) {
         this.fitnessFragmentFreeTrialModels = fitnessFragmentFreeTrialModels;
         this.context = context;
         this.fitnessPassModels = fitnessPassModels;
@@ -38,7 +38,7 @@ public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<Fitnes
         if(code==1)
             return new FitnessFragmentFreeTrialVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.fitness_fragment_freetrial_rv_xml,parent,false));
         else
-            return new FitnessFragmentFreeTrialVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.banner2_rv_xml,parent,false));
+            return new FitnessFragmentFreeTrialVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.pass_fragment_fitnesspass_rv_item,parent,false));
 
     }
 
@@ -65,7 +65,7 @@ public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<Fitnes
         ImageView bannerImageview;
         TextView bannerGymName;
         TextView bannerGymCategory;
-        TextView bannerGymSchedule;
+
 
         public FitnessFragmentFreeTrialVH(@NonNull View itemView) {
             super(itemView);
@@ -77,10 +77,10 @@ public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<Fitnes
                 category=itemView.findViewById(R.id.rv_item1_cardview_category);
             }
             else {
-                bannerImageview = itemView.findViewById(R.id.banner2_rv_item_cardview_imgvw);
-                bannerGymName=itemView.findViewById(R.id.banner2_rv_item_cardview_gym_name);
-                bannerGymCategory=itemView.findViewById(R.id.banner2_rv_item_cardview_gym_category);
-                bannerGymSchedule=itemView.findViewById(R.id.banner2_rv_item_cardview_gym_schedule);
+                bannerImageview = itemView.findViewById(R.id.fitnesspass_rv_item_cardview1_imgvw);
+                bannerGymName=itemView.findViewById(R.id.fitnesspass_rv_item1_cardview_gym_name);
+                bannerGymCategory=itemView.findViewById(R.id.fitnesspass_rv_item1_cardview_category);
+//                bannerGymSchedule=itemView.findViewById(R.id.banner2_rv_item_cardview_gym_schedule);
             }
 
 
@@ -94,11 +94,10 @@ public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<Fitnes
             category.setText(fitnessFragmentFreeTrialModel.getCategory());
         }
 
-        public void populateBanner(PopularHorizontalRvModel popularHorizontalRvModel) {
-            bannerImageview.setImageResource(popularHorizontalRvModel.getImageurl());
-            bannerGymName.setText(popularHorizontalRvModel.getGymName());
-            bannerGymCategory.setText(popularHorizontalRvModel.getCategory());
-            bannerGymSchedule.setText(popularHorizontalRvModel.getGymSchedule());
+        public void populateBanner(FitnessFragmentFreeTrialModel fitnessFragmentFreeTrialModel) {
+            bannerImageview.setImageResource(fitnessFragmentFreeTrialModel.getImageId());
+            bannerGymName.setText(fitnessFragmentFreeTrialModel.getGymName());
+            bannerGymCategory.setText(fitnessFragmentFreeTrialModel.getCategory());
         }
     }
 }

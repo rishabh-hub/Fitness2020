@@ -59,8 +59,8 @@ public class HomeFitnessatWorkTab extends Fragment {
         for (int i = 0;i<10;i++)
             clients.add(new ClientModel(R.drawable.ic_person_outline_black_24dp));
 
-//        for (int i=0;i<4;i++)
-//            videoModels.add(new VideoModel("abc"));
+        for (int i=0;i<5;i++)
+            videoModels.add(new VideoModel(R.mipmap.ic_launcher));
 
 
 

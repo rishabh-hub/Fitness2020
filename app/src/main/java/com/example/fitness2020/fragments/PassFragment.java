@@ -32,7 +32,7 @@ public class PassFragment extends Fragment {
     View view;
     TextView textView;
     RecyclerView fitnessPassRV;
-    ArrayList<PopularHorizontalRvModel> fitnessPassModels ;
+    ArrayList<FitnessFragmentFreeTrialModel> fitnessPassModels ;
 
     RecyclerView freeTrialRV;
     ArrayList<FitnessFragmentFreeTrialModel> fragmentFreeTrialModels;
@@ -106,7 +106,7 @@ public class PassFragment extends Fragment {
         }
         for (int i=0;i<5;i++)
         {
-            fitnessPassModels.add(new PopularHorizontalRvModel(R.drawable.trending_activity,"Gym name","Gym Category","Available on thi day from time -"));
+            fitnessPassModels.add(new FitnessFragmentFreeTrialModel(R.drawable.trending_activity,"Gym name","Gym Category","Crossfit, Zumba"));
             videos.add(new VideoModel(R.mipmap.ic_launcher));
         }
     }

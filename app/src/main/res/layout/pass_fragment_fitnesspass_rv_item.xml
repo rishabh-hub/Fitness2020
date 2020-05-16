@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/fitnesspass_rv_item_cardview_1"
+        app:cardCornerRadius="30sp"
+        android:layout_margin="10sp"
+        app:cardElevation="1sp"
+        android:layout_height="100sp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fitnesspass_rv_item_cardview1_imgvw"
+            android:scaleType="centerCrop"
+            android:background="#ccc"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:layout_below="@+id/fitnesspass_rv_item_cardview_1"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="1dp"
+        android:fontFamily="@font/metropolisbold"
+        android:id="@+id/fitnesspass_rv_item1_cardview_gym_name"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:fontFamily="@font/metropolissemibold"
+        android:layout_marginVertical="1dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_below="@+id/fitnesspass_rv_item1_cardview_gym_name"
+        android:id="@+id/fitnesspass_rv_item1_cardview_category"
+        />
+
+
+
+
+</RelativeLayout>
