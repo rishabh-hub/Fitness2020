@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.RelativeLayout;
 
 import com.example.fitness2020.Adapters.FitnessFragmentFreeTrialAdapter;
 import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
@@ -21,6 +22,7 @@ public class TrialCardActivity extends AppCompatActivity {
     ArrayList<FaqModel> faqs;
     ArrayList<TrendingRvModel> imageModels;
     SubscriptionCardsAdapter imageRvAdapter;
+    RelativeLayout membershipcard1,membershipcard2,membershipcard3,membershipcard4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +49,10 @@ public class TrialCardActivity extends AppCompatActivity {
     void attachId()
     {
         imageRv=findViewById(R.id.trial_card_imagerv);
-
+        membershipcard1 = findViewById(R.id.trial_membership_1);
+        membershipcard2 = findViewById(R.id.trial_membership_2);
+        membershipcard3 = findViewById(R.id.trial_membership_3);
+        membershipcard4 = findViewById(R.id.trial_membership_4);
     }
 
     void addData()
