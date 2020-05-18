@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.example.fitness2020.Adapters.FitnessFragmentFreeTrialAdapter;
@@ -13,6 +15,7 @@ import com.example.fitness2020.Models.FaqModel;
 import com.example.fitness2020.Models.FitnessFragmentFreeTrialModel;
 import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.R;
+import com.example.fitness2020.TrialMembershipBooking;
 
 import java.util.ArrayList;
 
@@ -36,6 +39,35 @@ public class TrialCardActivity extends AppCompatActivity {
         imageModels=new ArrayList<>(3);
 
         addData();
+
+        membershipcard1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TrialCardActivity.this, TrialMembershipBooking.class);
+                startActivity(intent);
+            }
+        });
+        membershipcard2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TrialCardActivity.this, TrialMembershipBooking.class);
+                startActivity(intent);
+            }
+        });
+        membershipcard3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TrialCardActivity.this, TrialMembershipBooking.class);
+                startActivity(intent);
+            }
+        });
+        membershipcard4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TrialCardActivity.this, TrialMembershipBooking.class);
+                startActivity(intent);
+            }
+        });
 
         imageRvAdapter=new SubscriptionCardsAdapter(TrialCardActivity.this,0,imageModels,faqs);
 
