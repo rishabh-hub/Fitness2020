@@ -15,10 +15,10 @@ import java.util.ArrayList;
 
 public class ValidityCardActivity extends AppCompatActivity {
 
-    RecyclerView imageRv,faqRV;
+    RecyclerView imageRv;
     ArrayList<FaqModel> faqs;
     ArrayList<TrendingRvModel> imageModels;
-    SubscriptionCardsAdapter imageRvAdapter,faqAdapter;
+    SubscriptionCardsAdapter imageRvAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,6 @@ public class ValidityCardActivity extends AppCompatActivity {
         attachId();
 
         imageRv.setLayoutManager(new LinearLayoutManager(ValidityCardActivity.this,LinearLayoutManager.HORIZONTAL,false));
-        faqRV.setLayoutManager(new LinearLayoutManager(ValidityCardActivity.this,LinearLayoutManager.VERTICAL,false));
 
         imageModels=new ArrayList<>(3);
         faqs = new ArrayList<>(3);
@@ -36,20 +35,16 @@ public class ValidityCardActivity extends AppCompatActivity {
         addData();
 
         imageRvAdapter=new SubscriptionCardsAdapter(ValidityCardActivity.this,0,imageModels,faqs);
-        faqAdapter = new SubscriptionCardsAdapter(ValidityCardActivity.this,1,imageModels,faqs);
 
         imageRv.setAdapter(imageRvAdapter);
-        faqRV.setAdapter(faqAdapter);
 
         imageRvAdapter.notifyDataSetChanged();
-        faqAdapter.notifyDataSetChanged();
 
     }
 
     void attachId()
     {
         imageRv=findViewById(R.id.validity_card_imagerv);
-        faqRV = findViewById(R.id.validity_card_faq_rv);
     }
 
     void addData()
@@ -57,7 +52,6 @@ public class ValidityCardActivity extends AppCompatActivity {
         for (int i=0;i<=5;i++)
         {
             imageModels.add(new TrendingRvModel(R.mipmap.ic_launcher));
-            faqs.add(new FaqModel("Q. Some Question about MemberShip?","A. Corresponding answer about MemberShip"));
         }
     }
 }

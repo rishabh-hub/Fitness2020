@@ -256,13 +256,49 @@
         </LinearLayout>
     </RelativeLayout>
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:id="@+id/trial_container_3"
+        android:layout_below="@id/container_2"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginVertical="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:id="@+id/trial_promo_tv"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:padding="2dp"
+            android:layout_marginHorizontal="1dp"
+            android:fontFamily="@font/metropolissemibold"
+            android:text="PROMO CODE"
+            android:background="@drawable/bg_promo_tv"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/trial_promo_et"
+            android:padding="3dp"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/trial_promo_tv"
+            android:background="@drawable/bg_textview"
+            android:layout_marginHorizontal="2dp"
+            android:singleLine="true"
+            />
+    </RelativeLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="17sp"
         android:gravity="center"
         android:id="@+id/membership_benefit_heading"
-        android:layout_below="@id/container_2"
+        android:layout_below="@id/trial_container_3"
         android:fontFamily="@font/metropolisbold"
         android:text="Benefits"
         android:layout_margin="10dp"/>
@@ -406,27 +442,7 @@
             android:textSize="14sp"
             android:fontFamily="@font/metropolisblack"/>
     </RelativeLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="17sp"
-        android:id="@+id/membership_faq_rv_heading"
-        android:layout_below="@id/trial_benefit_5"
-        android:fontFamily="@font/metropolisbold"
-        android:text="FAQs"
-        android:gravity="center"
-        android:layout_margin="10dp"/>
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/trial_card_faq_rv"
-        android:layout_below="@id/membership_faq_rv_heading"
-        android:orientation="vertical"
-
-        android:layout_marginTop="5dp"
-        />
 
 </RelativeLayout>
 </ScrollView>

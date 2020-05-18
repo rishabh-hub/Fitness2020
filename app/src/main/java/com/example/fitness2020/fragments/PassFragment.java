@@ -18,6 +18,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.example.fitness2020.Adapters.FitnessFragmentFreeTrialAdapter;
 import com.example.fitness2020.Adapters.FitnessVideoAdapter;
+import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
+import com.example.fitness2020.Models.FaqModel;
 import com.example.fitness2020.Adapters.HomePageClientAdapter;
 import com.example.fitness2020.Models.ClientModel;
 import com.example.fitness2020.Models.FitnessFragmentFreeTrialModel;
@@ -32,6 +34,7 @@ import java.util.ArrayList;
 public class PassFragment extends Fragment {
 
     View view;
+    TextView faqTv;
     TextView textView;
     RecyclerView clientRV;
     ArrayList<ClientModel> clients = new ArrayList<>();
@@ -39,6 +42,11 @@ public class PassFragment extends Fragment {
 
     RecyclerView fitnessPassRV;
     ArrayList<FitnessFragmentFreeTrialModel> fitnessPassModels ;
+
+    RecyclerView faqRv;
+    ArrayList<FaqModel> faqs;
+    SubscriptionCardsAdapter faqAdapter;
+
 
     RecyclerView freeTrialRV;
     ArrayList<FitnessFragmentFreeTrialModel> fragmentFreeTrialModels;
@@ -50,6 +58,9 @@ public class PassFragment extends Fragment {
     FitnessFragmentFreeTrialAdapter fragmentFreeTrialAdapter,fitnessPassAdapter;
     Context context;
     CardView trialCard,workoutCard,validityCard;
+
+    ArrayList<TrendingRvModel> imageModels;
+
 
     public PassFragment() {
     }
@@ -65,10 +76,12 @@ public class PassFragment extends Fragment {
         freeTrialRV.setLayoutManager(new GridLayoutManager(context,2,GridLayoutManager.HORIZONTAL,false));
         fitnessPassRV.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
         videoRV.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+        faqRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
 
         fragmentFreeTrialModels=new ArrayList<>(3);
         fitnessPassModels = new ArrayList<>(3);
         videos = new ArrayList<>(3);
+        faqs=new ArrayList<>(3);
 
         addData();
 
@@ -76,16 +89,20 @@ public class PassFragment extends Fragment {
         fragmentFreeTrialAdapter=new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,context,fitnessPassModels,1);
         fitnessPassAdapter = new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,context,fitnessPassModels,0);
         videoAdapter = new FitnessVideoAdapter(videos,context);
+        faqAdapter = new SubscriptionCardsAdapter(context,1,imageModels,faqs);
+
 
         clientRV.setAdapter(clientAdapter);
         freeTrialRV.setAdapter(fragmentFreeTrialAdapter);
         fitnessPassRV.setAdapter(fitnessPassAdapter);
         videoRV.setAdapter(videoAdapter);
+        faqRv.setAdapter(faqAdapter);
 
         clientAdapter.notifyDataSetChanged();
         fragmentFreeTrialAdapter.notifyDataSetChanged();
         fitnessPassAdapter.notifyDataSetChanged();
         videoAdapter.notifyDataSetChanged();
+        faqAdapter.notifyDataSetChanged();
 
         trialCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,6 +135,8 @@ public class PassFragment extends Fragment {
         {
             fitnessPassModels.add(new FitnessFragmentFreeTrialModel(R.drawable.trending_activity,"Gym name","Gym Category","Crossfit, Zumba"));
             videos.add(new VideoModel(R.mipmap.ic_launcher));
+            faqs.add(new FaqModel("Q. Some Question about MemberShip?","A. Corresponding answer about MemberShip"));
+
         }
         for (int i = 0;i<10;i++)
             clients.add(new ClientModel(R.drawable.ic_person_outline_black_24dp));
@@ -131,6 +150,8 @@ public class PassFragment extends Fragment {
         trialCard=view.findViewById(R.id.trial_card);
         workoutCard=view.findViewById(R.id.workout_card);
         validityCard=view.findViewById(R.id.validity_card);
+        faqRv =view.findViewById(R.id.fitness_pass_faq_rv);
+        faqTv=view.findViewById(R.id.fitness_pass_faq_rv_heading);
         clientRV = view.findViewById(R.id.fitness_at_work_clients_rv);
     }
 }

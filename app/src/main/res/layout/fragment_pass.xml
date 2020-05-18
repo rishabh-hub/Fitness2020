@@ -406,6 +406,27 @@
 
     </RelativeLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:id="@+id/fitness_pass_faq_rv_heading"
+        android:layout_below="@id/fitness_at_work_clients"
+        android:fontFamily="@font/metropolisbold"
+        android:text="FAQs"
+        android:gravity="center"
+        android:layout_margin="10dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fitness_pass_faq_rv"
+        android:layout_below="@id/fitness_pass_faq_rv_heading"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        />
+
 </RelativeLayout>
 
 </ScrollView>

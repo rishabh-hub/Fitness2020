@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="3dp"
@@ -11,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Question"
+        android:gravity="center"
         android:textAlignment="center"
         android:fontFamily="@font/metropolisblack"
         android:textSize="14sp"
@@ -20,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Answer"
+        android:gravity="center"
         android:textAlignment="center"
         android:textSize="12sp"
         android:fontFamily="@font/metropolislight"
