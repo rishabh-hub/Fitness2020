@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="250dp"
+    android:layout_height="150dp"
+    android:background="@drawable/bg_review"
+    android:padding="10dp"
+    android:layout_margin="4dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiger Shroff"
+        android:id="@+id/review_name"
+        android:textSize="17sp"
+        android:fontFamily="@font/metropolislight"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABC Gym"
+        android:fontFamily="@font/metropolislight"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:id="@+id/review_product"
+        android:layout_below="@id/review_name"
+        android:textSize="13sp"
+        android:textColor="#CDB6B6"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores."
+        android:id="@+id/review_desc"
+        android:layout_below="@id/review_product"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"/>
+
+</RelativeLayout>

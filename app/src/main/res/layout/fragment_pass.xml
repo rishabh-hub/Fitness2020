@@ -383,6 +383,28 @@
         android:layout_margin="10dp"
         android:layout_below="@+id/fitness_pass_video_rv_heading"
         android:id="@+id/fitness_pass_video_rv"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/clients_heading"
+        android:layout_below="@id/fitness_pass_video_rv"
+        android:fontFamily="@font/metropolisblack"
+        android:text="Our Clients"
+        android:padding="10dp"
+        android:textSize="17dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@id/clients_heading"
+        android:id="@+id/fitness_at_work_clients">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/fitness_at_work_clients_rv"/>
+
+
+    </RelativeLayout>
 
 </RelativeLayout>
 

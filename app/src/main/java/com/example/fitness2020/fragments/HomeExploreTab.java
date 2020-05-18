@@ -20,6 +20,7 @@ import com.example.fitness2020.Adapters.HomePopularRVAdapter;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
 import com.example.fitness2020.Models.PopularHorizontalRvModel;
 import com.example.fitness2020.Models.PopularRvModel;
+import com.example.fitness2020.Models.ReviewModel;
 import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.R;
 
@@ -39,6 +40,7 @@ public class HomeExploreTab extends Fragment {
     RecyclerView popularVerticalRv;
     ArrayList<TrendingRvModel> trendingRvModels;
     ArrayList<PopularRvModel> popularRvModels;
+    ArrayList<ReviewModel> reviews;
     ArrayList<PopularHorizontalRvModel> popularHorizontalRvModels;
     Spinner filterSpinner;
 

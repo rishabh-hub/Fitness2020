@@ -9,10 +9,25 @@
         android:onClick="openProfile"
         />
     <item
-    android:title="Home"
-    android:id="@+id/drawer_home"
+    android:title="Bookings"
+    android:id="@+id/drawer_bookings"
     android:icon="@drawable/ic_home_black_24dp"
-    android:onClick="drawerClose"/>
+    />
+    <item
+        android:title="Membership"
+        android:id="@+id/drawer_membership"
+        />
+    <item
+        android:title="Refer and Earn"
+        android:id="@+id/drawer_re"
+        />
+    <item
+        android:title="Change Password"
+        android:id="@+id/drawer_password"
+        />
+
+
+
 
 
 </menu>

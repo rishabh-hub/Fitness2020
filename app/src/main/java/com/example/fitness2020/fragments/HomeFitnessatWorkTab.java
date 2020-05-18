@@ -20,6 +20,7 @@ import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
 import com.example.fitness2020.Models.ClientModel;
 import com.example.fitness2020.Models.PopularHorizontalRvModel;
 import com.example.fitness2020.Models.PopularRvModel;
+import com.example.fitness2020.Models.ReviewModel;
 import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.R;
@@ -30,10 +31,11 @@ public class HomeFitnessatWorkTab extends Fragment {
 
     View view;
     Context context;
-   RecyclerView clientRV,videoRV;
-   HomePageClientAdapter clientAdapter;
+   RecyclerView clientRV,videoRV,reviewRV;
+   HomePageClientAdapter clientAdapter,reviewAdapter;
    FitnessVideoAdapter videoAdapter;
    ArrayList<VideoModel> videoModels = new ArrayList<>();
+   ArrayList<ReviewModel> reviews = new ArrayList<>();
    ArrayList<ClientModel> clients = new ArrayList<>();
 
     public HomeFitnessatWorkTab() {
@@ -51,8 +53,9 @@ public class HomeFitnessatWorkTab extends Fragment {
 
         clientRV = view.findViewById(R.id.fitness_at_work_clients_rv);
         videoRV = view.findViewById(R.id.home_fitness_at_work_video_rv);
+        reviewRV = view.findViewById(R.id.fitness_at_work_reviews_rv);
 
-
+        reviewRV.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
         clientRV.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL,false));
         videoRV.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
 
@@ -62,13 +65,18 @@ public class HomeFitnessatWorkTab extends Fragment {
         for (int i=0;i<5;i++)
             videoModels.add(new VideoModel(R.mipmap.ic_launcher));
 
+        for (int i=0;i<5;i++)
+            reviews.add(new ReviewModel("Tiger Shroff","ABC GYM","lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores."));
 
 
 
 
+
+        reviewAdapter = new HomePageClientAdapter(reviews,context,1);
         clientAdapter = new HomePageClientAdapter(clients,context);
         videoAdapter = new FitnessVideoAdapter(videoModels,context);
 
+        reviewRV.setAdapter(reviewAdapter);
         clientRV.setAdapter(clientAdapter);
         videoRV.setAdapter(videoAdapter);
 
