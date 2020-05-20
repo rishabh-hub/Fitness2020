@@ -17,14 +17,17 @@
     <item
         android:title="Membership"
         android:id="@+id/drawer_membership"
+        android:onClick="goMembership"
         />
     <item
         android:title="Refer and Earn"
         android:id="@+id/drawer_re"
+        android:onClick="goRefEarn"
         />
     <item
         android:title="Change Password"
         android:id="@+id/drawer_password"
+        android:onClick="changePassword"
         />
 
 

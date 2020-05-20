@@ -23,6 +23,7 @@ import com.example.fitness2020.fragments.HomeFragment;
 import com.example.fitness2020.fragments.PassFragment;
 import com.example.fitness2020.fragments.VouchersFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.ArrayList;
 
@@ -132,5 +133,23 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
         fragmentTransaction.replace(R.id.frame_layout,fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
+    }
+
+    public void goMembership(MenuItem item) {
+        Intent intent = new Intent(MainActivity.this,MembershipActivity.class);
+        startActivity(intent);
+        drawerLayout.closeDrawer(Gravity.RIGHT);
+    }
+
+    public void goRefEarn(MenuItem item) {
+        Intent intent = new Intent(MainActivity.this,ReferEarn.class);
+        startActivity(intent);
+        drawerLayout.closeDrawer(Gravity.RIGHT);
+    }
+
+    public void changePassword(MenuItem item) {
+        Intent intent = new Intent(MainActivity.this,ChangePasswordActivity.class);
+        startActivity(intent);
+        drawerLayout.closeDrawer(Gravity.RIGHT);
     }
 }

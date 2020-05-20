@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReferEarn">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="@string/refer_earn"
+            android:textColor="#fff"
+            android:fontFamily="@font/metropolisbold"
+            />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/ref_earn_head"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/refearn">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/metropolislight"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:text="Refer your friend to Fitness2020 and get rewarded for their actions"
+            android:textSize="12sp"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:layout_marginHorizontal="40dp"
+            android:background="@drawable/ref_earn_back">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/metropolisbold"
+                android:textAlignment="center"
+                android:text="KAL972"
+                android:id="@+id/ref_earn_code"
+                android:textSize="17sp"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/bookBtn"
+                android:src="@drawable/ic_fb"
+                android:id="@+id/fb_button_ref_earn"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/ref_earn_text"
+        android:layout_below="@id/ref_earn_head"
+        android:textAlignment="center"
+        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:id="@+id/ref_earn_btn"
+        android:layout_below="@id/ref_earn_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_button"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Invite Friends And Start Earning"
+        android:textColor="#fff"
+        android:fontFamily="@font/metropolisbold"/>
+
+
+</RelativeLayout>

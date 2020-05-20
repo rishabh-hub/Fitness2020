@@ -81,7 +81,7 @@ public class BookingsAdapter extends RecyclerView.Adapter<BookingsAdapter.Bookin
             productName.setText(bookingsModel.getProductName());
             purchaseDate.setText(bookingsModel.getPurchaseDate());
             code.setText(bookingsModel.getCode());
-            bookingId.setText(bookingsModel.getBookingId());
+            bookingId.setText(Integer.toString(bookingsModel.getBookingId()));
             status.setText(bookingsModel.getStatus());
             address1.setText(bookingsModel.getAddress1());
             address2.setText(bookingsModel.getAddress2());
