@@ -1,6 +1,8 @@
 package com.example.fitness2020.Models;
 
 public class MembershipModel {
+
+    private int imageID;
     private String gymName;
     private String purchaseDate;
     private String order;
@@ -12,7 +14,10 @@ public class MembershipModel {
     private String membershipTypeExpiry;
     private String pointsExpiry;
 
-    public MembershipModel(String gymName, String purchaseDate, String order, String amount, String discount, String amountPayable, String membershipType, String points, String membershipTypeExpiry, String pointsExpiry) {
+
+
+    public MembershipModel(int imageID, String gymName, String purchaseDate, String order, String amount, String discount, String amountPayable, String membershipType, String points, String membershipTypeExpiry, String pointsExpiry) {
+        this.imageID = imageID;
         this.gymName = gymName;
         this.purchaseDate = purchaseDate;
         this.order = order;
@@ -23,6 +28,13 @@ public class MembershipModel {
         this.points = points;
         this.membershipTypeExpiry = membershipTypeExpiry;
         this.pointsExpiry = pointsExpiry;
+    }
+    public int getImageID() {
+        return imageID;
+    }
+
+    public void setImageID(int imageID) {
+        this.imageID = imageID;
     }
 
     public String getGymName() {
