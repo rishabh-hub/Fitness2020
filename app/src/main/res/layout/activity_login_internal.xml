@@ -40,7 +40,7 @@
                     android:fontFamily="@font/metropolisbold"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:id="@+id/login_internal_profile_page_header_tv"
+                    android:id="@+id/login_internal_page_header_tv"
                     />
 
             </RelativeLayout>

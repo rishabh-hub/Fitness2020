@@ -11,8 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SignupInternalActivity"></activity>
-        <activity android:name=".LoginInternalActivity"></activity>
+        <activity android:name=".BookingsActivity"></activity>
+        <activity android:name=".SignupInternalActivity" />
+        <activity android:name=".LoginInternalActivity" />
         <activity android:name=".LoginPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +25,7 @@
         <activity android:name=".ProfileActivity" />
         <activity android:name=".fragments.ValidityCardActivity" />
         <activity android:name=".fragments.TrialCardActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

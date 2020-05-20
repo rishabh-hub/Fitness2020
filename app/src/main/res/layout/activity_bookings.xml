@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookingsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bookings_container1"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/bookings_tlbr_rellay"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/login_internal_page_back_btn"
+                    android:src="@drawable/ic_chevron_left_black_24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOGIN"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/metropolisbold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/bookings_header_tv"
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bookings_tlbr_rellay"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:id="@+id/chipgp_rellay"
+                >
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookings_filter_chipgp"
+                app:singleLine="true"
+                android:layout_centerHorizontal="true"
+                app:chipSpacing="10dp"
+                >
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/bookings_chip_all"
+                    android:text="All"
+                    />
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/bookings_chip_upcoming"
+                    android:text="Upcoming"
+                    />
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/bookings_chip_past"
+                    android:text="Past"
+                    />
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/bookings_chip_cancelled"
+                    android:text="Cancelled"
+                    />
+            </com.google.android.material.chip.ChipGroup>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chipgp_rellay"
+                android:layout_marginTop="10dp"
+                android:id="@+id/bookings_rv"
+                />
+            
+        </RelativeLayout>
+    </ScrollView>
+    
+</RelativeLayout>

@@ -106,6 +106,11 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
         startActivity(profileIntent);
     }
 
+    public void openBookings(MenuItem menuItem)
+    {
+        Intent bookingsIntent = new Intent(MainActivity.this,BookingsActivity.class);
+        startActivity(bookingsIntent);
+    }
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         if(parent.getId()==R.id.location_spinner)

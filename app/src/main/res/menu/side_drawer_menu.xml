@@ -9,9 +9,10 @@
         android:onClick="openProfile"
         />
     <item
-    android:title="Bookings"
-    android:id="@+id/drawer_bookings"
-    android:icon="@drawable/ic_home_black_24dp"
+        android:title="Bookings"
+        android:id="@+id/drawer_bookings"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:onClick="openBookings"
     />
     <item
         android:title="Membership"
