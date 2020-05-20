@@ -66,11 +66,11 @@
 
               <Button
                   android:layout_width="150dp"
-                  android:layout_height="wrap_content"
+                  android:layout_height="50dp"
                   android:text="LOGIN"
                   android:background="@drawable/bg_profile_update_button"
                   android:textColor="#fff"
-                  android:layout_marginHorizontal="40dp"
+                  android:layout_marginStart="20dp"
                   android:textSize="20sp"
                   android:layout_alignParentStart="true"
                   android:id="@+id/login_page_loginbtn"
@@ -78,12 +78,13 @@
 
               <Button
                   android:layout_width="150dp"
-                  android:layout_height="wrap_content"
+                  android:layout_height="50dp"
                   android:text="SIGN UP"
                   android:background="@drawable/bg_profile_update_button"
                   android:textColor="#fff"
-                  android:layout_marginHorizontal="40dp"
+                  android:layout_marginStart="20dp"
                   android:textSize="20sp"
+                  android:layout_marginEnd="20dp"
                   android:layout_alignParentEnd="true"
                   android:id="@+id/login_page_signupbtn"
                   />

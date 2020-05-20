@@ -234,6 +234,7 @@
             android:focusableInTouchMode="true"
             android:focusable="auto"
             android:textColorHint="#fff"
+            android:singleLine="true"
             android:layout_marginLeft="20dp"
             android:fontFamily="@font/metropolisbold"
             android:hint="Promo Code"/>
