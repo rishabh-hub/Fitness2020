@@ -46,6 +46,7 @@
             android:background="@drawable/bg_button"
             android:textColor="#fff"
             android:backgroundTint="@color/bookBtn"
+            />
     </RelativeLayout>
 
 

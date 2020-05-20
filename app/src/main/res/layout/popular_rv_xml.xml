@@ -68,7 +68,6 @@
             android:textAlignment="viewStart"
             android:id="@+id/popular_rv_xml_address"
             android:textColor="@color/colorPrimaryDark"
-            android:visibility="gone"
             android:text="Address of gym"
             android:textSize="10sp"
             android:layout_margin="1dp"
@@ -78,14 +77,14 @@
             />
 
     </RelativeLayout>
-    <TextView
-        android:layout_width="180dp"
-        android:layout_height="1dp"
-        android:background="#757373"
-        android:layout_above="@id/popular_rv_xml_points"
-        android:layout_alignStart="@id/popular_rv_xml_points"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="2dp"/>
+<!--    <TextView-->
+<!--        android:layout_width="180dp"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="#757373"-->
+<!--        android:layout_above="@id/popular_rv_xml_points"-->
+<!--        android:layout_alignStart="@id/popular_rv_xml_points"-->
+<!--        android:layout_marginTop="2dp"-->
+<!--        android:layout_marginBottom="2dp"/>-->
 
     <TextView
             android:layout_width="wrap_content"
