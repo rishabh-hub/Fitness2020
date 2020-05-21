@@ -10,5 +10,7 @@
     <corners
         android:radius="10sp"
         />
+    <solid
+        android:color="#fff"/>
 
 </shape>
