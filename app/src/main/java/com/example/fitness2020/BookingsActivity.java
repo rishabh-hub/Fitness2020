@@ -51,9 +51,10 @@ public class BookingsActivity extends AppCompatActivity {
 
     void addData()
     {
-        for(int i=0;i<=5;i++)
-            bookingsModels.add(new BookingsModel(10081,"FIT394AB849Z",
-                    "14 march 2019","TEST APP NEW","Redeemed","Jayh","Mankhurd",
-                    "7466678363","8846677888","1 Trial pass",R.mipmap.ic_launcher));
+        for(int i=0;i<=5;i++) {
+            bookingsModels.add(new BookingsModel(10081, "FIT394AB849Z",
+                    "14 march 2019", "TEST APP NEW", "Redeemed", "Jayh", "Mankhurd",
+                    "7466678363", "8846677888", "1 Trial pass", R.mipmap.ic_launcher));
+        }
     }
 }
