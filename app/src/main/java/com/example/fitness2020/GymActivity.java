@@ -9,8 +9,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.example.fitness2020.Adapters.GymPageAdapter;
-import com.example.fitness2020.fragments.GymDescriptionFragment;
-import com.example.fitness2020.fragments.GymOfferingsFragment;
+import com.example.fitness2020.fragments.GymAboutTab;
+import com.example.fitness2020.fragments.GymOfferTab;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
@@ -42,10 +42,10 @@ public class GymActivity extends AppCompatActivity {
 
                 switch(tab.getPosition())
                 {
-                    case 0: gymFragment=new GymDescriptionFragment();
+                    case 0: gymFragment=new GymAboutTab();
                         loadFragment(gymFragment);
                         break;
-                    case 1: gymFragment=new GymOfferingsFragment();
+                    case 1: gymFragment=new GymOfferTab();
                         loadFragment(gymFragment);
                         break;
                 }

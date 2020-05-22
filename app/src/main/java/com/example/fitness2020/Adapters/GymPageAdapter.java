@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.fitness2020.fragments.GymDescriptionFragment;
-import com.example.fitness2020.fragments.GymOfferingsFragment;
+import com.example.fitness2020.fragments.GymAboutTab;
+import com.example.fitness2020.fragments.GymOfferTab;
 
 public class GymPageAdapter extends FragmentPagerAdapter {
 
@@ -22,8 +22,8 @@ public class GymPageAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch(position)
         {
-            case 0:return new GymDescriptionFragment();
-            case 1:return new GymOfferingsFragment();
+            case 0:return new GymAboutTab();
+            case 1:return new GymOfferTab();
             default:return null;
 
         }

@@ -1,6 +1,7 @@
 package com.example.fitness2020.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitness2020.GymActivity;
 import com.example.fitness2020.Models.PopularRvModel;
 import com.example.fitness2020.R;
 
@@ -38,6 +40,17 @@ public class HomePopularRVAdapter extends RecyclerView.Adapter<HomePopularRVAdap
     public void onBindViewHolder(@NonNull final HomePopularRVAdapterVH holder, int position) {
 
         holder.populate(popularRvModels.get(position));
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent gymActivityIntent=new Intent(holder.itemView.getContext(), GymActivity.class);
+
+                holder.itemView.getContext().startActivity(gymActivityIntent);
+
+            }
+        });
 
     }
 

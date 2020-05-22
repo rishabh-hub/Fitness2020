@@ -17,6 +17,9 @@ import com.example.fitness2020.R;
  */
 public class GymOfferTab extends Fragment {
 
+    public GymOfferTab() {
+    }
+
     public static GymOfferTab newInstance(String param1, String param2) {
         GymOfferTab fragment = new GymOfferTab();
         return fragment;
