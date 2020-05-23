@@ -54,7 +54,7 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
     @Override
     public GymAdapterVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if(code==1)
-        return new GymAdapterVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.trialcard_imagerv_xml,parent,false));
+        return new GymAdapterVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.gym_description_image_rv_item,parent,false));
 
         else if(code==2)
             return new GymAdapterVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.fitness_at_work_video_rv_item,parent,false));
@@ -120,7 +120,7 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
             super(itemView);
 
             if (code==1)
-                gymImage=itemView.findViewById(R.id.rv_item_trailcard_imgvw);
+                gymImage=itemView.findViewById(R.id.rv_item_gym_offerings_imgvw);
 
             else if(code==2)
                 gymVideo=itemView.findViewById(R.id.home_fitness_at_work_video);
