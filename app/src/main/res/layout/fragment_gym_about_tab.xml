@@ -52,6 +52,12 @@
             android:textSize="8sp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="3dp"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_container"
+                android:layout_below="@id/gym_more_address_btn"
+                android:fillViewport="true">
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
@@ -61,6 +67,7 @@
             android:layout_marginTop="3dp"
             android:orientation="horizontal"
             android:layout_below="@id/gym_more_address_btn"/>
+            </ScrollView>
 
         <TextView
             android:layout_width="match_parent"
@@ -68,7 +75,7 @@
             android:layout_marginHorizontal="40dp"
             android:layout_marginVertical="5dp"
             android:id="@+id/gym_line1"
-            android:layout_below="@id/gym_tab_activity_rv"
+            android:layout_below="@id/rv_container"
             android:background="@color/colorPrimaryDark"/>
 
         <TextView
@@ -150,6 +157,17 @@
             android:id="@+id/gym_line2"
             android:layout_below="@id/gym_more_ttr_btn"
             android:background="@color/colorPrimaryDark"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="7dp"
+                android:id="@+id/book_container"
+                android:gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/bg_textview"
+                android:layout_below="@id/gym_line2">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -189,6 +207,7 @@
             android:textColor="#fff"
             android:layout_below="@id/gym_tab_pass_text"
             android:layout_marginVertical="10dp"/>
+            </LinearLayout>
 
 
         <TextView
@@ -200,7 +219,7 @@
             android:textSize="17sp"
             android:text="Videos"
             android:textAlignment="center"
-            android:layout_below="@id/gym_tab_pass_btn"
+            android:layout_below="@id/book_container"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"/>
 

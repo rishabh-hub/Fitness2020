@@ -63,7 +63,7 @@ public class GymAboutTab extends Fragment {
 
         gymPhotosRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         gymVideosRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
-        gymActivityRv.setLayoutManager(new GridLayoutManager(context,2,GridLayoutManager.HORIZONTAL,false));
+        gymActivityRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
 
         imageModels=new ArrayList<>(3);
         videoModels=new ArrayList<>(3);
