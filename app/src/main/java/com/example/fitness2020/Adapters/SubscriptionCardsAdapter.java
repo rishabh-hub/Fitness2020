@@ -1,6 +1,7 @@
 package com.example.fitness2020.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import com.example.fitness2020.Models.FaqModel;
 import com.example.fitness2020.Models.PackModel;
 import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.R;
+import com.example.fitness2020.fragments.TrialCardActivity;
 
 import java.util.ArrayList;
 
@@ -48,14 +50,10 @@ public class SubscriptionCardsAdapter extends RecyclerView.Adapter<SubscriptionC
 //write if else block
         if(code==1)
             return new SubscriptionCardsAdapterVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.faq_item,parent,false));
-        else
+        else if(code==0)
             return new SubscriptionCardsAdapterVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.trialcard_imagerv_xml,parent,false));
-
-        //replace the above with else if(code==0)
-
-        //add the layout file in inflator
-        //else
-          //  return new SubscriptionCardsAdapterVH(LayoutInflater.from(parent.getContext()).inflate(,parent,false));
+        else
+            return new SubscriptionCardsAdapterVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.membership_card_rv_item,parent,false));
     }
 
     @Override
@@ -95,7 +93,20 @@ public class SubscriptionCardsAdapter extends RecyclerView.Adapter<SubscriptionC
                 question = itemView.findViewById(R.id.trial_card_faq_question);
                 answer = itemView.findViewById(R.id.trial_card_faq_answer);
             }
+            else if (code==0)
                 imageView=itemView.findViewById(R.id.rv_item_trailcard_imgvw);
+            else {
+                packName=itemView.findViewById(R.id.pack_name);
+                packPrice=itemView.findViewById(R.id.pack_cost);
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent trialIntent =new Intent(v.getContext(), TrialCardActivity.class);
+
+                        v.getContext().startActivity(trialIntent);
+                    }
+                });
+            }
 
         }
       //make a separate populate func which receives your class type object as arguments
@@ -113,7 +124,7 @@ public class SubscriptionCardsAdapter extends RecyclerView.Adapter<SubscriptionC
         public void populatePack(PackModel packModel)
         {
             packName.setText(packModel.getPackName());
-            packPrice.setText(packModel.getPackPrice());
+            packPrice.setText("₹"+Integer.toString(packModel.getPackPrice()));
         }
     }
 }

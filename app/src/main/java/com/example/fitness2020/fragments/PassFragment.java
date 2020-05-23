@@ -24,6 +24,7 @@ import com.example.fitness2020.Adapters.HomePageClientAdapter;
 import com.example.fitness2020.Models.ClientModel;
 import com.example.fitness2020.Models.FitnessFragmentFreeTrialModel;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
+import com.example.fitness2020.Models.PackModel;
 import com.example.fitness2020.Models.PopularHorizontalRvModel;
 import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.Models.VideoModel;
@@ -36,6 +37,10 @@ public class PassFragment extends Fragment {
     View view;
     TextView faqTv;
     TextView textView;
+    RecyclerView membershipRV;
+    SubscriptionCardsAdapter membershipAdapter;
+    ArrayList<PackModel> packModels;
+
     RecyclerView clientRV;
     ArrayList<ClientModel> clients = new ArrayList<>();
     HomePageClientAdapter clientAdapter;
@@ -77,11 +82,15 @@ public class PassFragment extends Fragment {
         fitnessPassRV.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
         videoRV.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         faqRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
+        membershipRV.setLayoutManager(new GridLayoutManager(context,2,GridLayoutManager.VERTICAL,false));
+
+
 
         fragmentFreeTrialModels=new ArrayList<>(3);
         fitnessPassModels = new ArrayList<>(3);
         videos = new ArrayList<>(3);
         faqs=new ArrayList<>(3);
+        packModels = new ArrayList<>(3);
 
         addData();
 
@@ -90,6 +99,8 @@ public class PassFragment extends Fragment {
         fitnessPassAdapter = new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,context,fitnessPassModels,0);
         videoAdapter = new FitnessVideoAdapter(videos,context);
         faqAdapter = new SubscriptionCardsAdapter(context,1,imageModels,faqs);
+        membershipAdapter = new SubscriptionCardsAdapter(context,2,packModels);
+
 
 
         clientRV.setAdapter(clientAdapter);
@@ -97,29 +108,17 @@ public class PassFragment extends Fragment {
         fitnessPassRV.setAdapter(fitnessPassAdapter);
         videoRV.setAdapter(videoAdapter);
         faqRv.setAdapter(faqAdapter);
+        membershipRV.setAdapter(membershipAdapter);
+
 
         clientAdapter.notifyDataSetChanged();
         fragmentFreeTrialAdapter.notifyDataSetChanged();
         fitnessPassAdapter.notifyDataSetChanged();
         videoAdapter.notifyDataSetChanged();
         faqAdapter.notifyDataSetChanged();
+        membershipAdapter.notifyDataSetChanged();
 
-        trialCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent trialIntent =new Intent(getContext(),TrialCardActivity.class);
 
-                startActivity(trialIntent);
-            }
-        });
-
-        validityCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent validityIntent =new Intent(getContext(),ValidityCardActivity.class);
-                startActivity(validityIntent);
-            }
-        });
 
         return view;
     }
@@ -140,6 +139,10 @@ public class PassFragment extends Fragment {
         }
         for (int i = 0;i<10;i++)
             clients.add(new ClientModel(R.drawable.ic_person_outline_black_24dp));
+        for (int i=0;i<3;i++)
+        {
+            packModels.add(new PackModel("Unlimited Workouts",99));
+        }
     }
 
     void attachId()
@@ -148,8 +151,7 @@ public class PassFragment extends Fragment {
         fitnessPassRV = view.findViewById(R.id.fitness_pass_banner2_rv);
         videoRV = view.findViewById(R.id.fitness_pass_video_rv);
         trialCard=view.findViewById(R.id.trial_card);
-        workoutCard=view.findViewById(R.id.workout_card);
-        validityCard=view.findViewById(R.id.validity_card);
+        membershipRV=view.findViewById(R.id.pass_membership_rv);
         faqRv =view.findViewById(R.id.fitness_pass_faq_rv);
         faqTv=view.findViewById(R.id.fitness_pass_faq_rv_heading);
         clientRV = view.findViewById(R.id.fitness_at_work_clients_rv);
