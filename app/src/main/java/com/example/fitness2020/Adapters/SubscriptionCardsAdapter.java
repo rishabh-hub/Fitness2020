@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitness2020.Models.FaqModel;
+import com.example.fitness2020.Models.PackModel;
 import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.R;
 
@@ -22,6 +23,7 @@ public class SubscriptionCardsAdapter extends RecyclerView.Adapter<SubscriptionC
     int code;
     ArrayList<TrendingRvModel> imageModels;
     ArrayList<FaqModel> faqs;
+    ArrayList<PackModel> packModels;
     //add your arraylist of type whatever model class
 
 
@@ -32,7 +34,13 @@ public class SubscriptionCardsAdapter extends RecyclerView.Adapter<SubscriptionC
         this.faqs = faqModels;
     }
 
-    //delete this constructor and remake one after adding the global variables
+    public SubscriptionCardsAdapter(Context context, int code, ArrayList<PackModel> packModels) {
+        this.context = context;
+        this.code = code;
+        this.packModels = packModels;
+    }
+
+//delete this constructor and remake one after adding the global variables
 
     @NonNull
     @Override
@@ -43,6 +51,11 @@ public class SubscriptionCardsAdapter extends RecyclerView.Adapter<SubscriptionC
         else
             return new SubscriptionCardsAdapterVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.trialcard_imagerv_xml,parent,false));
 
+        //replace the above with else if(code==0)
+
+        //add the layout file in inflator
+        //else
+          //  return new SubscriptionCardsAdapterVH(LayoutInflater.from(parent.getContext()).inflate(,parent,false));
     }
 
     @Override
@@ -50,8 +63,10 @@ public class SubscriptionCardsAdapter extends RecyclerView.Adapter<SubscriptionC
 //write if else block
         if(code==1)
             holder.populatefaq(faqs.get(position));
-        else
+        else if (code==0)
             holder.populate(imageModels.get(position));
+        else
+            holder.populatePack(packModels.get(position));
 
     }
 
@@ -60,8 +75,10 @@ public class SubscriptionCardsAdapter extends RecyclerView.Adapter<SubscriptionC
         //write if else block
         if (code == 1)
             return faqs.size();
-        else
+        else if (code==0)
             return imageModels.size();
+        else
+            return packModels.size();
     }
 
     public class SubscriptionCardsAdapterVH extends RecyclerView.ViewHolder
@@ -69,6 +86,7 @@ public class SubscriptionCardsAdapter extends RecyclerView.Adapter<SubscriptionC
         ImageView imageView;
         //define your data types
         TextView question,answer;
+        TextView packName,packPrice;
 
         public SubscriptionCardsAdapterVH(@NonNull View itemView) {
             super(itemView);
@@ -90,6 +108,12 @@ public class SubscriptionCardsAdapter extends RecyclerView.Adapter<SubscriptionC
         public void populatefaq(FaqModel faqModel) {
             question.setText(faqModel.getQuestion());
             answer.setText(faqModel.getAnswer());
+        }
+
+        public void populatePack(PackModel packModel)
+        {
+            packName.setText(packModel.getPackName());
+            packPrice.setText(packModel.getPackPrice());
         }
     }
 }
