@@ -8,10 +8,16 @@
     tools:context=".SignupNewActivity">
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:layout_marginHorizontal="10dp"
         app:tabTextColor="@color/colorPrimary"
         android:id="@+id/login_slider_tab_layout"
-        app:tabIndicatorHeight="5sp"
+        app:tabIndicatorHeight="8dp"
+        app:tabIndicator="@drawable/tab_indicator_background"
+        app:tabIndicatorGravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
         app:tabIndicatorColor="@color/colorPrimary"
         app:tabSelectedTextColor="@color/colorPrimary"
         >
@@ -35,10 +41,10 @@
 
     <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
         android:id="@+id/login_view_pager"
         android:background="@color/colorPrimaryDark"
-        android:layout_below="@id/login_slider_tab_layout"
         >
         <FrameLayout
             android:layout_width="match_parent"
@@ -77,10 +83,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:gravity="center"
             android:padding="1dp">
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/ic_smartphone"
                 android:tint="@color/colorPrimaryDark"/>
         <Button

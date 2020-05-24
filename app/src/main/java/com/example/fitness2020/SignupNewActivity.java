@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 import android.widget.FrameLayout;
@@ -15,6 +16,7 @@ import com.example.fitness2020.fragments.SignupSlider2;
 import com.example.fitness2020.fragments.SignupSlider3;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 public class SignupNewActivity extends AppCompatActivity {
 
@@ -31,6 +33,7 @@ public class SignupNewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup_new);
 
         attachId();
+
 
         homePageAdapter=new HomePageAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,signUpTab.getTabCount(),1);
         sliderVp.setAdapter(homePageAdapter);
@@ -86,7 +89,7 @@ public class SignupNewActivity extends AppCompatActivity {
     void loadFragment(Fragment fragment)
     {
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.frameLayout,fragment);
+        fragmentTransaction.replace(R.id.login_frame_layout,fragment);
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.commit();
     }

@@ -32,21 +32,21 @@ public class HomePageAdapter extends FragmentPagerAdapter {
         switch(position)
         {
             case 0:
-                if (code==0)
+                {if (code==0)
                 return new HomeExploreTab();
                 else
-                    return new SignupSlider1();
+                    return new SignupSlider1();}
 
             case 1:
-                if(code==0)
+                {if(code==0)
                 return new HomeFitnessatWorkTab();
                 else
-                    return new SignupSlider2();
+                    return new SignupSlider2();}
             case 2:
-                if(code==0)
+                {if(code==0)
                     return new HomeFreeTrialTab();
                 else
-                    return new SignupSlider3();
+                    return new SignupSlider3();}
 
             default:return null;
         }

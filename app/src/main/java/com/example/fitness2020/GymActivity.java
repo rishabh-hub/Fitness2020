@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.transition.TransitionInflater;
+import android.widget.ImageView;
 
 import com.example.fitness2020.Adapters.GymPageAdapter;
 import com.example.fitness2020.fragments.GymAboutTab;
@@ -21,6 +23,7 @@ public class GymActivity extends AppCompatActivity {
     ViewPager gymViewPager;
     GymPageAdapter gymPageAdapter;
     Fragment gymFragment;
+    ImageView dot;
 
 
     @Override
@@ -72,14 +75,20 @@ public class GymActivity extends AppCompatActivity {
         descriptionTab=findViewById(R.id.gym_description);
         offeringsTab=findViewById(R.id.gym_offerings);
         gymViewPager=findViewById(R.id.gym_view_pager);
-
+//        dot = findViewById(R.id.page1_dot);
     }
 
     void loadFragment(Fragment fragment)
     {
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+//        fragment.setSharedElementReturnTransition(TransitionInflater.from(this).inflateTransition(R.transition.default_transition));
+//        fragment.setExitTransition(TransitionInflater.from(this).inflateTransition(android.R.transition.no_transition));
+//
+//        fragment.setSharedElementEnterTransition(TransitionInflater.from(this).inflateTransition(R.transition.default_transition));
+//        fragment.setEnterTransition(TransitionInflater.from(this).inflateTransition(android.R.transition.no_transition));
         fragmentTransaction.replace(R.id.gym_frame_layout,fragment);
-        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+//        fragmentTransaction.addSharedElement(dot, "page1");
+//        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.commit();
 
     }

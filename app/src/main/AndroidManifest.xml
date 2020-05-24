@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SignupNewActivity"></activity>
+        <activity android:name=".LoginPage"></activity>
         <activity android:name=".GymActivity" />
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".ReferEarn" />
@@ -24,7 +24,7 @@
         <activity android:name=".BookingsActivity" />
         <activity android:name=".SignupInternalActivity" />
         <activity android:name=".LoginInternalActivity" />
-        <activity android:name=".LoginPage">
+        <activity android:name=".SignupNewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -9,6 +9,13 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/login2"/>
+<!--    <ImageView-->
+<!--        android:layout_width="30dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:src="@drawable/selected_dot"-->
+<!--        android:layout_margin="40dp"-->
+<!--        android:transitionName="page1"-->
+<!--        android:id="@+id/page2_dot"/>-->
 
 
 
