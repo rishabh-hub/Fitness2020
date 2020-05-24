@@ -77,7 +77,7 @@ public class HomeFragment extends Fragment {
         homeFreeTrialsTab=view.findViewById(R.id.home_tab_freetrials);
         viewPager=view.findViewById(R.id.home_viewpager);
 
-        homePageAdapter=new HomePageAdapter(getChildFragmentManager(),FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,tabLayout.getTabCount());
+        homePageAdapter=new HomePageAdapter(getChildFragmentManager(),FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,tabLayout.getTabCount(),0);
         viewPager.setAdapter(homePageAdapter);
 
 
