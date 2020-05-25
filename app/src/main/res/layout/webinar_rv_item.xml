@@ -4,6 +4,7 @@
     android:layout_height="150dp"
     android:layout_margin="5dp"
     app:cardCornerRadius="20dp"
+    android:elevation="8dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="4dp">
     <RelativeLayout
@@ -11,10 +12,10 @@
         android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
         android:background="@color/colorPrimary"
+        android:layout_alignParentEnd="true"
         android:id="@+id/webinar_card_back_image"
         android:scaleType="centerCrop"/>
 
@@ -24,7 +25,7 @@
             android:textSize="17sp"
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/webinar_head"
-            android:textColor="#fff"
+            android:textColor="@color/colorPrimaryDark"
             android:text="Functional Training"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"/>
@@ -36,7 +37,7 @@
             android:fontFamily="@font/metropolismedium"
             android:id="@+id/webinar_timing"
             android:layout_below="@id/webinar_head"
-            android:textColor="#fff"
+            android:textColor="#000000"
             android:text="9:00 AM - 10:00 AM"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"/>
@@ -47,7 +48,7 @@
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/webinar_location"
             android:layout_below="@id/webinar_timing"
-            android:textColor="#fff"
+            android:textColor="@color/colorPrimaryDark"
             android:text="Live from Mumbai"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"/>
