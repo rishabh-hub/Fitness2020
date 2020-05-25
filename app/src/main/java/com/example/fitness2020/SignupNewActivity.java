@@ -7,7 +7,10 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 
 import com.example.fitness2020.Adapters.HomePageAdapter;
@@ -26,6 +29,7 @@ public class SignupNewActivity extends AppCompatActivity {
     Fragment fragment;
     HomePageAdapter homePageAdapter;
     FrameLayout frameLayout;
+    Button signupButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,14 @@ public class SignupNewActivity extends AppCompatActivity {
 
         homePageAdapter=new HomePageAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,signUpTab.getTabCount(),1);
         sliderVp.setAdapter(homePageAdapter);
+
+        signupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainActivityIntent=new Intent(SignupNewActivity.this,MainActivity.class);
+                startActivity(mainActivityIntent);
+            }
+        });
 
         signUpTab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -82,7 +94,7 @@ public class SignupNewActivity extends AppCompatActivity {
         login3=findViewById(R.id.login_3);
         sliderVp=findViewById(R.id.login_view_pager);
         frameLayout=findViewById(R.id.login_frame_layout);
-
+        signupButton=findViewById(R.id.mobile_btn);
 
     }
 

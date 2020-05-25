@@ -20,11 +20,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.fitness2020.Adapters.HomePopularRVAdapter;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
 import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
+import com.example.fitness2020.Models.CompanyModel;
 import com.example.fitness2020.Models.PackModel;
 import com.example.fitness2020.Models.PopularHorizontalRvModel;
 import com.example.fitness2020.Models.PopularRvModel;
 import com.example.fitness2020.Models.ReviewModel;
 import com.example.fitness2020.Models.TrendingRvModel;
+import com.example.fitness2020.Models.VouchersModel;
+import com.example.fitness2020.Models.WebinarModel;
 import com.example.fitness2020.R;
 
 import java.util.ArrayList;
@@ -43,11 +46,15 @@ public class HomeExploreTab extends Fragment {
     RecyclerView popularRv;
     RecyclerView popularVerticalRv,popularVerticalRV2;
     RecyclerView membershipRV;
+    RecyclerView companyRv,vouchersRv,webinarRv;
     ArrayList<TrendingRvModel> trendingRvModels;
     ArrayList<PopularRvModel> popularRvModels;
     ArrayList<ReviewModel> reviews;
     ArrayList<PackModel> packModels;
     ArrayList<PopularHorizontalRvModel> popularHorizontalRvModels;
+    ArrayList<WebinarModel> webinarModels;
+    ArrayList<VouchersModel> vouchersModels;
+    ArrayList<CompanyModel> companyModels;
     Spinner filterSpinner;
 
     public HomeExploreTab() {
@@ -71,6 +78,9 @@ public class HomeExploreTab extends Fragment {
         filterSpinner=view.findViewById(R.id.filter_spinner);
         popularVerticalRv=view.findViewById(R.id.home_popular_vertical_rv);
         popularVerticalRV2 = view.findViewById(R.id.home_trending_rv_3);
+//        webinarRv=view.findViewById(R.id.);
+//        vouchersRv=view.findViewById(R.id.);
+//        companyRv=view.findViewById(R.id.);
 
         populateFilterSpinner();
 
@@ -98,12 +108,18 @@ public class HomeExploreTab extends Fragment {
         popularVerticalRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         membershipRV.setLayoutManager(new GridLayoutManager(context,2,GridLayoutManager.VERTICAL,false));
         popularVerticalRV2.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
+        companyRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+        vouchersRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+        webinarRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
 
 
         popularRvModels=new ArrayList<>(3);
         trendingRvModels=new ArrayList<TrendingRvModel>(3);
         popularHorizontalRvModels=new ArrayList<>(3);
         packModels = new ArrayList<>(3);
+        companyModels=new ArrayList<>(3);
+        vouchersModels=new ArrayList<>(3);
+        webinarModels=new ArrayList<>(3);
 
         addData();
 
@@ -134,7 +150,7 @@ public class HomeExploreTab extends Fragment {
 
     void addData()//when using api, add data from api here.
     {
-        for(int i=0;i<4;i++)
+        for(int i=0;i<=5;i++)
         {
 
             trendingRvModels.add(new TrendingRvModel(R.drawable.trending_activity));
