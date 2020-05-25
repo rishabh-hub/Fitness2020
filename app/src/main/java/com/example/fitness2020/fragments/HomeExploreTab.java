@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitness2020.Adapters.CarousalsAdapter1;
 import com.example.fitness2020.Adapters.HomePopularRVAdapter;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
 import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
@@ -41,6 +42,7 @@ public class HomeExploreTab extends Fragment {
     HomeTrendingRVAdapter banner2Adapter;
     HomePopularRVAdapter homePopularRVAdapter,adapter2;
     SubscriptionCardsAdapter membershipAdapter;
+    CarousalsAdapter1 webinarAdapter,voucherAdapter,companyAdapter;
     RecyclerView trendingRv;
     RecyclerView banner2Rv;
     RecyclerView popularRv;
@@ -78,9 +80,9 @@ public class HomeExploreTab extends Fragment {
         filterSpinner=view.findViewById(R.id.filter_spinner);
         popularVerticalRv=view.findViewById(R.id.home_popular_vertical_rv);
         popularVerticalRV2 = view.findViewById(R.id.home_trending_rv_3);
-//        webinarRv=view.findViewById(R.id.);
-//        vouchersRv=view.findViewById(R.id.);
-//        companyRv=view.findViewById(R.id.);
+//      webinarRv=view.findViewById(R.id.);
+//      vouchersRv=view.findViewById(R.id.);
+//      companyRv=view.findViewById(R.id.);
 
         populateFilterSpinner();
 
@@ -113,6 +115,7 @@ public class HomeExploreTab extends Fragment {
         webinarRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
 
 
+
         popularRvModels=new ArrayList<>(3);
         trendingRvModels=new ArrayList<TrendingRvModel>(3);
         popularHorizontalRvModels=new ArrayList<>(3);
@@ -129,6 +132,11 @@ public class HomeExploreTab extends Fragment {
         adapter2=new HomePopularRVAdapter(popularRvModels,context);
         banner2Adapter=new HomeTrendingRVAdapter(trendingRvModels,context,2,popularHorizontalRvModels);
         membershipAdapter = new SubscriptionCardsAdapter(context,2,packModels);
+        webinarAdapter=new CarousalsAdapter1(context,companyModels,vouchersModels,webinarModels,0);
+        voucherAdapter=new CarousalsAdapter1(context,companyModels,vouchersModels,webinarModels,2);
+        companyAdapter=new CarousalsAdapter1(context,companyModels,vouchersModels,webinarModels,1);
+
+
 
         popularRv.setAdapter(homePopularRVAdapter);
         trendingRv.setAdapter(adapter);
@@ -136,12 +144,18 @@ public class HomeExploreTab extends Fragment {
         popularVerticalRv.setAdapter(homePopularRVAdapter);
         membershipRV.setAdapter(membershipAdapter);
         popularVerticalRV2.setAdapter(adapter2);
+        webinarRv.setAdapter(webinarAdapter);
+        vouchersRv.setAdapter(voucherAdapter);
+        companyRv.setAdapter(companyAdapter);
 
         homePopularRVAdapter.notifyDataSetChanged();
         adapter.notifyDataSetChanged();
         banner2Adapter.notifyDataSetChanged();
         membershipAdapter.notifyDataSetChanged();
         adapter2.notifyDataSetChanged();
+        webinarAdapter.notifyDataSetChanged();
+        voucherAdapter.notifyDataSetChanged();
+        companyAdapter.notifyDataSetChanged();
 
         return view;
     }
@@ -159,6 +173,8 @@ public class HomeExploreTab extends Fragment {
 //            Gurukripa lane, Opposite SIES College
             popularHorizontalRvModels.add(new PopularHorizontalRvModel(R.drawable.trending_activity,"Gym name","Gym Category","Available on this day from time -"));
              packModels.add(new PackModel("Unlimited Workouts",99));
+
+
         }
 
     }
