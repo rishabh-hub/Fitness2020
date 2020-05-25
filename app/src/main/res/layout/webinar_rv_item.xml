@@ -52,15 +52,19 @@
             android:text="Live from Mumbai"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"/>
-
-        <androidx.recyclerview.widget.RecyclerView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/webinar_activities_rv"
+            android:textSize="14sp"
+            android:fontFamily="@font/metropolisbold"
+            android:id="@+id/webinar_activities"
             android:layout_below="@id/webinar_location"
-            android:orientation="horizontal"
+            android:textColor="@color/bookBtn"
+            android:text="Crossfit/Zumba"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="6dp"/>
+
+
 
 
     </RelativeLayout>
