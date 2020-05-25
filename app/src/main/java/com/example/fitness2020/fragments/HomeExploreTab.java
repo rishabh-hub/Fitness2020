@@ -46,7 +46,7 @@ public class HomeExploreTab extends Fragment {
     RecyclerView trendingRv;
     RecyclerView banner2Rv;
     RecyclerView popularRv;
-    RecyclerView popularVerticalRv,popularVerticalRV2;
+    RecyclerView popularVerticalRv,popularVerticalRV2,popularRV3,popularRV4;
     RecyclerView membershipRV;
     RecyclerView companyRv,vouchersRv,webinarRv;
     ArrayList<TrendingRvModel> trendingRvModels;
@@ -80,9 +80,11 @@ public class HomeExploreTab extends Fragment {
         filterSpinner=view.findViewById(R.id.filter_spinner);
         popularVerticalRv=view.findViewById(R.id.home_popular_vertical_rv);
         popularVerticalRV2 = view.findViewById(R.id.home_trending_rv_3);
-//      webinarRv=view.findViewById(R.id.);
-//      vouchersRv=view.findViewById(R.id.);
-//      companyRv=view.findViewById(R.id.);
+        popularRV3 = view.findViewById(R.id.home_trending_rv_4);
+        popularRV4 = view.findViewById(R.id.home_trending_rv_5);
+        webinarRv=view.findViewById(R.id.explore_webinar_rv);
+        vouchersRv=view.findViewById(R.id.explore_voucher_rv);
+        companyRv=view.findViewById(R.id.explore_partners_rv);
 
         populateFilterSpinner();
 
@@ -106,6 +108,8 @@ public class HomeExploreTab extends Fragment {
 
         banner2Rv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         popularRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
+        popularRV3.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
+        popularRV4.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         trendingRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         popularVerticalRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         membershipRV.setLayoutManager(new GridLayoutManager(context,2,GridLayoutManager.VERTICAL,false));
@@ -139,6 +143,8 @@ public class HomeExploreTab extends Fragment {
 
 
         popularRv.setAdapter(homePopularRVAdapter);
+        popularRV3.setAdapter(homePopularRVAdapter);
+        popularRV4.setAdapter(homePopularRVAdapter);
         trendingRv.setAdapter(adapter);
         banner2Rv.setAdapter(banner2Adapter);
         popularVerticalRv.setAdapter(homePopularRVAdapter);
@@ -172,10 +178,15 @@ public class HomeExploreTab extends Fragment {
             popularRvModels.add(new PopularRvModel(R.drawable.gym_photo,"One More Rep","Crossfit, Zumba","Mumbai,Maharashtra ,400022","50 % OFF","4.9"));
 //            Gurukripa lane, Opposite SIES College
             popularHorizontalRvModels.add(new PopularHorizontalRvModel(R.drawable.trending_activity,"Gym name","Gym Category","Available on this day from time -"));
-             packModels.add(new PackModel("Unlimited Workouts",99));
 
 
+             webinarModels.add(new WebinarModel("Functional Training","9:00 AM - 10:00 AM","Live from Mumbai","Zumba/Crossfit",R.drawable.webinar));
+             vouchersModels.add(new VouchersModel("Trending","Gym Company","GYM50","Till Jun '20",R.drawable.gym_voucher,"FLAT 50% OFF"));
+             companyModels.add(new CompanyModel(R.drawable.company_logo,"OTIS Company"));
         }
+        packModels.add(new PackModel("Unlimited Workouts",99));
+        packModels.add(new PackModel("Unlimited Workouts",99));
+        packModels.add(new PackModel("Unlimited Workouts",99));
 
     }
 

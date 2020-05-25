@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="400dp"
     android:layout_height="150dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="5dp"
@@ -13,6 +13,7 @@
         <ImageView
             android:layout_width="150dp"
             android:layout_height="match_parent"
+            android:scaleType="centerCrop"
             android:id="@+id/voucher_card_back_image"
             android:background="@color/colorPrimaryDark"
             android:layout_alignParentEnd="true"
@@ -26,8 +27,8 @@
             android:background="#fff"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:padding="3dp"
-            android:layout_margin="2dp"
+            android:paddingHorizontal="7dp"
+            android:paddingVertical="2dp"
             android:textColor="@color/colorPrimaryDark"
             android:text="Trending"
             />
@@ -42,7 +43,7 @@
             android:textColor="@color/bookBtn"
             android:text="FLAT 50% OFF!!!"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="15dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

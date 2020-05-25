@@ -29,6 +29,7 @@ public class CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1.Ca
         this.companyModels = companyModels;
         this.vouchersModels = vouchersModels;
         this.webinarModels = webinarModels;
+        this.code = code;
     }
 
     @NonNull
@@ -59,7 +60,7 @@ public class CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1.Ca
     @Override
     public int getItemCount() {
         if (code==0)
-        return webinarModels.size();
+            return webinarModels.size();
         else if (code==1)
             return companyModels.size();
         else
