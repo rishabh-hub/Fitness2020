@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/gym_tab_address"
-            android:fontFamily="@font/metropolislight"
+            android:fontFamily="@font/metropolismedium"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="13sp"
             android:text="Silver Sunshine, 101, 9th Rd, Ram Krishna Nagar, Khar West, Mumbai, Maharashtra 400052"
@@ -78,7 +78,7 @@
             android:layout_marginVertical="5dp"
             android:id="@+id/gym_line1"
             android:layout_below="@id/rv_container"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="@color/colorPrimary"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -95,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/gym_tab_desc"
-            android:fontFamily="@font/metropolislight"
+            android:fontFamily="@font/metropolismedium"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="13sp"
             android:text="Krav Maga Global is headed by Master Eyal Yanilov, the right hand student of the creator of the Krav Maga system Imi Litchenfeld. As the Krav Maga system came of age and the system rapidly spread across the world through an ever increasing number of schools, largely due to the continuous"
@@ -131,7 +131,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/gym_tab_ttr"
-            android:fontFamily="@font/metropolislight"
+            android:fontFamily="@font/metropolismedium"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="13sp"
             android:text="Things to remember"
@@ -160,7 +160,7 @@
             android:layout_marginVertical="5dp"
             android:id="@+id/gym_line2"
             android:layout_below="@id/gym_more_ttr_btn"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="@color/colorPrimary"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
