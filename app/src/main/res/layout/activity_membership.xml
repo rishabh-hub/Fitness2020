@@ -6,26 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".MembershipActivity">
 
-    <androidx.appcompat.widget.Toolbar
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/toolbar"
+        android:id="@+id/membership_activity_tlbr_rellay"
         android:background="@color/colorPrimary"
         >
-        <TextView
-            android:layout_width="match_parent"
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:text="Membership"
+            android:id="@+id/membership_activity_back_btn"
+            android:src="@drawable/ic_chevron_left_white_24dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MEMBERSHIP"
+            android:textSize="20sp"
             android:textColor="#fff"
             android:fontFamily="@font/metropolisbold"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/membership_activity_header_tv"
             />
-    </androidx.appcompat.widget.Toolbar>
+
+    </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"
+        android:layout_below="@id/membership_activity_tlbr_rellay"
         android:id="@+id/membership_rv"/>
 
 
