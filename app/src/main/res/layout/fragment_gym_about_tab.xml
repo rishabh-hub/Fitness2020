@@ -43,7 +43,7 @@
             />
         <Button
             android:layout_width="50dp"
-            android:layout_height="15dp"
+            android:layout_height="20dp"
             android:text="More"
             android:background="@drawable/bg_textview"
             android:textColor="@color/colorPrimary"
@@ -106,7 +106,7 @@
             />
         <Button
             android:layout_width="50dp"
-            android:layout_height="15dp"
+            android:layout_height="20dp"
             android:text="More"
             android:background="@drawable/bg_textview"
             android:textColor="@color/colorPrimary"
@@ -142,7 +142,7 @@
             />
         <Button
             android:layout_width="50dp"
-            android:layout_height="15sp"
+            android:layout_height="20dp"
             android:text="More"
             android:background="@drawable/bg_textview"
             android:textColor="@color/colorPrimary"
