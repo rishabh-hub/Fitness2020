@@ -15,7 +15,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:id="@+id/gym_photos_rv"
             android:layout_alignParentTop="true"/>
         <TextView
@@ -51,12 +51,14 @@
             android:layout_below="@id/gym_tab_address"
             android:textSize="8sp"
             android:layout_marginLeft="10dp"
+            android:layout_marginBottom="3dp"
             android:layout_marginTop="3dp"/>
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/rv_container"
                 android:layout_below="@id/gym_more_address_btn"
+                android:layout_marginVertical="5dp"
                 android:fillViewport="true">
 
         <androidx.recyclerview.widget.RecyclerView
@@ -112,7 +114,7 @@
             android:layout_below="@id/gym_tab_desc"
             android:textSize="8sp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"/>
+            android:layout_marginTop="5dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -148,7 +150,9 @@
             android:layout_below="@id/gym_tab_ttr"
             android:textSize="8sp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="3dp"/>
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -164,6 +168,7 @@
                 android:paddingHorizontal="7dp"
                 android:id="@+id/book_container"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
                 android:layout_marginHorizontal="10dp"
                 android:background="@drawable/bg_textview"
                 android:layout_below="@id/gym_line2">
@@ -230,6 +235,7 @@
             android:layout_marginVertical="5dp"
             android:layout_below="@id/gym_tab_video_head"
             android:orientation="horizontal"
+            android:layout_marginHorizontal="5dp"
         />
 
 

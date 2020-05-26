@@ -186,7 +186,10 @@ public class HomeExploreTab extends Fragment {
         }
         packModels.add(new PackModel("Unlimited Workouts",99));
         packModels.add(new PackModel("Unlimited Workouts",99));
-
+        packModels.add(new PackModel("Unlimited Workouts",99));
+        packModels.add(new PackModel("Unlimited Workouts",99));
+        packModels.add(new PackModel("Unlimited Workouts",99));
+        packModels.add(new PackModel("Unlimited Workouts",99));
 
     }
 

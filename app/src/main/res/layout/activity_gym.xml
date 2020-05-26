@@ -13,7 +13,7 @@
         android:layout_height="60sp"
         app:tabTextColor="@color/colorPrimary"
         android:id="@+id/gym_tab_layout"
-        app:tabIndicatorHeight="5sp"
+        app:tabIndicatorHeight="3dp"
         app:tabIndicatorColor="@color/colorPrimary"
         app:tabSelectedTextColor="@color/colorPrimary"
         >
