@@ -91,8 +91,8 @@ public class GymAboutTab extends Fragment {
     {
         for(int i=0;i<=5;i++)
         {
-            imageModels.add(new TrendingRvModel(R.mipmap.ic_launcher));
-            videoModels.add(new VideoModel(R.mipmap.ic_launcher));
+            imageModels.add(new TrendingRvModel(R.drawable.gym_dummy));
+            videoModels.add(new VideoModel(R.drawable.gym_video_dummy));
 
         }
 

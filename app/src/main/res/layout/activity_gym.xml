@@ -10,12 +10,13 @@
 
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
-        android:layout_height="60sp"
+        android:layout_height="40sp"
         app:tabTextColor="@color/colorPrimary"
         android:id="@+id/gym_tab_layout"
-        app:tabIndicatorHeight="3dp"
+        app:tabIndicatorHeight="2dp"
         app:tabIndicatorColor="@color/colorPrimary"
         app:tabSelectedTextColor="@color/colorPrimary"
+        android:layout_marginBottom="5dp"
         >
 
         <com.google.android.material.tabs.TabItem

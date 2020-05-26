@@ -24,10 +24,10 @@
             android:id="@+id/gym_tab_name"
             android:fontFamily="@font/metropolisbold"
             android:textColor="@color/colorPrimary"
-            android:textSize="17sp"
+            android:textSize="20sp"
             android:text="Krav Maga Global"
             android:layout_below="@id/gym_photos_rv"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginHorizontal="10dp"/>
         <TextView
             android:layout_width="match_parent"
@@ -52,7 +52,7 @@
             android:textSize="8sp"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="3dp"
-            android:layout_marginTop="3dp"/>
+            android:layout_marginTop="5dp"/>
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginVertical="5dp"
+            android:layout_marginVertical="8dp"
             android:id="@+id/gym_line1"
             android:layout_below="@id/rv_container"
             android:background="#000"/>
@@ -125,7 +125,7 @@
             android:textSize="17sp"
             android:text="Things To Remember"
             android:layout_below="@id/gym_more_desc_btn"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_marginLeft="10dp"/>
         <TextView
             android:layout_width="match_parent"
@@ -134,7 +134,7 @@
             android:fontFamily="@font/metropolismedium"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="13sp"
-            android:text="Things to remember"
+            android:text="1. First thing\n2. Second Thing"
             android:layout_below="@id/gym_tab_ttr_head"
             android:layout_marginTop="5dp"
             android:maxLines="4"
@@ -150,14 +150,14 @@
             android:layout_below="@id/gym_tab_ttr"
             android:textSize="8sp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="5dp"
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginVertical="5dp"
+            android:layout_marginVertical="8dp"
             android:id="@+id/gym_line2"
             android:layout_below="@id/gym_more_ttr_btn"
             android:background="#000"/>
@@ -235,7 +235,6 @@
             android:layout_marginVertical="5dp"
             android:layout_below="@id/gym_tab_video_head"
             android:orientation="horizontal"
-            android:layout_marginHorizontal="5dp"
         />
 
 
