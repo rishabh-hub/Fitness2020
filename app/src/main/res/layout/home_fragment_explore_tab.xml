@@ -249,6 +249,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:nestedScrollingEnabled="false"
         android:layout_below="@id/filter_spinner"
         android:id="@+id/home_trending_rv_1"
         android:layout_marginTop="5sp"
@@ -271,6 +272,7 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:scrollbars="none"
                 android:layout_below="@+id/home_popular_tv"
                 android:id="@+id/home_banner2_rv_container">
                 <RelativeLayout
@@ -323,6 +325,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:nestedScrollingEnabled="false"
                 android:layout_below="@id/home_trending_rv"
                 android:id="@+id/home_popular_vertical_rv"
                 android:layout_marginTop="5sp"
@@ -331,6 +334,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:nestedScrollingEnabled="false"
                 android:layout_below="@id/home_banner2_rv_container"
                 android:id="@+id/home_trending_rv_3"
                 android:layout_marginTop="5sp"
@@ -340,6 +344,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/home_trending_rv_3"
+                android:scrollbars="none"
                 android:id="@+id/explore_voucher_container">
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -391,6 +396,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:nestedScrollingEnabled="false"
                 android:layout_below="@id/explore_voucher_container"
                 android:id="@+id/home_trending_rv_4"
                 android:layout_marginTop="5sp"
@@ -400,6 +406,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/home_trending_rv_4"
+                android:scrollbars="none"
                 android:id="@+id/explore_webinar_container">
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -451,6 +458,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:nestedScrollingEnabled="false"
                 android:layout_below="@id/explore_webinar_container"
                 android:id="@+id/home_trending_rv_5"
                 android:layout_marginTop="5sp"
@@ -458,6 +466,7 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:scrollbars="none"
                 android:layout_below="@+id/home_trending_rv_5"
                 android:id="@+id/explore_partners_container">
                 <RelativeLayout

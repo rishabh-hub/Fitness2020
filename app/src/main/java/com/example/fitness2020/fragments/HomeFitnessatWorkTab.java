@@ -60,10 +60,10 @@ public class HomeFitnessatWorkTab extends Fragment {
         videoRV.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
 
         for (int i = 0;i<10;i++)
-            clients.add(new ClientModel(R.drawable.ic_person_outline_black_24dp));
+            clients.add(new ClientModel(R.drawable.company_logo));
 
         for (int i=0;i<5;i++)
-            videoModels.add(new VideoModel(R.mipmap.ic_launcher));
+            videoModels.add(new VideoModel(R.drawable.gym_video_dummy));
 
         for (int i=0;i<5;i++)
             reviews.add(new ReviewModel("Tiger Shroff","ABC GYM","lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores."));

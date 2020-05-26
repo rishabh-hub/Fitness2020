@@ -9,7 +9,7 @@
 <androidx.cardview.widget.CardView
     android:layout_width="150dp"
     android:id="@+id/banner2_rv_item_cardview"
-    app:cardCornerRadius="30sp"
+    app:cardCornerRadius="20sp"
     android:layout_margin="10sp"
     app:cardElevation="1sp"
     android:layout_height="100dp">

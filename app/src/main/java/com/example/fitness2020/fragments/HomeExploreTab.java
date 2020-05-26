@@ -112,7 +112,7 @@ public class HomeExploreTab extends Fragment {
         popularRV4.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         trendingRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         popularVerticalRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
-        membershipRV.setLayoutManager(new GridLayoutManager(context,2,GridLayoutManager.VERTICAL,false));
+        membershipRV.setLayoutManager(new GridLayoutManager(context,1,GridLayoutManager.HORIZONTAL,false));
         popularVerticalRV2.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         companyRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         vouchersRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
@@ -170,14 +170,14 @@ public class HomeExploreTab extends Fragment {
 
     void addData()//when using api, add data from api here.
     {
-        for(int i=0;i<=5;i++)
+        for(int i=0;i<5;i++)
         {
 
             trendingRvModels.add(new TrendingRvModel(R.drawable.trending_activity));
 
             popularRvModels.add(new PopularRvModel(R.drawable.gym_photo,"One More Rep","Crossfit, Zumba","Mumbai,Maharashtra ,400022","50 % OFF","4.9"));
 //            Gurukripa lane, Opposite SIES College
-            popularHorizontalRvModels.add(new PopularHorizontalRvModel(R.drawable.trending_activity,"Gym name","Gym Category","Available on this day from time -"));
+            popularHorizontalRvModels.add(new PopularHorizontalRvModel(R.drawable.gym_dummy,"Danceout by Burzin Engineer","Dance, Aerobics","Tue-Fri 9:00 AM"));
 
 
              webinarModels.add(new WebinarModel("Functional Training","9:00 AM - 10:00 AM","Live from Mumbai","Zumba/Crossfit",R.drawable.webinar));

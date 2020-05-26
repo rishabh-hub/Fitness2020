@@ -53,6 +53,7 @@ public class FitnessVideoAdapter extends RecyclerView.Adapter<FitnessVideoAdapte
 
            // imageView.setImageResource(videoModel.getVideoImageResource());
             //set the thumbnail image for the video here
+            imageView.setImageResource(videoModel.getVideoImageResource());
         }
     }
 }
