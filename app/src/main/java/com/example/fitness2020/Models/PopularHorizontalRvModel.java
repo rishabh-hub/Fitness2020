@@ -6,12 +6,14 @@ public class PopularHorizontalRvModel {
     private String gymName;
     private String category;
     private String gymSchedule;
+    private String gymRating;
 
-    public PopularHorizontalRvModel(int imageurl, String gymName, String category, String gymSchedule) {
+    public PopularHorizontalRvModel(int imageurl, String gymName, String category, String gymSchedule,String gymRating) {
         this.imageurl = imageurl;
         this.gymName = gymName;
         this.category = category;
         this.gymSchedule = gymSchedule;
+        this.gymRating=gymRating;
     }
 
     public int getImageurl() {
@@ -44,5 +46,13 @@ public class PopularHorizontalRvModel {
 
     public void setGymSchedule(String gymSchedule) {
         this.gymSchedule = gymSchedule;
+    }
+
+    public String getGymRating() {
+        return gymRating;
+    }
+
+    public void setGymRating(String gymRating) {
+        this.gymRating = gymRating;
     }
 }

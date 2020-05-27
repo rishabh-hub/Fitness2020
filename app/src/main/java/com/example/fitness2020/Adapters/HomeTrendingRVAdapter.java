@@ -16,6 +16,8 @@ import com.example.fitness2020.Models.PopularHorizontalRvModel;
 import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.R;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class HomeTrendingRVAdapter extends RecyclerView.Adapter<HomeTrendingRVAdapter.HomeTrendingRVAdapterVH> {
@@ -75,6 +77,7 @@ public class HomeTrendingRVAdapter extends RecyclerView.Adapter<HomeTrendingRVAd
         TextView bannerGymName;
         TextView bannerGymCategory;
         TextView bannerGymSchedule;
+        TextView bannerGymRating;
 
         public HomeTrendingRVAdapterVH(@NonNull View itemView) {
             super(itemView);
@@ -86,7 +89,7 @@ public class HomeTrendingRVAdapter extends RecyclerView.Adapter<HomeTrendingRVAd
                 bannerGymName=itemView.findViewById(R.id.banner2_rv_item_cardview_gym_name);
                 bannerGymCategory=itemView.findViewById(R.id.banner2_rv_item_cardview_gym_category);
                 bannerGymSchedule=itemView.findViewById(R.id.banner2_rv_item_cardview_gym_schedule);
-
+                bannerGymRating=itemView.findViewById(R.id.popular_rv_xml_rating);
             }
         }
 
@@ -106,7 +109,7 @@ public class HomeTrendingRVAdapter extends RecyclerView.Adapter<HomeTrendingRVAd
             bannerGymName.setText(popularHorizontalRvModel.getGymName());
             bannerGymCategory.setText(popularHorizontalRvModel.getCategory());
             bannerGymSchedule.setText(popularHorizontalRvModel.getGymSchedule());
-
+            bannerGymRating.setText(popularHorizontalRvModel.getGymRating());
         }
     }
 

@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_star_black_12dp"
             android:layout_gravity="center"
+
             />
 
         <TextView
