@@ -6,10 +6,43 @@
     android:gravity="center"
     android:layout_height="wrap_content"
     >
+    <LinearLayout
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="25dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="8dp"
+        android:id="@+id/popular_rv_xml_rating_linlay"
+        android:background="@drawable/bg_button"
+        android:backgroundTint="@color/colorPrimary"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_black_12dp"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5.0"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="10sp"
+            android:padding="1dp"
+            android:id="@+id/popular_rv_xml_rating"
+            />
+    </LinearLayout>
 <androidx.cardview.widget.CardView
     android:layout_width="150dp"
     android:id="@+id/banner2_rv_item_cardview"
-    app:cardCornerRadius="20sp"
+    app:cardCornerRadius="15sp"
     android:layout_margin="10sp"
     app:cardElevation="1sp"
     android:layout_height="100dp">
@@ -33,6 +66,7 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginVertical="1dp"
         android:fontFamily="@font/metropolisbold"
+        android:layout_centerHorizontal="true"
         android:id="@+id/banner2_rv_item_cardview_gym_name"
         />
 
@@ -44,6 +78,7 @@
         android:gravity="center"
         android:fontFamily="@font/metropolissemibold"
         android:layout_marginVertical="1dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="10dp"
         android:layout_below="@+id/banner2_rv_item_cardview_gym_name"
         android:id="@+id/banner2_rv_item_cardview_gym_category"
@@ -55,6 +90,7 @@
         android:layout_height="wrap_content"
         android:textSize="10sp"
         android:gravity="center"
+        android:layout_centerHorizontal="true"
         android:fontFamily="@font/metropolislight"
         android:layout_marginVertical="1dp"
         android:layout_marginHorizontal="10dp"
