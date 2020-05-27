@@ -70,7 +70,7 @@ public class CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1.Ca
     public class CarouslasAdapter1VH extends RecyclerView.ViewHolder
     {
         ImageView partnersImage,voucherImage,webinarImage;
-        TextView webinarHead,webinarTiming,webinarLocation,webinarActivity,voucherTag,voucherTheme,voucherCompany,voucherPromCode,voucherValidity;
+        TextView webinarHead,webinarTiming,webinarLevel,webinarActivity,voucherTag,voucherTheme,voucherCompany,voucherPromCode,voucherValidity;
 
 
         public CarouslasAdapter1VH(@NonNull View itemView) {
@@ -80,7 +80,7 @@ public class CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1.Ca
                 webinarImage=itemView.findViewById(R.id.webinar_card_back_image);
                 webinarHead=itemView.findViewById(R.id.webinar_head);
                 webinarTiming=itemView.findViewById(R.id.webinar_timing);
-                webinarLocation=itemView.findViewById(R.id.webinar_location);
+                webinarLevel=itemView.findViewById(R.id.webinar_level);
                 webinarActivity=itemView.findViewById(R.id.webinar_activities);
 
             }
@@ -107,7 +107,7 @@ public class CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1.Ca
             webinarTiming.setText(webinarModel.getTiming());
             webinarHead.setText(webinarModel.getHeader());
             webinarImage.setImageResource(webinarModel.getWebinarImageUrl());
-            webinarLocation.setText(webinarModel.getLocation());
+            webinarLevel.setText(webinarModel.getLevel());
         }
 
         void populateVoucher(VouchersModel vouchersModel)

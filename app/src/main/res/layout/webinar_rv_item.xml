@@ -46,10 +46,10 @@
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:fontFamily="@font/metropolisbold"
-            android:id="@+id/webinar_location"
+            android:id="@+id/webinar_level"
             android:layout_below="@id/webinar_timing"
             android:textColor="@color/colorPrimaryDark"
-            android:text="Live from Mumbai"
+            android:text="INTERMEDIATE"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"/>
         <TextView
@@ -58,7 +58,7 @@
             android:textSize="14sp"
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/webinar_activities"
-            android:layout_below="@id/webinar_location"
+            android:layout_below="@id/webinar_level"
             android:textColor="@color/bookBtn"
             android:text="Crossfit/Zumba"
             android:layout_marginLeft="20dp"

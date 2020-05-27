@@ -4,14 +4,14 @@ public class WebinarModel {
 
     private String header;
     private String timing;
-    private String location;
+    private String level;
     private String activity;
     private int webinarImageUrl;
 
-    public WebinarModel(String header, String timing, String location, String activity,int webinarImageUrl) {
+    public WebinarModel(String header, String timing, String level, String activity,int webinarImageUrl) {
         this.header = header;
         this.timing = timing;
-        this.location = location;
+        this.level = level;
         this.activity = activity;
         this.webinarImageUrl=webinarImageUrl;
     }
@@ -32,12 +32,12 @@ public class WebinarModel {
         this.timing = timing;
     }
 
-    public String getLocation() {
-        return location;
+    public String getLevel() {
+        return level;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setLevel(String level) {
+        this.level = level;
     }
 
     public String getActivity() {
