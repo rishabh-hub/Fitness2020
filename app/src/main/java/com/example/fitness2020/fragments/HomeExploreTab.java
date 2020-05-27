@@ -86,7 +86,7 @@ public class HomeExploreTab extends Fragment {
         webinarRv=view.findViewById(R.id.explore_webinar_rv);
         vouchersRv=view.findViewById(R.id.explore_voucher_rv);
         companyRv=view.findViewById(R.id.explore_partners_rv);
-        //topBannerRv=view.findViewById(R.id.);
+        topBannerRv=view.findViewById(R.id.explore_workout_rv);
 
         populateFilterSpinner();
 
@@ -114,7 +114,7 @@ public class HomeExploreTab extends Fragment {
         popularRV4.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         trendingRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         popularVerticalRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
-        membershipRV.setLayoutManager(new GridLayoutManager(context,1,GridLayoutManager.HORIZONTAL,false));
+        membershipRV.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         popularVerticalRV2.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         companyRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         vouchersRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
@@ -189,15 +189,9 @@ public class HomeExploreTab extends Fragment {
              webinarModels.add(new WebinarModel("Functional Training","9:00 AM - 10:00 AM","INTERMEDIATE","Zumba/Crossfit",R.drawable.webinar));
              vouchersModels.add(new VouchersModel("Trending","Gym Company","GYM50","Till Jun '20",R.drawable.gym_voucher,"FLAT 50% OFF"));
              companyModels.add(new CompanyModel(R.drawable.company_logo));
-             //set image url below
-             // topBannerModel.add(new TrendingRvModel());
+            packModels.add(new PackModel("Unlimited Workouts",99));
+            topBannerModel.add(new TrendingRvModel(R.drawable.workout_carousel_dummy));
         }
-        packModels.add(new PackModel("Unlimited Workouts",99));
-        packModels.add(new PackModel("Unlimited Workouts",99));
-        packModels.add(new PackModel("Unlimited Workouts",99));
-        packModels.add(new PackModel("Unlimited Workouts",99));
-        packModels.add(new PackModel("Unlimited Workouts",99));
-        packModels.add(new PackModel("Unlimited Workouts",99));
 
     }
 
