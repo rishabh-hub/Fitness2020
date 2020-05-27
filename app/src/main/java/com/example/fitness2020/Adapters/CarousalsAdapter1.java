@@ -70,7 +70,7 @@ public class CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1.Ca
     public class CarouslasAdapter1VH extends RecyclerView.ViewHolder
     {
         ImageView partnersImage,voucherImage,webinarImage;
-        TextView partnerName,webinarHead,webinarTiming,webinarLocation,webinarActivity,voucherTag,voucherTheme,voucherCompany,voucherPromCode,voucherValidity;
+        TextView webinarHead,webinarTiming,webinarLocation,webinarActivity,voucherTag,voucherTheme,voucherCompany,voucherPromCode,voucherValidity;
 
 
         public CarouslasAdapter1VH(@NonNull View itemView) {
@@ -87,7 +87,6 @@ public class CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1.Ca
 
             else if (code==1)
             {
-                partnerName=itemView.findViewById(R.id.partner_item_name);
                 partnersImage=itemView.findViewById(R.id.partner_item_logo);
             }
 
@@ -124,7 +123,6 @@ public class CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1.Ca
         void populatePartners(CompanyModel companyModel)
         {
             partnersImage.setImageResource(companyModel.getCompanyImageUrl());
-            partnerName.setText(companyModel.getCompanyName());
         }
     }
 }
