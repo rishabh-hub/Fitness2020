@@ -40,7 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/membership_activity_tlbr_rellay"
-        android:id="@+id/membership_rv"/>
+        android:id="@+id/membership_rv"
+        />
 
 
 </RelativeLayout>
