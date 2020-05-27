@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="400dp"
-    android:layout_height="150dp"
+    android:layout_width="300dp"
+    android:layout_height="130dp"
     android:layout_margin="5dp"
     app:cardCornerRadius="20dp"
     android:elevation="8dp"
@@ -12,17 +12,19 @@
         android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="200dp"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
         android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/webinar_head"
         android:id="@+id/webinar_card_back_image"
         android:scaleType="centerCrop"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/webinar_head"
             android:textColor="@color/colorPrimaryDark"
@@ -33,7 +35,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:fontFamily="@font/metropolismedium"
             android:id="@+id/webinar_timing"
             android:layout_below="@id/webinar_head"
@@ -44,18 +46,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/webinar_level"
             android:layout_below="@id/webinar_timing"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorPrimary"
             android:text="INTERMEDIATE"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/webinar_activities"
             android:layout_below="@id/webinar_level"

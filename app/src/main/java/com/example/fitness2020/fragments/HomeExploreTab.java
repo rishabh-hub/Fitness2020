@@ -186,7 +186,7 @@ public class HomeExploreTab extends Fragment {
             popularHorizontalRvModels.add(new PopularHorizontalRvModel(R.drawable.gym_dummy,"Danceout by Burzin Engineer","Dance, Aerobics","Tue-Fri 9:00 AM","4.9"));
 
 
-             webinarModels.add(new WebinarModel("Functional Training","9:00 AM - 10:00 AM","INTERMEDIATE","Zumba/Crossfit",R.drawable.webinar));
+             webinarModels.add(new WebinarModel("Functional Training","9:00 AM - 10:00 AM","INTERMEDIATE","Zumba/Crossfit",R.drawable.gym_dummy));
              vouchersModels.add(new VouchersModel("Trending","Gym Company","GYM50","Till Jun '20",R.drawable.gym_voucher,"FLAT 50% OFF"));
              companyModels.add(new CompanyModel(R.drawable.company_logo));
             packModels.add(new PackModel("Unlimited Workouts",99));
