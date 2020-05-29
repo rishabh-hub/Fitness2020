@@ -3,17 +3,13 @@ package com.example.fitness2020.Models;
 public class GymOfferingModel {
     private String offeringName;
     private String oneClassName;
-    private String oneClassPtsBefore;
     private String oneClassPtsAfter;
-    private String oneMonthPriceBefore;
     private String oneMonthPriceAfter;
 
-    public GymOfferingModel(String offeringName, String oneClassName, String oneClassPtsBefore, String oneClassPtsAfter, String oneMonthPriceBefore, String oneMonthPriceAfter) {
+    public GymOfferingModel(String offeringName, String oneClassName, String oneClassPtsAfter, String oneMonthPriceAfter) {
         this.offeringName = offeringName;
         this.oneClassName = oneClassName;
-        this.oneClassPtsBefore = oneClassPtsBefore;
         this.oneClassPtsAfter = oneClassPtsAfter;
-        this.oneMonthPriceBefore = oneMonthPriceBefore;
         this.oneMonthPriceAfter = oneMonthPriceAfter;
     }
 
@@ -33,13 +29,6 @@ public class GymOfferingModel {
         this.oneClassName = oneClassName;
     }
 
-    public String getOneClassPtsBefore() {
-        return oneClassPtsBefore;
-    }
-
-    public void setOneClassPtsBefore(String oneClassPtsBefore) {
-        this.oneClassPtsBefore = oneClassPtsBefore;
-    }
 
     public String getOneClassPtsAfter() {
         return oneClassPtsAfter;
@@ -49,13 +38,7 @@ public class GymOfferingModel {
         this.oneClassPtsAfter = oneClassPtsAfter;
     }
 
-    public String getOneMonthPriceBefore() {
-        return oneMonthPriceBefore;
-    }
 
-    public void setOneMonthPriceBefore(String oneMonthPriceBefore) {
-        this.oneMonthPriceBefore = oneMonthPriceBefore;
-    }
 
     public String getOneMonthPriceAfter() {
         return oneMonthPriceAfter;

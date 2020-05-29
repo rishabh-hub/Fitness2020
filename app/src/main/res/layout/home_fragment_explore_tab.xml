@@ -18,6 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
+
+<!--            backend explore image rv-->
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -25,6 +27,7 @@
                 android:orientation="vertical"
                 android:layout_alignParentTop="true"/>
 
+<!--            membership button rv-->
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -51,7 +54,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:visibility="gone"
                 android:id="@+id/home_trending_rv"
                 android:layout_below="@id/home_trending_tv"
                 />
@@ -67,6 +69,7 @@
 <!--        android:id="@+id/home_activities_rv"-->
 <!--        />-->
             <!--Filters -->
+
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -85,6 +88,7 @@
                 android:gravity="fill"
                 android:id="@+id/home_fragment_explore_tab_activities">
 
+<!--                activities container rv -->
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -206,6 +210,7 @@
 
                 </LinearLayout>
                 </RelativeLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -255,11 +260,11 @@
 
 
 
+<!--            vertical rv 0-->
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="gone"
         android:nestedScrollingEnabled="false"
         android:layout_below="@id/filter_spinner"
         android:id="@+id/home_trending_rv_1"
@@ -267,6 +272,7 @@
         />
 
 
+<!--            popular heading-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -280,6 +286,7 @@
                 android:layout_marginStart="10sp"
                 />
 
+<!--            popular rv-->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -367,6 +374,7 @@
 
 
             </HorizontalScrollView>
+<!--            vertical rv 1-->
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -376,6 +384,8 @@
                 android:id="@+id/home_popular_vertical_rv"
                 android:layout_marginTop="5sp"
                 />
+
+<!--            vertical rv 2-->
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -386,10 +396,38 @@
                 android:layout_marginTop="5sp"
                 />
 
+<!--            main offer card rv-->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/home_trending_rv_3"
+                android:scrollbars="none"
+                android:id="@+id/explore_main_offer_card_container">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    >
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="5sp"
+                        android:id="@+id/explore_main_offer_card_rv"
+                        />
+
+                </RelativeLayout>
+
+
+            </HorizontalScrollView>
+
+
+<!--            voucher rv-->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/explore_main_offer_card_container"
                 android:scrollbars="none"
                 android:id="@+id/explore_voucher_container">
                 <RelativeLayout
@@ -438,6 +476,8 @@
 
 
             </HorizontalScrollView>
+
+<!--            vertical rv 3-->
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -448,6 +488,7 @@
                 android:layout_marginTop="5sp"
                 />
 
+<!--            webinars rv-->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -500,6 +541,8 @@
 
 
             </HorizontalScrollView>
+
+<!--            vertical rv 4-->
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -509,11 +552,40 @@
                 android:id="@+id/home_trending_rv_5"
                 android:layout_marginTop="5sp"
                 />
+
+
+<!--            brand videos rv-->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scrollbars="none"
                 android:layout_below="@+id/home_trending_rv_5"
+                android:id="@+id/explore_brand_videos_container">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    >
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="5sp"
+                        android:id="@+id/explore_brand_videos_rv"
+                        />
+
+                </RelativeLayout>
+
+
+            </HorizontalScrollView>
+
+<!--            our partners rv-->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_below="@+id/explore_brand_videos_container"
                 android:id="@+id/explore_partners_container">
                 <RelativeLayout
                     android:layout_width="wrap_content"

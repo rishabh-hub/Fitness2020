@@ -74,7 +74,7 @@ public class GymOfferTab extends Fragment {
     private void addData() {
         for(int i=0;i<5;i++)
         {
-            offeringModels.add(new GymOfferingModel("Yoga Classes","One Yoga Class","4","Free","400","200"));
+            offeringModels.add(new GymOfferingModel("Yoga Classes","One Yoga Class","Free","200"));
             facilityModels.add(new GymFacilityModel("Yoga"));
             reviewModels.add(new ReviewModel("XYZ","ABC","Very Good Product."));
         }

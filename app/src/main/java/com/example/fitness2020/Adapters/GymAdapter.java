@@ -112,7 +112,7 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
     public class GymAdapterVH extends RecyclerView.ViewHolder
     {
         ImageView gymImage, gymVideo;
-        TextView gymActivity,offeringName,oneClassName,oneClassPtsBefore,oneClassPtsAfter,oneMonthPriceBefore,oneMonhPriceAfter;
+        TextView gymActivity,offeringName,oneClassName,oneClassPtsAfter,oneMonhPriceAfter;
         TextView facility,reviewProduct,reviewPerson,reviewDesc;
         Button bookOneClass,bookOneMonth;
 
@@ -132,9 +132,7 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
             {
                 offeringName = itemView.findViewById(R.id.offering_rv_item_name);
                 oneClassName = itemView.findViewById(R.id.offering_1_class);
-                oneClassPtsBefore = itemView.findViewById(R.id.offering_pt_before);
                 oneClassPtsAfter = itemView.findViewById(R.id.offering_pt_after);
-                oneMonthPriceBefore = itemView.findViewById(R.id.offering_price_before);
                 oneMonhPriceAfter = itemView.findViewById(R.id.offering_price_after);
                 bookOneClass = itemView.findViewById(R.id.offering_item_1_day_btn);
                 bookOneMonth = itemView.findViewById(R.id.offering_item_1_month_btn);
@@ -168,9 +166,7 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
         public void offerPopulate(GymOfferingModel gymOfferingModel) {
             offeringName.setText(gymOfferingModel.getOfferingName());
             oneClassName.setText(gymOfferingModel.getOneClassName());
-            oneClassPtsBefore.setText(gymOfferingModel.getOneClassPtsBefore()+" Pts");
             oneClassPtsAfter.setText(gymOfferingModel.getOneClassPtsAfter());
-            oneMonthPriceBefore.setText(gymOfferingModel.getOneMonthPriceBefore());
             oneMonhPriceAfter.setText(gymOfferingModel.getOneMonthPriceAfter());
         }
 
