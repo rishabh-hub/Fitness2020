@@ -157,7 +157,8 @@
                 android:fontFamily="@font/metropolisblack"
                 android:layout_below="@id/fitness_at_work_feature_5"
                 android:text="Top Reviews"
-                android:padding="10dp"
+                android:layout_marginLeft="39dp"
+                android:layout_marginVertical="10dp"
                 android:textSize="17dp"/>
 
             <RelativeLayout
@@ -203,7 +204,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/clients_heading"
                 android:id="@+id/fitness_at_work_clients">
                 <androidx.recyclerview.widget.RecyclerView

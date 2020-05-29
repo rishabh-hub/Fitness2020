@@ -29,17 +29,19 @@
             android:layout_marginBottom="5dp"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:gravity="center"
             android:orientation="horizontal">
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
                 android:layout_weight="1"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
                     android:textSize="13sp"
                     android:textColor="#000"
                     android:fontFamily="@font/metropolislight"
@@ -49,7 +51,8 @@
                     android:id="@+id/offering_1_class"/>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
                     android:textSize="13sp"
                     android:textColor="#000"
                     android:fontFamily="@font/metropolislight"
@@ -58,40 +61,16 @@
                     android:paddingVertical="5dp"
                     android:id="@+id/offering_subscription"/>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:textColor="#000"
-                    android:fontFamily="@font/metropolislight"
-                    android:textAlignment="center"
-                    android:text="4 pts"
-                    android:paddingVertical="5dp"
-                    android:id="@+id/offering_pt_before"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:textColor="#000"
-                    android:fontFamily="@font/metropolislight"
-                    android:textAlignment="center"
-                    android:text="400"
-                    android:paddingVertical="5dp"
-                    android:id="@+id/offering_price_before"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
                     android:textSize="13sp"
                     android:textColor="#000"
                     android:fontFamily="@font/metropolislight"
@@ -101,7 +80,8 @@
                     android:id="@+id/offering_pt_after"/>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
                     android:textSize="13sp"
                     android:textColor="#000"
                     android:fontFamily="@font/metropolislight"
@@ -112,13 +92,13 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
                 <Button
-                    android:layout_width="60dp"
-                    android:layout_height="20dp"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
                     android:background="@drawable/bg_button"
                     android:textColor="#fff"
                     android:backgroundTint="@color/colorPrimary"
@@ -128,14 +108,15 @@
                     android:id="@+id/offering_item_1_day_btn"
                     android:text="Book"/>
                 <Button
-                    android:layout_width="60dp"
-                    android:layout_height="20dp"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
                     android:background="@drawable/bg_button"
                     android:textColor="#fff"
                     android:backgroundTint="@color/colorPrimary"
                     android:gravity="center"
                     android:textSize="13sp"
                     android:id="@+id/offering_item_1_month_btn"
+                    android:layout_marginBottom="10dp"
                     android:text="Book"/>
 
             </LinearLayout>
