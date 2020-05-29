@@ -95,8 +95,8 @@ public class HomeExploreTab extends Fragment {
         vouchersRv=view.findViewById(R.id.explore_voucher_rv);
         companyRv=view.findViewById(R.id.explore_partners_rv);
         topBannerRv=view.findViewById(R.id.explore_workout_rv);
-        //collectionsRv=view.findViewById(R.id.);
-        //videoRv=view.findViewById(R.id.);
+        collectionsRv=view.findViewById(R.id.explore_main_offer_card_rv);
+        videoRv=view.findViewById(R.id.explore_brand_videos_rv);
 
         populateFilterSpinner();
 
