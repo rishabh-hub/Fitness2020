@@ -5,7 +5,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.fitness2020.Adapters.CollectionsAdapter;
 import com.example.fitness2020.Adapters.HomePopularRVAdapter;
@@ -17,6 +19,8 @@ import java.util.ArrayList;
 public class CollectionInternalActivity extends AppCompatActivity {
     RecyclerView verticalRv;
     ImageView topImage;
+    ImageButton back;
+    TextView head,subhead,numberOfPlaces;
     HomePopularRVAdapter itemsAdapter;
     ArrayList<PopularRvModel> itemsModel;
 
@@ -43,11 +47,18 @@ public class CollectionInternalActivity extends AppCompatActivity {
 
     void attachId()
     {
-        //verticalRv=findViewById(R.id.);
+        verticalRv=findViewById(R.id.collections_internal_page_rv);
+        topImage = findViewById(R.id.collections_internal_image);
+        head = findViewById(R.id.collections_internal_main_head);
+        subhead = findViewById(R.id.collections_internal_sub_head);
+        numberOfPlaces = findViewById(R.id.collections_internal_number_places);
+        back = findViewById(R.id.collections_internal_back_button);
     }
 
     void addData()
     {
+        for (int i=0;i<8;i++)
+        itemsModel.add(new PopularRvModel(R.drawable.gym_photo,"One More Rep","Crossfit, Zumba","Mumbai,Maharashtra ,400022","50 % OFF","4.9"));
 
     }
 }

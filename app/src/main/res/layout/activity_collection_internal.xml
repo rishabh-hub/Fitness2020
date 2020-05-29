@@ -5,6 +5,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".CollectionInternalActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/toolbar"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true"
+        android:background="#65000000"
+        >
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="#00FFFFFF"
+            android:id="@+id/collections_internal_back_button"
+            android:src="@drawable/ic_chevron_left_white_24dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:text="Fitness@99"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/metropolisbold"
+            android:textSize="24sp"
+            android:id="@+id/collections_internal_main_head"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/design_default_color_primary_dark"
+        android:src="@drawable/webinar"
+        android:scaleType="fitXY"
+        android:id="@+id/collections_internal_image"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:text="Enjoy great deals starting at just 99!!"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/metropolismedium"
+        android:textSize="15sp"
+        android:layout_below="@id/collections_internal_image"
+        android:id="@+id/collections_internal_sub_head"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="17 Places"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/metropolismedium"
+        android:textSize="17sp"
+        android:layout_below="@id/collections_internal_sub_head"
+        android:id="@+id/collections_internal_number_places"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:padding="10dp"
+        android:id="@+id/collections_internal_page_rv"
+        android:orientation="vertical"
+        android:layout_below="@id/collections_internal_number_places"/>
 
 </RelativeLayout>

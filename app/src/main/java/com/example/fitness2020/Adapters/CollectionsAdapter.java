@@ -1,6 +1,7 @@
 package com.example.fitness2020.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitness2020.CollectionInternalActivity;
 import com.example.fitness2020.Models.CollectionsModel;
 import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.R;
@@ -63,7 +65,7 @@ public class CollectionsAdapter extends RecyclerView.Adapter<CollectionsAdapter.
         ImageView collectionImage,videoImage;
         TextView collectionHeading,collectionSubHeading;
 
-        public CollectionsAdapterVH(@NonNull View itemView) {
+        public CollectionsAdapterVH(@NonNull final View itemView) {
             super(itemView);
 
             if (code==0)
@@ -71,6 +73,14 @@ public class CollectionsAdapter extends RecyclerView.Adapter<CollectionsAdapter.
                 collectionImage=itemView.findViewById(R.id.main_offer_card_image);
                 collectionHeading=itemView.findViewById(R.id.main_offer_card_heading);
                 collectionSubHeading=itemView.findViewById(R.id.main_offer_card_subheading);
+
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent goToInternalPage = new Intent(itemView.getContext(), CollectionInternalActivity.class);
+                        itemView.getContext().startActivity(goToInternalPage);
+                    }
+                });
 
             }
 
