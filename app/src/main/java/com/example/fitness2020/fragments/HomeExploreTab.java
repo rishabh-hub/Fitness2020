@@ -205,7 +205,8 @@ public class HomeExploreTab extends Fragment {
             popularRvModels.add(new PopularRvModel(R.drawable.gym_photo,"One More Rep","Crossfit, Zumba","Mumbai,Maharashtra ,400022","50 % OFF","4.9"));
             popularHorizontalRvModels.add(new PopularHorizontalRvModel(R.drawable.gym_dummy,"Danceout by Burzin Engineer","Dance, Aerobics","Tue-Fri 9:00 AM","4.9"));
 
-
+            collectionsModels.add(new CollectionsModel(R.drawable.webinar,"Fitnes @99","17 Places"));
+            videoModels.add(new VideoModel(R.drawable.brand_video_dummy));
              webinarModels.add(new WebinarModel("Functional Training","9:00 AM - 10:00 AM","INTERMEDIATE","Zumba/Crossfit",R.drawable.gym_dummy));
              vouchersModels.add(new VouchersModel("Trending","Gym Company","GYM50","Till Jun '20",R.drawable.gym_voucher,"FLAT 50% OFF"));
              companyModels.add(new CompanyModel(R.drawable.company_logo));
