@@ -18,15 +18,18 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitness2020.Adapters.CarousalsAdapter1;
+import com.example.fitness2020.Adapters.CollectionsAdapter;
 import com.example.fitness2020.Adapters.HomePopularRVAdapter;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
 import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
+import com.example.fitness2020.Models.CollectionsModel;
 import com.example.fitness2020.Models.CompanyModel;
 import com.example.fitness2020.Models.PackModel;
 import com.example.fitness2020.Models.PopularHorizontalRvModel;
 import com.example.fitness2020.Models.PopularRvModel;
 import com.example.fitness2020.Models.ReviewModel;
 import com.example.fitness2020.Models.TrendingRvModel;
+import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.Models.VouchersModel;
 import com.example.fitness2020.Models.WebinarModel;
 import com.example.fitness2020.R;
@@ -43,6 +46,7 @@ public class HomeExploreTab extends Fragment {
     HomePopularRVAdapter homePopularRVAdapter,adapter2;
     SubscriptionCardsAdapter membershipAdapter;
     CarousalsAdapter1 webinarAdapter,voucherAdapter,companyAdapter;
+    CollectionsAdapter videoAdapter,collectionsAdapter;
     RecyclerView trendingRv;
     RecyclerView banner2Rv;
     RecyclerView popularRv;
@@ -50,6 +54,8 @@ public class HomeExploreTab extends Fragment {
     RecyclerView membershipRV;
     RecyclerView companyRv,vouchersRv,webinarRv;
     RecyclerView topBannerRv;
+    RecyclerView collectionsRv;
+    RecyclerView videoRv;
     ArrayList<TrendingRvModel> trendingRvModels;
     ArrayList<PopularRvModel> popularRvModels;
     ArrayList<PackModel> packModels;
@@ -58,6 +64,8 @@ public class HomeExploreTab extends Fragment {
     ArrayList<VouchersModel> vouchersModels;
     ArrayList<CompanyModel> companyModels;
     ArrayList<TrendingRvModel> topBannerModel;
+    ArrayList<CollectionsModel> collectionsModels;
+    ArrayList<VideoModel> videoModels;
     Spinner filterSpinner;
 
     public HomeExploreTab() {
@@ -87,6 +95,8 @@ public class HomeExploreTab extends Fragment {
         vouchersRv=view.findViewById(R.id.explore_voucher_rv);
         companyRv=view.findViewById(R.id.explore_partners_rv);
         topBannerRv=view.findViewById(R.id.explore_workout_rv);
+        //collectionsRv=view.findViewById(R.id.);
+        //videoRv=view.findViewById(R.id.);
 
         populateFilterSpinner();
 
@@ -120,6 +130,9 @@ public class HomeExploreTab extends Fragment {
         vouchersRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         webinarRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         topBannerRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+        collectionsRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+        videoRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+
 
 
 
@@ -131,6 +144,8 @@ public class HomeExploreTab extends Fragment {
         vouchersModels=new ArrayList<>(3);
         webinarModels=new ArrayList<>(3);
         topBannerModel=new ArrayList<>(3);
+        collectionsModels=new ArrayList<>(3);
+        videoModels=new ArrayList<>(3);
 
         addData();
 
@@ -144,7 +159,8 @@ public class HomeExploreTab extends Fragment {
         voucherAdapter=new CarousalsAdapter1(context,companyModels,vouchersModels,webinarModels,2);
         companyAdapter=new CarousalsAdapter1(context,companyModels,vouchersModels,webinarModels,1);
         topBannerAdapter=new HomeTrendingRVAdapter(topBannerModel,context,1,popularHorizontalRvModels);
-
+        collectionsAdapter=new CollectionsAdapter(context,0,collectionsModels,videoModels);
+        videoAdapter=new CollectionsAdapter(context,1,collectionsModels,videoModels);
 
 
         popularRv.setAdapter(homePopularRVAdapter);
@@ -159,6 +175,8 @@ public class HomeExploreTab extends Fragment {
         vouchersRv.setAdapter(voucherAdapter);
         companyRv.setAdapter(companyAdapter);
         topBannerRv.setAdapter(topBannerAdapter);
+        collectionsRv.setAdapter(collectionsAdapter);
+        videoRv.setAdapter(videoAdapter);
 
         homePopularRVAdapter.notifyDataSetChanged();
         adapter.notifyDataSetChanged();
@@ -169,6 +187,8 @@ public class HomeExploreTab extends Fragment {
         voucherAdapter.notifyDataSetChanged();
         companyAdapter.notifyDataSetChanged();
         topBannerAdapter.notifyDataSetChanged();
+        collectionsAdapter.notifyDataSetChanged();
+        videoAdapter.notifyDataSetChanged();
 
         return view;
     }
@@ -191,6 +211,7 @@ public class HomeExploreTab extends Fragment {
              companyModels.add(new CompanyModel(R.drawable.company_logo));
             packModels.add(new PackModel("Unlimited Workouts",99));
             topBannerModel.add(new TrendingRvModel(R.drawable.workout_carousel_dummy));
+
         }
 
     }
