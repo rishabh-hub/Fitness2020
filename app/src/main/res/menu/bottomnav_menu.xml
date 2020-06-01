@@ -13,7 +13,7 @@
         />
     <item
         android:id="@+id/events"
-        android:title="EVENTS"
+        android:title="Fit@Work"
         android:icon="@drawable/ic_event_black_24dp"
         />
     <item

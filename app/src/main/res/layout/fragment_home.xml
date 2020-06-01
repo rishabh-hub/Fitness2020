@@ -60,19 +60,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/home_tab_explore"
-            android:text="Explore"
+            android:text="Live"
             />
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/home_tab_fitness_work"
-            android:text="Fitness@work"
+            android:text="At the Studio"
             />
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/home_tab_freetrials"
-            android:text="Free Trials"
+            android:text="Events"
             />
 
 
