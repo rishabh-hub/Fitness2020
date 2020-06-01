@@ -19,6 +19,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.fitness2020.fragments.EventsFragment;
+import com.example.fitness2020.fragments.HomeFitnessatWorkTab;
 import com.example.fitness2020.fragments.HomeFragment;
 import com.example.fitness2020.fragments.PassFragment;
 import com.example.fitness2020.fragments.VouchersFragment;
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
                         loadFragment(new VouchersFragment());
                         return true;
                     case R.id.events:
-                        loadFragment(new EventsFragment());
+                        loadFragment(new HomeFitnessatWorkTab());
                         return true;
                 }
 

@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.fitness2020.fragments.EventsFragment;
 import com.example.fitness2020.fragments.HomeAtTheStudioTab;
 import com.example.fitness2020.fragments.HomeFitnessatWorkTab;
 import com.example.fitness2020.fragments.HomeLiveTab;
@@ -33,18 +34,18 @@ public class HomePageAdapter extends FragmentPagerAdapter {
         {
             case 0:
                 {if (code==0)
-                return new HomeAtTheStudioTab();
+                return new HomeLiveTab();
                 else
                     return new SignupSlider1();}
 
             case 1:
                 {if(code==0)
-                return new HomeFitnessatWorkTab();
+                return new HomeAtTheStudioTab();
                 else
                     return new SignupSlider2();}
             case 2:
                 {if(code==0)
-                    return new HomeLiveTab();
+                    return new EventsFragment();
                 else
                     return new SignupSlider3();}
 
