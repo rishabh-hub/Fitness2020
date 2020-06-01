@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitness2020.Adapters.HomePopularRVAdapter;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
+import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
+import com.example.fitness2020.Models.PackModel;
 import com.example.fitness2020.Models.PopularHorizontalRvModel;
 import com.example.fitness2020.Models.PopularRvModel;
 import com.example.fitness2020.Models.TrendingRvModel;
@@ -36,6 +38,13 @@ public class HomeLiveTab extends Fragment {
     ArrayList<PopularRvModel> popularRvModels;
     ArrayList<PopularHorizontalRvModel> popularHorizontalRvModels;
 
+    RecyclerView liveTopBannerRv;
+    ArrayList<TrendingRvModel> liveTopBannerModel;
+    HomeTrendingRVAdapter liveTopBannerAdapter;
+    SubscriptionCardsAdapter liveMembershipAdapter;
+    RecyclerView liveMembershiRv;
+    ArrayList<PackModel> packModels;
+
 
     public HomeLiveTab() {
     }
@@ -46,50 +55,72 @@ public class HomeLiveTab extends Fragment {
     }
 
     @Nullable
-    @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.home_fragment_free_trials_tab,container,false);
 
-        trendingRv=view.findViewById(R.id.home_trending_rv);
-        popularRv=view.findViewById(R.id.home_popular_rv);
-        banner2Rv=view.findViewById(R.id.home_banner2_rv);
 
-        banner2Rv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
-        popularRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
-        trendingRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+        liveTopBannerRv=view.findViewById(R.id.live_workout_rv);
+        liveMembershiRv=view.findViewById(R.id.live_membership_rv);
 
-        popularRvModels=new ArrayList<>(3);
-        trendingRvModels=new ArrayList<TrendingRvModel>(3);
-        popularHorizontalRvModels=new ArrayList<>(3);
+        liveTopBannerRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+        liveMembershiRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
 
+
+        liveTopBannerModel=new ArrayList<>(3);
+        packModels=new ArrayList<>(3);
 
         addData();
 
-        homePopularRVAdapter=new HomePopularRVAdapter(popularRvModels,context);
-        adapter=new HomeTrendingRVAdapter(trendingRvModels,context,1,popularHorizontalRvModels);
-        banner2Adapter=new HomeTrendingRVAdapter(trendingRvModels,context,2,popularHorizontalRvModels);
+        liveTopBannerAdapter=new HomeTrendingRVAdapter(liveTopBannerModel,context,1,popularHorizontalRvModels);
+        liveMembershipAdapter=new SubscriptionCardsAdapter(context,2,packModels);
 
+        liveTopBannerRv.setAdapter(liveTopBannerAdapter);
+        liveMembershiRv.setAdapter(liveMembershipAdapter);
 
-        popularRv.setAdapter(homePopularRVAdapter);
-        trendingRv.setAdapter(adapter);
-        banner2Rv.setAdapter(banner2Adapter);
-        homePopularRVAdapter.notifyDataSetChanged();
-        adapter.notifyDataSetChanged();
-        banner2Adapter.notifyDataSetChanged();
+//        trendingRv=view.findViewById(R.id.home_trending_rv);
+//        popularRv=view.findViewById(R.id.home_popular_rv);
+//        banner2Rv=view.findViewById(R.id.home_banner2_rv);
+//
+//        banner2Rv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+//        popularRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
+//        trendingRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+//
+//        popularRvModels=new ArrayList<>(3);
+//        trendingRvModels=new ArrayList<TrendingRvModel>(3);
+//        popularHorizontalRvModels=new ArrayList<>(3);
+//
+//
+//        addData();
+//
+//        homePopularRVAdapter=new HomePopularRVAdapter(popularRvModels,context);
+//        adapter=new HomeTrendingRVAdapter(trendingRvModels,context,1,popularHorizontalRvModels);
+//        banner2Adapter=new HomeTrendingRVAdapter(trendingRvModels,context,2,popularHorizontalRvModels);
+//
+//
+//        popularRv.setAdapter(homePopularRVAdapter);
+//        trendingRv.setAdapter(adapter);
+//        banner2Rv.setAdapter(banner2Adapter);
+//        homePopularRVAdapter.notifyDataSetChanged();
+//        adapter.notifyDataSetChanged();
+//        banner2Adapter.notifyDataSetChanged();
 
         return view;
     }
 
     void addData()//when using api, add data from api here.
     {
-        for(int i=0;i<4;i++)
+        for(int i=0;i<=5;i++)
         {
 
-            trendingRvModels.add(new TrendingRvModel(R.mipmap.ic_launcher));
 
-            popularRvModels.add(new PopularRvModel(R.mipmap.ic_launcher,"Gym name","Category"," Gym Address","Recommended","4.9"));
+            liveTopBannerModel.add(new TrendingRvModel(R.drawable.workout_carousel_dummy));
 
-            popularHorizontalRvModels.add(new PopularHorizontalRvModel(R.drawable.trending_activity,"Gym name","Gym Category","Available on thi day from time -","4.9"));
+            packModels.add(new PackModel("Unlimited Workouts",99));
+//            trendingRvModels.add(new TrendingRvModel(R.mipmap.ic_launcher));
+//
+//            popularRvModels.add(new PopularRvModel(R.mipmap.ic_launcher,"Gym name","Category"," Gym Address","Recommended","4.9"));
+//
+//            popularHorizontalRvModels.add(new PopularHorizontalRvModel(R.drawable.trending_activity,"Gym name","Gym Category","Available on thi day from time -","4.9"));
 
         }
 
