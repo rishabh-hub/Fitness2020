@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#0074AA</color>
+    <color name="colorPrimary">#004768</color>
     <color name="bookBtn">#1A2561</color>
     <color name="colorPrimaryDark">#484848</color>
     <color name="colorAccent">#03DAC5</color>

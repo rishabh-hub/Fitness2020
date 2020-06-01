@@ -163,9 +163,7 @@ public class HomeLiveTab extends Fragment {
 
             liveTrendingModel.add(new TrendingRvModel(R.drawable.trending_activity));
 
-            liveWebinarModels1.add(new WebinarModel("Functional Training","9:00 - 10:00","INTERMEDIATE","Crossfit/Zumba",R.drawable.gym_dummy));
 
-            liveWebinarModels2.add(new WebinarModel("Functional Training 2","!0:00 - 11:00","ADVANCED","Swimming",R.drawable.gym_dummy));
 
             liveReviewModel.add(new ReviewModel("Tiger Shroff","ABC GYM","lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores."));
 
@@ -176,6 +174,13 @@ public class HomeLiveTab extends Fragment {
 //
 //            popularHorizontalRvModels.add(new PopularHorizontalRvModel(R.drawable.trending_activity,"Gym name","Gym Category","Available on thi day from time -","4.9"));
 
+        }
+
+        for (int i=0;i<3;++i)
+        {
+            liveWebinarModels1.add(new WebinarModel("Functional Training","9:00 - 10:00","INTERMEDIATE","Crossfit/Zumba",R.drawable.gym_dummy));
+
+            liveWebinarModels2.add(new WebinarModel("Functional Training 2","10:00 - 11:00","ADVANCED","Swimming",R.drawable.gym_dummy));
         }
 
     }

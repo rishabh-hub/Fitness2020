@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
-
     <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none"
@@ -13,12 +8,13 @@
         android:id="@+id/home_scrollvw"
         android:nestedScrollingEnabled="true"
         >
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/banner_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_pack"
@@ -30,6 +26,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
+                    android:layout_marginTop="5dp"
                     android:text="Why Fitness 2020?"
                     android:fontFamily="@font/metropolisbold"
                     android:textSize="17sp"
@@ -44,6 +41,8 @@
                     />
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/member_container"
+                android:layout_below="@id/banner_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -67,6 +66,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/webinar_container"
+                android:layout_below="@id/member_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -97,8 +98,7 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_height="match_parent"
                     android:id="@+id/live_webinar_rv_1"
                     android:nestedScrollingEnabled="false"
                     android:layout_marginBottom="10dp"
@@ -106,9 +106,14 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/trending_container"
+                android:layout_below="@id/webinar_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_pack"
+                android:backgroundTint="#88000000"
+                android:backgroundTintMode="src_atop"
                 android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -118,10 +123,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
+                        android:layout_marginTop="5dp"
                         android:text="What's Buzzing?"
                         android:fontFamily="@font/metropolisbold"
                         android:textSize="17sp"
-                        android:textColor="@color/colorPrimaryDark"/>
+                        android:textColor="#FFFFFF"/>
 
                 </LinearLayout>
 
@@ -130,11 +136,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:id="@+id/live_trending_rv"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="15dp"
                     />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@id/trending_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/live_webinar_rv_2"
@@ -144,6 +151,8 @@
 
 
             <LinearLayout
+                android:id="@+id/reveiw_container"
+                android:layout_below="@id/live_webinar_rv_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -189,10 +198,9 @@
                 </RelativeLayout>
             </LinearLayout>
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
     </ScrollView>
 
 
-</LinearLayout>

@@ -3,19 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginVertical="5dp"
+    app:cardCornerRadius="5dp"
     android:layout_marginHorizontal="10dp"
-    app:cardCornerRadius="15dp"
     android:elevation="8dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="4dp">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="120dp"
+        android:background="#FFFFFF"
         android:layout_alignParentTop="true"
         android:id="@+id/webinar_card_back_image"
         android:scaleType="centerCrop"/>
@@ -26,7 +27,7 @@
             android:textSize="15sp"
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/webinar_head"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#FFFFFF"
             android:layout_below="@id/webinar_card_back_image"
             android:text="Functional Training"
             android:layout_marginLeft="20dp"
@@ -34,14 +35,14 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:textSize="10sp"
+            android:layout_height="25dp"
+            android:textSize="12sp"
             android:gravity="center"
             android:fontFamily="@font/metropolismedium"
             android:id="@+id/webinar_timing"
             android:textColor="#FFFFFF"
             android:background="@drawable/bg_button"
-            android:backgroundTint="@color/bookBtn"
+            android:backgroundTint="@color/colorPrimary"
             android:padding="5dp"
             android:layout_marginRight="10dp"
             android:textStyle="bold"
@@ -54,11 +55,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="13sp"
+            android:textSize="12sp"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="6dp"
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/webinar_level"
             android:layout_below="@id/webinar_timing"
             android:textColor="#FF6D00"
+            android:background="@drawable/bg_textview"
             android:text="INTERMEDIATE"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="1dp"/>
@@ -69,7 +73,7 @@
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/webinar_activities"
             android:layout_below="@id/webinar_level"
-            android:textColor="@color/bookBtn"
+            android:textColor="@color/colorAccent"
             android:text="Crossfit/Zumba"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="20dp"
