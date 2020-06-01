@@ -7,9 +7,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.fitness2020.fragments.HomeExploreTab;
+import com.example.fitness2020.fragments.HomeAtTheStudioTab;
 import com.example.fitness2020.fragments.HomeFitnessatWorkTab;
-import com.example.fitness2020.fragments.HomeFreeTrialTab;
+import com.example.fitness2020.fragments.HomeLiveTab;
 import com.example.fitness2020.fragments.SignupSlider1;
 import com.example.fitness2020.fragments.SignupSlider2;
 import com.example.fitness2020.fragments.SignupSlider3;
@@ -33,7 +33,7 @@ public class HomePageAdapter extends FragmentPagerAdapter {
         {
             case 0:
                 {if (code==0)
-                return new HomeExploreTab();
+                return new HomeAtTheStudioTab();
                 else
                     return new SignupSlider1();}
 
@@ -44,7 +44,7 @@ public class HomePageAdapter extends FragmentPagerAdapter {
                     return new SignupSlider2();}
             case 2:
                 {if(code==0)
-                    return new HomeFreeTrialTab();
+                    return new HomeLiveTab();
                 else
                     return new SignupSlider3();}
 

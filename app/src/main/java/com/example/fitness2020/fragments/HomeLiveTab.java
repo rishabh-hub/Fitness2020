@@ -21,7 +21,7 @@ import com.example.fitness2020.R;
 
 import java.util.ArrayList;
 
-public class HomeFreeTrialTab extends Fragment {
+public class HomeLiveTab extends Fragment {
 
 
     View view;
@@ -37,7 +37,7 @@ public class HomeFreeTrialTab extends Fragment {
     ArrayList<PopularHorizontalRvModel> popularHorizontalRvModels;
 
 
-    public HomeFreeTrialTab() {
+    public HomeLiveTab() {
     }
 
     @Override

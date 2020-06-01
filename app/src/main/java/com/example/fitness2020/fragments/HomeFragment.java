@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,21 +12,13 @@ import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 //import com.example.fitness2020.Adapters.HomePageAdapter;
 import com.example.fitness2020.Adapters.HomePageAdapter;
-import com.example.fitness2020.Adapters.HomePopularRVAdapter;
-import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
-import com.example.fitness2020.Models.PopularRvModel;
-import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.R;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
-
-import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
 
@@ -90,13 +80,13 @@ public class HomeFragment extends Fragment {
 
                 switch(tab.getPosition())
                 {
-                    case 0: fragment=new HomeExploreTab();
+                    case 0: fragment=new HomeLiveTab();
                         loadFragment(fragment);
                         break;
-                    case 1: fragment=new HomeFitnessatWorkTab();
+                    case 1: fragment=new HomeAtTheStudioTab();
                         loadFragment(fragment);
                         break;
-                    case 2: fragment=new HomeFreeTrialTab();
+                    case 2: fragment=new EventsFragment();
                         loadFragment(fragment);
                         break;
 

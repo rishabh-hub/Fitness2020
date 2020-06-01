@@ -36,7 +36,7 @@ import com.example.fitness2020.R;
 
 import java.util.ArrayList;
 
-public class HomeExploreTab extends Fragment {
+public class HomeAtTheStudioTab extends Fragment {
 
     View view;
     Context context;
@@ -68,7 +68,7 @@ public class HomeExploreTab extends Fragment {
     ArrayList<VideoModel> videoModels;
     Spinner filterSpinner;
 
-    public HomeExploreTab() {
+    public HomeAtTheStudioTab() {
     }
 
     @Override
