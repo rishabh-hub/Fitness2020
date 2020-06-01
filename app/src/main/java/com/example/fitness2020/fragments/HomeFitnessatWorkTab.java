@@ -70,8 +70,6 @@ public class HomeFitnessatWorkTab extends Fragment {
 
 
 
-
-
         reviewAdapter = new HomePageClientAdapter(reviews,context,1);
         clientAdapter = new HomePageClientAdapter(clients,context);
         videoAdapter = new FitnessVideoAdapter(videoModels,context);

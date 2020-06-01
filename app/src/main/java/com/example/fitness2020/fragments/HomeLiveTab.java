@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitness2020.Adapters.CarousalsAdapter1;
+import com.example.fitness2020.Adapters.HomePageClientAdapter;
 import com.example.fitness2020.Adapters.HomePopularRVAdapter;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
 import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
@@ -20,6 +21,7 @@ import com.example.fitness2020.Models.CompanyModel;
 import com.example.fitness2020.Models.PackModel;
 import com.example.fitness2020.Models.PopularHorizontalRvModel;
 import com.example.fitness2020.Models.PopularRvModel;
+import com.example.fitness2020.Models.ReviewModel;
 import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.Models.VouchersModel;
 import com.example.fitness2020.Models.WebinarModel;
@@ -46,6 +48,8 @@ public class HomeLiveTab extends Fragment {
     RecyclerView liveMembershiRv;
     RecyclerView liveTrendingRv;
     RecyclerView liveWebinarRv1, liveWebinarRv2;
+    RecyclerView liveReviewRv;
+    ArrayList<ReviewModel> liveReviewModel;
     ArrayList<TrendingRvModel> liveTopBannerModel;
     ArrayList<PackModel> packModels;
     ArrayList<TrendingRvModel> liveTrendingModel;
@@ -55,11 +59,8 @@ public class HomeLiveTab extends Fragment {
     HomeTrendingRVAdapter liveTrendingRvAdapter;
     HomeTrendingRVAdapter liveTopBannerAdapter;
     SubscriptionCardsAdapter liveMembershipAdapter;
+    HomePageClientAdapter liveReviewAdapter;
     CarousalsAdapter1 liveWebinarAdapter1, liveWebinarAdapter2;
-
-
-
-
 
 
 
@@ -81,18 +82,21 @@ public class HomeLiveTab extends Fragment {
         liveTrendingRv=view.findViewById(R.id.live_trending_rv);
         liveWebinarRv1=view.findViewById(R.id.live_webinar_rv_1);
         liveWebinarRv2=view.findViewById(R.id.live_webinar_rv_2);
+        liveReviewRv=view.findViewById(R.id.live_reviews_rv);
 
         liveTopBannerRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         liveMembershiRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         liveTrendingRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         liveWebinarRv1.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         liveWebinarRv2.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
+        liveReviewRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
 
         liveTopBannerModel=new ArrayList<>(3);
         packModels=new ArrayList<>(3);
         liveTrendingModel=new ArrayList<>(3);
         liveWebinarModels1 =new ArrayList<>(3);
         liveWebinarModels2 =new ArrayList<>(3);
+        liveReviewModel=new ArrayList<>(3);
 
         addData();
 
@@ -101,18 +105,21 @@ public class HomeLiveTab extends Fragment {
         liveTrendingRvAdapter=new HomeTrendingRVAdapter(liveTrendingModel,context,1,popularHorizontalRvModels);
         liveWebinarAdapter1 =new CarousalsAdapter1(context,liveCompanyModels,liveVouchersModels,liveWebinarModels1,0);
         liveWebinarAdapter2 =new CarousalsAdapter1(context,liveCompanyModels,liveVouchersModels,liveWebinarModels2,0);
+        liveReviewAdapter=new HomePageClientAdapter(liveReviewModel,context,1);
 
         liveTopBannerRv.setAdapter(liveTopBannerAdapter);
         liveMembershiRv.setAdapter(liveMembershipAdapter);
         liveTrendingRv.setAdapter(liveTrendingRvAdapter);
         liveWebinarRv1.setAdapter(liveWebinarAdapter1);
         liveWebinarRv2.setAdapter(liveWebinarAdapter2);
+        liveReviewRv.setAdapter(liveReviewAdapter);
 
         liveTopBannerAdapter.notifyDataSetChanged();
         liveMembershipAdapter.notifyDataSetChanged();
         liveTrendingRvAdapter.notifyDataSetChanged();
         liveWebinarAdapter1.notifyDataSetChanged();
         liveWebinarAdapter2.notifyDataSetChanged();
+        liveReviewAdapter.notifyDataSetChanged();
 
 //        trendingRv=view.findViewById(R.id.home_trending_rv);
 //        popularRv=view.findViewById(R.id.home_popular_rv);
@@ -159,6 +166,9 @@ public class HomeLiveTab extends Fragment {
             liveWebinarModels1.add(new WebinarModel("Functional Training","9:00 - 10:00","INTERMEDIATE","Crossfit/Zumba",R.drawable.gym_dummy));
 
             liveWebinarModels2.add(new WebinarModel("Functional Training 2","!0:00 - 11:00","ADVANCED","Swimming",R.drawable.gym_dummy));
+
+            liveReviewModel.add(new ReviewModel("Tiger Shroff","ABC GYM","lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores."));
+
 
 //            trendingRvModels.add(new TrendingRvModel(R.mipmap.ic_launcher));
 //
