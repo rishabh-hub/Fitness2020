@@ -1,29 +1,42 @@
 package com.example.fitness2020;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.transition.TransitionInflater;
-import android.widget.ImageView;
 
-import com.example.fitness2020.Adapters.GymPageAdapter;
-import com.example.fitness2020.fragments.GymAboutTab;
-import com.example.fitness2020.fragments.GymOfferTab;
+import com.example.fitness2020.Adapters.GymAdapter;
+import com.example.fitness2020.Models.GymActivitiesModel;
+import com.example.fitness2020.Models.GymFacilityModel;
+import com.example.fitness2020.Models.GymOfferingModel;
+import com.example.fitness2020.Models.ReviewModel;
+import com.example.fitness2020.Models.TrendingRvModel;
+import com.example.fitness2020.Models.VideoModel;
 import com.google.android.material.tabs.TabItem;
-import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
 
 public class GymActivity extends AppCompatActivity {
 
-    TabLayout gymTabLayout;
     TabItem descriptionTab,offeringsTab;
     ViewPager gymViewPager;
-    GymPageAdapter gymPageAdapter;
-    Fragment gymFragment;
-    ImageView dot;
+//    GymPageAdapter gymPageAdapter;
+//    Fragment gymFragment;
+    RecyclerView reviewRv;
+    ArrayList<ReviewModel> reviewModels = new ArrayList<>();
+    GymAdapter reviewAdapter;
+    ArrayList<GymFacilityModel> facilityModels = new ArrayList<>();
+    ArrayList<GymOfferingModel> offeringModels = new ArrayList<>();
+
+    RecyclerView gymActivityRv,gymPhotosRv,gymVideosRv;
+    ArrayList<TrendingRvModel> imageModels;
+    ArrayList<VideoModel> videoModels;
+    ArrayList<GymActivitiesModel> gymActivitiesModels;
+    GymAdapter gymPhotosAdapter;
+    GymAdapter gymVideosAdapter,gymActivityAdapter;
+
 
 
     @Override
@@ -33,63 +46,60 @@ public class GymActivity extends AppCompatActivity {
 
         attachId();
 
-        gymPageAdapter=new GymPageAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,gymTabLayout.getTabCount());
 
-        gymViewPager.setAdapter(gymPageAdapter);
-
-        gymTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                gymViewPager.setCurrentItem(tab.getPosition());
+        reviewRv.setLayoutManager(new LinearLayoutManager(GymActivity.this,LinearLayoutManager.HORIZONTAL,false));
+        gymPhotosRv.setLayoutManager(new LinearLayoutManager(GymActivity.this,LinearLayoutManager.HORIZONTAL,false));
+        gymVideosRv.setLayoutManager(new LinearLayoutManager(GymActivity.this,LinearLayoutManager.HORIZONTAL,false));
+        gymActivityRv.setLayoutManager(new LinearLayoutManager(GymActivity.this,LinearLayoutManager.HORIZONTAL,false));
 
 
-                switch(tab.getPosition())
-                {
-                    case 0: gymFragment=new GymAboutTab();
-                        loadFragment(gymFragment);
-                        break;
-                    case 1: gymFragment=new GymOfferTab();
-                        loadFragment(gymFragment);
-                        break;
-                }
-            }
+        imageModels=new ArrayList<>(3);
+        videoModels=new ArrayList<>(3);
+        gymActivitiesModels=new ArrayList<>(3);
+        reviewModels=new ArrayList<>(3);
 
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
+        addData();
 
-            }
+        reviewAdapter=new GymAdapter(GymActivity.this,6,facilityModels,offeringModels,reviewModels);
+        gymPhotosAdapter =new GymAdapter(GymActivity.this,imageModels,1,videoModels,gymActivitiesModels);
+        gymVideosAdapter=new GymAdapter(GymActivity.this,imageModels,2,videoModels,gymActivitiesModels);
+        gymActivityAdapter=new GymAdapter(GymActivity.this,imageModels,3,videoModels,gymActivitiesModels);
 
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
+        reviewRv.setAdapter(reviewAdapter);
+        gymPhotosRv.setAdapter(gymPhotosAdapter);
+        gymVideosRv.setAdapter(gymVideosAdapter);
+        gymActivityRv.setAdapter(gymActivityAdapter);
 
-            }
-        });
 
-        gymViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(gymTabLayout));
+        reviewAdapter.notifyDataSetChanged();
+        gymPhotosAdapter.notifyDataSetChanged();
+        gymVideosAdapter.notifyDataSetChanged();
+        gymActivityAdapter.notifyDataSetChanged();
 
     }
 
     void attachId()
     {
-        gymTabLayout=findViewById(R.id.gym_tab_layout);
-        descriptionTab=findViewById(R.id.gym_description);
-        offeringsTab=findViewById(R.id.gym_offerings);
-        gymViewPager=findViewById(R.id.gym_view_pager);
-//        dot = findViewById(R.id.page1_dot);
+
+        gymActivityRv=findViewById(R.id.gym_tab_activity_rv);
+        gymPhotosRv=findViewById(R.id.gym_photos_rv);
+        gymVideosRv=findViewById(R.id.gym_tab_videos_rv);
+        reviewRv=findViewById(R.id.gym_tab_reviews_rv);
     }
 
-    void loadFragment(Fragment fragment)
+    void addData()
     {
-        FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-//        fragment.setSharedElementReturnTransition(TransitionInflater.from(this).inflateTransition(R.transition.default_transition));
-//        fragment.setExitTransition(TransitionInflater.from(this).inflateTransition(android.R.transition.no_transition));
-//
-//        fragment.setSharedElementEnterTransition(TransitionInflater.from(this).inflateTransition(R.transition.default_transition));
-//        fragment.setEnterTransition(TransitionInflater.from(this).inflateTransition(android.R.transition.no_transition));
-        fragmentTransaction.replace(R.id.gym_frame_layout,fragment);
-//        fragmentTransaction.addSharedElement(dot, "page1");
-//        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        fragmentTransaction.commit();
+        for (int i=0;i<=5;i++)
+        {
+            reviewModels.add(new ReviewModel("XYZ", "ABC", "Very Good Product"));
+            imageModels.add(new TrendingRvModel(R.drawable.gym_dummy));
+            videoModels.add(new VideoModel(R.drawable.gym_video_dummy));
+        }
+
+
+        for(int i=0;i<=8;i++)
+            gymActivitiesModels.add(new GymActivitiesModel("Crossfit"));
 
     }
+
 }

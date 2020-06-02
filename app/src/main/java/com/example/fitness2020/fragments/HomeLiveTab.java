@@ -91,6 +91,7 @@ public class HomeLiveTab extends Fragment {
         liveWebinarRv2.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         liveReviewRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
 
+
         liveTopBannerModel=new ArrayList<>(3);
         packModels=new ArrayList<>(3);
         liveTrendingModel=new ArrayList<>(3);

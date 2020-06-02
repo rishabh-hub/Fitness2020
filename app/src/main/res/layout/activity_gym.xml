@@ -8,43 +8,302 @@
     android:orientation="vertical"
     tools:context=".GymActivity">
 
-    <com.google.android.material.tabs.TabLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="40sp"
-        app:tabTextColor="@color/colorPrimary"
-        android:id="@+id/gym_tab_layout"
-        app:tabIndicatorHeight="2dp"
-        app:tabIndicatorColor="@color/colorPrimary"
-        app:tabSelectedTextColor="@color/colorPrimary"
-        android:layout_marginBottom="5dp"
-        >
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/gym_description"
-            android:text="Description"
-            />
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/gym_offerings"
-            android:text="Offerings"
-            />
-    </com.google.android.material.tabs.TabLayout>
-
-    <androidx.viewpager.widget.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/gym_view_pager"
-        android:layout_below="@id/gym_tab_layout"
-        >
-        <FrameLayout
-            android:layout_width="match_parent"
+        <RelativeLayout
             android:layout_height="match_parent"
-            android:id="@+id/gym_frame_layout"
-            />
+            android:layout_width="match_parent">
 
-    </androidx.viewpager.widget.ViewPager>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gym_photos_rv"
+                android:layout_alignParentTop="true"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gym_tab_name"
+                android:fontFamily="@font/metropolisbold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:text="Krav Maga Global"
+                android:layout_below="@id/gym_photos_rv"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gym_tab_address"
+                android:fontFamily="@font/metropolismedium"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="13sp"
+                android:text="Silver Sunshine, 101, 9th Rd, Ram Krishna Nagar, Khar West, Mumbai, Maharashtra 400052"
+                android:layout_below="@id/gym_tab_name"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="10dp"
+                />
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:text="More"
+                android:background="@drawable/bg_textview"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/gym_more_address_btn"
+                android:layout_below="@id/gym_tab_address"
+                android:textSize="8sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="5dp"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_container"
+                android:layout_below="@id/gym_more_address_btn"
+                android:layout_marginVertical="5dp"
+                android:fillViewport="true">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gym_tab_activity_rv"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/gym_more_address_btn"/>
+            </ScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="8dp"
+                android:id="@+id/gym_line1"
+                android:layout_below="@id/rv_container"
+                android:background="#000"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gym_tab_desc_head"
+                android:fontFamily="@font/metropolisbold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp"
+                android:text="Description"
+                android:layout_below="@id/gym_line1"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gym_tab_desc"
+                android:fontFamily="@font/metropolismedium"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="13sp"
+                android:text="Krav Maga Global is headed by Master Eyal Yanilov, the right hand student of the creator of the Krav Maga system Imi Litchenfeld. As the Krav Maga system came of age and the system rapidly spread across the world through an ever increasing number of schools, largely due to the continuous"
+                android:layout_below="@id/gym_tab_desc_head"
+                android:layout_marginTop="5dp"
+                android:maxLines="4"
+                android:layout_marginHorizontal="10dp"
+                />
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:text="More"
+                android:background="@drawable/bg_textview"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/gym_more_desc_btn"
+                android:layout_below="@id/gym_tab_desc"
+                android:textSize="8sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gym_tab_ttr_head"
+                android:fontFamily="@font/metropolisbold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp"
+                android:text="Things To Remember"
+                android:layout_below="@id/gym_more_desc_btn"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gym_tab_ttr"
+                android:fontFamily="@font/metropolismedium"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="13sp"
+                android:text="1. First thing\n2. Second Thing"
+                android:layout_below="@id/gym_tab_ttr_head"
+                android:layout_marginTop="5dp"
+                android:maxLines="4"
+                android:layout_marginHorizontal="10dp"
+                />
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:text="More"
+                android:background="@drawable/bg_textview"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/gym_more_ttr_btn"
+                android:layout_below="@id/gym_tab_ttr"
+                android:textSize="8sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="5dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="8dp"
+                android:id="@+id/gym_line2"
+                android:layout_below="@id/gym_more_ttr_btn"
+                android:background="#000"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="7dp"
+                android:id="@+id/book_container"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/bg_textview"
+                android:layout_below="@id/gym_line2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gym_tab_pass_head"
+                    android:fontFamily="@font/metropolisbold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+                    android:textAlignment="center"
+                    android:text="Fitness Pass Exclusive"
+                    android:layout_below="@id/gym_line2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gym_tab_pass_text"
+                    android:fontFamily="@font/metropolisbold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="13sp"
+                    android:text="Get 1 complementary class at Krav Maga Global"
+                    android:layout_below="@id/gym_tab_pass_head"
+                    android:layout_marginTop="5dp"
+                    android:textAlignment="center"
+                    android:maxLines="4"
+                    android:layout_marginHorizontal="10dp"
+                    />
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/gym_tab_pass_btn"
+                    android:background="@drawable/bg_button"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_marginHorizontal="30dp"
+                    android:text="Book"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/metropolisbold"
+                    android:textColor="#fff"
+                    android:layout_below="@id/gym_tab_pass_text"
+                    android:layout_marginVertical="10dp"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gym_tab_video_head"
+                android:fontFamily="@font/metropolisbold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp"
+                android:text="Videos"
+                android:textAlignment="center"
+                android:layout_below="@id/book_container"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gym_tab_videos_rv"
+                android:layout_marginVertical="5dp"
+                android:layout_below="@id/gym_tab_video_head"
+                android:orientation="horizontal"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gym_tab_reviews"
+                android:fontFamily="@font/metropolisbold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp"
+                android:text="Reviews"
+                android:textAlignment="center"
+                android:layout_below="@id/gym_tab_videos_rv"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gym_tab_reviews_rv"
+                android:layout_below="@+id/gym_tab_reviews"
+                android:orientation="horizontal"
+                android:layout_marginVertical="5dp"
+                />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40sp"-->
+<!--        app:tabTextColor="@color/colorPrimary"-->
+<!--        android:id="@+id/gym_tab_layout"-->
+<!--        app:tabIndicatorHeight="2dp"-->
+<!--        app:tabIndicatorColor="@color/colorPrimary"-->
+<!--        app:tabSelectedTextColor="@color/colorPrimary"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        >-->
+
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/gym_description"-->
+<!--            android:text="Description"-->
+<!--            />-->
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/gym_offerings"-->
+<!--            android:text="Offerings"-->
+<!--            />-->
+<!--    </com.google.android.material.tabs.TabLayout>-->
+
+<!--    <androidx.viewpager.widget.ViewPager-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/gym_view_pager"-->
+<!--        android:layout_below="@id/gym_tab_layout"-->
+<!--        >-->
+<!--        <FrameLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:id="@+id/gym_frame_layout"-->
+<!--            />-->
+
+<!--    </androidx.viewpager.widget.ViewPager>-->
 
 </RelativeLayout>
