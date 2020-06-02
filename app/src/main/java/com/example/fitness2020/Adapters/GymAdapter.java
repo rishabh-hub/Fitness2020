@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitness2020.CustomDialogClass;
+import com.example.fitness2020.GymActivity;
 import com.example.fitness2020.Models.GymActivitiesModel;
 import com.example.fitness2020.Models.GymFacilityModel;
 import com.example.fitness2020.Models.GymOfferingModel;
@@ -33,6 +35,7 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
     ArrayList<GymFacilityModel> facilityModels;
     ArrayList<GymOfferingModel> offeringModels;
     ArrayList<ReviewModel> reviewModels;
+    CustomDialogClass customDialogClass;
 
     public GymAdapter(Context context, ArrayList<TrendingRvModel> imageModels, int code, ArrayList<VideoModel> videoModels, ArrayList<GymActivitiesModel> gymActivitiesModels) {
         this.context = context;
@@ -116,7 +119,7 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
         TextView facility,reviewProduct,reviewPerson,reviewDesc;
         Button bookOneClass,bookOneMonth;
 
-        public GymAdapterVH(@NonNull View itemView) {
+        public GymAdapterVH(@NonNull final View itemView) {
             super(itemView);
 
             if (code==1)
@@ -136,6 +139,15 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
                 oneMonhPriceAfter = itemView.findViewById(R.id.offering_price_after);
                 bookOneClass = itemView.findViewById(R.id.offering_item_1_day_btn);
                 bookOneMonth = itemView.findViewById(R.id.offering_item_1_month_btn);
+
+                bookOneClass.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        customDialogClass=new CustomDialogClass(itemView.getContext(),0);
+                        customDialogClass.setCancelable(true);
+                        customDialogClass.show();
+                    }
+                });
             }
             else if(code==5)
                 facility = itemView.findViewById(R.id.gym_facility_name);

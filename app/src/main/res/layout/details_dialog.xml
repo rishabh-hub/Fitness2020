@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="300dp"
+    app:cardBackgroundColor="#AB00151E"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp">
+<RelativeLayout
+     android:layout_width="300dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:fontFamily="@font/metropolisbold"
+        android:textColor="#FFFFFF"
+        android:id="@+id/head"
+        android:text="Details"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:id="@+id/desc"
+        android:text="Please enter the following details before continuing."
+        android:layout_below="@id/head"
+        android:textColor="#FFFFFF"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/desc"
+        android:layout_marginHorizontal="30dp"
+        style="@style/Widget.Design.TextInputLayout"
+        android:hint="Name"
+        android:padding="5dp"
+        android:layout_marginVertical="5dp"
+        android:background="@drawable/bg_et"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:fontFamily="@font/metropolisbold"
+        android:id="@+id/details_name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/details_name"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="5dp"
+        style="@style/Widget.Design.TextInputLayout"
+        android:hint="Email"
+        android:padding="5dp"
+        android:background="@drawable/bg_et"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:fontFamily="@font/metropolisbold"
+        android:id="@+id/details_email"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/details_email"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="5dp"
+        style="@style/Widget.Design.TextInputLayout"
+        android:hint="Phone Number"
+        android:padding="5dp"
+        android:background="@drawable/bg_et"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:fontFamily="@font/metropolisbold"
+        android:id="@+id/details_ph"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/details_ph"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="5dp"
+        style="@style/Widget.Design.TextInputLayout"
+        android:hint="Address"
+        android:padding="5dp"
+        android:background="@drawable/bg_et"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:fontFamily="@font/metropolisbold"
+        android:id="@+id/details_address"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/details_address"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_button"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginVertical="10dp"
+        android:text="Continue"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:id="@+id/details_continue_btn"/>
+
+
+
+</RelativeLayout>
+</androidx.cardview.widget.CardView>

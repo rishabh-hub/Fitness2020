@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="#AB00151E"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp">
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="300dp"
+    android:layout_width="match_parent"
     android:layout_height="300dp">
 
     <TextView
@@ -10,7 +16,9 @@
         android:padding="5dp"
         android:textAlignment="center"
         android:textSize="17sp"
+        android:fontFamily="@font/metropolisbold"
         android:id="@+id/head"
+        android:textColor="#fff"
         android:text="Select Offering"
         />
 
@@ -20,6 +28,8 @@
         android:id="@+id/offerings_rv"
         android:layout_below="@id/head"
         android:orientation="vertical"
+        android:layout_marginBottom="10dp"
         />
 
 </RelativeLayout>
+</androidx.cardview.widget.CardView>

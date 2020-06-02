@@ -80,7 +80,8 @@ public class GymActivity extends AppCompatActivity {
         gymBookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                customDialogClass=new CustomDialogClass(GymActivity.this);
+                customDialogClass=new CustomDialogClass(GymActivity.this,1);
+                customDialogClass.setCancelable(true);
                 customDialogClass.show();
             }
         });
