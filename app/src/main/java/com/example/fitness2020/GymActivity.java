@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.fitness2020.Adapters.GymAdapter;
 import com.example.fitness2020.Models.GymActivitiesModel;
@@ -20,10 +22,6 @@ import java.util.ArrayList;
 
 public class GymActivity extends AppCompatActivity {
 
-    TabItem descriptionTab,offeringsTab;
-    ViewPager gymViewPager;
-//    GymPageAdapter gymPageAdapter;
-//    Fragment gymFragment;
     RecyclerView reviewRv;
     ArrayList<ReviewModel> reviewModels = new ArrayList<>();
     GymAdapter reviewAdapter;
@@ -36,6 +34,9 @@ public class GymActivity extends AppCompatActivity {
     ArrayList<GymActivitiesModel> gymActivitiesModels;
     GymAdapter gymPhotosAdapter;
     GymAdapter gymVideosAdapter,gymActivityAdapter;
+
+    Button gymBookButton;
+    CustomDialogClass customDialogClass;
 
 
 
@@ -76,6 +77,14 @@ public class GymActivity extends AppCompatActivity {
         gymVideosAdapter.notifyDataSetChanged();
         gymActivityAdapter.notifyDataSetChanged();
 
+        gymBookButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                customDialogClass=new CustomDialogClass(GymActivity.this);
+                customDialogClass.show();
+            }
+        });
+
     }
 
     void attachId()
@@ -85,6 +94,7 @@ public class GymActivity extends AppCompatActivity {
         gymPhotosRv=findViewById(R.id.gym_photos_rv);
         gymVideosRv=findViewById(R.id.gym_tab_videos_rv);
         reviewRv=findViewById(R.id.gym_tab_reviews_rv);
+        gymBookButton=findViewById(R.id.gym_tab_pass_btn);
     }
 
     void addData()
