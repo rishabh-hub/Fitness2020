@@ -17,7 +17,7 @@ import com.example.fitness2020.R;
 
 import java.util.ArrayList;
 
-public class CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1.CarouslasAdapter1VH> {
+public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1.CarouslasAdapter1VH> {
     Context context;
     ArrayList<CompanyModel> companyModels;
     ArrayList<VouchersModel> vouchersModels;
