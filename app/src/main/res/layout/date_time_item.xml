@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="5dp"
+    android:background="@drawable/bg_textview">
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="2:00PM-3:00PM"
+        android:textSize="13dp"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/date_time"
+        android:textStyle="bold"/>
+
+</LinearLayout>

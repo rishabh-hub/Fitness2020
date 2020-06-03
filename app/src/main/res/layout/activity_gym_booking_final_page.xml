@@ -1,9 +1,265 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".GymBookingFinalPage">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:fontFamily="@font/metropolisbold"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="ABC Fitness"
+        android:textAlignment="center"
+        android:id="@+id/final_booking_page_gym_name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Activity:"
+        android:layout_below="@id/final_booking_page_gym_name"
+        android:id="@+id/activity"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimaryDark"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Yoga"
+        android:layout_below="@id/final_booking_page_gym_name"
+        android:layout_toRightOf="@id/activity"
+        android:id="@+id/final_booking_page_gym_activity"
+        android:textSize="17sp"
+        android:textColor="@color/bookBtn"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Booking for:"
+        android:layout_below="@id/final_booking_page_gym_activity"
+        android:id="@+id/offer"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimaryDark"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="1 Month Subscription"
+        android:layout_below="@id/final_booking_page_gym_activity"
+        android:layout_toRightOf="@id/offer"
+        android:id="@+id/final_booking_page_gym_offer"
+        android:textSize="17sp"
+        android:textColor="@color/bookBtn"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:padding="5dp"
+        android:layout_below="@id/final_booking_page_gym_offer"
+        android:id="@+id/line1"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:background="@color/colorPrimaryDark"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Select Date"
+        android:layout_below="@id/line1"
+        android:id="@+id/date"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/final_booking_page_gym_date_rv"
+        android:layout_below="@id/date"
+        android:orientation="horizontal"
+        android:padding="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:padding="5dp"
+        android:layout_below="@id/final_booking_page_gym_date_rv"
+        android:id="@+id/line2"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:background="@color/colorPrimaryDark"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Select Time"
+        android:layout_below="@id/line2"
+        android:id="@+id/time"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/final_booking_page_gym_time_rv"
+        android:layout_below="@id/time"
+        android:orientation="horizontal"
+        android:padding="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:padding="5dp"
+        android:layout_below="@id/final_booking_page_gym_time_rv"
+        android:id="@+id/line3"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:background="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Select Number of People: "
+        android:layout_below="@id/line3"
+        android:id="@+id/squad"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimaryDark"/>
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:hint="Enter Number"
+        android:textAlignment="center"
+        android:layout_below="@id/line3"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@id/squad"
+        android:id="@+id/final_booking_page_gym_groupET"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="@color/bookBtn"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:padding="5dp"
+        android:layout_below="@id/final_booking_page_gym_groupET"
+        android:id="@+id/line4"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:background="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Enter Promo Code: "
+        android:layout_below="@id/line4"
+        android:id="@+id/promo"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimaryDark"/>
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:hint="Enter Here"
+        android:textAlignment="center"
+        android:layout_below="@id/line4"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@id/squad"
+        android:id="@+id/final_booking_page_gym_promoET"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="@color/bookBtn"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:padding="5dp"
+        android:layout_below="@id/final_booking_page_gym_promoET"
+        android:id="@+id/line5"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:background="@color/colorPrimaryDark"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/line5"
+        android:background="@color/colorPrimary"
+        android:id="@+id/final_booking_page_gym_fitness_pass"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:padding="5dp"
+        android:layout_below="@id/final_booking_page_gym_fitness_pass"
+        android:id="@+id/line6"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:background="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Net Amount: "
+        android:layout_below="@id/line6"
+        android:id="@+id/amount"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Rs 999"
+        android:layout_below="@id/line6"
+        android:id="@+id/final_booking_page_gym_amount"
+        android:layout_alignParentEnd="true"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/bookBtn"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_button"
+        android:layout_below="@id/amount"
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="10dp"
+        android:text="Proceed to Payment"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="#fff"
+        android:elevation="12dp"
+        android:id="@+id/final_booking_page_gym_book_btn"/>
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
+</ScrollView>

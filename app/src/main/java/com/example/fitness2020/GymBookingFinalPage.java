@@ -19,8 +19,8 @@ import java.util.ArrayList;
 
 public class GymBookingFinalPage extends AppCompatActivity {
 
-    TextView gymName,offeringName,offeringSubscription;
-    EditText promoCode;
+    TextView gymName,offeringName,offeringSubscription,netAmount;
+    EditText promoCode,groupNum;
     Button payButton;
     RecyclerView dateRv,timeRv;
     ArrayList<DateModel> dateModels;
@@ -62,14 +62,15 @@ public class GymBookingFinalPage extends AppCompatActivity {
 
     void attachId()
     {
-//        gymName=findViewById(R.id.);
-//        offeringName=findViewById(R.id.);
-//        offeringSubscription=findViewById(R.id.);
-//        dateRv=findViewById(R.id.);
-//        timeRv=findViewById(R.id.);
-//        promoCode=findViewById(R.id.);
-//        payButton=findViewById(R.id.);
-//
+        gymName=findViewById(R.id.final_booking_page_gym_name);
+        offeringName=findViewById(R.id.final_booking_page_gym_activity);
+        offeringSubscription=findViewById(R.id.final_booking_page_gym_offer);
+        dateRv=findViewById(R.id.final_booking_page_gym_date_rv);
+        timeRv=findViewById(R.id.final_booking_page_gym_time_rv);
+        promoCode=findViewById(R.id.final_booking_page_gym_promoET);
+        payButton=findViewById(R.id.final_booking_page_gym_book_btn);
+        groupNum = findViewById(R.id.final_booking_page_gym_groupET);
+        netAmount = findViewById(R.id.final_booking_page_gym_amount);
     }
 
     void addData()
@@ -77,7 +78,7 @@ public class GymBookingFinalPage extends AppCompatActivity {
         for (int i=0;i<=6;i++)
         {
             timeModels.add(new TimeModel("10:00-11:00"));
-            dateModels.add(new DateModel("2", "June"));
+            dateModels.add(new DateModel("2 June", "June"));
         }
 
     }

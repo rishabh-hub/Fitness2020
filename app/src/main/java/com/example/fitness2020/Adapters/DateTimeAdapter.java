@@ -32,11 +32,10 @@ public class DateTimeAdapter extends RecyclerView.Adapter<DateTimeAdapter.DateTi
     @NonNull
     @Override
     public DateTimeAdapterVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        if(code==0)
-//        return new DateTimeAdapterVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.,parent,false));
-//        else
-//            return new DateTimeAdapterVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.,parent,false));
-        return null;
+        if(code==0)
+        return new DateTimeAdapterVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.date_time_item,parent,false));
+        else
+            return new DateTimeAdapterVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.date_time_item,parent,false));
     }
 
     @Override
@@ -66,11 +65,11 @@ public class DateTimeAdapter extends RecyclerView.Adapter<DateTimeAdapter.DateTi
 
             if (code==0)
             {
-//                date=itemView.findViewById(R.id.);
+                date=itemView.findViewById(R.id.date_time);
             }
             else
             {
-//                time=itemView.findViewById(R.id.);
+                time=itemView.findViewById(R.id.date_time);
             }
 
         }
