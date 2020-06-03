@@ -3,11 +3,11 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="wrap_content"
     android:layout_width="300dp"
-    app:cardBackgroundColor="#AB00151E"
+    app:cardBackgroundColor="#DC00151E"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="15dp">
 <RelativeLayout
-     android:layout_width="300dp"
+     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <TextView
         android:layout_width="match_parent"
