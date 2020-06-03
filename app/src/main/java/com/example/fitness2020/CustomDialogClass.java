@@ -3,9 +3,11 @@ package com.example.fitness2020;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
@@ -51,6 +53,13 @@ public class CustomDialogClass extends Dialog {
               setContentView(R.layout.details_dialog);
               attachId();
 
+              continueBtn.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+                      Intent gymFinalBookingPageIntent=new Intent(context,GymBookingFinalPage.class);
+                      context.startActivity(gymFinalBookingPageIntent);
+                  }
+              });
           }
 
         else {
