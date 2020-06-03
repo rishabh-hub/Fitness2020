@@ -36,7 +36,7 @@ public class GymActivity extends AppCompatActivity {
     GymAdapter gymVideosAdapter,gymActivityAdapter;
 
     Button gymBookButton;
-    CustomDialogClass customDialogClass;
+    public CustomDialogClass customDialogClass;
 
 
 

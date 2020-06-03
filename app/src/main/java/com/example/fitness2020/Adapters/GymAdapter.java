@@ -143,6 +143,7 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
                 bookOneClass.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
                         customDialogClass=new CustomDialogClass(itemView.getContext(),0);
                         customDialogClass.setCancelable(true);
                         customDialogClass.show();
