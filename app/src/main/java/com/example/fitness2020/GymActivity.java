@@ -5,9 +5,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.fitness2020.Adapters.GymAdapter;
 import com.example.fitness2020.Models.GymActivitiesModel;
@@ -35,8 +38,10 @@ public class GymActivity extends AppCompatActivity {
     GymAdapter gymPhotosAdapter;
     GymAdapter gymVideosAdapter,gymActivityAdapter;
 
-    Button gymBookButton;
+    Button gymBookButton,mapsButton;
+    TextView gymAddress;
     public CustomDialogClass customDialogClass;
+    private String address;
 
 
 
@@ -86,6 +91,17 @@ public class GymActivity extends AppCompatActivity {
             }
         });
 
+        mapsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                address=gymAddress.getText().toString();
+                Uri mapUri = Uri.parse("geo:0,0?q=" + Uri.encode(address));
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, mapUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+            }
+        });
+
     }
 
     void attachId()
@@ -96,6 +112,8 @@ public class GymActivity extends AppCompatActivity {
         gymVideosRv=findViewById(R.id.gym_tab_videos_rv);
         reviewRv=findViewById(R.id.gym_tab_reviews_rv);
         gymBookButton=findViewById(R.id.gym_tab_pass_btn);
+//        mapsButton=findViewById(R.id);
+        gymAddress=findViewById(R.id.gym_tab_address);
     }
 
     void addData()
