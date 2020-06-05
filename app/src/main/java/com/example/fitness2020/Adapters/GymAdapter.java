@@ -1,6 +1,8 @@
 package com.example.fitness2020.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,12 +10,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitness2020.CustomDialogClass;
 import com.example.fitness2020.GymActivity;
+import com.example.fitness2020.Models.AddressModel;
 import com.example.fitness2020.Models.GymActivitiesModel;
 import com.example.fitness2020.Models.GymFacilityModel;
 import com.example.fitness2020.Models.GymOfferingModel;
@@ -35,6 +39,7 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
     ArrayList<GymFacilityModel> facilityModels;
     ArrayList<GymOfferingModel> offeringModels;
     ArrayList<ReviewModel> reviewModels;
+    ArrayList<AddressModel> addressModels;
     CustomDialogClass customDialogClass;
 
     public GymAdapter(Context context, ArrayList<TrendingRvModel> imageModels, int code, ArrayList<VideoModel> videoModels, ArrayList<GymActivitiesModel> gymActivitiesModels) {
@@ -45,12 +50,14 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
         this.gymActivitiesModels = gymActivitiesModels;
     }
 
-    public GymAdapter(Context context, int code, ArrayList<GymFacilityModel> facilityModels, ArrayList<GymOfferingModel> offeringModels, ArrayList<ReviewModel> reviewModels) {
+    public GymAdapter(Context context, int code, ArrayList<GymFacilityModel> facilityModels, ArrayList<GymOfferingModel> offeringModels, ArrayList<ReviewModel> reviewModels,ArrayList<AddressModel> addressModels) {
         this.context = context;
         this.code = code;
         this.facilityModels = facilityModels;
         this.offeringModels = offeringModels;
         this.reviewModels = reviewModels;
+        this.addressModels=addressModels;
+
     }
 
     @NonNull
@@ -69,16 +76,16 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
             return new GymAdapterVH((LayoutInflater.from(parent.getContext()).inflate(R.layout.gym_offerings_rv_item,parent,false)));
         else if(code==5)
             return new GymAdapterVH((LayoutInflater.from(parent.getContext()).inflate(R.layout.gym_facility_rv_item,parent,false)));
-        else
+        else if (code==6)
             return new GymAdapterVH((LayoutInflater.from(parent.getContext()).inflate(R.layout.review_rv_item,parent,false)));
 
-
-
+        else
+            return new GymAdapterVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.single_address_layout,parent,false));
 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull GymAdapterVH holder, int position) {
+    public void onBindViewHolder(@NonNull final GymAdapterVH holder, int position) {
 
         if (code==1)
             holder.imagePopulate(imageModels.get(position));
@@ -90,8 +97,13 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
             holder.offerPopulate(offeringModels.get(position));
         else if(code==5)
             holder.facilityPopulate(facilityModels.get(position));
-        else
+        else if (code ==6)
             holder.reviewPopulate(reviewModels.get(position));
+
+        else
+            {
+            holder.addressPopulate(addressModels.get(position));
+        }
 
 
     }
@@ -108,14 +120,16 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
             return offeringModels.size();
         else if (code==5)
             return facilityModels.size();
-        else
+        else if (code==6)
             return reviewModels.size();
+        else
+            return addressModels.size();
     }
 
     public class GymAdapterVH extends RecyclerView.ViewHolder
     {
         ImageView gymImage, gymVideo;
-        TextView gymActivity,offeringName,oneClassName,oneClassPtsAfter,oneMonhPriceAfter;
+        TextView gymActivity,offeringName,oneClassName,oneClassPtsAfter,oneMonhPriceAfter,gymAddress;
         TextView facility,reviewProduct,reviewPerson,reviewDesc;
         Button bookOneClass,bookOneMonth;
 
@@ -152,13 +166,33 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
             }
             else if(code==5)
                 facility = itemView.findViewById(R.id.gym_facility_name);
-            else
+            else if (code==6)
             {
                 reviewPerson = itemView.findViewById(R.id.review_name);
                 reviewProduct = itemView.findViewById(R.id.review_product);
                 reviewDesc = itemView.findViewById(R.id.review_desc);
             }
+            else
+                {
+                gymAddress = itemView.findViewById(R.id.gym_address_dialog_item);
 
+                    itemView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+
+                            String address=gymAddress.getText().toString();
+                            Uri mapUri = Uri.parse("geo:0,0?q=" + Uri.encode(address));
+                            Intent mapIntent = new Intent(Intent.ACTION_VIEW, mapUri);
+                            mapIntent.setPackage("com.google.android.apps.maps");
+                            if (mapIntent.resolveActivity(itemView.getContext().getPackageManager()) != null) {
+                                itemView.getContext().startActivity(mapIntent);
+                            } else{
+                                Toast.makeText(itemView.getContext(),"Please install Google maps to use this feature",Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+
+                }
         }
 
         void imagePopulate(TrendingRvModel trendingRvModel)
@@ -191,6 +225,11 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
             reviewPerson.setText(reviewModel.getName());
             reviewProduct.setText(reviewModel.getProduct());
             reviewDesc.setText(reviewModel.getDescription());
+        }
+
+        public void addressPopulate(AddressModel addressModel)
+        {
+            gymAddress.setText(addressModel.getAddress());
         }
     }
 }

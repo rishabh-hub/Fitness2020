@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fitness2020.Adapters.GymAdapter;
+import com.example.fitness2020.Models.AddressModel;
 import com.example.fitness2020.Models.GymActivitiesModel;
 import com.example.fitness2020.Models.GymFacilityModel;
 import com.example.fitness2020.Models.GymOfferingModel;
@@ -37,6 +38,7 @@ public class GymActivity extends AppCompatActivity {
     ArrayList<TrendingRvModel> imageModels;
     ArrayList<VideoModel> videoModels;
     ArrayList<GymActivitiesModel> gymActivitiesModels;
+    ArrayList<AddressModel> addressModels;
     GymAdapter gymPhotosAdapter;
     GymAdapter gymVideosAdapter,gymActivityAdapter;
 
@@ -69,7 +71,7 @@ public class GymActivity extends AppCompatActivity {
 
         addData();
 
-        reviewAdapter=new GymAdapter(GymActivity.this,6,facilityModels,offeringModels,reviewModels);
+        reviewAdapter=new GymAdapter(GymActivity.this,6,facilityModels,offeringModels,reviewModels,addressModels);
         gymPhotosAdapter =new GymAdapter(GymActivity.this,imageModels,1,videoModels,gymActivitiesModels);
         gymVideosAdapter=new GymAdapter(GymActivity.this,imageModels,2,videoModels,gymActivitiesModels);
         gymActivityAdapter=new GymAdapter(GymActivity.this,imageModels,3,videoModels,gymActivitiesModels);
@@ -97,15 +99,11 @@ public class GymActivity extends AppCompatActivity {
         mapsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                address=gymAddress.getText().toString();
-                Uri mapUri = Uri.parse("geo:0,0?q=" + Uri.encode(address));
-                Intent mapIntent = new Intent(Intent.ACTION_VIEW, mapUri);
-                mapIntent.setPackage("com.google.android.apps.maps");
-                if (mapIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(mapIntent);
-                } else{
-                    Toast.makeText(GymActivity.this,"Please install Google maps to use this feature",Toast.LENGTH_LONG).show();
-                }
+
+                customDialogClass=new CustomDialogClass(GymActivity.this,2);
+                customDialogClass.setCancelable(true);
+                customDialogClass.show();
+
             }
         });
 

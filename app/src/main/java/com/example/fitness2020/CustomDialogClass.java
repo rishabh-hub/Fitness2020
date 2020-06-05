@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitness2020.Adapters.GymAdapter;
+import com.example.fitness2020.Models.AddressModel;
 import com.example.fitness2020.Models.GymFacilityModel;
 import com.example.fitness2020.Models.GymOfferingModel;
 import com.example.fitness2020.Models.ReviewModel;
@@ -30,11 +31,13 @@ public class CustomDialogClass extends Dialog {
     int code;
     public Button continueBtn;
     public EditText nameEt,emailET,phoneET,addressET;
-    RecyclerView offeringsRv;
+    RecyclerView offeringsRv,gymAddressesRv;
     ArrayList<GymOfferingModel> gymOfferingModels;
     ArrayList<GymFacilityModel> facilityModels = new ArrayList<>();
     ArrayList<ReviewModel> reviewModels = new ArrayList<>();
+    ArrayList<AddressModel> addressModels=new ArrayList<>();
     GymAdapter offeringsAdapter;
+    GymAdapter addressAdapter;
 
     public CustomDialogClass(@NonNull Context context,int code) {
         super(context);
@@ -62,7 +65,7 @@ public class CustomDialogClass extends Dialog {
               });
           }
 
-        else {
+        else if (code==1){
             setContentView(R.layout.offering_dialog);
             attachId();
 
@@ -72,12 +75,30 @@ public class CustomDialogClass extends Dialog {
 
             addData();
 
-            offeringsAdapter=new GymAdapter(context,4,facilityModels,gymOfferingModels,reviewModels);
+            offeringsAdapter=new GymAdapter(context,4,facilityModels,gymOfferingModels,reviewModels,addressModels);
 
             offeringsRv.setAdapter(offeringsAdapter);
 
             offeringsAdapter.notifyDataSetChanged();
         }
+
+        else
+        {
+            setContentView(R.layout.address_dialog_layout);
+
+            gymAddressesRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
+
+            addressModels=new ArrayList<>(3);
+            addData();
+
+            addressAdapter=new GymAdapter(context,7,facilityModels,gymOfferingModels,reviewModels,addressModels);
+
+            gymAddressesRv.setAdapter(addressAdapter);
+
+            addressAdapter.notifyDataSetChanged();
+        }
+
+
     }
 
     void attachId()
