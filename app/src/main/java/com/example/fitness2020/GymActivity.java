@@ -1,10 +1,12 @@
 package com.example.fitness2020;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.ActivityManager;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -45,7 +47,7 @@ public class GymActivity extends AppCompatActivity {
     Button gymBookButton;
     ImageButton mapsButton;
     TextView gymAddress;
-    public CustomDialogClass customDialogClass;
+    public CustomDialogClass customDialogClass,customDialogClass1;
     private String address;
 
 
@@ -90,9 +92,9 @@ public class GymActivity extends AppCompatActivity {
         gymBookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                customDialogClass=new CustomDialogClass(GymActivity.this,1);
-                customDialogClass.setCancelable(true);
-                customDialogClass.show();
+                customDialogClass1=new CustomDialogClass(GymActivity.this,1);
+                customDialogClass1.setCancelable(true);
+                customDialogClass1.show();
             }
         });
 

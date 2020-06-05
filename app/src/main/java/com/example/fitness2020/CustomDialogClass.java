@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,7 +33,7 @@ public class CustomDialogClass extends Dialog {
     public Button continueBtn;
     public EditText nameEt,emailET,phoneET,addressET;
     RecyclerView offeringsRv,gymAddressesRv;
-    ArrayList<GymOfferingModel> gymOfferingModels;
+    ArrayList<GymOfferingModel> gymOfferingModels=new ArrayList<>();
     ArrayList<GymFacilityModel> facilityModels = new ArrayList<>();
     ArrayList<ReviewModel> reviewModels = new ArrayList<>();
     ArrayList<AddressModel> addressModels=new ArrayList<>();
@@ -86,6 +87,8 @@ public class CustomDialogClass extends Dialog {
         {
             setContentView(R.layout.address_dialog_layout);
 
+            attachId();
+
             gymAddressesRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
 
             addressModels=new ArrayList<>(3);
@@ -105,7 +108,7 @@ public class CustomDialogClass extends Dialog {
     {
         if (code==1)
             offeringsRv=findViewById(R.id.offerings_rv);
-        else
+        else if(code==0)
         {
             nameEt = findViewById(R.id.details_name);
             phoneET = findViewById(R.id.details_ph);
@@ -113,11 +116,14 @@ public class CustomDialogClass extends Dialog {
             addressET = findViewById(R.id.details_address);
             continueBtn = findViewById(R.id.details_continue_btn);
         }
+        else
+            gymAddressesRv = findViewById(R.id.gym_address_dialog_rv);
     }
 
     void addData()
     {
         for (int i=0;i<=6;i++)
-            gymOfferingModels.add(new GymOfferingModel("Yoga Fit","Free Trial","free","200"));
+            {gymOfferingModels.add(new GymOfferingModel("Yoga Fit","Free Trial","free","200"));
+        addressModels.add(new AddressModel("Silver Sunshine, 101, 9th Rd, Ram Krishna Nagar, Khar West, Mumbai, Maharashtra 400052"));}
     }
 }
