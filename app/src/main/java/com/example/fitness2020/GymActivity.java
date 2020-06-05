@@ -10,7 +10,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fitness2020.Adapters.GymAdapter;
 import com.example.fitness2020.Models.GymActivitiesModel;
@@ -38,7 +40,8 @@ public class GymActivity extends AppCompatActivity {
     GymAdapter gymPhotosAdapter;
     GymAdapter gymVideosAdapter,gymActivityAdapter;
 
-    Button gymBookButton,mapsButton;
+    Button gymBookButton;
+    ImageButton mapsButton;
     TextView gymAddress;
     public CustomDialogClass customDialogClass;
     private String address;
@@ -98,7 +101,11 @@ public class GymActivity extends AppCompatActivity {
                 Uri mapUri = Uri.parse("geo:0,0?q=" + Uri.encode(address));
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, mapUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
-                startActivity(mapIntent);
+                if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(mapIntent);
+                } else{
+                    Toast.makeText(GymActivity.this,"Please install Google maps to use this feature",Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -112,7 +119,7 @@ public class GymActivity extends AppCompatActivity {
         gymVideosRv=findViewById(R.id.gym_tab_videos_rv);
         reviewRv=findViewById(R.id.gym_tab_reviews_rv);
         gymBookButton=findViewById(R.id.gym_tab_pass_btn);
-//        mapsButton=findViewById(R.id);
+        mapsButton=findViewById(R.id.gym_map_btn);
         gymAddress=findViewById(R.id.gym_tab_address);
     }
 
