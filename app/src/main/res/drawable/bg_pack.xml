@@ -3,7 +3,8 @@
     android:shape="rectangle">
 
 <gradient
-    android:startColor="@color/colorPrimary"
+    android:startColor="@color/colorAccent"
+    android:centerColor="@color/colorPrimary"
     android:endColor="@color/bookBtn"
     android:angle="135"
     />
