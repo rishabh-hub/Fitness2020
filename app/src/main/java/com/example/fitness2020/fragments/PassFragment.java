@@ -82,7 +82,7 @@ public class PassFragment extends Fragment {
         fitnessPassRV.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
         videoRV.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         faqRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
-        membershipRV.setLayoutManager(new GridLayoutManager(context,2,GridLayoutManager.VERTICAL,false));
+        membershipRV.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
 
 
 
@@ -139,7 +139,7 @@ public class PassFragment extends Fragment {
         }
         for (int i = 0;i<10;i++)
             clients.add(new ClientModel(R.drawable.ic_person_outline_black_24dp));
-        for (int i=0;i<3;i++)
+        for (int i=0;i<6;i++)
         {
             packModels.add(new PackModel("Unlimited Workouts",99));
         }
