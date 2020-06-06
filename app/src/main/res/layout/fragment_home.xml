@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/bg_actionbar"
         android:id="@+id/toolbar">
     <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"
@@ -48,7 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="30sp"
         app:tabTextColor="#ECECEC"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/bg_actionbar"
         android:id="@+id/home_tab_layout"
         app:tabIndicatorColor="#FFFFFF"
         app:tabIndicatorHeight="3sp"
