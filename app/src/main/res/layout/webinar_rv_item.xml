@@ -15,7 +15,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:background="#FFFFFF"
         android:layout_alignParentTop="true"
         android:id="@+id/webinar_card_back_image"

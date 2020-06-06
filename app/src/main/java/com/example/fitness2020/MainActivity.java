@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
         attachId();
         loadFragment(new HomeFragment());//needs to be configured so that once user logins only then this fragment is loaded
 
+
+
         populateLocationSpinner();
         locationSpinner.setOnItemSelectedListener(this);
 
