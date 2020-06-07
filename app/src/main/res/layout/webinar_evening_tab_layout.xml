@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_morning_webinar"
+        android:src="@drawable/ic_evening_webinar"
         android:scaleType="centerCrop"
         android:tint="#9E000000"
         />
@@ -15,15 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:elevation="8dp"
-        android:id="@+id/webinar_morning_activity_rv"
+        android:id="@+id/webinar_evening_activity_rv"
         android:orientation="horizontal"/>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:elevation="8dp"
-        android:id="@+id/webinar_morning_rv"
-        android:layout_below="@id/webinar_morning_activity_rv"
+        android:id="@+id/webinar_evening_rv"
+        android:layout_below="@id/webinar_evening_activity_rv"
         android:padding="5dp"/>
 
 </RelativeLayout>
