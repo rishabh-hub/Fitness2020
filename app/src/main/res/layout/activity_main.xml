@@ -54,15 +54,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/toolbar"
-            android:layout_above="@id/bottom_nav"
+            android:layout_above="@id/line"
             android:id="@+id/frame_layout"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/line"
+            android:background="@drawable/bg_grad"
+            android:layout_above="@id/bottom_nav"
+            />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/bottom_nav"
-            android:background="#ffffff"
-            app:itemIconTint="@drawable/bg_grad"
+            android:background="#FFFFFF"
             app:menu="@menu/bottomnav_menu"
             android:layout_alignParentBottom="true"/>
 
