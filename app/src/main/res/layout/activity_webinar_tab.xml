@@ -68,7 +68,7 @@
             <com.google.android.material.tabs.TabLayout
                 android:layout_width="match_parent"
                 android:layout_height="30sp"
-                android:id="@+id/home_tab_layout"
+                android:id="@+id/webinar_tab_layout"
                 app:tabGravity="fill"
                 app:tabSelectedTextColor="@color/colorPrimary"
                 app:tabIndicatorColor="@color/colorPrimary"
@@ -79,14 +79,14 @@
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/home_tab_explore"
-                    android:text="Live"
+                    android:id="@+id/webinar_tab_morning"
+                    android:text="Morning"
                     />
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/home_tab_fitness_work"
-                    android:text="At the Studio"
+                    android:id="@+id/webinar_tab_evening"
+                    android:text="Evening"
                     />
 
             </com.google.android.material.tabs.TabLayout>
