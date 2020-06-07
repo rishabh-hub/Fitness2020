@@ -11,6 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/card"
         android:background="@color/colorPrimary">
 
     <ImageView
@@ -41,8 +42,6 @@
             android:fontFamily="@font/metropolismedium"
             android:id="@+id/webinar_timing"
             android:textColor="#FFFFFF"
-            android:background="@drawable/bg_button"
-            android:backgroundTint="@color/colorPrimary"
             android:padding="5dp"
             android:layout_marginRight="10dp"
             android:textStyle="bold"
@@ -62,7 +61,8 @@
             android:id="@+id/webinar_level"
             android:layout_below="@id/webinar_timing"
             android:textColor="#FF6D00"
-            android:background="@drawable/bg_textview"
+            android:background="@drawable/bg_button"
+            android:backgroundTint="#fff"
             android:text="INTERMEDIATE"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="1dp"/>
@@ -78,6 +78,20 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="1dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_button"
+            android:backgroundTint="#FFFFFF"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/webinar_activities"
+            android:text="Book Now"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginEnd="5dp"
+            android:id="@+id/webinar_book_btn"/>
 
 
 

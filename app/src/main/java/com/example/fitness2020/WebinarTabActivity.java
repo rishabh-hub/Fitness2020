@@ -6,7 +6,11 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ImageButton;
 
 import com.example.fitness2020.Adapters.DateTimeAdapter;
 import com.example.fitness2020.Models.DateModel;
@@ -26,8 +30,10 @@ public class WebinarTabActivity extends AppCompatActivity {
     TabLayout timeSlotTab;
     TabItem morningTab,eveningTab;
     Fragment fragment;
-    ArrayList<DateModel> dateModels;
-    ArrayList<TimeModel> timeModels;
+    ImageButton back;
+    FrameLayout frameLayout;
+    ArrayList<DateModel> dateModels=new ArrayList<>();
+    ArrayList<TimeModel> timeModels=new ArrayList<>();
     RecyclerView dateRv;
     DateTimeAdapter dateAdapter;
 
@@ -39,6 +45,7 @@ public class WebinarTabActivity extends AppCompatActivity {
 
         attachId();
 
+        loadFragment(new MorningFragmentTab());
         dateRv.setLayoutManager(new LinearLayoutManager(WebinarTabActivity.this,LinearLayoutManager.HORIZONTAL,false));
 
         timeModels=new ArrayList<>(3);
@@ -51,6 +58,15 @@ public class WebinarTabActivity extends AppCompatActivity {
         dateRv.setAdapter(dateAdapter);
 
         dateAdapter.notifyDataSetChanged();
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WebinarTabActivity.this,MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         timeSlotTab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -85,18 +101,21 @@ public class WebinarTabActivity extends AppCompatActivity {
         morningTab=findViewById(R.id.webinar_tab_morning);
         eveningTab=findViewById(R.id.webinar_tab_evening);
         timeSlotTab=findViewById(R.id.webinar_tab_layout);
+        frameLayout = findViewById(R.id.webinar_frame);
+        back = findViewById(R.id.webinar_internal_back_btn);
     }
 
     void loadFragment(Fragment fragment)
     {
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-//        fragmentTransaction.replace(R.id.,fragment);
+        fragmentTransaction.replace(R.id.webinar_frame,fragment);
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.commit();
     }
 
     void addData()
     {
+        for (int i=0;i<4;i++)
         dateModels.add(new DateModel("2 June","June"));
     }
 }

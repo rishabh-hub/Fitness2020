@@ -27,12 +27,12 @@ import java.util.ArrayList;
 public class MorningFragmentTab extends Fragment {
     View view;
     Context context;
-    ArrayList<GymActivitiesModel> gymActivitiesModels;
-    ArrayList<WebinarModel> webinarModels;
-    ArrayList<CompanyModel> companyModels;
-    ArrayList<VouchersModel> vouchersModels;
-    ArrayList<VideoModel> videoModels;
-    ArrayList<TrendingRvModel> trendingRvModels;
+    ArrayList<GymActivitiesModel> gymActivitiesModels=new ArrayList<>();
+    ArrayList<WebinarModel> webinarModels= new ArrayList<>();
+    ArrayList<CompanyModel> companyModels=new ArrayList<>();
+    ArrayList<VouchersModel> vouchersModels=new ArrayList<>();
+    ArrayList<VideoModel> videoModels=new ArrayList<>();
+    ArrayList<TrendingRvModel> trendingRvModels=new ArrayList<>();
     RecyclerView webinarRv,activitiesRv;
     CarousalsAdapter1 webinarAdapter;
     GymAdapter activitiesAdapter;
@@ -58,7 +58,7 @@ public class MorningFragmentTab extends Fragment {
 
         addData();
 
-        webinarAdapter=new CarousalsAdapter1(context,companyModels,vouchersModels,webinarModels,0);
+        webinarAdapter=new CarousalsAdapter1(context,companyModels,vouchersModels,webinarModels,0,1);
         activitiesAdapter=new GymAdapter(context,trendingRvModels,3,videoModels,gymActivitiesModels);
 
         webinarRv.setAdapter(webinarAdapter);

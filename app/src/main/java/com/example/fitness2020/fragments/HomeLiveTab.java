@@ -1,10 +1,12 @@
 package com.example.fitness2020.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,6 +28,7 @@ import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.Models.VouchersModel;
 import com.example.fitness2020.Models.WebinarModel;
 import com.example.fitness2020.R;
+import com.example.fitness2020.WebinarTabActivity;
 
 import java.util.ArrayList;
 
@@ -62,6 +65,8 @@ public class HomeLiveTab extends Fragment {
     HomePageClientAdapter liveReviewAdapter;
     CarousalsAdapter1 liveWebinarAdapter1, liveWebinarAdapter2;
 
+    TextView webinarViewMore;
+
 
 
     public HomeLiveTab() {
@@ -83,6 +88,7 @@ public class HomeLiveTab extends Fragment {
         liveWebinarRv1=view.findViewById(R.id.live_webinar_rv_1);
         liveWebinarRv2=view.findViewById(R.id.live_webinar_rv_2);
         liveReviewRv=view.findViewById(R.id.live_reviews_rv);
+        webinarViewMore=view.findViewById(R.id.webinar_live_view_more_btn);
 
         liveTopBannerRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         liveMembershiRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
@@ -121,6 +127,14 @@ public class HomeLiveTab extends Fragment {
         liveWebinarAdapter1.notifyDataSetChanged();
         liveWebinarAdapter2.notifyDataSetChanged();
         liveReviewAdapter.notifyDataSetChanged();
+
+        webinarViewMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(view.getContext(), WebinarTabActivity.class);
+                startActivity(intent);
+            }
+        });
 
 //        trendingRv=view.findViewById(R.id.home_trending_rv);
 //        popularRv=view.findViewById(R.id.home_popular_rv);

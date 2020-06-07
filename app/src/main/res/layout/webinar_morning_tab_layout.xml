@@ -6,7 +6,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_morning_webinar"
+        android:src="@drawable/morning_webinar"
         android:scaleType="centerCrop"
         android:tint="#9E000000"
         />
@@ -14,6 +14,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="155dp"
         android:padding="5dp"
         android:elevation="8dp"
         android:id="@+id/webinar_morning_activity_rv"

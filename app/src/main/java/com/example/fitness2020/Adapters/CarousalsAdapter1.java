@@ -1,10 +1,12 @@
 package com.example.fitness2020.Adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,7 +24,7 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
     ArrayList<CompanyModel> companyModels;
     ArrayList<VouchersModel> vouchersModels;
     ArrayList<WebinarModel> webinarModels;
-    int code;
+    int code,code2;
 
     public CarousalsAdapter1(Context context, ArrayList<CompanyModel> companyModels, ArrayList<VouchersModel> vouchersModels, ArrayList<WebinarModel> webinarModels,int code) {
         this.context = context;
@@ -32,6 +34,14 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
         this.code = code;
     }
 
+    public CarousalsAdapter1(Context context, ArrayList<CompanyModel> companyModels, ArrayList<VouchersModel> vouchersModels, ArrayList<WebinarModel> webinarModels,int code,int code2) {
+        this.context = context;
+        this.companyModels = companyModels;
+        this.vouchersModels = vouchersModels;
+        this.webinarModels = webinarModels;
+        this.code = code;
+        this.code2=code2;
+    }
     @NonNull
     @Override
     public CarouslasAdapter1VH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -71,7 +81,7 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
     {
         ImageView partnersImage,voucherImage,webinarImage;
         TextView webinarHead,webinarTiming,webinarLevel,webinarActivity,voucherTag,voucherTheme,voucherCompany,voucherPromCode,voucherValidity;
-
+        RelativeLayout card;
 
         public CarouslasAdapter1VH(@NonNull View itemView) {
             super(itemView);
@@ -82,7 +92,7 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
                 webinarTiming=itemView.findViewById(R.id.webinar_timing);
                 webinarLevel=itemView.findViewById(R.id.webinar_level);
                 webinarActivity=itemView.findViewById(R.id.webinar_activities);
-
+                card = itemView.findViewById(R.id.card);
             }
 
             else if (code==1)
@@ -103,10 +113,16 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
 
         void populateWebinar(WebinarModel webinarModel)
         {
+            if(code2==1)
+               { webinarImage.setVisibility(View.GONE);
+               card.setBackground(itemView.getContext().getDrawable(R.color.colorPrimaryDark));
+               }
+            else
+                webinarImage.setImageResource(webinarModel.getWebinarImageUrl());
+
             webinarActivity.setText(webinarModel.getActivity());
             webinarTiming.setText(webinarModel.getTiming());
             webinarHead.setText(webinarModel.getHeader());
-            webinarImage.setImageResource(webinarModel.getWebinarImageUrl());
             webinarLevel.setText(webinarModel.getLevel());
         }
 

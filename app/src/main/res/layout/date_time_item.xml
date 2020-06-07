@@ -4,11 +4,13 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_marginHorizontal="5dp"
+    android:gravity="center"
     android:background="@drawable/bg_textview">
     <TextView
         android:layout_width="130dp"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:gravity="center"
+        android:layout_gravity="center"
         android:text="2:00PM-3:00PM"
         android:textSize="13dp"
         android:textColor="@color/colorPrimary"

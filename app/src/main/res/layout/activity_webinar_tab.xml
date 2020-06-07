@@ -8,7 +8,9 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff">
+        android:id="@+id/webinar_appbar"
+        android:background="#fff"
+        android:backgroundTint="#83000000">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -19,14 +21,14 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:background="@drawable/ic_left_arrow"
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/white"
                 android:id="@+id/webinar_internal_back_btn"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
                 android:layout_marginLeft="10dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/white"
                 android:text="Webinars"/>
 
         </LinearLayout>
@@ -41,7 +43,7 @@
                 android:layout_height="15dp"
                 android:layout_centerVertical="true"
                 android:background="@drawable/ic_left_arrow"
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/white"
                 android:id="@+id/webinar_internal_date_back_btn"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="fill_parent"
@@ -56,7 +58,7 @@
                 android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/ic_right_arrow"
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/white"
                 android:id="@+id/webinar_internal_date_forward_btn"/>
         </RelativeLayout>
         <LinearLayout
@@ -70,8 +72,9 @@
                 android:layout_height="60dp"
                 android:id="@+id/webinar_tab_layout"
                 app:tabGravity="fill"
-                app:tabSelectedTextColor="@color/colorPrimary"
-                app:tabIndicatorColor="@color/colorPrimary"
+                app:tabSelectedTextColor="@color/white"
+                app:tabIndicatorColor="@color/white"
+                app:tabTextColor="#CDCCCC"
                 app:tabIconTint="#FFAB00"
                 app:tabIndicatorHeight="3sp"
                 android:fillViewport="true"
@@ -95,5 +98,9 @@
             </com.google.android.material.tabs.TabLayout>
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webinar_frame"/>
 
 </RelativeLayout>
