@@ -1,11 +1,10 @@
 package com.example.fitness2020.Models;
 
 public class DateModel {
-    private String date,month;
+    private String date;
 
     public DateModel(String date, String month) {
         this.date = date;
-        this.month = month;
     }
 
     public String getDate() {
@@ -16,11 +15,4 @@ public class DateModel {
         this.date = date;
     }
 
-    public String getMonth() {
-        return month;
-    }
-
-    public void setMonth(String month) {
-        this.month = month;
-    }
 }

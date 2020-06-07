@@ -74,7 +74,6 @@
                 app:tabIndicatorColor="@color/colorPrimary"
                 app:tabIndicatorHeight="3sp"
                 android:fillViewport="true"
-                app:tabMode="scrollable"
                 android:layout_marginBottom="5dp"
                 >
                 <com.google.android.material.tabs.TabItem
