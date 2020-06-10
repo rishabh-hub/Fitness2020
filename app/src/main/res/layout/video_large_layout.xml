@@ -9,7 +9,6 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_margin="5dp"
         android:id="@+id/video_large_item"
         android:scaleType="centerCrop"/>
 

@@ -129,6 +129,18 @@
                         android:fontFamily="@font/metropolisbold"
                         android:textSize="17sp"
                         android:textColor="#FFFFFF"/>
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textAlignment="textEnd"
+                        android:layout_marginTop="5dp"
+                        android:text="View More"
+                        android:id="@+id/live_buzzing_viewmore_btn"
+                        android:fontFamily="@font/metropolisbold"
+                        android:textSize="15sp"
+                        android:textColor="#FFFFFF"/>
+
 
                 </LinearLayout>
 

@@ -92,7 +92,7 @@ public class HomeLiveTab extends Fragment {
         liveWebinarRv2=view.findViewById(R.id.live_webinar_rv_2);
         liveReviewRv=view.findViewById(R.id.live_reviews_rv);
         webinarViewMore=view.findViewById(R.id.webinar_live_view_more_btn);
-//        buzzingViewMoreButton=view.findViewById(R.id.);
+        buzzingViewMoreButton=view.findViewById(R.id.live_buzzing_viewmore_btn);
 
         liveTopBannerRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         liveMembershiRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
@@ -135,7 +135,7 @@ public class HomeLiveTab extends Fragment {
         buzzingViewMoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent videosIntent=new Intent(context, VideosActivity.class);
+                Intent videosIntent=new Intent(getContext(), VideosActivity.class);
                 startActivity(videosIntent);
             }
         });
