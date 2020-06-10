@@ -8,27 +8,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <androidx.cardview.widget.CardView
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/bg_pack"
+    android:backgroundTint="#88000000"
+    android:backgroundTintMode="src_atop"
+    android:id="@+id/head_banner">
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        app:cardCornerRadius="10dp"
-        android:id="@+id/head_banner"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        app:cardBackgroundColor="#000"/>
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:id="@+id/fitness_pass_video_rv"/>
+</RelativeLayout>
+
 
 
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_below="@id/head_banner"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:weightSum="3"
     android:layout_marginVertical="10dp"
     android:id="@+id/memberships_container">
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Become a Member"
+        android:fontFamily="@font/metropolisbold"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimaryDark"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
@@ -46,7 +59,8 @@
         android:layout_below="@id/memberships_container"
         android:fontFamily="@font/metropolisbold"
         android:text="Free Trial"
-        android:layout_margin="10dp"/>
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_margin="5dp"/>
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -107,6 +121,7 @@
         android:id="@+id/fitness_pass_rv_heading"
         android:layout_below="@id/free_trial_rv_container"
         android:fontFamily="@font/metropolisbold"
+        android:textColor="@color/colorPrimaryDark"
         android:text="Fitness Pass"
         android:layout_margin="10dp"/>
 
@@ -163,31 +178,16 @@
 
     </HorizontalScrollView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="17sp"
-        android:id="@+id/fitness_pass_video_rv_heading"
-        android:layout_below="@id/home_banner2_rv_container"
-        android:fontFamily="@font/metropolisbold"
-        android:text="Videos"
-        android:layout_margin="10dp"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_margin="10dp"
-        android:layout_below="@+id/fitness_pass_video_rv_heading"
-        android:id="@+id/fitness_pass_video_rv"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/clients_heading"
-        android:layout_below="@id/fitness_pass_video_rv"
+        android:layout_below="@id/home_banner2_rv_container"
         android:fontFamily="@font/metropolisblack"
         android:text="Our Clients"
-        android:padding="10dp"
+        android:padding="5dp"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="17dp"/>
     <RelativeLayout
         android:layout_width="match_parent"
