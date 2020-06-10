@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -28,6 +29,7 @@ import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.Models.VouchersModel;
 import com.example.fitness2020.Models.WebinarModel;
 import com.example.fitness2020.R;
+import com.example.fitness2020.VideosActivity;
 import com.example.fitness2020.WebinarTabActivity;
 
 import java.util.ArrayList;
@@ -66,6 +68,7 @@ public class HomeLiveTab extends Fragment {
     CarousalsAdapter1 liveWebinarAdapter1, liveWebinarAdapter2;
 
     TextView webinarViewMore;
+    TextView buzzingViewMoreButton;
 
 
 
@@ -89,6 +92,7 @@ public class HomeLiveTab extends Fragment {
         liveWebinarRv2=view.findViewById(R.id.live_webinar_rv_2);
         liveReviewRv=view.findViewById(R.id.live_reviews_rv);
         webinarViewMore=view.findViewById(R.id.webinar_live_view_more_btn);
+//        buzzingViewMoreButton=view.findViewById(R.id.);
 
         liveTopBannerRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         liveMembershiRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
@@ -127,6 +131,14 @@ public class HomeLiveTab extends Fragment {
         liveWebinarAdapter1.notifyDataSetChanged();
         liveWebinarAdapter2.notifyDataSetChanged();
         liveReviewAdapter.notifyDataSetChanged();
+
+        buzzingViewMoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videosIntent=new Intent(context, VideosActivity.class);
+                startActivity(videosIntent);
+            }
+        });
 
         webinarViewMore.setOnClickListener(new View.OnClickListener() {
             @Override

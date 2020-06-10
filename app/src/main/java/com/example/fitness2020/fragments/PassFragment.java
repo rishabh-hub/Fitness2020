@@ -3,6 +3,7 @@ package com.example.fitness2020.fragments;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import com.example.fitness2020.Adapters.FitnessFragmentFreeTrialAdapter;
 import com.example.fitness2020.Adapters.FitnessVideoAdapter;
 import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
+import com.example.fitness2020.Adapters.VideosAdapter;
 import com.example.fitness2020.Models.FaqModel;
 import com.example.fitness2020.Adapters.HomePageClientAdapter;
 import com.example.fitness2020.Models.ClientModel;
@@ -57,8 +59,8 @@ public class PassFragment extends Fragment {
     ArrayList<FitnessFragmentFreeTrialModel> fragmentFreeTrialModels;
 
     RecyclerView videoRV;
-    ArrayList<VideoModel> videos;
-    FitnessVideoAdapter videoAdapter;
+    ArrayList<VideoModel> videos,dailyWorkoutVideos,studioVideos,corporateVideos;
+    VideosAdapter videoAdapter;
 
     FitnessFragmentFreeTrialAdapter fragmentFreeTrialAdapter,fitnessPassAdapter;
     Context context;
@@ -97,7 +99,7 @@ public class PassFragment extends Fragment {
         clientAdapter = new HomePageClientAdapter(clients,context);
         fragmentFreeTrialAdapter=new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,context,fitnessPassModels,1);
         fitnessPassAdapter = new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,context,fitnessPassModels,0);
-        videoAdapter = new FitnessVideoAdapter(videos,context);
+        videoAdapter = new VideosAdapter(videos,dailyWorkoutVideos,studioVideos,corporateVideos,context,0);
         faqAdapter = new SubscriptionCardsAdapter(context,1,imageModels,faqs);
         membershipAdapter = new SubscriptionCardsAdapter(context,2,packModels);
 
