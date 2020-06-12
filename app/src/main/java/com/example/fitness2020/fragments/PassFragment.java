@@ -149,7 +149,7 @@ public class PassFragment extends Fragment {
 
     void attachId()
     {
-        freeTrialRV=view.findViewById(R.id.pass_fragment_fitness_pass_rv);
+        freeTrialRV=view.findViewById(R.id.pass_fragment_top_fitness_rv);
         fitnessPassRV = view.findViewById(R.id.fitness_pass_banner2_rv);
         videoRV = view.findViewById(R.id.fitness_pass_video_rv);
         trialCard=view.findViewById(R.id.trial_card);
