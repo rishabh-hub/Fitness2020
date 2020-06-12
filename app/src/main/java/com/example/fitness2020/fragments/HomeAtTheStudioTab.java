@@ -45,14 +45,14 @@ public class HomeAtTheStudioTab extends Fragment {
     HomeTrendingRVAdapter banner2Adapter,topBannerAdapter;
     HomePopularRVAdapter homePopularRVAdapter,adapter2;
     SubscriptionCardsAdapter membershipAdapter;
-    CarousalsAdapter1 webinarAdapter,voucherAdapter,companyAdapter;
+    CarousalsAdapter1 voucherAdapter,companyAdapter;
     CollectionsAdapter videoAdapter,collectionsAdapter;
     RecyclerView trendingRv;
     RecyclerView banner2Rv;
     RecyclerView popularRv;
     RecyclerView popularVerticalRv,popularVerticalRV2,popularRV3,popularRV4;
     RecyclerView membershipRV;
-    RecyclerView companyRv,vouchersRv,webinarRv;
+    RecyclerView companyRv,vouchersRv;
     RecyclerView topBannerRv;
     RecyclerView collectionsRv;
     RecyclerView videoRv;
@@ -91,7 +91,6 @@ public class HomeAtTheStudioTab extends Fragment {
         popularVerticalRV2 = view.findViewById(R.id.home_trending_rv_3);
         popularRV3 = view.findViewById(R.id.home_trending_rv_4);
         popularRV4 = view.findViewById(R.id.home_trending_rv_5);
-        webinarRv=view.findViewById(R.id.explore_webinar_rv);
         vouchersRv=view.findViewById(R.id.explore_voucher_rv);
         companyRv=view.findViewById(R.id.explore_partners_rv);
         topBannerRv=view.findViewById(R.id.explore_workout_rv);
@@ -128,7 +127,6 @@ public class HomeAtTheStudioTab extends Fragment {
         popularVerticalRV2.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         companyRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         vouchersRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
-        webinarRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         topBannerRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         collectionsRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         videoRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
@@ -142,7 +140,6 @@ public class HomeAtTheStudioTab extends Fragment {
         packModels = new ArrayList<>(3);
         companyModels=new ArrayList<>(3);
         vouchersModels=new ArrayList<>(3);
-        webinarModels=new ArrayList<>(3);
         topBannerModel=new ArrayList<>(3);
         collectionsModels=new ArrayList<>(3);
         videoModels=new ArrayList<>(3);
@@ -155,7 +152,6 @@ public class HomeAtTheStudioTab extends Fragment {
         adapter2=new HomePopularRVAdapter(popularRvModels,context);
         banner2Adapter=new HomeTrendingRVAdapter(trendingRvModels,context,2,popularHorizontalRvModels);
         membershipAdapter = new SubscriptionCardsAdapter(context,2,packModels);
-        webinarAdapter=new CarousalsAdapter1(context,companyModels,vouchersModels,webinarModels,0);
         voucherAdapter=new CarousalsAdapter1(context,companyModels,vouchersModels,webinarModels,2);
         companyAdapter=new CarousalsAdapter1(context,companyModels,vouchersModels,webinarModels,1);
         topBannerAdapter=new HomeTrendingRVAdapter(topBannerModel,context,1,popularHorizontalRvModels);
@@ -171,7 +167,6 @@ public class HomeAtTheStudioTab extends Fragment {
         popularVerticalRv.setAdapter(homePopularRVAdapter);
         membershipRV.setAdapter(membershipAdapter);
         popularVerticalRV2.setAdapter(adapter2);
-        webinarRv.setAdapter(webinarAdapter);
         vouchersRv.setAdapter(voucherAdapter);
         companyRv.setAdapter(companyAdapter);
         topBannerRv.setAdapter(topBannerAdapter);
@@ -183,7 +178,6 @@ public class HomeAtTheStudioTab extends Fragment {
         banner2Adapter.notifyDataSetChanged();
         membershipAdapter.notifyDataSetChanged();
         adapter2.notifyDataSetChanged();
-        webinarAdapter.notifyDataSetChanged();
         voucherAdapter.notifyDataSetChanged();
         companyAdapter.notifyDataSetChanged();
         topBannerAdapter.notifyDataSetChanged();
@@ -207,7 +201,7 @@ public class HomeAtTheStudioTab extends Fragment {
 
             collectionsModels.add(new CollectionsModel(R.drawable.webinar,"Fitnes @99","17 Places"));
             videoModels.add(new VideoModel(R.drawable.brand_video_dummy));
-             webinarModels.add(new WebinarModel("Functional Training","9:00 AM - 10:00 AM","INTERMEDIATE","Zumba/Crossfit",R.drawable.gym_dummy));
+//             webinarModels.add(new WebinarModel("Functional Training","9:00 AM - 10:00 AM","INTERMEDIATE","Zumba/Crossfit",R.drawable.gym_dummy));
              vouchersModels.add(new VouchersModel("Trending","Gym Company","GYM50","Till Jun '20",R.drawable.gym_voucher,"FLAT 50% OFF"));
              companyModels.add(new CompanyModel(R.drawable.company_logo));
             packModels.add(new PackModel("Unlimited Workouts",99));

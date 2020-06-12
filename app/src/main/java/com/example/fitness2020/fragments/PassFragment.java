@@ -135,7 +135,7 @@ public class PassFragment extends Fragment {
         for (int i=0;i<5;i++)
         {
             fitnessPassModels.add(new FitnessFragmentFreeTrialModel(R.drawable.trending_activity,"Gym name","Gym Category","Crossfit, Zumba"));
-            videos.add(new VideoModel(R.mipmap.ic_launcher));
+            videos.add(new VideoModel(R.drawable.gym_video_dummy));
             faqs.add(new FaqModel("Q. Some Question about MemberShip?","A. Corresponding answer about MemberShip"));
 
         }

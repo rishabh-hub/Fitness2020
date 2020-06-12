@@ -52,20 +52,20 @@ public class HomeLiveTab extends Fragment {
     RecyclerView liveTopBannerRv;
     RecyclerView liveMembershiRv;
     RecyclerView liveTrendingRv;
-    RecyclerView liveWebinarRv1, liveWebinarRv2;
+    RecyclerView liveWebinarRv1, liveWebinarRv2,liveWebinarRv3;
     RecyclerView liveReviewRv;
     ArrayList<ReviewModel> liveReviewModel;
     ArrayList<TrendingRvModel> liveTopBannerModel;
     ArrayList<PackModel> packModels;
     ArrayList<TrendingRvModel> liveTrendingModel;
-    ArrayList<WebinarModel> liveWebinarModels1, liveWebinarModels2;
+    ArrayList<WebinarModel> liveWebinarModels1, liveWebinarModels2,liveWebinarModels3;
     ArrayList<VouchersModel> liveVouchersModels;
     ArrayList<CompanyModel> liveCompanyModels;
     HomeTrendingRVAdapter liveTrendingRvAdapter;
     HomeTrendingRVAdapter liveTopBannerAdapter;
     SubscriptionCardsAdapter liveMembershipAdapter;
     HomePageClientAdapter liveReviewAdapter;
-    CarousalsAdapter1 liveWebinarAdapter1, liveWebinarAdapter2;
+    CarousalsAdapter1 liveWebinarAdapter1, liveWebinarAdapter2,liveWebinarAdapter3;
 
     TextView webinarViewMore;
     TextView buzzingViewMoreButton;
@@ -90,6 +90,7 @@ public class HomeLiveTab extends Fragment {
         liveTrendingRv=view.findViewById(R.id.live_trending_rv);
         liveWebinarRv1=view.findViewById(R.id.live_webinar_rv_1);
         liveWebinarRv2=view.findViewById(R.id.live_webinar_rv_2);
+//        liveWebinarRv3=view.findViewById(R.id.);
         liveReviewRv=view.findViewById(R.id.live_reviews_rv);
         webinarViewMore=view.findViewById(R.id.webinar_live_view_more_btn);
         buzzingViewMoreButton=view.findViewById(R.id.live_buzzing_viewmore_btn);
@@ -100,6 +101,7 @@ public class HomeLiveTab extends Fragment {
         liveWebinarRv1.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         liveWebinarRv2.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         liveReviewRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+        liveWebinarRv3.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
 
 
         liveTopBannerModel=new ArrayList<>(3);
@@ -108,6 +110,7 @@ public class HomeLiveTab extends Fragment {
         liveWebinarModels1 =new ArrayList<>(3);
         liveWebinarModels2 =new ArrayList<>(3);
         liveReviewModel=new ArrayList<>(3);
+        liveWebinarModels3=new ArrayList<>(3);
 
         addData();
 
@@ -117,6 +120,7 @@ public class HomeLiveTab extends Fragment {
         liveWebinarAdapter1 =new CarousalsAdapter1(context,liveCompanyModels,liveVouchersModels,liveWebinarModels1,0);
         liveWebinarAdapter2 =new CarousalsAdapter1(context,liveCompanyModels,liveVouchersModels,liveWebinarModels2,0);
         liveReviewAdapter=new HomePageClientAdapter(liveReviewModel,context,1);
+        liveWebinarAdapter3=new CarousalsAdapter1(context,liveCompanyModels,liveVouchersModels,liveWebinarModels3,0);
 
         liveTopBannerRv.setAdapter(liveTopBannerAdapter);
         liveMembershiRv.setAdapter(liveMembershipAdapter);
@@ -124,6 +128,7 @@ public class HomeLiveTab extends Fragment {
         liveWebinarRv1.setAdapter(liveWebinarAdapter1);
         liveWebinarRv2.setAdapter(liveWebinarAdapter2);
         liveReviewRv.setAdapter(liveReviewAdapter);
+        liveWebinarRv3.setAdapter(liveWebinarAdapter3);
 
         liveTopBannerAdapter.notifyDataSetChanged();
         liveMembershipAdapter.notifyDataSetChanged();
@@ -131,6 +136,7 @@ public class HomeLiveTab extends Fragment {
         liveWebinarAdapter1.notifyDataSetChanged();
         liveWebinarAdapter2.notifyDataSetChanged();
         liveReviewAdapter.notifyDataSetChanged();
+        liveWebinarAdapter3.notifyDataSetChanged();
 
         buzzingViewMoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -208,6 +214,8 @@ public class HomeLiveTab extends Fragment {
             liveWebinarModels1.add(new WebinarModel("Functional Training","9:00 - 10:00","INTERMEDIATE","Crossfit/Zumba",R.drawable.gym_dummy));
 
             liveWebinarModels2.add(new WebinarModel("Functional Training 2","10:00 - 11:00","ADVANCED","Swimming",R.drawable.gym_dummy));
+
+            liveWebinarModels3.add(new WebinarModel("Functional Training","9:00 - 10:00","INTERMEDIATE","Crossfit/Zumba",R.drawable.gym_dummy));
         }
 
     }
