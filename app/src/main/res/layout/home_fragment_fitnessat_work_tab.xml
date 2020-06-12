@@ -123,7 +123,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_button"
-                    android:padding="5dp"
+                    android:paddingHorizontal="30dp"
+                    android:paddingVertical="10dp"
                     android:textColor="#fff"
                     android:textAlignment="center"
                     android:id="@+id/fitness_at_work_feature_4_text"
@@ -167,10 +168,11 @@
                 android:layout_below="@id/top_review_heading"
                 android:id="@+id/fitness_at_work_reviews">
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_centerInParent="true"
                     android:layout_margin="3dp"
+                    android:tint="@color/colorPrimary"
                     android:src="@drawable/ic_left_arrow"
                     android:layout_alignParentStart="true"
                     android:id="@+id/review_left"/>
@@ -182,10 +184,11 @@
                     android:layout_toLeftOf="@id/review_right"
                     android:id="@+id/fitness_at_work_reviews_rv"/>
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_centerInParent="true"
                     android:layout_margin="3dp"
+                    android:tint="@color/colorPrimary"
                     android:src="@drawable/ic_right_arrow"
                     android:layout_alignParentEnd="true"
                     android:id="@+id/review_right"/>
