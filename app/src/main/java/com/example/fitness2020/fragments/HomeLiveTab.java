@@ -90,7 +90,7 @@ public class HomeLiveTab extends Fragment {
         liveTrendingRv=view.findViewById(R.id.live_trending_rv);
         liveWebinarRv1=view.findViewById(R.id.live_webinar_rv_1);
         liveWebinarRv2=view.findViewById(R.id.live_webinar_rv_2);
-//        liveWebinarRv3=view.findViewById(R.id.);
+        liveWebinarRv3=view.findViewById(R.id.live_webinar_rv_3);
         liveReviewRv=view.findViewById(R.id.live_reviews_rv);
         webinarViewMore=view.findViewById(R.id.webinar_live_view_more_btn);
         buzzingViewMoreButton=view.findViewById(R.id.live_buzzing_viewmore_btn);
