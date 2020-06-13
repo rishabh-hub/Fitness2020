@@ -1,24 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
-
-    <TextView
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="EVENTS"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="50sp"
-        android:id="@+id/events_tv"
-        android:gravity="center"
-        />
-    <ImageView
-        android:layout_width="100sp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/events_tv"
-        android:id="@+id/events_iv"
-        />
+        android:layout_height="match_parent"
+        >
 
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/event_rv_0"
+            android:background="@drawable/bg_pack"
+            android:backgroundTint="#37000000"
+            android:backgroundTintMode="src_atop"
+            android:layout_alignParentTop="true"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/event_head_banner_rv"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/event_rv_1"
+            android:layout_below="@id/event_rv_0"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Fitness"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="17sp"
+                android:textColor="@color/colorPrimaryDark"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/event_fitness_rv"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/event_rv_2"
+            android:layout_below="@id/event_rv_1"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Recreation"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="17sp"
+                android:textColor="@color/colorPrimaryDark"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/event_recreation_rv"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/event_rv_3"
+            android:layout_below="@id/event_rv_2"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Special Talks"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="17sp"
+                android:textColor="@color/colorPrimaryDark"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/event_talks_rv"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/event_rv_4"
+            android:layout_below="@id/event_rv_3"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="This Weekend"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="17sp"
+                android:textColor="@color/colorPrimaryDark"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/event_weekend_rv"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
