@@ -27,10 +27,8 @@ public class EventsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.fragment_events,container,false);
-        textView=view.findViewById(R.id.events_tv);
-        imageView=view.findViewById(R.id.events_iv);
 
-        Glide.with(getContext()).load(R.mipmap.ic_launcher).into(imageView);
+
         return view;
     }
 }
