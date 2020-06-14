@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,11 +20,11 @@ public class EventsInternalActivity extends AppCompatActivity {
 
     RecyclerView imageRv,videoRv,categoryRv;
     ArrayList<VideoModel> imageModels,videoModels;
-    ArrayList<DateModel> categorymodels;
+    ArrayList<DateModel> categoryModels;
     EventsInternalAdapter imageAdapter,videoAdapter,categoryAdapter;
 
-    TextView eventName,eventPrice,eventLocation;
-    ImageView locationIcon;
+    TextView eventName,eventPrice,eventLocation,eventDesc,eventTC;
+    Button mapBtn,bookBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,9 +59,9 @@ public class EventsInternalActivity extends AppCompatActivity {
     }
 
     private void initAdapter() {
-        imageAdapter=new EventsInternalAdapter(EventsInternalActivity.this,0,imageModels,videoModels,categorymodels);
-        videoAdapter=new EventsInternalAdapter(EventsInternalActivity.this,1,imageModels,videoModels,categorymodels);
-        categoryAdapter=new EventsInternalAdapter(EventsInternalActivity.this,2,imageModels,videoModels,categorymodels);
+        imageAdapter=new EventsInternalAdapter(EventsInternalActivity.this,0,imageModels,videoModels,categoryModels);
+        videoAdapter=new EventsInternalAdapter(EventsInternalActivity.this,1,imageModels,videoModels,categoryModels);
+        categoryAdapter=new EventsInternalAdapter(EventsInternalActivity.this,2,imageModels,videoModels,categoryModels);
     }
 
     private void addData() {
@@ -69,14 +70,14 @@ public class EventsInternalActivity extends AppCompatActivity {
         {
             imageModels.add(new VideoModel(R.drawable.gym_video_dummy));
             videoModels.add(new VideoModel(R.drawable.gym_video_dummy));
-            categorymodels.add(new DateModel("Premium"));
+            categoryModels.add(new DateModel("Premium"));
         }
     }
 
     private void initArrayList() {
         imageModels=new ArrayList<>(3);
         videoModels=new ArrayList<>(3);
-        categorymodels=new ArrayList<>(3);
+        categoryModels=new ArrayList<>(3);
     }
 
     private void setLayoutManager() {
@@ -86,6 +87,15 @@ public class EventsInternalActivity extends AppCompatActivity {
     }
 
     private void attachId() {
-//        imageRv=findViewById(R.id.event_internal_image_rv);
+        imageRv=findViewById(R.id.event_internal_image_rv);
+        videoRv = findViewById(R.id.event_internal_video_rv);
+        categoryRv = findViewById(R.id.event_internal_category_rv);
+        eventName = findViewById(R.id.event_internal_event_name);
+        eventLocation = findViewById(R.id.event_internal_event_location);
+        eventPrice = findViewById(R.id.event_internal_event_price);
+        eventDesc = findViewById(R.id.event_internal_event_desc);
+        eventTC = findViewById(R.id.event_internal_event_t_c);
+        mapBtn = findViewById(R.id.event_internal_map_btn);
+        bookBtn = findViewById(R.id.event_internal_book_btn);
     }
 }

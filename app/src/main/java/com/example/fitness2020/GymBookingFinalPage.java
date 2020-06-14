@@ -78,7 +78,7 @@ public class GymBookingFinalPage extends AppCompatActivity {
         for (int i=0;i<=6;i++)
         {
             timeModels.add(new TimeModel("10:00-11:00"));
-            dateModels.add(new DateModel("2 June", "June"));
+            dateModels.add(new DateModel("2 June"));
         }
 
     }

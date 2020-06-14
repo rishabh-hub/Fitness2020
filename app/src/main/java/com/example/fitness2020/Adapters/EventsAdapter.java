@@ -84,14 +84,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.EventsAdap
         else
             holder.populateWeekend(weekendModels.get(position));
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Intent eventsActivityIntent=new Intent(holder.itemView.getContext(), EventsInternalActivity.class);
-                holder.itemView.getContext().startActivity(eventsActivityIntent);
-            }
-        });
     }
 
     @Override
@@ -126,9 +119,8 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.EventsAdap
         TextView fitnessLocation,recreationLocation,specialTalkLocation,weekendLocation;
         TextView fitnessHost,recreationHost,specialTalkHost,weekendHost;
 
-        public EventsAdapterRvVH(@NonNull View itemView) {
+        public EventsAdapterRvVH(@NonNull final View itemView) {
             super(itemView);
-
             if (code==0)
             {
                 topImage=itemView.findViewById(R.id.video_large_item);
@@ -169,6 +161,14 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.EventsAdap
                 weekendHost=itemView.findViewById(R.id.event_item_host);
             }
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent eventsActivityIntent=new Intent(itemView.getContext(), EventsInternalActivity.class);
+                    itemView.getContext().startActivity(eventsActivityIntent);
+                }
+            });
 
         }
 

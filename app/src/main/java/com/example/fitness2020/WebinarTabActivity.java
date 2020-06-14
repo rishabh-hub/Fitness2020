@@ -116,6 +116,6 @@ public class WebinarTabActivity extends AppCompatActivity {
     void addData()
     {
         for (int i=0;i<4;i++)
-        dateModels.add(new DateModel("2 June","June"));
+        dateModels.add(new DateModel("2 June"));
     }
 }

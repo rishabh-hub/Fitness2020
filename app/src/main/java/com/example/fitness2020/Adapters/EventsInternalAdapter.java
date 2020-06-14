@@ -34,15 +34,14 @@ public class EventsInternalAdapter extends RecyclerView.Adapter<EventsInternalAd
     @NonNull
     @Override
     public EventsInternalAdapterRvVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        if (code==0)
-//        return new EventsInternalAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.,parent,false));
-//
-//        else if (code==1)
-//            return new EventsInternalAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.,parent,false));
-//
-//        else
-//            return new EventsInternalAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.,parent,false));
-        return null;
+        if (code==0)
+        return new EventsInternalAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.trialcard_imagerv_xml,parent,false));
+
+        else if (code==1)
+            return new EventsInternalAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.fitness_at_work_video_rv_item,parent,false));
+
+        else
+            return new EventsInternalAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.date_time_item,parent,false));
     }
 
     @Override
@@ -76,16 +75,16 @@ public class EventsInternalAdapter extends RecyclerView.Adapter<EventsInternalAd
         public EventsInternalAdapterRvVH(@NonNull View itemView) {
             super(itemView);
 
-//            if (code==0) {
-//                image=itemView.findViewById(R.id.);
-//            }
-//
-//            else if (code==1) {
-//                video =itemView.findViewById(R.id.);
-//            }
-//            else {
-//                category=itemView.findViewById(R.id.);
-//            }
+            if (code==0) {
+                image=itemView.findViewById(R.id.rv_item_trailcard_imgvw);
+            }
+
+            else if (code==1) {
+                video =itemView.findViewById(R.id.home_fitness_at_work_video);
+            }
+            else {
+                category=itemView.findViewById(R.id.date_time);
+            }
         }
 
         public void populateImage(VideoModel videoModel) {
