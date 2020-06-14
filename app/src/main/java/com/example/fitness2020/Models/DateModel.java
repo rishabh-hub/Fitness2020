@@ -3,7 +3,7 @@ package com.example.fitness2020.Models;
 public class DateModel {
     private String date;
 
-    public DateModel(String date, String month) {
+    public DateModel(String date) {
         this.date = date;
     }
 
