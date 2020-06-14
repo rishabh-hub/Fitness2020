@@ -1,6 +1,7 @@
 package com.example.fitness2020.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitness2020.EventsInternalActivity;
 import com.example.fitness2020.Models.EventsModel;
 import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.R;
@@ -59,7 +61,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.EventsAdap
     }
 
     @Override
-    public void onBindViewHolder(@NonNull EventsAdapterRvVH holder, int position) {
+    public void onBindViewHolder(@NonNull final EventsAdapterRvVH holder, int position) {
 
         if (code==0)
         {
@@ -81,6 +83,15 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.EventsAdap
 
         else
             holder.populateWeekend(weekendModels.get(position));
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent eventsActivityIntent=new Intent(holder.itemView.getContext(), EventsInternalActivity.class);
+                holder.itemView.getContext().startActivity(eventsActivityIntent);
+            }
+        });
     }
 
     @Override
