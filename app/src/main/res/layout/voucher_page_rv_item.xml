@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:fontFamily="@font/metropolisbold"
-            android:id="@+id/voucher_tag"
+            android:id="@+id/voucher_number"
             android:paddingHorizontal="7dp"
             android:paddingVertical="2dp"
             android:layout_toLeftOf="@id/coupons_num"
@@ -92,7 +92,7 @@
             android:paddingVertical="5dp"
             android:background="@drawable/ref_earn_back"
             android:fontFamily="@font/metropolisbold"
-            android:id="@+id/voucher_promocode"
+            android:id="@+id/voucher_price"
             android:textColor="@color/colorPrimary"
             android:text="FREE"
             android:layout_marginTop="8dp"/>

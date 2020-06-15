@@ -6,15 +6,15 @@ public class VouchersModel {
     private String noOfCoupons;
     private String validity;
     private int voucherImageUrl;
-    private String voucherTheme;
+    private String voucherPrice;
 
-    public VouchersModel(String offer, String companyName, String noOfCoupons, String validity,int voucherImageUrl,String voucherTheme) {
+    public VouchersModel(String offer, String companyName, String noOfCoupons, String validity,int voucherImageUrl,String voucherPrice) {
         this.offer = offer;
         this.companyName = companyName;
         this.noOfCoupons = noOfCoupons;
         this.validity = validity;
         this.voucherImageUrl=voucherImageUrl;
-        this.voucherTheme=voucherTheme;
+        this.voucherPrice =voucherPrice;
     }
 
     public String getOffer() {
@@ -57,11 +57,11 @@ public class VouchersModel {
         this.voucherImageUrl = voucherImageUrl;
     }
 
-    public String getVoucherTheme() {
-        return voucherTheme;
+    public String getVoucherPrice() {
+        return voucherPrice;
     }
 
-    public void setVoucherTheme(String voucherTheme) {
-        this.voucherTheme = voucherTheme;
+    public void setVoucherPrice(String voucherPrice) {
+        this.voucherPrice = voucherPrice;
     }
 }
