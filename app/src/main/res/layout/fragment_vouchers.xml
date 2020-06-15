@@ -1,17 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:fillViewport="true"
     android:layout_height="match_parent">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="VOUCHERS"
-        android:textColor="@color/colorPrimaryDark"
-        android:id="@+id/vouchers_tv"
-        android:textSize="50sp"
-        android:gravity="center"
-        />
+        android:layout_height="match_parent"
+        >
 
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/voucher_rv_0"
+            android:background="@drawable/bg_pack"
+            android:backgroundTint="#37000000"
+            android:backgroundTintMode="src_atop"
+            android:layout_alignParentTop="true"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/voucher_head_banner_rv"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_grad_yellow"
+            android:id="@+id/voucher_rv_1"
+            android:layout_below="@id/voucher_rv_0"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Offer Zone"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="17sp"
+                android:textColor="@color/white"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/voucher_offer_zone_rv"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/voucher_rv_2"
+            android:layout_below="@id/voucher_rv_1"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Pleasure"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="17sp"
+                android:textColor="@color/colorPrimaryDark"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/voucher_pleasure_rv"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/voucher_rv_3"
+            android:layout_below="@id/voucher_rv_2"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Health"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="17sp"
+                android:textColor="@color/colorPrimaryDark"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/voucher_health_rv"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/voucher_rv_4"
+            android:layout_below="@id/voucher_rv_3"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Experiences"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="17sp"
+                android:textColor="@color/colorPrimaryDark"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/voucher_experiences_rv"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/voucher_rv_5"
+            android:layout_below="@id/voucher_rv_4"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Shopping"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="17sp"
+                android:textColor="@color/colorPrimaryDark"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/voucher_shopping_rv"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/voucher_rv_6"
+            android:layout_below="@id/voucher_rv_5"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Travel"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="17sp"
+                android:textColor="@color/colorPrimaryDark"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/voucher_travel_rv"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="350dp"
+    android:layout_width="200dp"
     android:layout_height="150dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="5dp"
@@ -12,11 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ImageView
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:id="@+id/voucher_card_back_image"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/white"
             android:layout_alignParentEnd="true"
             />
         <RelativeLayout
@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:background="#fff"
+            android:elevation="12dp"
             android:layout_alignParentTop="true">
         <TextView
             android:layout_width="wrap_content"
@@ -48,37 +49,45 @@
                 android:id="@+id/coupons_num"/>
         </RelativeLayout>
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center"
-            android:layout_alignParentTop="true"
+            android:gravity="bottom"
+            android:elevation="8dp"
+            android:background="#9F012B3E"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:layout_toLeftOf="@id/voucher_card_back_image">
+            >
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:fontFamily="@font/metropolisblack"
             android:id="@+id/voucher_theme"
-            android:textColor="@color/bookBtn"
+            android:textColor="@color/white"
             android:text="FLAT 50% OFF!!!"
             android:layout_marginTop="10dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
+            android:textSize="14sp"
             android:fontFamily="@font/metropolismedium"
             android:textStyle="bold"
             android:id="@+id/voucher_company"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/white"
             android:text="Baskin Robin"
             android:layout_marginTop="6dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:paddingHorizontal="15dp"
             android:paddingVertical="5dp"
             android:background="@drawable/ref_earn_back"
@@ -90,12 +99,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/voucher_validity"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#FFFFFF"
             android:text="Valid till jun'20"
             android:layout_marginTop="6dp"/>
+            </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
 
