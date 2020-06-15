@@ -1,7 +1,6 @@
 package com.example.fitness2020.Adapters;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,7 +79,7 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
     public class CarouslasAdapter1VH extends RecyclerView.ViewHolder
     {
         ImageView partnersImage,voucherImage,webinarImage;
-        TextView webinarHead,webinarTiming,webinarLevel,webinarActivity,voucherTag,voucherTheme,voucherCompany,voucherPromCode,voucherValidity;
+        TextView webinarHead,webinarTiming,webinarLevel,webinarActivity,voucherTag,voucherTheme,voucherCompany, noOfCoupons,voucherValidity;
         RelativeLayout card;
 
         public CarouslasAdapter1VH(@NonNull View itemView) {
@@ -106,7 +105,7 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
                 voucherCompany=itemView.findViewById(R.id.voucher_company);
                 voucherTag=itemView.findViewById(R.id.voucher_tag);
                 voucherTheme=itemView.findViewById(R.id.voucher_theme);
-                voucherPromCode=itemView.findViewById(R.id.voucher_promocode);
+                noOfCoupons =itemView.findViewById(R.id.voucher_promocode);
                 voucherValidity=itemView.findViewById(R.id.voucher_validity);
             }
         }
@@ -131,7 +130,7 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
         {
             voucherImage.setImageResource(vouchersModel.getVoucherImageUrl());
             voucherValidity.setText(vouchersModel.getValidity());
-            voucherPromCode.setText(vouchersModel.getPromoCode());
+            noOfCoupons.setText(vouchersModel.getNoOfCoupons());
             voucherCompany.setText(vouchersModel.getCompanyName());
             voucherTag.setText(vouchersModel.getOffer());
             voucherTheme.setText(vouchersModel.getVoucherTheme());

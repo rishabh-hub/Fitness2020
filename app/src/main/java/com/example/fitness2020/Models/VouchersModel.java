@@ -3,15 +3,15 @@ package com.example.fitness2020.Models;
 public class VouchersModel {
     private String offer;
     private String companyName;
-    private String promoCode;
+    private String noOfCoupons;
     private String validity;
     private int voucherImageUrl;
     private String voucherTheme;
 
-    public VouchersModel(String offer, String companyName, String promoCode, String validity,int voucherImageUrl,String voucherTheme) {
+    public VouchersModel(String offer, String companyName, String noOfCoupons, String validity,int voucherImageUrl,String voucherTheme) {
         this.offer = offer;
         this.companyName = companyName;
-        this.promoCode = promoCode;
+        this.noOfCoupons = noOfCoupons;
         this.validity = validity;
         this.voucherImageUrl=voucherImageUrl;
         this.voucherTheme=voucherTheme;
@@ -33,12 +33,12 @@ public class VouchersModel {
         this.companyName = companyName;
     }
 
-    public String getPromoCode() {
-        return promoCode;
+    public String getNoOfCoupons() {
+        return noOfCoupons;
     }
 
-    public void setPromoCode(String promoCode) {
-        this.promoCode = promoCode;
+    public void setNoOfCoupons(String noOfCoupons) {
+        this.noOfCoupons = noOfCoupons;
     }
 
     public String getValidity() {
