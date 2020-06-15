@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitness2020.Adapters.EventsAdapter;
+import com.example.fitness2020.Adapters.VouchersInternalAdapter;
 import com.example.fitness2020.Models.EventsModel;
 import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.Models.VouchersModel;
@@ -29,7 +30,7 @@ public class VouchersFragment extends Fragment {
     RecyclerView imageRv,offerZoneRV,pleasureRV,healthRV,experienceRV,shoppingRV,travelRV;
     ArrayList<VideoModel> imageModels;
     ArrayList<VouchersModel>  offerZoneModels, pleasureModels,healthModels,experienceModels,shoppingModels,travelModels;
-//    VoucherInternalAdapter offerzoneAdapter,pleasureAdapter,healthAdapter,experienceAdapter,shoppingAdapter,travelAdapter,videoAdapter;
+    VouchersInternalAdapter offerZoneAdapter,pleasureAdapter,healthAdapter,experienceAdapter,shoppingAdapter,travelAdapter,videoAdapter;
     public VouchersFragment() {
     }
 
@@ -96,30 +97,30 @@ public class VouchersFragment extends Fragment {
         }
     }
     private void initAdapter() {
-        //        offerzoneAdapter = new VoucherInternalAdapter();
-//        pleasureAdapter = new VoucherInternalAdapter();
-//        healthAdapter = new VoucherInternalAdapter();
-//        experienceAdapter = new VoucherInternalAdapter();
-//        shoppingAdapter = new VoucherInternalAdapter();
-//        travelAdapter = new VoucherInternalAdapter();
-//        videoAdapter = new VoucherInternalAdapter();
+        offerZoneAdapter = new VouchersInternalAdapter(context,6,pleasureModels,healthModels,experienceModels,shoppingModels,travelModels,offerZoneModels,imageModels);
+        pleasureAdapter = new VouchersInternalAdapter(context,1,pleasureModels,healthModels,experienceModels,shoppingModels,travelModels,offerZoneModels,imageModels);
+        healthAdapter = new VouchersInternalAdapter(context,2,pleasureModels,healthModels,experienceModels,shoppingModels,travelModels,offerZoneModels,imageModels);
+        experienceAdapter = new VouchersInternalAdapter(context,3,pleasureModels,healthModels,experienceModels,shoppingModels,travelModels,offerZoneModels,imageModels);
+        shoppingAdapter = new VouchersInternalAdapter(context,4,pleasureModels,healthModels,experienceModels,shoppingModels,travelModels,offerZoneModels,imageModels);
+        travelAdapter = new VouchersInternalAdapter(context,5,pleasureModels,healthModels,experienceModels,shoppingModels,travelModels,offerZoneModels,imageModels);
+        videoAdapter = new VouchersInternalAdapter(context,0,pleasureModels,healthModels,experienceModels,shoppingModels,travelModels,offerZoneModels,imageModels);
     }
     private void attachAdapter() {
-//        offerZoneRV.setAdapter();
-//        pleasureRV.setAdapter();
-//        healthRV.setAdapter();
-//        experienceRV.setAdapter();
-//        shoppingRV.setAdapter();
-//        travelRV.setAdapter();
-//        imageRv.setAdapter();
+        offerZoneRV.setAdapter(offerZoneAdapter);
+        pleasureRV.setAdapter(pleasureAdapter);
+        healthRV.setAdapter(healthAdapter);
+        experienceRV.setAdapter(experienceAdapter);
+        shoppingRV.setAdapter(shoppingAdapter);
+        travelRV.setAdapter(travelAdapter);
+        imageRv.setAdapter(videoAdapter);
     }
     private void updateData() {
-//        offerZoneAdapter.notifyDataSetChanged();
-//        pleasureAdapter.notifyDataSetChanged();
-//        healthAdapter.notifyDataSetChanged();
-//        experienceAdapter.notifyDataSetChanged();
-//        shoppingAdapter.notifyDataSetChanged();
-//        travelAdapter.notifyDataSetChanged();
+        offerZoneAdapter.notifyDataSetChanged();
+        pleasureAdapter.notifyDataSetChanged();
+        healthAdapter.notifyDataSetChanged();
+        experienceAdapter.notifyDataSetChanged();
+        shoppingAdapter.notifyDataSetChanged();
+        travelAdapter.notifyDataSetChanged();
 
 
     }
