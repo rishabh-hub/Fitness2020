@@ -102,7 +102,7 @@ public class HomeAtTheStudioTab extends Fragment {
         videoRv=view.findViewById(R.id.explore_brand_videos_rv);
         popularViewMoreButton=view.findViewById(R.id.home_fragment_explore_tab_more_popular_btn);
         vouchersViewMoreButton=view.findViewById(R.id.home_fragment_explore_tab_more_voucher_btn);
-//        videosViewMoreButton=view.findViewById(R.id.);
+        videosViewMoreButton=view.findViewById(R.id.home_fragment_explore_tab_more_videos_btn);
 
         populateFilterSpinner();
 

@@ -285,6 +285,24 @@
                 android:layout_marginStart="10sp"
                 />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View More"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="15sp"
+                android:textColor="@color/bookBtn"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBaseline="@id/home_popular_tv"
+                android:layout_marginVertical="13sp"
+                android:id="@+id/home_fragment_explore_tab_more_popular_btn"
+                />
+
 <!--            popular rv-->
             <HorizontalScrollView
                 android:layout_width="match_parent"
@@ -348,26 +366,26 @@
                         android:layout_marginRight="5dp"
                         android:layout_toRightOf="@id/home_banner2_rv"
                         android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="View More"
-                        android:textSize="10sp"
-                        android:gravity="center"
-                        android:layout_centerVertical="true"
-                        android:padding="5dp"
-                        android:layout_marginRight="5dp"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_marginLeft="2dp"
-                        android:layout_marginVertical="13sp"
-                        android:id="@+id/home_fragment_explore_tab_more_popular_btn"
-                        />
-                        <ImageView
-                            android:layout_width="7dp"
-                            android:layout_height="7dp"
-                            android:layout_marginLeft="1dp"
-                            android:tint="@color/colorPrimary"
-                            android:src="@drawable/ic_right_arrow"/>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="View More"-->
+<!--                        android:textSize="10sp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:padding="5dp"-->
+<!--                        android:layout_marginRight="5dp"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:layout_marginLeft="2dp"-->
+<!--                        android:layout_marginVertical="13sp"-->
+<!--                        android:id="@+id/home_fragment_explore_tab_more_popular_btn"-->
+<!--                        />-->
+<!--                        <ImageView-->
+<!--                            android:layout_width="7dp"-->
+<!--                            android:layout_height="7dp"-->
+<!--                            android:layout_marginLeft="1dp"-->
+<!--                            android:tint="@color/colorPrimary"-->
+<!--                            android:src="@drawable/ic_right_arrow"/>-->
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -448,6 +466,25 @@
                 android:layout_marginStart="10sp"
                 />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View More"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="15sp"
+                android:textColor="@color/bookBtn"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBaseline="@id/home_vouchers_head"
+                android:layout_marginVertical="13sp"
+                android:id="@+id/home_fragment_explore_tab_more_voucher_btn"
+                />
+
+
 <!--            voucher rv-->
             <HorizontalScrollView
                 android:layout_width="match_parent"
@@ -476,26 +513,6 @@
                         android:layout_marginRight="5dp"
                         android:layout_toRightOf="@id/explore_voucher_rv"
                         android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="View More"
-                            android:textSize="10sp"
-                            android:gravity="center"
-                            android:layout_centerVertical="true"
-                            android:padding="5dp"
-                            android:layout_marginRight="5dp"
-                            android:textColor="@color/colorPrimary"
-                            android:layout_marginLeft="2dp"
-                            android:layout_marginVertical="13sp"
-                            android:id="@+id/home_fragment_explore_tab_more_voucher_btn"
-                            />
-                        <ImageView
-                            android:layout_width="7dp"
-                            android:layout_height="7dp"
-                            android:layout_marginLeft="1dp"
-                            android:tint="@color/colorPrimary"
-                            android:src="@drawable/ic_right_arrow"/>
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -526,6 +543,24 @@
                 android:layout_marginStart="10sp"
                 />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View More"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="15sp"
+                android:textColor="@color/bookBtn"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBaseline="@id/home_videos_head"
+                android:layout_marginVertical="13sp"
+                android:id="@+id/home_fragment_explore_tab_more_videos_btn"
+                />
+
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -544,7 +579,6 @@
                         android:orientation="horizontal"
                         android:layout_alignParentStart="true"
                         android:layout_marginTop="5sp"
-                        android:layout_below="@id/home_videos_head"
                         android:id="@+id/explore_brand_videos_rv"
                         />
 
