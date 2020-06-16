@@ -202,6 +202,7 @@ public class HomeAtTheStudioTab extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent voucherIntent=new Intent(view.getContext(),VouchersFragment.class);
+                startActivity(voucherIntent);
             }
         });
 
@@ -209,6 +210,7 @@ public class HomeAtTheStudioTab extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent videoIntent=new Intent(view.getContext(), VideosActivity.class);
+                startActivity(videoIntent);
             }
         });
 
