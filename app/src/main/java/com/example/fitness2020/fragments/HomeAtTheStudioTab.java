@@ -1,6 +1,7 @@
 package com.example.fitness2020.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -33,6 +35,7 @@ import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.Models.VouchersModel;
 import com.example.fitness2020.Models.WebinarModel;
 import com.example.fitness2020.R;
+import com.example.fitness2020.VideosActivity;
 
 import java.util.ArrayList;
 
@@ -67,6 +70,7 @@ public class HomeAtTheStudioTab extends Fragment {
     ArrayList<CollectionsModel> collectionsModels;
     ArrayList<VideoModel> videoModels;
     Spinner filterSpinner;
+    TextView vouchersViewMoreButton,popularViewMoreButton,videosViewMoreButton;
 
     public HomeAtTheStudioTab() {
     }
@@ -96,6 +100,9 @@ public class HomeAtTheStudioTab extends Fragment {
         topBannerRv=view.findViewById(R.id.explore_workout_rv);
         collectionsRv=view.findViewById(R.id.explore_main_offer_card_rv);
         videoRv=view.findViewById(R.id.explore_brand_videos_rv);
+        popularViewMoreButton=view.findViewById(R.id.home_fragment_explore_tab_more_popular_btn);
+        vouchersViewMoreButton=view.findViewById(R.id.home_fragment_explore_tab_more_voucher_btn);
+//        videosViewMoreButton=view.findViewById(R.id.);
 
         populateFilterSpinner();
 
@@ -183,6 +190,27 @@ public class HomeAtTheStudioTab extends Fragment {
         topBannerAdapter.notifyDataSetChanged();
         collectionsAdapter.notifyDataSetChanged();
         videoAdapter.notifyDataSetChanged();
+
+        popularViewMoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent popularIntent=new Intent(view.getContext(),);
+            }
+        });
+
+        vouchersViewMoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent voucherIntent=new Intent(view.getContext(),VouchersFragment.class);
+            }
+        });
+
+        videosViewMoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videoIntent=new Intent(view.getContext(), VideosActivity.class);
+            }
+        });
 
         return view;
     }
