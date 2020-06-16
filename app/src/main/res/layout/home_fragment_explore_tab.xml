@@ -513,82 +513,31 @@
                 android:layout_marginTop="5sp"
                 />
 
-<!--            webinars rv-->
-<!--            <HorizontalScrollView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@+id/home_trending_rv_4"-->
-<!--                android:scrollbars="none"-->
-<!--                android:id="@+id/explore_webinar_container">-->
-<!--                <RelativeLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:gravity="center"-->
-<!--                    >-->
-<!--                    <androidx.recyclerview.widget.RecyclerView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:orientation="horizontal"-->
-<!--                        android:layout_alignParentStart="true"-->
-<!--                        android:layout_marginTop="5sp"-->
-<!--                        android:id="@+id/explore_webinar_rv"-->
-<!--                        />-->
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:gravity="center"-->
-<!--                        android:layout_centerVertical="true"-->
-<!--                        android:layout_marginRight="5dp"-->
-<!--                        android:layout_toRightOf="@id/explore_webinar_rv"-->
-<!--                        android:orientation="horizontal">-->
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="View More"-->
-<!--                            android:textSize="10sp"-->
-<!--                            android:gravity="center"-->
-<!--                            android:layout_centerVertical="true"-->
-<!--                            android:padding="5dp"-->
-<!--                            android:layout_marginRight="5dp"-->
-<!--                            android:textColor="@color/colorPrimary"-->
-<!--                            android:layout_marginLeft="2dp"-->
-<!--                            android:layout_marginVertical="13sp"-->
-<!--                            android:id="@+id/home_fragment_explore_tab_more_webinar_btn"-->
-<!--                            />-->
-<!--                        <ImageView-->
-<!--                            android:layout_width="7dp"-->
-<!--                            android:layout_height="7dp"-->
-<!--                            android:layout_marginLeft="1dp"-->
-<!--                            android:tint="@color/colorPrimary"-->
-<!--                            android:src="@drawable/ic_right_arrow"/>-->
-<!--                    </LinearLayout>-->
-<!--                </RelativeLayout>-->
-
-
-<!--            </HorizontalScrollView>-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Videos"
+                android:textSize="24sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@id/home_trending_rv_4"
+                android:fontFamily="@font/metropolisblack"
+                android:id="@+id/home_videos_head"
+                android:layout_marginVertical="3sp"
+                android:layout_marginStart="10sp"
+                />
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scrollbars="none"
-                android:layout_below="@+id/home_trending_rv_4"
+                android:layout_below="@id/home_videos_head"
                 android:id="@+id/explore_brand_videos_container">
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Videos"
-                        android:textSize="24sp"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:fontFamily="@font/metropolisblack"
-                        android:id="@+id/home_videos_head"
-                        android:layout_marginVertical="3sp"
-                        android:layout_marginStart="10sp"
-                        />
+
                     <androidx.recyclerview.widget.RecyclerView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

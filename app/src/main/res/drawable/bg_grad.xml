@@ -12,7 +12,7 @@
                 android:startColor="#00005C"
                 android:endColor="#6A097D"
                 android:type="linear"
-                android:angle="135"
+                android:angle="180"
                 />
 
 

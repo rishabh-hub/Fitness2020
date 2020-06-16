@@ -37,8 +37,8 @@ public class VideosActivity extends AppCompatActivity {
         for (int i=0;i<6;i++)
         {
             fitnessPassVideos.add(new VideoModel(R.drawable.gym_video_dummy));
-            dailyWorkoutVideos.add(new VideoModel(R.drawable.gym_video_dummy));
-            studioVideos.add(new VideoModel(R.drawable.gym_video_dummy));
+            dailyWorkoutVideos.add(new VideoModel(R.drawable.brand_video_dummy));
+            studioVideos.add(new VideoModel(R.drawable.gym_photo));
             corporateVideos.add(new VideoModel(R.drawable.gym_video_dummy));
         }
     }
