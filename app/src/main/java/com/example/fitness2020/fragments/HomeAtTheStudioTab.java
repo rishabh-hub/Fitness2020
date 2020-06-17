@@ -15,6 +15,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,6 +25,7 @@ import com.example.fitness2020.Adapters.CollectionsAdapter;
 import com.example.fitness2020.Adapters.HomePopularRVAdapter;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
 import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
+import com.example.fitness2020.MainActivity;
 import com.example.fitness2020.Models.CollectionsModel;
 import com.example.fitness2020.Models.CompanyModel;
 import com.example.fitness2020.Models.PackModel;
@@ -201,7 +203,8 @@ public class HomeAtTheStudioTab extends Fragment {
         vouchersViewMoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent voucherIntent=new Intent(view.getContext(),VouchersFragment.class);
+                Intent voucherIntent=new Intent(view.getContext(), MainActivity.class);
+                voucherIntent.putExtra("code",1);
                 startActivity(voucherIntent);
             }
         });
@@ -252,5 +255,12 @@ public class HomeAtTheStudioTab extends Fragment {
         filterSpinner.setAdapter(adapter);
     }
 
+    public void loadFragment(Fragment fragment)
+    {
+        FragmentTransaction fragmentTransaction=getFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout,fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
 
 }

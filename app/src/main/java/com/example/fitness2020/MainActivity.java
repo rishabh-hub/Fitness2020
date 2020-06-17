@@ -42,6 +42,14 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
         setContentView(R.layout.activity_main);
 
         attachId();
+
+        if (getIntent().getIntExtra("code",0)==1)
+
+        {
+            loadFragment(new VouchersFragment());
+            bottomNavigationView.setSelectedItemId(R.id.vouchers);
+        }
+        else
         loadFragment(new HomeFragment());//needs to be configured so that once user logins only then this fragment is loaded
 
         bottomNavigationView.setItemIconTintList(null);
