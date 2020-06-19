@@ -15,6 +15,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/voucher_rv_0"
+            android:padding="10dp"
             android:background="@drawable/bg_pack"
             android:backgroundTint="#37000000"
             android:backgroundTintMode="src_atop"
@@ -47,7 +48,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:id="@+id/voucher_offer_zone_rv"/>
+                android:id="@+id/voucher_offer_zone_rv"
+                android:layout_marginBottom="10dp"/>
 
         </LinearLayout>
         <LinearLayout

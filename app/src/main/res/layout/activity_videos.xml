@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_pack"
+        android:elevation="4dp"
         android:backgroundTint="#88000000"
         android:backgroundTintMode="src_atop"
         android:layout_alignParentTop="true"
@@ -42,6 +43,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/secondryBlue"
+        android:elevation="4dp"
+        android:layout_marginTop="5dp"
         android:layout_below="@id/container1"
         android:id="@+id/container2">
         <TextView
@@ -65,6 +69,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/secondryBlue"
+        android:elevation="4dp"
+        android:layout_marginTop="5dp"
         android:layout_below="@id/container2"
         android:id="@+id/container3">
         <TextView
@@ -88,6 +95,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/secondryBlue"
+        android:layout_marginTop="5dp"
+        android:elevation="4dp"
+        android:layout_marginBottom="5dp"
         android:layout_below="@id/container3"
         android:id="@+id/container4">
         <TextView
