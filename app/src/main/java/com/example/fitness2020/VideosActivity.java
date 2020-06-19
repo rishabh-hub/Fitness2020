@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.example.fitness2020.Adapters.VideosAdapter;
 import com.example.fitness2020.Models.VideoModel;
@@ -20,6 +23,8 @@ public class VideosActivity extends AppCompatActivity {
     RecyclerView passRV,workoutRV,studioRV,corporateRV;
     VideosAdapter fitnessPassVideoAdapter,dailyWorkoutVideoAdapter,studioVideoAdapter,corporateVideoAdapter;
 
+    ImageButton backButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,15 @@ public class VideosActivity extends AppCompatActivity {
         setLayoutManagers();
         initAdapter();
         setAdapters();
+
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backIntent=new Intent(VideosActivity.this,MainActivity.class);
+                startActivity(backIntent);
+            }
+        });
 
     }
 
@@ -70,5 +84,6 @@ public class VideosActivity extends AppCompatActivity {
         workoutRV = findViewById(R.id.video_page_dailyworkout_rv);
         studioRV = findViewById(R.id.video_page_studio_rv);
         corporateRV = findViewById(R.id.video_page_corporate_rv);
+        backButton=findViewById(R.id.videos_activity_back_btn);
     }
 }
