@@ -50,6 +50,8 @@ public class GymActivity extends AppCompatActivity {
     public CustomDialogClass customDialogClass,customDialogClass1;
     private String address;
 
+    ImageButton backButton;
+
 
 
     @Override
@@ -109,6 +111,14 @@ public class GymActivity extends AppCompatActivity {
             }
         });
 
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backIntent=new Intent(GymActivity.this,MainActivity.class);
+                startActivity(backIntent);
+            }
+        });
+
     }
 
     void attachId()
@@ -121,6 +131,7 @@ public class GymActivity extends AppCompatActivity {
         gymBookButton=findViewById(R.id.gym_tab_pass_btn);
         mapsButton=findViewById(R.id.gym_map_btn);
         gymAddress=findViewById(R.id.gym_tab_address);
+        backButton=findViewById(R.id.gym_activity_back_btn);
     }
 
     void addData()
