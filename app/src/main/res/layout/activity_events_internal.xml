@@ -60,6 +60,7 @@
             android:fontFamily="@font/metropolisbold"
             android:textColor="@color/colorPrimary"
             android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
             android:text="Free"
             android:id="@+id/event_internal_event_price"/>
     </RelativeLayout>
