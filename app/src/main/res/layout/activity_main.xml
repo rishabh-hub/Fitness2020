@@ -7,13 +7,14 @@
     android:layout_width="match_parent"
     android:id="@+id/drawer">
     <RelativeLayout
-        android:background="@color/secondryBlue"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/secondryBlue"
             android:id="@+id/toolbar">
 
             <Spinner
