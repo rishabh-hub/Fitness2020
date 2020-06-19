@@ -41,8 +41,8 @@ public class PassFragment extends Fragment {
     ArrayList<ClientModel> clients = new ArrayList<>();
     HomePageClientAdapter clientAdapter;
 
-    RecyclerView fitnessPassRV;
-    ArrayList<FitnessFragmentFreeTrialModel> fitnessPassModels ;
+    RecyclerView topTrainerRv;
+    ArrayList<FitnessFragmentFreeTrialModel> topTrainerModels;
 
     RecyclerView faqRv;
     ArrayList<FaqModel> faqs;
@@ -59,7 +59,7 @@ public class PassFragment extends Fragment {
     ArrayList<VideoModel> videos,dailyWorkoutVideos,studioVideos,corporateVideos;
     VideosAdapter videoAdapter;
 
-    FitnessFragmentFreeTrialAdapter fragmentFreeTrialAdapter,fitnessPassAdapter,liveWorkoutsAdapter;
+    FitnessFragmentFreeTrialAdapter fragmentFreeTrialAdapter, topTrainerAdapter,liveWorkoutsAdapter;
     Context context;
     CardView trialCard,workoutCard,validityCard;
 
@@ -78,7 +78,7 @@ public class PassFragment extends Fragment {
 
         clientRV.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL,false));
         topfitnessRv.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
-        fitnessPassRV.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
+        topTrainerRv.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
         videoRV.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         faqRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         membershipRV.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
@@ -87,7 +87,7 @@ public class PassFragment extends Fragment {
 
 
         fragmentFreeTrialModels=new ArrayList<>(3);
-        fitnessPassModels = new ArrayList<>(3);
+        topTrainerModels = new ArrayList<>(3);
         videos = new ArrayList<>(3);
         faqs=new ArrayList<>(3);
         packModels = new ArrayList<>(3);
@@ -96,16 +96,16 @@ public class PassFragment extends Fragment {
         addData();
 
         clientAdapter = new HomePageClientAdapter(clients,context);
-        fragmentFreeTrialAdapter=new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,context,fitnessPassModels,1);
-        fitnessPassAdapter = new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,context,fitnessPassModels,0);
+        fragmentFreeTrialAdapter=new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,context, topTrainerModels,1);
+        topTrainerAdapter = new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,context, topTrainerModels,0);
         videoAdapter = new VideosAdapter(videos,dailyWorkoutVideos,studioVideos,corporateVideos,context,0);
         faqAdapter = new SubscriptionCardsAdapter(context,1,imageModels,faqs);
         membershipAdapter = new SubscriptionCardsAdapter(context,2,packModels);
-        liveWorkoutsAdapter=new FitnessFragmentFreeTrialAdapter(liveWorkoutModels,context,fitnessPassModels,0);
+        liveWorkoutsAdapter=new FitnessFragmentFreeTrialAdapter(liveWorkoutModels,context, topTrainerModels,0);
 
         clientRV.setAdapter(clientAdapter);
         topfitnessRv.setAdapter(fragmentFreeTrialAdapter);
-        fitnessPassRV.setAdapter(fitnessPassAdapter);
+        topTrainerRv.setAdapter(topTrainerAdapter);
         videoRV.setAdapter(videoAdapter);
         faqRv.setAdapter(faqAdapter);
         membershipRV.setAdapter(membershipAdapter);
@@ -114,7 +114,7 @@ public class PassFragment extends Fragment {
 
         clientAdapter.notifyDataSetChanged();
         fragmentFreeTrialAdapter.notifyDataSetChanged();
-        fitnessPassAdapter.notifyDataSetChanged();
+        topTrainerAdapter.notifyDataSetChanged();
         videoAdapter.notifyDataSetChanged();
         faqAdapter.notifyDataSetChanged();
         membershipAdapter.notifyDataSetChanged();
@@ -133,10 +133,9 @@ public class PassFragment extends Fragment {
         }
         for (int i=0;i<5;i++)
         {
-            fitnessPassModels.add(new FitnessFragmentFreeTrialModel(R.drawable.trending_activity,"Gym name","Gym Category","Crossfit, Zumba"));
+            topTrainerModels.add(new FitnessFragmentFreeTrialModel(R.drawable.trending_activity,"Trainer Name","Gym Category","Crossfit, Zumba"));
             videos.add(new VideoModel(R.drawable.gym_video_dummy));
             faqs.add(new FaqModel("Q. Some Question about MemberShip?","A. Corresponding answer about MemberShip"));
-
         }
         for (int i = 0;i<10;i++)
             clients.add(new ClientModel(R.drawable.ic_person_outline_black_24dp));
@@ -149,7 +148,7 @@ public class PassFragment extends Fragment {
     void attachId()
     {
         topfitnessRv =view.findViewById(R.id.pass_fragment_top_fitness_rv);
-        fitnessPassRV = view.findViewById(R.id.fitness_pass_banner2_rv);
+        topTrainerRv = view.findViewById(R.id.fitness_pass_banner2_rv);
         videoRV = view.findViewById(R.id.fitness_pass_video_rv);
         trialCard=view.findViewById(R.id.trial_card);
         membershipRV=view.findViewById(R.id.pass_membership_rv);
