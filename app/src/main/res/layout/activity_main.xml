@@ -43,7 +43,7 @@
                 android:padding="5dp"
                 android:id="@+id/user_image_imgvw"
                 android:background="@color/primaryBlue"
-                android:tint="@color/brightYellow"
+                android:tint="@color/secondryBlue"
                 android:src="@drawable/ic_person_outline_black_24dp"
                 />
             </androidx.cardview.widget.CardView>
@@ -69,10 +69,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/bottom_nav"
-            android:elevation="0dp"
-            app:itemIconTint="@color/brightYellow"
-            android:background="#7494EA"
-            app:itemTextColor="@color/brightYellow"
+            android:elevation="12dp"
+            android:background="@color/secondryBlue"
+            app:itemTextColor="@color/primaryBlue"
             app:menu="@menu/bottomnav_menu"
             android:layout_alignParentBottom="true"/>
 

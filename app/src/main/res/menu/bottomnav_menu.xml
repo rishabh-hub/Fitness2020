@@ -4,23 +4,23 @@
         android:id="@+id/home"
         android:title="HOME"
         android:titleCondensed="Home"
-        android:icon="@drawable/home"
+        android:icon="@drawable/ic_home_24px"
         />
 
     <item
         android:id="@+id/fitness_pass"
         android:title="FITNESS PASS"
-        android:icon="@drawable/pass"
+        android:icon="@drawable/ic_pass"
         />
     <item
         android:id="@+id/events"
         android:title="Fit@Work"
-        android:icon="@drawable/work"
+        android:icon="@drawable/ic_work"
         />
     <item
         android:id="@+id/vouchers"
         android:title="VOUCHERS"
-        android:icon="@drawable/vouchers"
+        android:icon="@drawable/ic_coupon"
         />
 
 </menu>

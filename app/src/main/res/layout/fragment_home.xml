@@ -27,6 +27,7 @@
         app:elevation="0dp"
         android:backgroundTint="@color/secondryBlue"
         android:id="@+id/toolbar">
+
     <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"
         android:layout_height="35dp"
