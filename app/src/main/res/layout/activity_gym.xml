@@ -17,51 +17,63 @@
             android:layout_height="match_parent"
             android:layout_width="match_parent">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/secondryBlue"
+                android:elevation="10dp"
                 android:id="@+id/gym_activity_container"
                 android:gravity="center_vertical"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 android:orientation="horizontal">
                 <ImageButton
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:background="@drawable/ic_left_arrow"
                     android:layout_marginStart="10dp"
+                    android:tint="@color/primaryBlue"
                     android:id="@+id/gym_activity_back_btn"/>
 
-            </LinearLayout>
+            </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
+                android:background="@color/secondryBlue"
+                android:elevation="10dp"
+                android:paddingHorizontal="10dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/gym_photos_rv"
-                android:layout_marginTop="5dp"
                 android:layout_below="@+id/gym_activity_container"
                 />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gym_photos_rv"
+                android:padding="5dp"
+                android:background="@color/secondryBlue"
+                android:elevation="10dp"
+                android:id="@+id/head1">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/gym_tab_name"
                 android:fontFamily="@font/metropolisbold"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/primaryBlue"
                 android:textSize="20sp"
                 android:text="Krav Maga Global"
-                android:layout_below="@id/gym_photos_rv"
-                android:layout_marginTop="5dp"
-                android:layout_marginHorizontal="10dp"/>
+                android:layout_toLeftOf="@id/gym_map_btn"
+                android:paddingTop="5dp"
+                android:paddingHorizontal="10dp"/>
             <ImageButton
                 android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_height="24dp"
                 android:background= "@drawable/ic_location"
-                android:layout_alignBaseline="@id/gym_photos_rv"
-                android:layout_below="@id/gym_photos_rv"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
+                android:layout_alignBottom="@id/gym_tab_name"
+                android:paddingTop="15dp"
+                android:paddingRight="10dp"
                 android:layout_alignParentEnd="true"
                 android:id="@+id/gym_map_btn"/>
             <TextView
@@ -102,19 +114,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/gym_more_address_btn"
-                    android:layout_marginHorizontal="10dp"
+                    android:paddingHorizontal="10dp"
                     android:layout_marginTop="3dp"
                     android:orientation="horizontal" />
             </ScrollView>
+            </RelativeLayout>
 
-            <TextView
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginHorizontal="40dp"-->
+<!--                android:layout_marginVertical="8dp"-->
+<!--                android:id="@+id/gym_line1"-->
+<!--                android:layout_below="@id/head1"-->
+<!--                android:background="#000"/>-->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginHorizontal="40dp"
-                android:layout_marginVertical="8dp"
-                android:id="@+id/gym_line1"
-                android:layout_below="@id/rv_container"
-                android:background="#000"/>
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/secondryBlue"
+                android:elevation="10dp"
+                android:layout_marginHorizontal="5dp"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/head1"
+                android:id="@+id/head2">
 
             <TextView
                 android:layout_width="match_parent"
@@ -124,7 +148,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="17sp"
                 android:text="Description"
-                android:layout_below="@id/gym_line1"
+                android:layout_below="@id/head1"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="10dp"/>
             <TextView
@@ -151,6 +175,19 @@
                 android:textSize="8sp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/secondryBlue"
+                android:elevation="10dp"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_below="@id/head2"
+                android:id="@+id/head3">
 
             <TextView
                 android:layout_width="match_parent"
@@ -160,7 +197,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="17sp"
                 android:text="Things To Remember"
-                android:layout_below="@id/gym_more_desc_btn"
+                android:layout_below="@id/head2"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="10dp"/>
             <TextView
@@ -189,25 +226,27 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="5dp"
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginHorizontal="40dp"
-                android:layout_marginVertical="8dp"
-                android:id="@+id/gym_line2"
-                android:layout_below="@id/gym_more_ttr_btn"
-                android:background="#000"/>
+            </LinearLayout>
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginHorizontal="40dp"-->
+<!--                android:layout_marginVertical="8dp"-->
+<!--                android:id="@+id/gym_line2"-->
+<!--                android:layout_below="@id/gym_more_ttr_btn"-->
+<!--                android:background="#000"/>-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingHorizontal="7dp"
+                android:elevation="10dp"
                 android:id="@+id/book_container"
                 android:gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginHorizontal="10dp"
                 android:background="@drawable/bg_textview"
-                android:layout_below="@id/gym_line2">
+                android:layout_below="@id/head3">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -218,7 +257,6 @@
                     android:textSize="17sp"
                     android:textAlignment="center"
                     android:text="Fitness Pass Exclusive"
-                    android:layout_below="@id/gym_line2"
                     android:layout_marginTop="10dp"
                     android:layout_marginHorizontal="10dp"/>
                 <TextView
@@ -250,6 +288,17 @@
                     android:layout_marginVertical="10dp"/>
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/secondryBlue"
+                android:elevation="10dp"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_below="@id/book_container"
+                android:id="@+id/head4">
 
             <TextView
                 android:layout_width="match_parent"
@@ -272,6 +321,20 @@
                 android:layout_below="@id/gym_tab_video_head"
                 android:orientation="horizontal"
                 />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/secondryBlue"
+                android:elevation="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:paddingHorizontal="10dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_below="@id/head4"
+                android:id="@+id/head5">
 
             <TextView
                 android:layout_width="match_parent"
@@ -294,6 +357,7 @@
                 android:orientation="horizontal"
                 android:layout_marginVertical="5dp"
                 />
+            </LinearLayout>
 
 
         </RelativeLayout>
