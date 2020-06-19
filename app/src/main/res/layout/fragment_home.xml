@@ -23,7 +23,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/bg_actionbar"
+        android:elevation="0dp"
+        app:elevation="0dp"
+        android:backgroundTint="@color/secondryBlue"
         android:id="@+id/toolbar">
     <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"
@@ -47,13 +49,13 @@
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="30sp"
-        app:tabTextColor="#7EFFFFFF"
-        android:background="@drawable/bg_actionbar"
+        app:tabTextColor="@color/webGray"
+        android:backgroundTint="@color/secondryBlue"
         android:id="@+id/home_tab_layout"
         app:tabIndicatorHeight="3sp"
-        app:tabIndicatorColor="#fff"
+        app:tabIndicatorColor="@color/primaryBlue"
         app:tabMode="scrollable"
-        app:tabSelectedTextColor="@color/white"
+        app:tabSelectedTextColor="@color/primaryBlue"
         android:layout_marginBottom="5dp"
         >
         <com.google.android.material.tabs.TabItem

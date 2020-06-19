@@ -71,7 +71,7 @@
             android:id="@+id/bottom_nav"
             android:elevation="0dp"
             app:itemIconTint="@color/brightYellow"
-            android:background="@color/primaryBlue"
+            android:background="#7494EA"
             app:itemTextColor="@color/brightYellow"
             app:menu="@menu/bottomnav_menu"
             android:layout_alignParentBottom="true"/>
