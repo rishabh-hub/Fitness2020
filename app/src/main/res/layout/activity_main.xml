@@ -7,14 +7,14 @@
     android:layout_width="match_parent"
     android:id="@+id/drawer">
     <RelativeLayout
+        android:background="@color/secondryBlue"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/toolbar"
-            android:background="@drawable/bg_actionbar">
+            android:id="@+id/toolbar">
 
             <Spinner
                 android:layout_width="match_parent"
@@ -42,7 +42,8 @@
                 android:scaleType="centerCrop"
                 android:padding="5dp"
                 android:id="@+id/user_image_imgvw"
-                android:tint="@color/colorPrimary"
+                android:background="@color/primaryBlue"
+                android:tint="@color/brightYellow"
                 android:src="@drawable/ic_person_outline_black_24dp"
                 />
             </androidx.cardview.widget.CardView>
@@ -54,21 +55,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/toolbar"
-            android:layout_above="@id/line"
-            android:id="@+id/frame_layout"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:id="@+id/line"
-            android:background="@drawable/bg_grad"
             android:layout_above="@id/bottom_nav"
-            />
+            android:id="@+id/frame_layout"/>
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="2dp"-->
+<!--            android:id="@+id/line"-->
+<!--            android:background="@drawable/bg_grad"-->
+<!--            android:layout_above="@id/bottom_nav"-->
+<!--            />-->
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/bottom_nav"
-            android:background="#FFFFFF"
+            android:elevation="0dp"
+            app:itemIconTint="@color/brightYellow"
+            android:background="@color/primaryBlue"
+            app:itemTextColor="@color/brightYellow"
             app:menu="@menu/bottomnav_menu"
             android:layout_alignParentBottom="true"/>
 
