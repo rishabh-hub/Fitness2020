@@ -164,7 +164,6 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.EventsAdap
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
                     Intent eventsActivityIntent=new Intent(itemView.getContext(), EventsInternalActivity.class);
                     itemView.getContext().startActivity(eventsActivityIntent);
                 }

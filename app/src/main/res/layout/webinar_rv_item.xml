@@ -89,10 +89,10 @@
             android:layout_alignBottom="@id/webinar_activities"
             android:text="Book Now"
             android:textSize="12sp"
-            android:layout_margin="2dp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimary"
-            android:layout_marginEnd="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
             android:id="@+id/webinar_book_btn"/>
 
 
