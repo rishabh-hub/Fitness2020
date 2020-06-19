@@ -12,9 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/toolbar"
-        android:elevation="4dp"
+        android:elevation="12dp"
         android:layout_alignParentTop="true"
-        android:background="#65000000"
+        android:background="#5C000000"
         >
         <ImageButton
             android:layout_width="20dp"
@@ -38,35 +38,36 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_alignParentTop="true"
-        android:background="@color/design_default_color_primary_dark"
+        android:background="@color/colorPrimaryDark"
         android:src="@drawable/webinar"
-        android:scaleType="fitXY"
+        android:elevation="10dp"
+        android:scaleType="centerCrop"
         android:id="@+id/collections_internal_image"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:gravity="center"
+        android:textColor="@color/primaryBlue"
+        android:elevation="10dp"
+        android:background="@color/secondryBlue"
         android:text="Enjoy great deals starting at just 99!!"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        android:fontFamily="@font/metropolismedium"
+        android:padding="10dp"
+        android:fontFamily="@font/metropolisbold"
         android:textSize="15sp"
         android:layout_below="@id/collections_internal_image"
         android:id="@+id/collections_internal_sub_head"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:elevation="10dp"
         android:textColor="@color/colorPrimaryDark"
-        android:gravity="center"
         android:text="17 Places"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/metropolismedium"
-        android:textSize="17sp"
+        android:background="@color/secondryBlue"
+        android:paddingHorizontal="10dp"
+        android:paddingBottom="10dp"
+        android:fontFamily="@font/metropolisbold"
+        android:textSize="15sp"
         android:layout_below="@id/collections_internal_sub_head"
         android:id="@+id/collections_internal_number_places"/>
 
