@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.fitness2020.Adapters.DateTimeAdapter;
@@ -26,6 +28,7 @@ public class GymBookingFinalPage extends AppCompatActivity {
     ArrayList<DateModel> dateModels;
     ArrayList<TimeModel> timeModels;
     DateTimeAdapter timeAdapter,dateAdapter;
+    ImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,14 @@ public class GymBookingFinalPage extends AppCompatActivity {
             }
         });
 
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backIntent=new Intent(GymBookingFinalPage.this,GymActivity.class);
+                startActivity(backIntent);
+            }
+        });
+
     }
 
     void attachId()
@@ -71,6 +82,7 @@ public class GymBookingFinalPage extends AppCompatActivity {
         payButton=findViewById(R.id.final_booking_page_gym_book_btn);
         groupNum = findViewById(R.id.final_booking_page_gym_groupET);
         netAmount = findViewById(R.id.final_booking_page_gym_amount);
+        backButton=findViewById(R.id.final_booking_page_back_btn);
     }
 
     void addData()

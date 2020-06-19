@@ -13,22 +13,37 @@
     android:padding="10dp"
     tools:context=".GymBookingFinalPage">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:fontFamily="@font/metropolisbold"
-        android:textSize="20sp"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="ABC Fitness"
-        android:textAlignment="center"
-        android:id="@+id/final_booking_page_gym_name"/>
+        android:layout_marginHorizontal="5dp"
+        android:id="@+id/final_booking_page_container1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_left_arrow"
+            android:id="@+id/final_booking_page_back_btn"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:fontFamily="@font/metropolisbold"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="ABC Fitness"
+            android:textAlignment="center"
+            android:id="@+id/final_booking_page_gym_name"/>
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="Activity:"
-        android:layout_below="@id/final_booking_page_gym_name"
+        android:layout_below="@id/final_booking_page_container1"
         android:id="@+id/activity"
         android:textStyle="bold"
         android:textSize="17sp"
@@ -38,7 +53,7 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="Yoga"
-        android:layout_below="@id/final_booking_page_gym_name"
+        android:layout_below="@id/final_booking_page_container1"
         android:layout_toRightOf="@id/activity"
         android:id="@+id/final_booking_page_gym_activity"
         android:textSize="17sp"
