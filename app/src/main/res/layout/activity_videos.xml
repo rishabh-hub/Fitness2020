@@ -18,6 +18,31 @@
         android:backgroundTintMode="src_atop"
         android:layout_alignParentTop="true"
         android:id="@+id/container1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:id="@+id/video_activity_container1"
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_left_arrow"
+                android:backgroundTint="@color/white"
+                android:layout_marginStart="5dp"
+                android:id="@+id/videos_activity_back_btn"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="Videos"/>
+
+        </LinearLayout>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,6 +51,7 @@
             android:layout_marginTop="5dp"
             android:textSize="17sp"
             android:textColor="#fff"
+            android:layout_below="@+id/video_activity_container1"
             android:fontFamily="@font/metropolisblack"
             android:text="Fitness Pass"
             android:id="@+id/video_page_fitnesspass_txt"/>
