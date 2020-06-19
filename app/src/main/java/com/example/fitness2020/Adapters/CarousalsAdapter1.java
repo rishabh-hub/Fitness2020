@@ -117,7 +117,7 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
                card.setBackground(itemView.getContext().getDrawable(R.color.webinar));
                }
             else {
-                card.setBackground(itemView.getContext().getDrawable(R.color.colorPrimary));
+                card.setBackground(itemView.getContext().getDrawable(R.color.mullaGreen));
                 webinarImage.setImageResource(webinarModel.getWebinarImageUrl());
             }
             webinarActivity.setText(webinarModel.getActivity());

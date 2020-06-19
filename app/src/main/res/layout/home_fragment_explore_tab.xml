@@ -21,6 +21,7 @@
 
 <!--            backend explore image rv-->
             <androidx.recyclerview.widget.RecyclerView
+                android:background="@drawable/bg_banner2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/explore_workout_rv"
