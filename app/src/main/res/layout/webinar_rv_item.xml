@@ -95,9 +95,6 @@
             android:layout_marginBottom="5dp"
             android:id="@+id/webinar_book_btn"/>
 
-
-
-
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
