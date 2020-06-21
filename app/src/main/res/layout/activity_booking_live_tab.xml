@@ -19,7 +19,7 @@
             <com.google.android.material.chip.ChipGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bookings_filter_chipgp"
+                android:id="@+id/bookings_live_filter_chip_grp"
                 app:singleLine="true"
                 android:layout_centerHorizontal="true"
                 app:chipSpacing="10dp"
@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/booking_live_chip_grp"
-            android:id="@+id/booking_studio_RV"
+            android:id="@+id/booking_live_RV"
             android:nestedScrollingEnabled="false"/>
     </RelativeLayout>
 
