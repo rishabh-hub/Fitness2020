@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:elevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/photo_container"
+            android:background="@drawable/bg_main_offer_card"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:layout_alignParentTop="true"
+                android:id="@+id/booking_live_image"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Gold"
+            android:layout_alignTop="@id/photo_container"
+            android:textColor="@color/brightYellow"
+            android:fontFamily="@font/metropolisblack"
+            android:padding="5dp"
+            android:background="#fff"
+            android:textSize="15sp"
+            android:id="@+id/booking_live_privilege"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Functional Training"
+            android:layout_alignBottom="@id/photo_container"
+            android:textColor="#fff"
+            android:fontFamily="@font/metropolisbold"
+            android:layout_margin="10dp"
+            android:textSize="17sp"
+            android:id="@+id/booking_live_name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="7:00 AM"
+            android:layout_alignBottom="@id/photo_container"
+            android:textColor="#fff"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/metropolisbold"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="14sp"
+            android:id="@+id/booking_live_time"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="21 August 2019"
+            android:textColor="#fff"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/metropolisbold"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="14sp"
+            android:layout_above="@id/booking_live_time"
+            android:id="@+id/booking_live_date"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/photo_container"
+            android:text="Live on: Zoom"
+            android:textColor="@color/primaryBlue"
+            android:fontFamily="@font/metropolisbold"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"
+            android:textSize="17sp"
+            android:id="@+id/booking_live_class_type"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/booking_live_class_type"
+            android:text="Zoom ID: "
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/metropolisbold"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="2dp"
+            android:textSize="13sp"
+            android:id="@+id/booking_live_zoom_id"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/booking_live_zoom_id"
+            android:text="Zoom Password: "
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/metropolisbold"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="2dp"
+            android:textSize="13sp"
+            android:id="@+id/booking_live_zoom_password"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/booking_live_zoom_password"
+            android:text="77 seats available"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/metropolisbold"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp"
+            android:id="@+id/booking_live_no_of_seats"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/primaryBlue"
+            android:id="@+id/booking_live_start_button"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/booking_live_no_of_seats"
+            android:layout_marginRight="10dp"/>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
