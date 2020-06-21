@@ -61,7 +61,8 @@ public class BookingStudioTab extends Fragment {
     }
 
     private void addData() {
-        bookingsModels.add(new BookingsModel(R.drawable.gym_dummy,100010,"55BC02R5","!5 April","New Product","Redeemed","221 Baker Street Bombay","7466678363","Crossfit","15:00-16:00","Free Trial"));
+        for (int i=0;i<=5;i++)
+        bookingsModels.add(new BookingsModel(R.drawable.gym_dummy,100010,"55BC02R5","15 April","New Product","Redeemed","221 Baker Street Bombay","7466678363","Crossfit","15:00-16:00","Free Trial"));
     }
 
     private void updateAdapter() {
