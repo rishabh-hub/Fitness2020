@@ -45,71 +45,122 @@
                     android:layout_centerVertical="true"
                     android:id="@+id/bookings_header_tv"
                     />
-
-
             </RelativeLayout>
 
-            <RelativeLayout
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                app:tabTextColor="@color/webGray"
+                android:backgroundTint="@color/secondryBlue"
+                android:id="@+id/bookings_activity_tab_layout"
+                app:tabIndicatorHeight="3sp"
+                android:layout_below="@+id/bookings_tlbr_rellay"
+                app:tabIndicatorColor="@color/primaryBlue"
+                app:tabSelectedTextColor="@color/primaryBlue"
+                android:layout_marginBottom="5dp"
+                >
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookings_activity_live"
+                    android:text="Live"
+                    />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookings_activity_studio"
+                    android:text="Studio"
+                    />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookings_activity_events"
+                    android:text="Events"
+                    />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookings_activity_vouchers"
+                    android:text="Vouchers"
+                    />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager.widget.ViewPager
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/bookings_tlbr_rellay"
-                android:layout_marginTop="5dp"
-                android:gravity="center"
-                android:id="@+id/chipgp_rellay"
+                android:id="@+id/bookings_activity_viewpager"
+                android:layout_below="@id/bookings_activity_tab_layout"
                 >
-            <com.google.android.material.chip.ChipGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/bookings_filter_chipgp"
-                app:singleLine="true"
-                android:layout_centerHorizontal="true"
-                app:chipSpacing="10dp"
-                >
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:id="@+id/bookings_chip_all"
-                    android:text="All"
-                    app:chipBackgroundColor="@color/colorPrimary"
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/bookings_activity_frameLayout"
                     />
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:id="@+id/bookings_chip_upcoming"
-                    android:text="Upcoming"
-                    app:chipBackgroundColor="@color/colorPrimary"
-                    />
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:id="@+id/bookings_chip_past"
-                    android:text="Past"
-                    app:chipBackgroundColor="@color/colorPrimary"
-                    />
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:id="@+id/bookings_chip_cancelled"
-                    android:text="Cancelled"
-                    app:chipBackgroundColor="@color/colorPrimary"
-                    />
-            </com.google.android.material.chip.ChipGroup>
-            </RelativeLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/chipgp_rellay"
-                android:layout_marginTop="10dp"
-                android:id="@+id/bookings_rv"
-                android:nestedScrollingEnabled="true"
-                android:background="#fff"
-                />
-            
+            </androidx.viewpager.widget.ViewPager>
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/bookings_tlbr_rellay"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:gravity="center"-->
+<!--                android:id="@+id/chipgp_rellay"-->
+<!--                >-->
+<!--            <com.google.android.material.chip.ChipGroup-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/bookings_filter_chipgp"-->
+<!--                app:singleLine="true"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                app:chipSpacing="10dp"-->
+<!--                >-->
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:id="@+id/bookings_chip_all"-->
+<!--                    android:text="All"-->
+<!--                    app:chipBackgroundColor="@color/colorPrimary"-->
+<!--                    />-->
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:id="@+id/bookings_chip_upcoming"-->
+<!--                    android:text="Upcoming"-->
+<!--                    app:chipBackgroundColor="@color/colorPrimary"-->
+<!--                    />-->
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:id="@+id/bookings_chip_past"-->
+<!--                    android:text="Past"-->
+<!--                    app:chipBackgroundColor="@color/colorPrimary"-->
+<!--                    />-->
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
+<!--                    android:id="@+id/bookings_chip_cancelled"-->
+<!--                    android:text="Cancelled"-->
+<!--                    app:chipBackgroundColor="@color/colorPrimary"-->
+<!--                    />-->
+<!--            </com.google.android.material.chip.ChipGroup>-->
+<!--            </RelativeLayout>-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/chipgp_rellay"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:id="@+id/bookings_rv"-->
+<!--                android:nestedScrollingEnabled="true"-->
+<!--                android:background="#fff"-->
+<!--                />-->
+
         </RelativeLayout>
     </ScrollView>
     
