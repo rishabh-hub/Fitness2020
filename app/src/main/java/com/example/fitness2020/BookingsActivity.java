@@ -49,6 +49,7 @@ public class BookingsActivity extends AppCompatActivity {
 
         bookingsPagerAdapter=new BookingsPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,bookingTab.getTabCount(),0);
 
+        viewPager.setAdapter(bookingsPagerAdapter);
 
         bookingTab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
