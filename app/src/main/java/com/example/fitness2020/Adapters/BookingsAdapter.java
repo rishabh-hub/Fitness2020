@@ -85,8 +85,6 @@ public class BookingsAdapter extends RecyclerView.Adapter<BookingsAdapter.Bookin
                 status=itemView.findViewById(R.id.bookings_rv_item_status);
                 address1=itemView.findViewById(R.id.bookings_rv_item_address1);
                 address2=itemView.findViewById(R.id.bookings_rv_item_address2);
-                contact1=itemView.findViewById(R.id.bookings_rv_item_contact1);
-                contact2=itemView.findViewById(R.id.bookings_rv_item_contact2);
                 purchaseDetails=itemView.findViewById(R.id.bookings_rv_item_purchase_detail);
             }
             else
