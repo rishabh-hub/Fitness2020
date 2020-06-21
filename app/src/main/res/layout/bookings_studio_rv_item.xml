@@ -5,7 +5,7 @@
     android:layout_marginVertical="10dp"
     android:backgroundTint="#fff"
     android:layout_marginHorizontal="10dp"
-    app:cardCornerRadius="30dp"
+    app:cardCornerRadius="10dp"
     android:padding="10dp"
     android:layout_height="wrap_content">
 
