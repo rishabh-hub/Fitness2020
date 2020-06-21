@@ -26,6 +26,8 @@ public class BookingLiveTab extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_booking_live_tab,container,false);
 
+
+
         return view;
     }
 }
