@@ -8,24 +8,24 @@ public class BookingsModel {
     private String purchaseDate;
     private String productName;
     private String status;
-    private String address1;
     private String address2;
     private String contact1;
-    private String contact2;
+    private String activity;
+    private String time;
     private String purchaseDetails;
 
-    public BookingsModel(int bookingId, String code, String purchaseDate, String productName, String status, String address1, String address2, String contact1, String contact2, String purchaseDetails, int imageId) {
+    public BookingsModel(int imageId, int bookingId, String code, String purchaseDate, String productName, String status, String address2, String contact1, String activity, String time, String purchaseDetails) {
+        this.imageId = imageId;
         this.bookingId = bookingId;
         this.code = code;
         this.purchaseDate = purchaseDate;
         this.productName = productName;
         this.status = status;
-        this.address1 = address1;
         this.address2 = address2;
         this.contact1 = contact1;
-        this.contact2 = contact2;
+        this.activity = activity;
+        this.time = time;
         this.purchaseDetails = purchaseDetails;
-        this.imageId=imageId;
     }
 
     public int getBookingId() {
@@ -68,14 +68,6 @@ public class BookingsModel {
         this.status = status;
     }
 
-    public String getAddress1() {
-        return address1;
-    }
-
-    public void setAddress1(String address1) {
-        this.address1 = address1;
-    }
-
     public String getAddress2() {
         return address2;
     }
@@ -92,13 +84,6 @@ public class BookingsModel {
         this.contact1 = contact1;
     }
 
-    public String getContact2() {
-        return contact2;
-    }
-
-    public void setContact2(String contact2) {
-        this.contact2 = contact2;
-    }
 
     public String getPurchaseDetails() {
         return purchaseDetails;
@@ -106,6 +91,22 @@ public class BookingsModel {
 
     public void setPurchaseDetails(String purchaseDetails) {
         this.purchaseDetails = purchaseDetails;
+    }
+
+    public String getActivity() {
+        return activity;
+    }
+
+    public void setActivity(String activity) {
+        this.activity = activity;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public int getImageId() {
