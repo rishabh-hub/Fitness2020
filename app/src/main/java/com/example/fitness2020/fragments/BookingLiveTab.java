@@ -92,7 +92,7 @@ public class BookingLiveTab extends Fragment {
 
     private void attachId() {
         bookingLiveRV = view.findViewById(R.id.booking_live_RV);
-        all=view.findViewById(R.id.bookings_live_filter_chip_grp);
+        all=view.findViewById(R.id.bookings_chip_all);
         cancelled=view.findViewById(R.id.bookings_chip_cancelled);
         past=view.findViewById(R.id.bookings_chip_past);
         upcoming=view.findViewById(R.id.bookings_chip_upcoming);

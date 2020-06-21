@@ -180,7 +180,7 @@ public class BookingsActivityAdapter extends RecyclerView.Adapter<BookingsActivi
             studioTime.setText(bookingsModel.getTime());
             studioActivity.setText(bookingsModel.getActivity());
             studioCode.setText(bookingsModel.getCode());
-            studioOrderId.setText(bookingsModel.getBookingId());
+            studioOrderId.setText(Integer.toString(bookingsModel.getBookingId()));
             studioStatus.setText(bookingsModel.getStatus());
             studioName.setText(bookingsModel.getProductName());
             studioAddress.setText(bookingsModel.getAddress2());
