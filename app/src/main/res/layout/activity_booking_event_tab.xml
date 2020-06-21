@@ -1,9 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.BookingLiveTab">
+    android:theme="@style/Theme.MaterialComponents.NoActionBar"
+    android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:id="@+id/booking_event_chip_grp"
+            >
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookings_filter_chipgp"
+                app:singleLine="true"
+                android:layout_centerHorizontal="true"
+                app:chipSpacing="10dp"
+                >
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/bookings_chip_all"
+                    android:text="All"
+                    app:chipBackgroundColor="@color/colorPrimary"
+                    />
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/bookings_chip_upcoming"
+                    android:text="Upcoming"
+                    app:chipBackgroundColor="@color/colorPrimary"
+                    />
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/bookings_chip_past"
+                    android:text="Past"
+                    app:chipBackgroundColor="@color/colorPrimary"
+                    />
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/bookings_chip_cancelled"
+                    android:text="Cancelled"
+                    app:chipBackgroundColor="@color/colorPrimary"
+                    />
+            </com.google.android.material.chip.ChipGroup>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/booking_event_chip_grp"
+            android:id="@+id/booking_studio_RV"
+            android:nestedScrollingEnabled="false"/>
+    </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
