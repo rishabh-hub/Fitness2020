@@ -87,15 +87,15 @@ public class MembershipActivity extends AppCompatActivity {
     void attachId()
     {
         backButton=findViewById(R.id.membership_activity_back_btn);
-        membershipTab=findViewById(R.id.);
-        ftiness2020Menmbership=findViewById(R.id.);
-        gymMembership=findViewById(R.id.);
+        membershipTab=findViewById(R.id.membership_tab_layout);
+        ftiness2020Menmbership=findViewById(R.id.membership_fitnes2020_tab);
+        gymMembership=findViewById(R.id.membership_gym_tab);
     }
 
     void loadFragment(Fragment fragment)
     {
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.,fragment);
+        fragmentTransaction.replace(R.id.membership_frame,fragment);
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.commit();
 
