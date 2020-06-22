@@ -15,6 +15,9 @@ import com.example.fitness2020.R;
 public class Fitness2020MembershipTab extends Fragment {
 
     View view;
+
+
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
