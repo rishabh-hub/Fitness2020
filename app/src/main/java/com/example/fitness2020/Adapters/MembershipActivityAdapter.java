@@ -24,6 +24,12 @@ public class MembershipActivityAdapter extends RecyclerView.Adapter<MembershipAc
     ArrayList<GymMembershipModel> gymMembershipModels;
     ArrayList<Fitness2020Model> fitness2020Models;
 
+    public MembershipActivityAdapter(int code, ArrayList<GymMembershipModel> gymMembershipModels, ArrayList<Fitness2020Model> fitness2020Models) {
+        this.code = code;
+        this.gymMembershipModels = gymMembershipModels;
+        this.fitness2020Models = fitness2020Models;
+    }
+
     @NonNull
     @Override
     public MembershipActivityRvVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
