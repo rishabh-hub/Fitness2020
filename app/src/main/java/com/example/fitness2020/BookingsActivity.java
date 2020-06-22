@@ -8,8 +8,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 
 import com.example.fitness2020.Adapters.BookingsAdapter;
 import com.example.fitness2020.Adapters.BookingsPagerAdapter;
@@ -29,15 +32,13 @@ import java.util.ArrayList;
 
 public class BookingsActivity extends AppCompatActivity {
 
-//    RecyclerView bookingsRv;
-//    Chip all,cancelled,past,upcoming;
-//    ArrayList<BookingsModel> bookingsModels;
-//    BookingsAdapter bookingsAdapter;
+
     Fragment fragment;
     TabLayout bookingTab;
     TabItem bookingLiveTab,bookingEventTab,bookingVoucherTab,bookingStudioTab;
     ViewPager viewPager;
     BookingsPagerAdapter bookingsPagerAdapter;
+    ImageView backButton;
 
 
     @Override
@@ -90,17 +91,12 @@ public class BookingsActivity extends AppCompatActivity {
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(bookingTab));
 
-//        bookingsRv.setLayoutManager(new LinearLayoutManager(BookingsActivity.this,LinearLayoutManager.VERTICAL,false));
-//
-//        bookingsModels=new ArrayList<>(3);
-//
-//        addData();
-//
-//        bookingsAdapter=new BookingsAdapter(bookingsModels,BookingsActivity.this,1);
-//
-//        bookingsRv.setAdapter(bookingsAdapter);
-//
-//        bookingsAdapter.notifyDataSetChanged();
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 
@@ -112,11 +108,8 @@ public class BookingsActivity extends AppCompatActivity {
         bookingStudioTab=findViewById(R.id.bookings_activity_studio);
         bookingVoucherTab=findViewById(R.id.bookings_activity_vouchers);
         viewPager=findViewById(R.id.bookings_activity_viewpager);
-//        bookingsRv=findViewById(R.id.bookings_rv);
-//        all=findViewById(R.id.bookings_chip_all);
-//        cancelled=findViewById(R.id.bookings_chip_cancelled);
-//        past=findViewById(R.id.bookings_chip_past);
-//        upcoming=findViewById(R.id.bookings_chip_upcoming);
+        backButton=findViewById(R.id.bookings_activity_back_btn);
+
     }
 
     void loadFragment(Fragment fragment)
@@ -127,12 +120,5 @@ public class BookingsActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-//    void addData()
-//    {
-//        for(int i=0;i<=5;i++) {
-//            bookingsModels.add(new BookingsModel(10081, "FIT394AB849Z",
-//                    "14 march 2019", "TEST APP NEW", "Redeemed", "Jayh", "Mankhurd",
-//                    "7466678363", "8846677888", "1 Trial pass", R.mipmap.ic_launcher));
-//        }
-//    }
+
 }
