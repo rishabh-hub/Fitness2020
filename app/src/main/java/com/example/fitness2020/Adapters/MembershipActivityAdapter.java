@@ -34,7 +34,7 @@ public class MembershipActivityAdapter extends RecyclerView.Adapter<MembershipAc
 
         else
         {
-            return new MembershipActivityRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.bookings_studio_rv_item,parent,false));
+            return new MembershipActivityRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.gym_membership_rv_item,parent,false));
         }
     }
 
@@ -91,7 +91,14 @@ public class MembershipActivityAdapter extends RecyclerView.Adapter<MembershipAc
 
             else
             {
-
+                gymImage = itemView.findViewById(R.id.gym_membership_image);
+                gymMembershipName = itemView.findViewById(R.id.gym_membership_name);
+                gymPrice = itemView.findViewById(R.id.gym_membership_price);
+                gymName = itemView.findViewById(R.id.gym_membership_gym_name);
+                gymStartDate = itemView.findViewById(R.id.gym_membership_gym_start_date);
+                gymEndDate = itemView.findViewById(R.id.gym_membership_gym_end_date);
+                gymAddress = itemView.findViewById(R.id.gym_membership_gym_address);
+                gymContactButton = itemView.findViewById(R.id.gym_membership_call_btn);
             }
         }
 

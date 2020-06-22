@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:fillViewport="true"
+    android:background="@color/primaryBlue"
     android:layout_height="match_parent">
 
     <RelativeLayout
@@ -15,16 +16,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/voucher_rv_0"
-            android:padding="10dp"
-            android:background="@drawable/bg_pack"
-            android:backgroundTint="#37000000"
             android:backgroundTintMode="src_atop"
             android:layout_alignParentTop="true"
             >
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
                 android:id="@+id/voucher_head_banner_rv"/>
 
         </LinearLayout>
@@ -66,7 +63,7 @@
                 android:text="Pleasure"
                 android:fontFamily="@font/metropolisbold"
                 android:textSize="17sp"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:textColor="@color/white"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -88,7 +85,7 @@
                 android:text="Health"
                 android:fontFamily="@font/metropolisbold"
                 android:textSize="17sp"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:textColor="@color/white"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -110,7 +107,7 @@
                 android:text="Experiences"
                 android:fontFamily="@font/metropolisbold"
                 android:textSize="17sp"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:textColor="@color/white"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -133,7 +130,7 @@
                 android:text="Shopping"
                 android:fontFamily="@font/metropolisbold"
                 android:textSize="17sp"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:textColor="@color/white"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -155,7 +152,7 @@
                 android:text="Travel"
                 android:fontFamily="@font/metropolisbold"
                 android:textSize="17sp"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:textColor="@color/white"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

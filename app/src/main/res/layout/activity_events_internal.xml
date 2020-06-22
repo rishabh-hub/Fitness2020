@@ -21,7 +21,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/secondryBlue"
+            android:background="@color/white"
             android:elevation="10dp"
             android:layout_marginHorizontal="5dp"
             android:id="@+id/event_internal_container_1"
@@ -29,14 +29,13 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
                 android:id="@+id/event_internal_image_rv"/>
         </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="10dp"
-        android:background="@color/secondryBlue"
+        android:background="@color/white"
         android:layout_marginHorizontal="5dp"
         android:elevation="10dp"
         android:id="@+id/event_internal_container_2"
@@ -48,7 +47,6 @@
             android:fontFamily="@font/metropolisblack"
             android:textColor="@color/primaryBlue"
             android:text="World Yoga Day"
-            android:textAlignment="center"
             android:layout_marginTop="5dp"
             android:layout_toLeftOf="@id/event_internal_event_price"
             android:id="@+id/event_internal_event_name"/>
@@ -67,8 +65,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/secondryBlue"
+        android:background="@color/white"
         android:elevation="10dp"
+        android:paddingHorizontal="5dp"
         android:layout_marginHorizontal="5dp"
         android:id="@+id/event_internal_container_3"
         android:layout_below="@id/event_internal_container_2">
@@ -97,9 +96,8 @@
         android:layout_height="wrap_content"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
-        android:layout_marginTop="5dp"
         android:layout_marginHorizontal="5dp"
-        android:background="@color/secondryBlue"
+        android:background="@color/white"
         android:elevation="10dp"
         android:id="@+id/event_internal_container_4"
         android:layout_below="@id/event_internal_container_3">
@@ -127,9 +125,8 @@
         android:layout_height="wrap_content"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
-        android:layout_marginTop="5dp"
         android:layout_marginHorizontal="5dp"
-        android:background="@color/secondryBlue"
+        android:background="@color/white"
         android:elevation="10dp"
         android:id="@+id/event_internal_container_5"
         android:layout_below="@id/event_internal_container_4">
@@ -159,7 +156,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginHorizontal="5dp"
         android:elevation="10dp"
-        android:background="@color/secondryBlue"
+        android:background="@color/webGray"
         android:layout_marginBottom="5dp"
         android:id="@+id/event_internal_container_7"
         android:layout_below="@id/event_internal_container_5">
@@ -167,14 +164,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="17sp"
+            android:layout_marginLeft="5dp"
             android:fontFamily="@font/metropolisbold"
-            android:textColor="@color/primaryBlue"
+            android:textColor="@color/white"
             android:text="Videos"
             android:id="@+id/video_head"/>
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp"
             android:layout_below="@id/video_head"
             android:id="@+id/event_internal_video_rv"/>
     </RelativeLayout>
@@ -183,7 +180,7 @@
 </ScrollView>
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:elevation="8dp"
         app:elevation="12dp"
         android:background="@color/primaryBlue"
@@ -194,22 +191,24 @@
             android:layout_height="match_parent">
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_centerVertical="true"
+                android:background="@color/primaryBlue"
+                android:layout_marginHorizontal="10dp"
                 android:padding="10dp"
                 android:layout_alignParentStart="true"
                 android:layout_toLeftOf="@id/event_internal_book_btn"
                 android:id="@+id/event_internal_category_rv"/>
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/bg_button"
-                android:backgroundTint="@color/secondryBlue"
-                android:text="Book"
                 android:textStyle="bold"
+                android:background="@drawable/bg_button"
+                android:backgroundTint="@color/white"
+                android:text="Book"
                 android:textColor="@color/primaryBlue"
                 android:id="@+id/event_internal_book_btn"/>
         </RelativeLayout>

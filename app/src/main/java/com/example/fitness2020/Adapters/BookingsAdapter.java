@@ -89,17 +89,17 @@ public class BookingsAdapter extends RecyclerView.Adapter<BookingsAdapter.Bookin
             }
             else
             {
-                memberGymImage = itemView.findViewById(R.id.membership_gym_photo);
-                memberPurchaseDate = itemView.findViewById(R.id.membership_gym_purchased);
-                memberGymName = itemView.findViewById(R.id.membership_gym_name);
-                memberOrderID = itemView.findViewById(R.id.membership_gym_order);
-                memberAmount = itemView.findViewById(R.id.membership_amount);
-                memberDiscount = itemView.findViewById(R.id.membership_discount);
-                memberPayableAmount = itemView.findViewById(R.id.membership_payable_amount);
-                memberPoints = itemView.findViewById(R.id.membership_points);
-                memberPointsExpiry = itemView.findViewById(R.id.membership_points_expiry);
-                memberType = itemView.findViewById(R.id.membership_type);
-                memberTypeExpiry = itemView.findViewById(R.id.membership_type_expiry);
+//                memberGymImage = itemView.findViewById(R.id.membership_gym_photo);
+//                memberPurchaseDate = itemView.findViewById(R.id.membership_gym_purchased);
+//                memberGymName = itemView.findViewById(R.id.membership_gym_name);
+//                memberOrderID = itemView.findViewById(R.id.membership_gym_order);
+//                memberAmount = itemView.findViewById(R.id.membership_amount);
+//                memberDiscount = itemView.findViewById(R.id.membership_discount);
+//                memberPayableAmount = itemView.findViewById(R.id.membership_payable_amount);
+//                memberPoints = itemView.findViewById(R.id.membership_points);
+//                memberPointsExpiry = itemView.findViewById(R.id.membership_points_expiry);
+//                memberType = itemView.findViewById(R.id.membership_type);
+//                memberTypeExpiry = itemView.findViewById(R.id.membership_type_expiry);
             }
 
         }
@@ -119,17 +119,17 @@ public class BookingsAdapter extends RecyclerView.Adapter<BookingsAdapter.Bookin
         }
 
         public void membershipsPopulate(MembershipModel membershipModel) {
-            memberGymImage.setImageResource(membershipModel.getImageID());
-            memberGymName.setText(membershipModel.getGymName());
-            memberPurchaseDate.setText(membershipModel.getPurchaseDate());
-            memberOrderID.setText(membershipModel.getOrder());
-            memberAmount.setText(membershipModel.getAmount());
-            memberDiscount.setText(membershipModel.getDiscount());
-            memberPayableAmount.setText(membershipModel.getAmountPayable());
-            memberPoints.setText("Points: "+membershipModel.getPoints());
-            memberPointsExpiry.setText("Expiry: "+membershipModel.getPointsExpiry());
-            memberType.setText(membershipModel.getMembershipType());
-            memberTypeExpiry.setText("Expiry: "+membershipModel.getMembershipTypeExpiry());
+//            memberGymImage.setImageResource(membershipModel.getImageID());
+//            memberGymName.setText(membershipModel.getGymName());
+//            memberPurchaseDate.setText(membershipModel.getPurchaseDate());
+//            memberOrderID.setText(membershipModel.getOrder());
+//            memberAmount.setText(membershipModel.getAmount());
+//            memberDiscount.setText(membershipModel.getDiscount());
+//            memberPayableAmount.setText(membershipModel.getAmountPayable());
+//            memberPoints.setText("Points: "+membershipModel.getPoints());
+//            memberPointsExpiry.setText("Expiry: "+membershipModel.getPointsExpiry());
+//            memberType.setText(membershipModel.getMembershipType());
+//            memberTypeExpiry.setText("Expiry: "+membershipModel.getMembershipTypeExpiry());
 
         }
     }

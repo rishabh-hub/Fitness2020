@@ -30,8 +30,8 @@
         android:layout_marginLeft="10dp"
         android:textColor="@color/primaryBlue"
         android:textSize="17sp"
-        android:text="2020 Lite"
-        android:fontFamily="@font/metropolisbold"
+        android:text="6 Month Subscription"
+        android:fontFamily="@font/metropolisblack"
         android:id="@+id/fitness2020_membership_name"/>
     <TextView
         android:layout_width="wrap_content"

@@ -47,9 +47,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/primaryBlue"
+        android:textColor="@color/white"
         android:elevation="10dp"
-        android:background="@color/secondryBlue"
+        android:background="@color/primaryBlue"
         android:text="Enjoy great deals starting at just 99!!"
         android:padding="10dp"
         android:fontFamily="@font/metropolisbold"
@@ -61,9 +61,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="10dp"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/secondryBlue"
         android:text="17 Places"
-        android:background="@color/secondryBlue"
+        android:background="@color/primaryBlue"
         android:paddingHorizontal="10dp"
         android:paddingBottom="10dp"
         android:fontFamily="@font/metropolisbold"
@@ -74,7 +74,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:padding="10dp"
+        android:background="#D5D8DF"
         android:id="@+id/collections_internal_page_rv"
         android:orientation="vertical"
         android:layout_below="@id/collections_internal_number_places"/>
