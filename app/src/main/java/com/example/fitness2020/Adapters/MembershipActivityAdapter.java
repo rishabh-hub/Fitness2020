@@ -1,6 +1,8 @@
 package com.example.fitness2020.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +25,8 @@ public class MembershipActivityAdapter extends RecyclerView.Adapter<MembershipAc
     Context context;
     ArrayList<GymMembershipModel> gymMembershipModels;
     ArrayList<Fitness2020Model> fitness2020Models;
+    String phno;
+    String phno1;
 
     public MembershipActivityAdapter(int code, ArrayList<GymMembershipModel> gymMembershipModels, ArrayList<Fitness2020Model> fitness2020Models) {
         this.code = code;
@@ -78,7 +82,7 @@ public class MembershipActivityAdapter extends RecyclerView.Adapter<MembershipAc
         Button fitness2020ContactButton,gymContactButton, fitness2020RefundButton,stopPaymentbutton;
 
 
-        public MembershipActivityRvVH(@NonNull View itemView) {
+        public MembershipActivityRvVH(@NonNull final View itemView) {
             super(itemView);
             if (code==0)
             {
@@ -93,6 +97,15 @@ public class MembershipActivityAdapter extends RecyclerView.Adapter<MembershipAc
                 fitness2020ContactButton=itemView.findViewById(R.id.fitness2020_membership_support_btn);
                 fitness2020RefundButton =itemView.findViewById(R.id.fitness2020_membership_refund_button);
                 stopPaymentbutton=itemView.findViewById(R.id.stop_fitness2020_membership_btn);
+
+                fitness2020ContactButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Uri number= Uri.parse("tel:"+phno);
+                        Intent callIntent = new Intent(Intent.ACTION_DIAL,number);
+                        itemView.getContext().startActivity(callIntent);
+                    }
+                });
             }
 
             else
@@ -105,6 +118,14 @@ public class MembershipActivityAdapter extends RecyclerView.Adapter<MembershipAc
                 gymEndDate = itemView.findViewById(R.id.gym_membership_gym_end_date);
                 gymAddress = itemView.findViewById(R.id.gym_membership_gym_address);
                 gymContactButton = itemView.findViewById(R.id.gym_membership_call_btn);
+                gymContactButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Uri number= Uri.parse("tel:"+phno1);
+                        Intent callIntent = new Intent(Intent.ACTION_DIAL,number);
+                        itemView.getContext().startActivity(callIntent);
+                    }
+                });
             }
         }
 
@@ -119,13 +140,33 @@ public class MembershipActivityAdapter extends RecyclerView.Adapter<MembershipAc
             voucherExpiry.setText(fitness2020Model.getVouchersExpiry());
             pointsExpiry.setText(fitness2020Model.getPointsExpiry());
             autoDebitDate.setText(fitness2020Model.getAutoDebitDate());
-//            fitness2020ContactButton
-//            fitness2020RefundButton =itemView.findViewById(R.id.);
-//            stopPaymentbutton=itemView.findViewById(R.id.);
+            phno=fitness2020Model.getContactNo();
 
+//            fitness2020RefundButton.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//
+//                }
+//            });
+//            stopPaymentbutton.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//
+//                }
+//            });
         }
 
         public void populateGym(GymMembershipModel gymMembershipModel) {
+
+            gymImage.setImageResource(gymMembershipModel.getImageId());
+            gymMembershipName.setText(gymMembershipModel.getMemberShipName());
+            gymPrice.setText(gymMembershipModel.getPrice());
+            gymName.setText(gymMembershipModel.getGymName());
+            gymStartDate.setText(gymMembershipModel.getStartDate());
+            gymEndDate.setText(gymMembershipModel.getEndDate());
+            gymAddress.setText(gymMembershipModel.getGymAddress());
+            phno1=gymMembershipModel.getContactNo();
+
 
         }
     }

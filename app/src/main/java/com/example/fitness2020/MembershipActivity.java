@@ -42,6 +42,8 @@ public class MembershipActivity extends AppCompatActivity {
 
         attachId();
 
+        Fragment fragmentFirst=new Fitness2020MembershipTab();
+        loadFragment(fragmentFirst);
         membershipTab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {

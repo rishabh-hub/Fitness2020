@@ -72,7 +72,7 @@ public class GymMembershipTab extends Fragment {
     }
 
     private void initAdapter() {
-        adapter = new MembershipActivityAdapter(0,models,dummylist);
+        adapter = new MembershipActivityAdapter(1,models,dummylist);
     }
 
     private void attachAdapter() {
