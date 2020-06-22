@@ -43,7 +43,7 @@ public class BookingsAdapter extends RecyclerView.Adapter<BookingsAdapter.Bookin
         if(code==1)
             return new BookingsAdaperVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.bookings_studio_rv_item,parent,false));
         else
-            return new BookingsAdaperVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.membership_rv_item,parent,false));
+            return new BookingsAdaperVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.fitness2020_membership_rv_item,parent,false));
     }
 
     @Override

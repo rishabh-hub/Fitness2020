@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:padding="10dp"
+    android:elevation="8dp"
+    app:cardBackgroundColor="#fff"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/gym_photo"
+        android:layout_margin="10dp"
+        android:id="@+id/membership_gym_photo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/membership_gym_photo"
+        android:layout_toLeftOf="@id/membership_gym_photo"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/primaryBlue"
+        android:textSize="17sp"
+        android:text="2020 Lite"
+        android:fontFamily="@font/metropolisbold"
+        android:id="@+id/fitness2020_membership_name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/fitness2020_membership_name"
+        android:layout_below="@id/fitness2020_membership_name"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="13dp"
+        android:text="Membership Code: "
+        android:id="@+id/membership_gym_code_tv"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/membership_gym_code_tv"
+        android:layout_below="@id/fitness2020_membership_name"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/metropolisbold"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="13dp"
+        android:text="1002039"
+        android:id="@+id/membership_gym_code"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/fitness2020_membership_name"
+        android:layout_below="@id/membership_gym_code"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:text="Price: "
+        android:id="@+id/membership_gym_order_tv"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/membership_gym_code"
+        android:layout_below="@id/membership_gym_code"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15dp"
+        android:fontFamily="@font/metropolisbold"
+        android:text="₹499"
+        android:id="@+id/membership_gym_price"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/fitness2020_membership_name"
+        android:layout_below="@id/membership_gym_price"
+        android:layout_marginTop="5dp"
+        android:textSize="17sp"
+        android:fontFamily="@font/metropolisbold"
+        android:text="Expiration:"
+        android:textColor="@color/primaryBlue"
+        android:id="@+id/expiry_tv"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/expiry_tv"
+        android:layout_below="@id/expiry_tv"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/webGray"
+        android:text="Free Trial: "
+        android:id="@+id/free_trial_expiry_tv"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/expiry_tv"
+        android:layout_marginStart="15dp"
+        android:layout_below="@id/free_trial_expiry_tv"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/webGray"
+        android:text="Live Workout: "
+        android:id="@+id/live_workout_expiry_tv"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/expiry_tv"
+        android:layout_marginStart="15dp"
+        android:layout_below="@id/live_workout_expiry_tv"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/webGray"
+        android:text="Voucher: "
+        android:id="@+id/voucher_expiry_tv"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/expiry_tv"
+        android:layout_below="@id/voucher_expiry_tv"
+        android:layout_marginStart="15dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/webGray"
+        android:text="Points: "
+        android:id="@+id/points_expiry_tv"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/free_trial_expiry_tv"
+        android:layout_alignBottom="@id/free_trial_expiry_tv"
+        android:layout_alignStart="@id/fitness2020_live_workout_expiry"
+        android:textSize="14sp"
+        android:fontFamily="@font/metropolisbold"
+        android:textColor="@color/black"
+        android:text="21 Jan 2021"
+        android:id="@+id/fitness2020_free_trial_expiry"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/live_workout_expiry_tv"
+        android:layout_alignBottom="@id/live_workout_expiry_tv"
+        android:layout_marginStart="15dp"
+        android:textSize="14sp"
+        android:fontFamily="@font/metropolisbold"
+        android:textColor="@color/black"
+        android:text="21 Jan 2021"
+        android:id="@+id/fitness2020_live_workout_expiry"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/voucher_expiry_tv"
+        android:layout_alignBottom="@id/voucher_expiry_tv"
+        android:layout_alignStart="@id/fitness2020_live_workout_expiry"
+        android:textSize="14sp"
+        android:fontFamily="@font/metropolisbold"
+        android:textColor="@color/black"
+        android:text="21 Jan 2021"
+        android:id="@+id/fitness2020_voucher_expiry"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/points_expiry_tv"
+        android:layout_alignBottom="@id/points_expiry_tv"
+        android:layout_alignStart="@id/fitness2020_live_workout_expiry"
+        android:textSize="14sp"
+        android:fontFamily="@font/metropolisbold"
+        android:textColor="@color/black"
+        android:text="21 Jan 2021"
+        android:id="@+id/fitness2020_points_expiry"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/points_expiry_tv"
+        android:layout_alignStart="@id/expiry_tv"
+        android:layout_marginTop="10dp"
+        android:textSize="17sp"
+        android:fontFamily="@font/metropolisbold"
+        android:textColor="@color/primaryBlue"
+        android:text="Auto Debit Date: "
+        android:id="@+id/fitness2020_debit_date_tv"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fitness2020_debit_date_tv"
+        android:layout_alignBottom="@id/fitness2020_debit_date_tv"
+        android:layout_marginTop="10dp"
+        android:textSize="17sp"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/metropolisbold"
+        android:textColor="@color/black"
+        android:text="15 Jan 2021"
+        android:id="@+id/fitness2020_debit_date"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@id/fitness2020_debit_date"
+        android:background="@drawable/bg_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="10dp"
+        android:backgroundTint="@color/primaryBlue"
+        android:textSize="10sp"
+        android:text="Stop Payment"
+        android:paddingHorizontal="10dp"
+        android:textColor="#fff"
+        android:id="@+id/stop_fitness2020_membership_btn"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bookings_rv_item_comtainer8"
+        android:orientation="horizontal"
+        android:layout_below="@id/fitness2020_debit_date"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:weightSum="2"
+        android:paddingVertical="3dp"
+        android:gravity="center">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button"
+            android:backgroundTint="@color/primaryBlue"
+            android:id="@+id/fitness2020_membership_support_btn"
+            android:layout_marginHorizontal="10dp"
+            android:text="contact support"
+            android:textColor="#fff"
+            android:textStyle="bold"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button"
+            android:backgroundTint="@color/primaryBlue"
+            android:id="@+id/fitness2020_membership_refund_button"
+            android:layout_marginHorizontal="10dp"
+            android:text="Apply for refund"
+            android:textColor="#fff"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
+</androidx.cardview.widget.CardView>
