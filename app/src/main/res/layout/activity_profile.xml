@@ -44,18 +44,18 @@
                     android:textColor="#fff"
                     android:fontFamily="@font/metropolisbold"
                     />
+
                 <TextView
+                    android:id="@+id/profile_page_logout_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="LOG OUT"
-                    android:textSize="12sp"
-                    android:id="@+id/profile_page_logout_tv"
-                    android:layout_marginEnd="10dp"
-                    android:textColor="#FFFFFF"
-                    android:fontFamily="@font/metropolissemibold"
-                    android:layout_centerVertical="true"
                     android:layout_alignParentEnd="true"
-                    />
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/metropolissemibold"
+                    android:text="LOG OUT"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
             </RelativeLayout>
 
             <TextView
@@ -128,7 +128,7 @@
                 android:text="Gender:"/>
 
             <Spinner
-                android:id="@+id/location_spinner"
+                android:id="@+id/gender_spinner"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_alignParentEnd="true"
