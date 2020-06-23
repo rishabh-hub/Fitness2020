@@ -77,11 +77,34 @@ public class ProfileActivity extends AppCompatActivity implements  AdapterView.O
 
         };
 
+        final DatePickerDialog.OnDateSetListener aniversary = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                // TODO Auto-generated method stub
+                calendar.set(Calendar.YEAR, year);
+                calendar.set(Calendar.MONTH, monthOfYear);
+                calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateLabel1();
+            }
+
+        };
+
         dateOfBirth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 new DatePickerDialog(ProfileActivity.this, date, calendar
+                        .get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                        calendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+
+        anniversary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(ProfileActivity.this, aniversary, calendar
                         .get(Calendar.YEAR), calendar.get(Calendar.MONTH),
                         calendar.get(Calendar.DAY_OF_MONTH)).show();
             }
@@ -93,6 +116,8 @@ public class ProfileActivity extends AppCompatActivity implements  AdapterView.O
 //        also check how to disable check on the other gender if one gender is selected
 
     }
+
+
 
     void attachId()
     {
@@ -108,9 +133,15 @@ public class ProfileActivity extends AppCompatActivity implements  AdapterView.O
         updateButton=findViewById(R.id.profile_update_button);
 
     }
+    private void updateLabel1() {
+        String myFormat = "dd/MM/yyyy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+        anniversary.setText(sdf.format(calendar.getTime()));
+    }
 
     private void updateLabel() {
-        String myFormat = "MM/dd/yy"; //In which you need put here
+        String myFormat = "dd/MM/yyyy"; //In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
         dateOfBirth.setText(sdf.format(calendar.getTime()));
