@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -18,7 +19,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 
 public class ReferEarn extends AppCompatActivity {
-    ImageButton facebookbutton,instagramButton,gmailButton,smsButton,whatsappButton;
+    Button shareButton;
     TextView referralCode;
     ImageView backButton;
     ImageView copyButton;
@@ -31,7 +32,7 @@ public class ReferEarn extends AppCompatActivity {
 
         attachId();
 
-        facebookbutton.setOnClickListener(new View.OnClickListener() {
+        shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -67,13 +68,14 @@ public class ReferEarn extends AppCompatActivity {
 
     void attachId()
     {
-        facebookbutton=findViewById(R.id.ref_earn_fb_btn);
-        instagramButton=findViewById(R.id.ref_earn_insta_btn);
-        gmailButton=findViewById(R.id.ref_earn_email_btn);
-        smsButton=findViewById(R.id.ref_earn_sms_btn);
-        whatsappButton=findViewById(R.id.ref_earn_whatsapp_btn);
+//        facebookbutton=findViewById(R.id.ref_earn_fb_btn);
+//        instagramButton=findViewById(R.id.ref_earn_insta_btn);
+//        gmailButton=findViewById(R.id.ref_earn_email_btn);
+//        smsButton=findViewById(R.id.ref_earn_sms_btn);
+//        whatsappButton=findViewById(R.id.ref_earn_whatsapp_btn);
         referralCode=findViewById(R.id.ref_earn_code);
         backButton=findViewById(R.id.activity_refer_earn_back_btn);
-//        copyButton=findViewById(R.id.);
+        shareButton = findViewById(R.id.ref_earn_btn);
+        copyButton=findViewById(R.id.ref_earn_copy_promo_btn);
     }
 }

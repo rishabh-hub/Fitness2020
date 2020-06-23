@@ -126,24 +126,21 @@
                 android:fontFamily="@font/metropolisbold"
                 android:id="@+id/tv_gender"
                 android:text="Gender:"/>
-            <EditText
-                android:layout_width="match_parent"
+
+            <Spinner
+                android:id="@+id/location_spinner"
+                android:layout_width="300dp"
                 android:layout_height="40dp"
-                android:id="@+id/profile_page_gender_et"
-                android:hint="Male"
-                android:fontFamily="@font/metropolisbold"
-                android:singleLine="true"
-                android:inputType="none"
-                android:enabled="false"
-                android:layout_toRightOf="@id/tv_gender"
+                android:layout_alignParentEnd="true"
                 android:layout_alignBottom="@id/tv_gender"
-                android:layout_marginRight="10dp"
-                android:layout_alignStart="@id/profile_page_mobile_et"
-                android:textSize="15sp"
-                android:backgroundTint="#00FFFFFF"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:textColor="@color/primaryBlue"
-                />
+                android:layout_marginStart="79dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"
+                android:layout_toEndOf="@id/tv_gender"
+                android:backgroundTint="@color/primaryBlue"
+                android:elevation="5dp"
+                android:gravity="center" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
@@ -280,6 +277,7 @@
                 android:textSize="14sp"
                 android:layout_marginTop="50dp"
                 android:id="@+id/text"
+                android:layout_marginHorizontal="10dp"
                 android:text="@string/update_detail_text"
                 android:layout_below="@id/tv_anniversary"
                 android:gravity="center"/>

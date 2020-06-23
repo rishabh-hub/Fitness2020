@@ -21,6 +21,8 @@ import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+import java.util.Random;
+
 public class SignupNewActivity extends AppCompatActivity {
 
     TabLayout signUpTab;
@@ -30,6 +32,9 @@ public class SignupNewActivity extends AppCompatActivity {
     HomePageAdapter homePageAdapter;
     FrameLayout frameLayout;
     Button signupButton;
+//    final int one = new Random().nextInt(3)+1;
+//    int two = 4- one;
+//    int three = 6- one - two;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +62,7 @@ public class SignupNewActivity extends AppCompatActivity {
 
                 switch(tab.getPosition())
                 {
-                    case 0: fragment=new SignupSlider1();
+                    case 3: fragment=new SignupSlider1();
                         loadFragment(fragment);
                         break;
                     case 1: fragment=new SignupSlider2();

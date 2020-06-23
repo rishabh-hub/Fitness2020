@@ -115,12 +115,14 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
     public void openProfile(MenuItem menuItem)
     {
         Intent profileIntent=new Intent(MainActivity.this,ProfileActivity.class);
+        drawerLayout.closeDrawer(Gravity.RIGHT);
         startActivity(profileIntent);
     }
 
     public void openBookings(MenuItem menuItem)
     {
         Intent bookingsIntent = new Intent(MainActivity.this,BookingsActivity.class);
+        drawerLayout.closeDrawer(Gravity.RIGHT);
         startActivity(bookingsIntent);
     }
     @Override
