@@ -26,35 +26,35 @@ public class ProfileActivity extends AppCompatActivity {
 
         attachId();
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-
-        logoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //logout of the current user account
-            }
-        });
-
-        updateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //update the details and return to the previous screen
-
-                Toast.makeText(ProfileActivity.this, "Updated", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        profileImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //get image from either gallery or the camera directly
-            }
-        });
+//        backButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
+//
+//        logoutButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //logout of the current user account
+//            }
+//        });
+//
+//        updateButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //update the details and return to the previous screen
+//
+//                Toast.makeText(ProfileActivity.this, "Updated", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+//        profileImage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //get image from either gallery or the camera directly
+//            }
+//        });
 
         //also check how to disable check on the other gender if one gender is selected
 
@@ -62,15 +62,15 @@ public class ProfileActivity extends AppCompatActivity {
 
     void attachId()
     {
-        backButton=findViewById(R.id.profile_page_back_btn);
-        profileImage=findViewById(R.id.profile_page_profile_image);
-        logoutButton=findViewById(R.id.profile_page_logout_tv);
-        profileName=findViewById(R.id.profile_page_profile_name);
-        emailId=findViewById(R.id.profile_page_email_et);
-        phoneNo=findViewById(R.id.profile_page_number_et);
-        dateOfBirth=findViewById(R.id.profile_page_dob_et);
-        male=findViewById(R.id.profile_page_male_cb);
-        female=findViewById(R.id.profile_page_female_cb);
-        updateButton=findViewById(R.id.profile_page_update_btn);
+//        backButton=findViewById(R.id.profile_page_back_btn);
+//        profileImage=findViewById(R.id.profile_page_profile_image);
+//        logoutButton=findViewById(R.id.profile_page_logout_tv);
+//        profileName=findViewById(R.id.profile_page_profile_name);
+//        emailId=findViewById(R.id.profile_page_email_et);
+//        phoneNo=findViewById(R.id.profile_page_number_et);
+//        dateOfBirth=findViewById(R.id.profile_page_dob_et);
+//        male=findViewById(R.id.profile_page_male_cb);
+//        female=findViewById(R.id.profile_page_female_cb);
+//        updateButton=findViewById(R.id.profile_page_update_btn);
     }
 }
