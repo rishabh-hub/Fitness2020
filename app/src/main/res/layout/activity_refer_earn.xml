@@ -105,36 +105,36 @@
         android:gravity="center"
         android:id="@+id/socials">
         <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:background="@drawable/ic_whatsapp"
             android:id="@+id/ref_earn_whatsapp_btn"
             android:layout_margin="10dp"/>
         <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:background="@drawable/ic_facebook"
             android:id="@+id/ref_earn_fb_btn"
             android:layout_margin="10dp"/>
         <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:background="@drawable/ic_instagram"
             android:id="@+id/ref_earn_insta_btn"
             android:layout_margin="10dp"/>
         <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:background="@drawable/ic_email"
             android:id="@+id/ref_earn_email_btn"
             android:layout_margin="10dp"/>
         <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:background="@drawable/ic_sms"
             android:backgroundTint="@color/primaryBlue"
