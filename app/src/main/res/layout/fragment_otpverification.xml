@@ -66,11 +66,11 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint=" Number"
+            android:hint="OTP"
             android:singleLine="true"
-            android:inputType="phone"
+            android:inputType="number"
             android:textColor="@color/primaryBlue"
-            android:id="@+id/phonenumber_number"
+            android:id="@+id/verify_otp"
             android:padding="10dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,8 +85,21 @@
         android:textSize="17sp"
         android:fontFamily="@font/metropolisbold"
         android:textColor="@color/white"
-        android:text="resend otp"
-        android:id="@+id/resend_button"/>
+        android:text="Verify"
+        android:id="@+id/verify_button"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_below="@id/verify_button"
+        android:layout_alignEnd="@id/verify_button"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/primaryBlue"
+        android:text="Resend OTP"
+        android:textStyle="bold"
+        android:id="@+id/resend_otp"/>
+
 
 
 
