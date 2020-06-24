@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_marginHorizontal="3dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="7dp">
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="180dp"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:id="@+id/fitnesspass_rv_item_cardview_1"
-        app:cardCornerRadius="30sp"
-        android:layout_margin="10sp"
         app:cardElevation="1sp"
         android:layout_height="100sp">
 
@@ -28,11 +35,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="10sp"
+        android:textSize="14sp"
         android:gravity="center"
+        android:textColor="@color/primaryBlue"
         android:layout_below="@+id/fitnesspass_rv_item_cardview_1"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="1dp"
+        android:layout_marginTop="3dp"
         android:fontFamily="@font/metropolisbold"
         android:id="@+id/fitnesspass_rv_item1_cardview_gym_name"
         />
@@ -40,12 +48,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="10sp"
+        android:textSize="11sp"
         android:gravity="center"
-        android:fontFamily="@font/metropolissemibold"
-        android:layout_marginVertical="1dp"
+        android:fontFamily="@font/metropolisbold"
+        android:layout_marginTop="2dp"
         android:layout_marginHorizontal="10dp"
         android:layout_below="@+id/fitnesspass_rv_item1_cardview_gym_name"
+        android:layout_marginBottom="5dp"
         android:id="@+id/fitnesspass_rv_item1_cardview_category"
         />
 
@@ -53,3 +62,4 @@
 
 
 </RelativeLayout>
+</androidx.cardview.widget.CardView>
