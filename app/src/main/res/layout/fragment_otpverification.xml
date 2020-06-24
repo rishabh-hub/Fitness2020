@@ -59,7 +59,7 @@
         android:layout_below="@id/txt"
         android:textColorHint="@color/primaryBlue"
         app:hintTextColor="@color/webGray"
-        android:hint=" Number"
+        android:hint="OTP"
         android:id="@+id/et"
         >
 
