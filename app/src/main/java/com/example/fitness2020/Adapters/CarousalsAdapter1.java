@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -80,6 +81,7 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
     {
         ImageView partnersImage,voucherImage,webinarImage;
         TextView webinarHead,webinarTiming,webinarLevel,webinarActivity,voucherTheme,voucherCompany, noOfCoupons,voucherValidity,voucherPrice;
+        Button webinarBookBtn;
         RelativeLayout card;
 
         public CarouslasAdapter1VH(@NonNull View itemView) {
@@ -92,6 +94,7 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
                 webinarLevel=itemView.findViewById(R.id.webinar_level);
                 webinarActivity=itemView.findViewById(R.id.webinar_activities);
                 card = itemView.findViewById(R.id.card);
+                webinarBookBtn = itemView.findViewById(R.id.webinar_book_btn);
             }
 
             else if (code==1)
@@ -117,8 +120,15 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
                card.setBackground(itemView.getContext().getDrawable(R.color.webinar));
                }
             else {
-                card.setBackground(itemView.getContext().getDrawable(R.color.mullaGreen));
+                card.setBackground(itemView.getContext().getDrawable(R.color.white));
+                webinarHead.setTextColor(itemView.getContext().getResources().getColor(R.color.primaryBlue));
                 webinarImage.setImageResource(webinarModel.getWebinarImageUrl());
+                webinarTiming.setTextColor(itemView.getContext().getResources().getColor(R.color.primaryBlue));
+                webinarLevel.setBackgroundTintList(itemView.getContext().getResources().getColorStateList(R.color.mullaGreen));
+                webinarLevel.setTextColor(itemView.getContext().getResources().getColor(R.color.white));
+                webinarActivity.setTextColor(itemView.getContext().getResources().getColor(R.color.mullaGreen));
+                webinarBookBtn.setBackgroundTintList(itemView.getContext().getResources().getColorStateList(R.color.primaryBlue));
+                webinarBookBtn.setTextColor(itemView.getContext().getResources().getColor(R.color.white));
             }
             webinarActivity.setText(webinarModel.getActivity());
             webinarTiming.setText(webinarModel.getTiming());

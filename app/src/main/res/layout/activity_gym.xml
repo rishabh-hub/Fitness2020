@@ -43,7 +43,6 @@
                 android:layout_width="match_parent"
                 android:background="@color/webGray"
                 android:elevation="10dp"
-                android:paddingHorizontal="10dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/gym_photos_rv"
                 android:layout_below="@+id/gym_activity_container"
@@ -136,7 +135,6 @@
                 android:background="@color/white"
                 android:elevation="10dp"
                 android:padding="10dp"
-                android:layout_marginTop="5dp"
                 android:layout_below="@id/head1"
                 android:id="@+id/head2">
 
@@ -184,7 +182,6 @@
                 android:background="@color/white"
                 android:elevation="10dp"
                 android:padding="10dp"
-                android:layout_marginTop="5dp"
                 android:layout_below="@id/head2"
                 android:id="@+id/head3">
 
@@ -243,7 +240,7 @@
                 android:id="@+id/book_container"
                 android:background="@color/white"
                 android:gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="2dp"
                 android:layout_below="@id/head3">
 
                 <TextView
@@ -291,9 +288,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@color/webGray"
-                android:elevation="10dp"
                 android:paddingHorizontal="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="2dp"
                 android:layout_below="@id/book_container"
                 android:id="@+id/head4">
 
@@ -325,9 +321,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@color/webGray"
-                android:elevation="10dp"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="2dp"
                 android:paddingHorizontal="10dp"
                 android:layout_marginHorizontal="5dp"
                 android:layout_below="@id/head4"

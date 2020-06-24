@@ -11,6 +11,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/webGray"
             android:orientation="vertical">
 
             <LinearLayout
@@ -18,24 +19,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_banner"
-                android:layout_marginBottom="10dp"
                 android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:layout_marginTop="5dp"
-                    android:text="Why Fitness 2020?"
-                    android:fontFamily="@font/metropolisbold"
-                    android:textSize="17sp"
-                    android:textColor="@color/white"/>
+
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:id="@+id/live_workout_rv"
-                    android:layout_marginBottom="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -43,7 +34,8 @@
                 android:layout_below="@id/banner_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
+                android:background="@color/white"
+                android:paddingVertical="5dp"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
@@ -73,6 +65,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/white"
                     android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"

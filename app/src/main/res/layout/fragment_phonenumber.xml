@@ -28,9 +28,10 @@
             android:textColor="@color/primaryBlue"
             android:textSize="70sp"
             android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="true"
             android:textAlignment="viewEnd"
-            android:text="ADD YOUR PHONE NUMBER"
-            android:layout_toRightOf="@id/number_page_back_btn"/>
+            android:text="ADD\nYOUR\nPHONE\nNUMBER"
+            />
 
 
     </RelativeLayout>
