@@ -12,13 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fragments.BookingLiveTab"></activity>
+        <activity android:name=".NumberVerificationActivity"></activity>
+        <activity android:name=".fragments.BookingLiveTab" />
         <activity android:name=".EventsInternalActivity" />
         <activity android:name=".VideosActivity" />
         <activity android:name=".WebinarTabActivity" />
         <activity android:name=".GymBookingFinalPage" />
         <activity android:name=".CollectionInternalActivity" />
-        <activity android:name=".LoginPage" />
         <activity android:name=".GymActivity" />
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".ReferEarn" />
@@ -29,8 +29,6 @@
         <activity android:name=".fragments.TrialCardActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".BookingsActivity" />
-        <activity android:name=".SignupInternalActivity" />
-        <activity android:name=".LoginInternalActivity" />
         <activity android:name=".SignupNewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

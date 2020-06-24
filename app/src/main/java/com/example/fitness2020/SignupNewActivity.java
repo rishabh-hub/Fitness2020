@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.example.fitness2020.Adapters.HomePageAdapter;
 import com.example.fitness2020.fragments.SignupSlider1;
@@ -35,6 +36,9 @@ public class SignupNewActivity extends AppCompatActivity {
 //    final int one = new Random().nextInt(3)+1;
 //    int two = 4- one;
 //    int three = 6- one - two;
+    Random r=new Random();
+    int random=r.nextInt(2)+1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,7 @@ public class SignupNewActivity extends AppCompatActivity {
 
         attachId();
 
+        Toast.makeText(SignupNewActivity.this, ""+random, Toast.LENGTH_SHORT).show();
 
         homePageAdapter=new HomePageAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,signUpTab.getTabCount(),1);
         sliderVp.setAdapter(homePageAdapter);
@@ -60,7 +65,8 @@ public class SignupNewActivity extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 sliderVp.setCurrentItem(tab.getPosition());
 
-                switch(tab.getPosition())
+
+                switch(random)
                 {
                     case 3: fragment=new SignupSlider1();
                         loadFragment(fragment);
