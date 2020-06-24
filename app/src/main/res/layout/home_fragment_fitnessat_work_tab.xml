@@ -17,21 +17,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
-
-
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fitness_at_work_rv_container"
+                android:background="@color/webGray"
+                >
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_margin="10dp"
                     android:id="@+id/home_fitness_at_work_video_rv"/>
-
+            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:layout_below="@id/home_fitness_at_work_video_rv"
+                android:layout_below="@id/fitness_at_work_rv_container"
                 android:id="@+id/fitness_at_work_feature_1">
 
                 <ImageView
@@ -116,7 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:layout_below="@id/fitness_at_work_feature_3"
+                android:layout_below="@id/fitness_at_work_feature_5"
                 android:id="@+id/fitness_at_work_feature_4">
 
                 <TextView
@@ -137,7 +141,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:layout_below="@id/fitness_at_work_feature_4"
+                android:layout_marginVertical="5dp"
+                android:layout_below="@id/fitness_at_work_feature_3"
                 android:id="@+id/fitness_at_work_feature_5">
 
                 <TextView
@@ -156,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/top_review_heading"
                 android:fontFamily="@font/metropolisblack"
-                android:layout_below="@id/fitness_at_work_feature_5"
+                android:layout_below="@id/fitness_at_work_feature_4"
                 android:text="Top Reviews"
                 android:layout_marginLeft="39dp"
                 android:layout_marginVertical="10dp"
@@ -166,32 +171,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/top_review_heading"
-                android:id="@+id/fitness_at_work_reviews">
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_centerInParent="true"
-                    android:layout_margin="3dp"
-                    android:tint="@color/colorPrimary"
-                    android:src="@drawable/ic_left_arrow"
-                    android:layout_alignParentStart="true"
-                    android:id="@+id/review_left"/>
+                android:id="@+id/fitness_at_work_reviews"
+                android:background="@color/webGray">
+
+<!--                <ImageView-->
+<!--                    android:layout_width="20dp"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:layout_margin="3dp"-->
+<!--                    android:tint="@color/colorPrimary"-->
+<!--                    android:src="@drawable/ic_left_arrow"-->
+<!--                    android:layout_alignParentStart="true"-->
+<!--                    android:id="@+id/review_left"/>-->
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_toRightOf="@id/review_left"
-                    android:layout_toLeftOf="@id/review_right"
                     android:id="@+id/fitness_at_work_reviews_rv"/>
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_centerInParent="true"
-                    android:layout_margin="3dp"
-                    android:tint="@color/colorPrimary"
-                    android:src="@drawable/ic_right_arrow"
-                    android:layout_alignParentEnd="true"
-                    android:id="@+id/review_right"/>
+
+<!--                <ImageView-->
+<!--                    android:layout_width="20dp"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:layout_margin="3dp"-->
+<!--                    android:tint="@color/colorPrimary"-->
+<!--                    android:src="@drawable/ic_right_arrow"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:id="@+id/review_right"/>-->
 
             </RelativeLayout>
 
