@@ -19,7 +19,6 @@ import java.util.ArrayList;
 
 public class CollectionInternalActivity extends AppCompatActivity {
     RecyclerView verticalRv;
-    ImageView topImage;
     ImageButton back;
     TextView head,subhead,numberOfPlaces;
     HomePopularRVAdapter itemsAdapter;
@@ -56,7 +55,6 @@ public class CollectionInternalActivity extends AppCompatActivity {
     void attachId()
     {
         verticalRv=findViewById(R.id.collections_internal_page_rv);
-        topImage = findViewById(R.id.collections_internal_image);
         head = findViewById(R.id.collections_internal_main_head);
         subhead = findViewById(R.id.collections_internal_sub_head);
         numberOfPlaces = findViewById(R.id.collections_internal_number_places);
