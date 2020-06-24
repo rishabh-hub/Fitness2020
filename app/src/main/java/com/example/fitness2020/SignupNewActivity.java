@@ -33,11 +33,6 @@ public class SignupNewActivity extends AppCompatActivity {
     HomePageAdapter homePageAdapter;
     FrameLayout frameLayout;
     Button signupButton;
-//    final int one = new Random().nextInt(3)+1;
-//    int two = 4- one;
-//    int three = 6- one - two;
-    Random r=new Random();
-    int random=r.nextInt(2)+1;
 
 
     @Override
@@ -47,7 +42,7 @@ public class SignupNewActivity extends AppCompatActivity {
 
         attachId();
 
-        Toast.makeText(SignupNewActivity.this, ""+random, Toast.LENGTH_SHORT).show();
+        Toast.makeText(SignupNewActivity.this, "", Toast.LENGTH_SHORT).show();
 
         homePageAdapter=new HomePageAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,signUpTab.getTabCount(),1);
         sliderVp.setAdapter(homePageAdapter);
@@ -66,7 +61,7 @@ public class SignupNewActivity extends AppCompatActivity {
                 sliderVp.setCurrentItem(tab.getPosition());
 
 
-                switch(random)
+                switch(tab.getPosition())
                 {
                     case 3: fragment=new SignupSlider1();
                         loadFragment(fragment);
