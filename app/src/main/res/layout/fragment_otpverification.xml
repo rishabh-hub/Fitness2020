@@ -1,6 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.MaterialComponents"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/number_page_tlbr_rellay"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/verify_page_back_btn"
+            android:src="@drawable/ic_chevron_left_white_24dp"
+            android:tint="@color/primaryBlue"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/metropolisblack"
+            android:textColor="@color/primaryBlue"
+            android:textSize="40sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:textAlignment="viewEnd"
+            android:text="OTP\nVERIFICATION"
+            android:layout_toRightOf="@id/verify_page_back_btn"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/primaryBlue"
+        android:textSize="15sp"
+        android:text="An OTP has been sent to your number. Enter manually if not detected within 60 seconds or press RESEND OTP."
+        android:layout_below="@id/number_page_tlbr_rellay"
+        android:id="@+id/txt"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:backgroundTint="@color/primaryBlue"
+        app:boxStrokeColor="@color/primaryBlue"
+        app:boxStrokeWidth="2dp"
+        android:layout_below="@id/txt"
+        android:textColorHint="@color/primaryBlue"
+        app:hintTextColor="@color/webGray"
+        android:hint=" Number"
+        android:id="@+id/et"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Number"
+            android:singleLine="true"
+            android:inputType="phone"
+            android:textColor="@color/primaryBlue"
+            android:id="@+id/phonenumber_number"
+            android:padding="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et"
+        android:background="@drawable/bg_button"
+        android:backgroundTint="@color/primaryBlue"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="17sp"
+        android:fontFamily="@font/metropolisbold"
+        android:textColor="@color/white"
+        android:text="resend otp"
+        android:id="@+id/resend_button"/>
+
+
+
+</RelativeLayout>

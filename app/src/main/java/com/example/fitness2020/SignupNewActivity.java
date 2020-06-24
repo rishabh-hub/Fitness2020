@@ -42,7 +42,6 @@ public class SignupNewActivity extends AppCompatActivity {
 
         attachId();
 
-        Toast.makeText(SignupNewActivity.this, ""+random, Toast.LENGTH_SHORT).show();
 
         homePageAdapter=new HomePageAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,signUpTab.getTabCount(),1);
         sliderVp.setAdapter(homePageAdapter);
