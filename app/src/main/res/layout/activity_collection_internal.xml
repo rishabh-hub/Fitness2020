@@ -14,18 +14,19 @@
         android:id="@+id/toolbar"
         android:elevation="12dp"
         android:layout_alignParentTop="true"
-        android:background="#5C000000"
+        android:background="@color/white"
         >
         <ImageButton
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:background="#00FFFFFF"
             android:id="@+id/collections_internal_back_button"
-            android:src="@drawable/ic_chevron_left_white_24dp"/>
+            android:background="@drawable/ic_left_arrow"
+            android:backgroundTint="@color/primaryBlue"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#fff"
+            android:textColor="@color/primaryBlue"
             android:gravity="center"
             android:text="Fitness@99"
             android:layout_marginLeft="30dp"
@@ -34,15 +35,7 @@
             android:id="@+id/collections_internal_main_head"/>
     </androidx.appcompat.widget.Toolbar>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignParentTop="true"
-        android:background="@color/colorPrimaryDark"
-        android:src="@drawable/webinar"
-        android:elevation="10dp"
-        android:scaleType="centerCrop"
-        android:id="@+id/collections_internal_image"/>
+
 
     <TextView
         android:layout_width="match_parent"
@@ -52,9 +45,9 @@
         android:background="@color/primaryBlue"
         android:text="Enjoy great deals starting at just 99!!"
         android:padding="10dp"
+        android:layout_below="@id/toolbar"
         android:fontFamily="@font/metropolisbold"
         android:textSize="15sp"
-        android:layout_below="@id/collections_internal_image"
         android:id="@+id/collections_internal_sub_head"/>
 
     <TextView

@@ -59,7 +59,6 @@ public class SignupNewActivity extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 sliderVp.setCurrentItem(tab.getPosition());
 
-
                 switch(tab.getPosition())
                 {
                     case 3: fragment=new SignupSlider1();
