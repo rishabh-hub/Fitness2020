@@ -34,18 +34,15 @@
                 android:layout_marginRight="10dp"
                 android:layout_centerInParent="true"
                 android:layout_alignParentEnd="true"
-                app:cardCornerRadius="5dp"
+                app:cardCornerRadius="15dp"
                 android:id="@+id/user_image_cardvw"
                 >
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:padding="5dp"
                 android:id="@+id/user_image_imgvw"
-                android:background="@color/secondryBlue"
-                android:tint="@color/primaryBlue"
-                android:src="@drawable/ic_person_outline_black_24dp"
+                android:src="@drawable/ic_user"
                 />
             </androidx.cardview.widget.CardView>
 
@@ -71,8 +68,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/bottom_nav"
             android:elevation="12dp"
-            android:background="@color/secondryBlue"
-            app:itemTextColor="@color/primaryBlue"
+            android:background="@color/primaryBlue"
+            app:itemTextColor="@color/webGray"
+            app:itemIconTint="@color/secondryBlue"
             app:menu="@menu/bottomnav_menu"
             android:layout_alignParentBottom="true"/>
 
