@@ -24,6 +24,7 @@ import com.example.fitness2020.Adapters.CarousalsAdapter1;
 import com.example.fitness2020.Adapters.CollectionsAdapter;
 import com.example.fitness2020.Adapters.HomePopularRVAdapter;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
+import com.example.fitness2020.Adapters.NewCorrectionAdapter;
 import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
 import com.example.fitness2020.MainActivity;
 import com.example.fitness2020.Models.CollectionsModel;
@@ -61,7 +62,6 @@ public class HomeAtTheStudioTab extends Fragment {
     RecyclerView topBannerRv;
     RecyclerView collectionsRv;
     RecyclerView videoRv;
-    ArrayList<TrendingRvModel> trendingRvModels;
     ArrayList<PopularRvModel> popularRvModels;
     ArrayList<PackModel> packModels;
     ArrayList<PopularHorizontalRvModel> popularHorizontalRvModels;
@@ -73,6 +73,8 @@ public class HomeAtTheStudioTab extends Fragment {
     ArrayList<VideoModel> videoModels;
     Spinner filterSpinner;
     TextView vouchersViewMoreButton,popularViewMoreButton,videosViewMoreButton;
+    NewCorrectionAdapter newCorrectionAdapter;
+    ArrayList<TrendingRvModel> trendingRvModels,webinarVideos;
 
     public HomeAtTheStudioTab() {
     }
@@ -145,6 +147,7 @@ public class HomeAtTheStudioTab extends Fragment {
 
         popularRvModels=new ArrayList<>(3);
         trendingRvModels=new ArrayList<TrendingRvModel>(3);
+        webinarVideos=new ArrayList<>(3);
         popularHorizontalRvModels=new ArrayList<>(3);
         packModels = new ArrayList<>(3);
         companyModels=new ArrayList<>(3);
@@ -157,7 +160,7 @@ public class HomeAtTheStudioTab extends Fragment {
 
         //the next few lines are a masterpiece
         homePopularRVAdapter=new HomePopularRVAdapter(popularRvModels,context);
-        adapter=new HomeTrendingRVAdapter(trendingRvModels,context,1,popularHorizontalRvModels);
+        newCorrectionAdapter=new NewCorrectionAdapter(1,webinarVideos,trendingRvModels);
         adapter2=new HomePopularRVAdapter(popularRvModels,context);
         banner2Adapter=new HomeTrendingRVAdapter(trendingRvModels,context,2,popularHorizontalRvModels);
         membershipAdapter = new SubscriptionCardsAdapter(context,2,packModels);
@@ -171,7 +174,7 @@ public class HomeAtTheStudioTab extends Fragment {
         popularRv.setAdapter(homePopularRVAdapter);
         popularRV3.setAdapter(homePopularRVAdapter);
         popularRV4.setAdapter(homePopularRVAdapter);
-        trendingRv.setAdapter(adapter);
+        trendingRv.setAdapter(newCorrectionAdapter);
         banner2Rv.setAdapter(banner2Adapter);
         popularVerticalRv.setAdapter(homePopularRVAdapter);
         membershipRV.setAdapter(membershipAdapter);
@@ -183,7 +186,7 @@ public class HomeAtTheStudioTab extends Fragment {
         videoRv.setAdapter(videoAdapter);
 
         homePopularRVAdapter.notifyDataSetChanged();
-        adapter.notifyDataSetChanged();
+        newCorrectionAdapter.notifyDataSetChanged();
         banner2Adapter.notifyDataSetChanged();
         membershipAdapter.notifyDataSetChanged();
         adapter2.notifyDataSetChanged();

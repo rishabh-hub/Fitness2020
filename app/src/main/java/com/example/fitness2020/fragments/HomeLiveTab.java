@@ -19,6 +19,7 @@ import com.example.fitness2020.Adapters.CarousalsAdapter1;
 import com.example.fitness2020.Adapters.HomePageClientAdapter;
 import com.example.fitness2020.Adapters.HomePopularRVAdapter;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
+import com.example.fitness2020.Adapters.NewCorrectionAdapter;
 import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
 import com.example.fitness2020.Models.CompanyModel;
 import com.example.fitness2020.Models.PackModel;
@@ -45,7 +46,6 @@ public class HomeLiveTab extends Fragment {
     RecyclerView trendingRv;
     RecyclerView banner2Rv;
     RecyclerView popularRv;
-    ArrayList<TrendingRvModel> trendingRvModels;
     ArrayList<PopularRvModel> popularRvModels;
     ArrayList<PopularHorizontalRvModel> popularHorizontalRvModels;
 
@@ -67,6 +67,8 @@ public class HomeLiveTab extends Fragment {
     HomePageClientAdapter liveReviewAdapter;
     CarousalsAdapter1 liveWebinarAdapter1, liveWebinarAdapter2,liveWebinarAdapter3;
 
+    NewCorrectionAdapter newCorrectionAdapter;
+    ArrayList<TrendingRvModel> webinarVideos,trendingRvModels;
     TextView webinarViewMore;
     TextView buzzingViewMoreButton;
 
@@ -87,7 +89,7 @@ public class HomeLiveTab extends Fragment {
 
         liveTopBannerRv=view.findViewById(R.id.live_workout_rv);
         liveMembershiRv=view.findViewById(R.id.live_membership_rv);
-        liveTrendingRv=view.findViewById(R.id.live_trending_rv);
+        liveTrendingRv=view.findViewById(R.id.live_trending_rv);//This is for videos
         liveWebinarRv1=view.findViewById(R.id.live_webinar_rv_1);
         liveWebinarRv2=view.findViewById(R.id.live_webinar_rv_2);
         liveWebinarRv3=view.findViewById(R.id.live_webinar_rv_3);
@@ -111,12 +113,14 @@ public class HomeLiveTab extends Fragment {
         liveWebinarModels2 =new ArrayList<>(3);
         liveReviewModel=new ArrayList<>(3);
         liveWebinarModels3=new ArrayList<>(3);
+        trendingRvModels=new ArrayList<>(3);
+        webinarVideos=new ArrayList<>(3);
 
         addData();
 
         liveTopBannerAdapter=new HomeTrendingRVAdapter(liveTopBannerModel,context,1,popularHorizontalRvModels);
         liveMembershipAdapter=new SubscriptionCardsAdapter(context,2,packModels);
-        liveTrendingRvAdapter=new HomeTrendingRVAdapter(liveTrendingModel,context,1,popularHorizontalRvModels);
+        newCorrectionAdapter=new NewCorrectionAdapter(0,webinarVideos,trendingRvModels);//new correction  adapter
         liveWebinarAdapter1 =new CarousalsAdapter1(context,liveCompanyModels,liveVouchersModels,liveWebinarModels1,0);
         liveWebinarAdapter2 =new CarousalsAdapter1(context,liveCompanyModels,liveVouchersModels,liveWebinarModels2,0);
         liveReviewAdapter=new HomePageClientAdapter(liveReviewModel,context,1);
@@ -124,7 +128,7 @@ public class HomeLiveTab extends Fragment {
 
         liveTopBannerRv.setAdapter(liveTopBannerAdapter);
         liveMembershiRv.setAdapter(liveMembershipAdapter);
-        liveTrendingRv.setAdapter(liveTrendingRvAdapter);
+        liveTrendingRv.setAdapter(newCorrectionAdapter);
         liveWebinarRv1.setAdapter(liveWebinarAdapter1);
         liveWebinarRv2.setAdapter(liveWebinarAdapter2);
         liveReviewRv.setAdapter(liveReviewAdapter);
@@ -132,7 +136,7 @@ public class HomeLiveTab extends Fragment {
 
         liveTopBannerAdapter.notifyDataSetChanged();
         liveMembershipAdapter.notifyDataSetChanged();
-        liveTrendingRvAdapter.notifyDataSetChanged();
+        newCorrectionAdapter.notifyDataSetChanged();
         liveWebinarAdapter1.notifyDataSetChanged();
         liveWebinarAdapter2.notifyDataSetChanged();
         liveReviewAdapter.notifyDataSetChanged();
@@ -201,6 +205,7 @@ public class HomeLiveTab extends Fragment {
             liveReviewModel.add(new ReviewModel("Tiger Shroff","ABC GYM","lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores."));
 
 
+            webinarVideos.add(new TrendingRvModel(R.drawable.trending_activity));
 //            trendingRvModels.add(new TrendingRvModel(R.mipmap.ic_launcher));
 //
 //            popularRvModels.add(new PopularRvModel(R.mipmap.ic_launcher,"Gym name","Category"," Gym Address","Recommended","4.9"));
