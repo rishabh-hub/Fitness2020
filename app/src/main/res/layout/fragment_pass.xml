@@ -277,7 +277,6 @@
         android:layout_below="@id/fitness_at_work_clients"
         android:fontFamily="@font/metropolisbold"
         android:text="FAQs"
-        android:gravity="center"
         android:layout_margin="10dp"/>
 
 

@@ -8,36 +8,38 @@
     android:orientation="vertical"
     android:background="@color/webGray"
     tools:context=".GymActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryBlue"
+        android:elevation="10dp"
+        android:id="@+id/gym_activity_container"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_left_arrow"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/white"
+            android:id="@+id/gym_activity_back_btn"/>
+
+    </RelativeLayout>
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/gym_activity_container"
         android:fillViewport="true">
 
         <RelativeLayout
             android:layout_height="match_parent"
             android:layout_width="match_parent">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/primaryBlue"
-                android:elevation="10dp"
-                android:id="@+id/gym_activity_container"
-                android:gravity="center_vertical"
-                android:layout_alignParentTop="true"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:orientation="horizontal">
-                <ImageButton
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:background="@drawable/ic_left_arrow"
-                    android:layout_marginStart="10dp"
-                    android:backgroundTint="@color/white"
-                    android:id="@+id/gym_activity_back_btn"/>
-
-            </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
@@ -45,7 +47,6 @@
                 android:elevation="10dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/gym_photos_rv"
-                android:layout_below="@+id/gym_activity_container"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -93,7 +94,7 @@
                 android:layout_height="20dp"
                 android:text="More"
                 android:background="@drawable/bg_textview"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/primaryBlue"
                 android:id="@+id/gym_more_address_btn"
                 android:layout_below="@id/gym_tab_address"
                 android:textSize="8sp"
@@ -167,7 +168,7 @@
                 android:layout_height="20dp"
                 android:text="More"
                 android:background="@drawable/bg_textview"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/primaryBlue"
                 android:id="@+id/gym_more_desc_btn"
                 android:layout_below="@id/gym_tab_desc"
                 android:textSize="8sp"
@@ -214,7 +215,7 @@
                 android:layout_height="20dp"
                 android:text="More"
                 android:background="@drawable/bg_textview"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/primaryBlue"
                 android:id="@+id/gym_more_ttr_btn"
                 android:layout_below="@id/gym_tab_ttr"
                 android:textSize="8sp"
@@ -298,7 +299,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/gym_tab_video_head"
                 android:fontFamily="@font/metropolisbold"
-                android:textColor="@color/white"
+                android:textColor="@color/primaryBlue"
                 android:textSize="17sp"
                 android:text="Videos"
                 android:textAlignment="center"
@@ -333,7 +334,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/gym_tab_reviews"
                 android:fontFamily="@font/metropolisbold"
-                android:textColor="@color/white"
+                android:textColor="@color/primaryBlue"
                 android:textSize="17sp"
                 android:text="Reviews"
                 android:textAlignment="center"

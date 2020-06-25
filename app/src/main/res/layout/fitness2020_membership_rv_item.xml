@@ -51,7 +51,7 @@
         android:layout_below="@id/fitness2020_membership_name"
         android:layout_marginLeft="10dp"
         android:fontFamily="@font/metropolisbold"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/hoodBlue"
         android:textSize="13dp"
         android:text="1002039"
         android:id="@+id/membership_gym_code"/>
@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@id/membership_gym_code"
         android:layout_below="@id/membership_gym_code"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/hoodBlue"
         android:textSize="15dp"
         android:fontFamily="@font/metropolisbold"
         android:text="₹499"
@@ -97,7 +97,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="15dp"
         android:textStyle="bold"
-        android:textColor="@color/webGray"
+        android:textColor="@color/colorPrimaryDark"
         android:text="Free Trial: "
         android:id="@+id/free_trial_expiry_tv"
         />
@@ -109,7 +109,7 @@
         android:layout_below="@id/free_trial_expiry_tv"
         android:textSize="14sp"
         android:textStyle="bold"
-        android:textColor="@color/webGray"
+        android:textColor="@color/colorPrimaryDark"
         android:text="Live Workout: "
         android:id="@+id/live_workout_expiry_tv"
         />
@@ -121,7 +121,7 @@
         android:layout_below="@id/live_workout_expiry_tv"
         android:textSize="14sp"
         android:textStyle="bold"
-        android:textColor="@color/webGray"
+        android:textColor="@color/colorPrimaryDark"
         android:text="Voucher: "
         android:id="@+id/voucher_expiry_tv"
         />
@@ -133,7 +133,7 @@
         android:layout_marginStart="15dp"
         android:textSize="14sp"
         android:textStyle="bold"
-        android:textColor="@color/webGray"
+        android:textColor="@color/colorPrimaryDark"
         android:text="Points: "
         android:id="@+id/points_expiry_tv"
         />
@@ -232,7 +232,7 @@
         android:id="@+id/bookings_rv_item_comtainer8"
         android:orientation="horizontal"
         android:layout_below="@id/fitness2020_debit_date"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
         android:weightSum="2"
         android:paddingVertical="3dp"
