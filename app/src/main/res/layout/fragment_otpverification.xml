@@ -21,32 +21,53 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"
             />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/otp_back"
+            android:id="@+id/otp_card"
+            android:layout_below="@id/verify_page_back_btn"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_otp_recieve"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/metropolisblack"
             android:textColor="@color/primaryBlue"
-            android:textSize="40sp"
-            android:layout_alignParentEnd="true"
+            android:textSize="20sp"
+            android:id="@+id/head"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/otp_card"
+            android:layout_marginHorizontal="40dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginRight="10dp"
-            android:textAlignment="viewEnd"
-            android:text="OTP\nVERIFICATION"
-            android:layout_toRightOf="@id/verify_page_back_btn"/>
+            android:textAlignment="center"
+            android:text="Verification"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/metropolismedium"
+            android:textColor="@color/primaryBlue"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/head"
+            android:layout_marginHorizontal="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp"
+            android:textAlignment="center"
+            android:text="You will receive the OTP\n through SMS"
+            />
 
 
     </RelativeLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="40dp"
-        android:textColor="@color/primaryBlue"
-        android:textSize="15sp"
-        android:text="An OTP has been sent to your number. Enter manually if not detected within 60 seconds or press RESEND OTP."
-        android:layout_below="@id/number_page_tlbr_rellay"
-        android:id="@+id/txt"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -56,9 +77,10 @@
         android:backgroundTint="@color/primaryBlue"
         app:boxStrokeColor="@color/primaryBlue"
         app:boxStrokeWidth="2dp"
-        android:layout_below="@id/txt"
+        android:focusedByDefault="true"
+        android:layout_below="@id/number_page_tlbr_rellay"
         android:textColorHint="@color/primaryBlue"
-        app:hintTextColor="@color/webGray"
+        app:hintTextColor="@color/primaryBlue"
         android:hint="OTP"
         android:id="@+id/et"
         >
@@ -87,6 +109,18 @@
         android:textColor="@color/white"
         android:text="Verify"
         android:id="@+id/verify_button"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_below="@id/verify_button"
+        android:layout_alignStart="@id/verify_button"
+        android:layout_toLeftOf="@id/resend_otp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="Did not recieve the verification OTP?"
+        android:textStyle="bold"
+        android:id="@+id/resend_otp_txt"/>
 
     <TextView
         android:layout_width="wrap_content"

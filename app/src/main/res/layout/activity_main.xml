@@ -16,17 +16,40 @@
             android:layout_height="wrap_content"
             android:background="@color/primaryBlue"
             android:id="@+id/toolbar">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_location"
+                android:tint="@color/white"
+                android:layout_marginStart="10dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/location_ic"/>
 
-            <Spinner
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/location_spinner"
-                android:elevation="5dp"
-                android:layout_centerInParent="true"
-                android:layout_toStartOf="@id/user_image_cardvw"
-                android:layout_marginStart="5dp"
-                android:gravity="center"
+                android:id="@+id/location_txt"
+                android:layout_toRightOf="@id/location_ic"
+                android:layout_marginHorizontal="10dp"
+                android:text="Location"
+                android:textSize="17sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/metropolisbold"
+                android:layout_toLeftOf="@id/user_image_cardvw"
                 />
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                android:layout_toLeftOf="@id/user_image_cardvw"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/location_txt"
+                android:layout_alignStart="@id/location_txt"
+                android:background="@color/white"/>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
@@ -80,6 +103,10 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/main_nav"
+        android:background="@drawable/bg_button"
+        app:itemTextColor="@color/webGray"
+        app:itemIconTint="@color/webGray"
+        android:backgroundTint="@color/primaryBlue"
         app:menu="@menu/side_drawer_menu"
         app:headerLayout="@layout/drawer_header_layout"
         android:layout_gravity="right"/>

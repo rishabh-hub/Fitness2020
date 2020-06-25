@@ -13,9 +13,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fitness2020.fragments.EventsFragment;
@@ -28,13 +30,13 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements  AdapterView.OnItemSelectedListener {
+public class MainActivity extends AppCompatActivity{
 
     FrameLayout frameLayout;
     ImageView userImage;
     DrawerLayout drawerLayout;
     BottomNavigationView bottomNavigationView;
-    Spinner locationSpinner;
+    TextView location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +56,7 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
 
         bottomNavigationView.setItemIconTintList(null);
 
-        populateLocationSpinner();
-        locationSpinner.setOnItemSelectedListener(this);
+
 
         userImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,19 +94,11 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
         frameLayout=findViewById(R.id.frame_layout);
         bottomNavigationView=findViewById(R.id.bottom_nav);
         drawerLayout=findViewById(R.id.drawer);
-        locationSpinner=findViewById(R.id.location_spinner);
+        location=findViewById(R.id.location_txt);
         userImage=findViewById(R.id.user_image_imgvw);
     }
 
-    void populateLocationSpinner()
-    {
-        ArrayList<String> locationData=new ArrayList<>();
-        locationData.add("Location 1");
-        locationData.add("Location 2");
-        ArrayAdapter<String> locationAdapter=new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,locationData);
-        locationAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        locationSpinner.setAdapter(locationAdapter);
-    }
+
 
     public  void drawerClose(MenuItem menuItem)
     {
@@ -125,20 +118,9 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
         drawerLayout.closeDrawer(Gravity.RIGHT);
         startActivity(bookingsIntent);
     }
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        if(parent.getId()==R.id.location_spinner)
-        {
-            Toast.makeText(this, "Selected "+parent.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
-        }
 
 
-    }
 
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
 
     void loadFragment(Fragment fragment)
     {

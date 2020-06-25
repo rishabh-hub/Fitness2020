@@ -11,23 +11,26 @@
     <item
         android:title="Bookings"
         android:id="@+id/drawer_bookings"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/ic_bookings"
         android:onClick="openBookings"
     />
     <item
         android:title="Membership"
         android:id="@+id/drawer_membership"
         android:onClick="goMembership"
+        android:icon="@drawable/ic_membership"
         />
     <item
         android:title="Refer and Earn"
         android:id="@+id/drawer_re"
         android:onClick="goRefEarn"
+        android:icon="@drawable/ic_refer_and_earn"
         />
     <item
-        android:title="Change Password"
+        android:title="Change Number"
         android:id="@+id/drawer_password"
         android:onClick="changePassword"
+        android:icon="@drawable/ic_smartphone"
         />
 
 

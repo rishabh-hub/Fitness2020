@@ -203,29 +203,14 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/top_review_heading"
                     android:id="@+id/fitness_at_work_reviews">
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_centerInParent="true"
-                        android:layout_margin="3dp"
-                        android:src="@drawable/ic_left_arrow"
-                        android:layout_alignParentStart="true"
-                        android:id="@+id/review_left"/>
+
                     <androidx.recyclerview.widget.RecyclerView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:paddingHorizontal="3dp"
                         android:orientation="horizontal"
-                        android:layout_toRightOf="@id/review_left"
-                        android:layout_toLeftOf="@id/review_right"
                         android:id="@+id/live_reviews_rv"/>
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_centerInParent="true"
-                        android:layout_margin="3dp"
-                        android:src="@drawable/ic_right_arrow"
-                        android:layout_alignParentEnd="true"
-                        android:id="@+id/review_right"/>
+
 
                 </RelativeLayout>
             </LinearLayout>

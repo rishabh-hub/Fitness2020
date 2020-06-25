@@ -21,16 +21,48 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"
             />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/otp_back"
+            android:id="@+id/otp_card"
+            android:layout_below="@id/number_page_back_btn"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_otp_send"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/metropolisblack"
             android:textColor="@color/primaryBlue"
-            android:textSize="70sp"
+            android:textSize="20sp"
+            android:id="@+id/head"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/otp_card"
+            android:layout_marginHorizontal="40dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginRight="10dp"
-            android:layout_alignParentEnd="true"
-            android:textAlignment="viewEnd"
-            android:text="ADD\nYOUR\nPHONE\nNUMBER"
+            android:textAlignment="center"
+            android:text="Verification"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/metropolismedium"
+            android:textColor="@color/primaryBlue"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/head"
+            android:layout_marginHorizontal="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp"
+            android:textAlignment="center"
+            android:text="We will send you a One Time Password on your phone number"
             />
 
 
@@ -46,15 +78,15 @@
         app:boxStrokeWidth="2dp"
         android:layout_below="@id/number_page_tlbr_rellay"
         android:textColorHint="@color/primaryBlue"
-        app:hintTextColor="@color/webGray"
-        android:hint=" Number"
+        app:hintTextColor="@color/primaryBlue"
+        android:hint="Enter Phone Number"
         android:id="@+id/et"
         >
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint=" Number"
+            android:hint=" Enter Phone Number"
             android:singleLine="true"
             android:inputType="phone"
             android:textColor="@color/primaryBlue"
@@ -73,7 +105,7 @@
         android:textSize="17sp"
         android:fontFamily="@font/metropolisbold"
         android:textColor="@color/white"
-        android:text="Verify via otp"
+        android:text="Get otp"
         android:id="@+id/continue_button"/>
 
 

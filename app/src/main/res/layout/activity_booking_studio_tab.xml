@@ -30,7 +30,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:id="@+id/bookings_chip_all"
                 android:text="All"
-                app:chipBackgroundColor="@color/colorPrimary"
+                app:chipBackgroundColor="@color/primaryBlue"
                 />
             <com.google.android.material.chip.Chip
                 android:layout_width="wrap_content"
@@ -38,7 +38,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:id="@+id/bookings_chip_upcoming"
                 android:text="Upcoming"
-                app:chipBackgroundColor="@color/colorPrimary"
+                app:chipBackgroundColor="@color/primaryBlue"
                 />
             <com.google.android.material.chip.Chip
                 android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:id="@+id/bookings_chip_past"
                 android:text="Past"
-                app:chipBackgroundColor="@color/colorPrimary"
+                app:chipBackgroundColor="@color/primaryBlue"
                 />
             <com.google.android.material.chip.Chip
                 android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:id="@+id/bookings_chip_cancelled"
                 android:text="Cancelled"
-                app:chipBackgroundColor="@color/colorPrimary"
+                app:chipBackgroundColor="@color/primaryBlue"
                 />
         </com.google.android.material.chip.ChipGroup>
     </RelativeLayout>

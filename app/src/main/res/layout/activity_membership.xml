@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="50sp"
         android:paddingBottom="2dp"
-        app:tabTextColor="@color/webGray"
+        app:tabTextColor="@color/paariBlue"
         android:background="@color/primaryBlue"
         android:id="@+id/membership_tab_layout"
         android:layout_below="@id/membership_activity_tlbr_rellay"

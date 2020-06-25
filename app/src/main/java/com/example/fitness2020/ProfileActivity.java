@@ -23,7 +23,7 @@ import java.util.Locale;
 
 public class ProfileActivity extends AppCompatActivity implements  AdapterView.OnItemSelectedListener {
 
-    ImageView backButton;
+    ImageView backButton,profilePhoto;
     TextView logoutButton;
     EditText emailId,phoneNo,profileName,anniversary,dateOfBirth,age;
     Spinner gender;
@@ -131,7 +131,7 @@ public class ProfileActivity extends AppCompatActivity implements  AdapterView.O
         age=findViewById(R.id.profile_page_age_et);
         gender=findViewById(R.id.gender_spinner);
         updateButton=findViewById(R.id.profile_update_button);
-
+        profilePhoto = findViewById(R.id.profile_page_photo);
     }
     private void updateLabel1() {
         String myFormat = "dd/MM/yyyy"; //In which you need put here
