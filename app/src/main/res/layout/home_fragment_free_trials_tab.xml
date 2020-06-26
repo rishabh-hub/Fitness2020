@@ -183,8 +183,34 @@
 
 
             <LinearLayout
-                android:id="@+id/reveiw_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:layout_below="@id/evening_rv_container"
+                android:id="@+id/tomorrow_rv_container">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Tomorrow"
+                    android:layout_below="@id/trending_container"
+                    android:fontFamily="@font/metropolisbold"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/live_webinar_rv_3"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_marginBottom="10dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reveiw_container"
+                android:layout_below="@id/tomorrow_rv_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -213,32 +239,6 @@
 
 
                 </RelativeLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_below="@id/reveiw_container"
-                android:id="@+id/tomorrow_rv_container">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="Tomorrow"
-                    android:layout_below="@id/trending_container"
-                    android:fontFamily="@font/metropolisbold"
-                    android:textSize="15sp"
-                    android:textColor="@color/colorPrimaryDark"/>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/live_webinar_rv_3"
-                    android:nestedScrollingEnabled="false"
-                    android:layout_marginBottom="10dp"
-                    />
             </LinearLayout>
 
         </RelativeLayout>
