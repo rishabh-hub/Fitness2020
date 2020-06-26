@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitness2020.CustomDialogClass;
 import com.example.fitness2020.GymActivity;
+import com.example.fitness2020.GymBookingFinalPage;
 import com.example.fitness2020.Models.AddressModel;
 import com.example.fitness2020.Models.GymActivitiesModel;
 import com.example.fitness2020.Models.GymFacilityModel;
@@ -157,10 +158,8 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
                 bookOneClass.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
-                        customDialogClass=new CustomDialogClass(itemView.getContext(),0);
-                        customDialogClass.setCancelable(true);
-                        customDialogClass.show();
+                        Intent gymFinalBookingPageIntent=new Intent(itemView.getContext(), GymBookingFinalPage.class);
+                        itemView.getContext().startActivity(gymFinalBookingPageIntent);
                     }
                 });
             }
