@@ -196,7 +196,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        
+
         android:hint="Enter Number"
         android:layout_alignStart="@id/final_booking_page_gym_promoET"
         android:textAlignment="center"
