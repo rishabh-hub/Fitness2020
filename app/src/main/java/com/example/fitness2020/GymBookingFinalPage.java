@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.fitness2020.Adapters.DateTimeAdapter;
@@ -28,7 +29,7 @@ public class GymBookingFinalPage extends AppCompatActivity {
     ArrayList<DateModel> dateModels;
     ArrayList<TimeModel> timeModels;
     DateTimeAdapter timeAdapter,dateAdapter;
-    ImageButton backButton;
+    ImageView backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +74,7 @@ public class GymBookingFinalPage extends AppCompatActivity {
 
     void attachId()
     {
-        gymName=findViewById(R.id.final_booking_page_gym_name);
+//        gymName=findViewById(R.id.final_booking_page_gym_name);
         offeringName=findViewById(R.id.final_booking_page_gym_activity);
         offeringSubscription=findViewById(R.id.final_booking_page_gym_offer);
         dateRv=findViewById(R.id.final_booking_page_gym_date_rv);
