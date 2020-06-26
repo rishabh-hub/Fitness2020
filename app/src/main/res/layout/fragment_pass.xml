@@ -13,6 +13,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentTop="true"
+    android:background="@color/colorPrimaryDark"
     android:backgroundTintMode="src_atop"
     android:id="@+id/head_banner">
     <androidx.recyclerview.widget.RecyclerView
@@ -55,9 +56,142 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/benefit_head"
+        android:layout_below="@id/memberships_container"
+        android:background="@color/colorPrimaryDark"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:paddingVertical="7dp"
+        android:text="Benefits of Fitness 2020"
+        android:fontFamily="@font/metropolisbold"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:id="@+id/benefit_container"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_below="@id/benefit_head">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="bottom|center_horizontal"
+                android:layout_weight="1"
+                >
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginVertical="10dp"
+                    android:src="@drawable/ic_correct"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:text="20 Activities 200+\nclasses to choose from"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="bottom|center_horizontal"
+                android:layout_weight="1"
+                >
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginVertical="10dp"
+                    android:src="@drawable/ic_clock"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:text="On Demand\nWorkouts"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginVertical="10dp"
+                    android:src="@drawable/ic_savings"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:text="Save upto 70%\non booking"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                >
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginVertical="10dp"
+                    android:src="@drawable/ic_nutrition"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:text="Nutrition consulting\nFitness talks"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:textSize="17sp"
         android:id="@+id/top_fitness_rv_heading"
-        android:layout_below="@id/memberships_container"
+        android:layout_below="@id/benefit_container"
         android:fontFamily="@font/metropolisbold"
         android:text="Top Fitness Centres"
         android:textColor="@color/colorPrimaryDark"
