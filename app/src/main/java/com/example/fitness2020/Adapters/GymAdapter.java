@@ -130,9 +130,9 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
     public class GymAdapterVH extends RecyclerView.ViewHolder
     {
         ImageView gymImage, gymVideo;
-        TextView gymActivity,offeringName,oneClassName,oneClassPtsAfter,oneMonhPriceAfter,gymAddress;
+        TextView gymActivity,offeringName,offeringPrice,offeringActivityName,gymAddress;
         TextView facility,reviewProduct,reviewPerson,reviewDesc;
-        Button bookOneClass,bookOneMonth;
+        Button offeringBookBtn;
 
         public GymAdapterVH(@NonNull final View itemView) {
             super(itemView);
@@ -149,13 +149,11 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
             else if(code==4)
             {
                 offeringName = itemView.findViewById(R.id.offering_rv_item_name);
-                oneClassName = itemView.findViewById(R.id.offering_1_class);
-                oneClassPtsAfter = itemView.findViewById(R.id.offering_pt_after);
-                oneMonhPriceAfter = itemView.findViewById(R.id.offering_price_after);
-                bookOneClass = itemView.findViewById(R.id.offering_item_1_day_btn);
-                bookOneMonth = itemView.findViewById(R.id.offering_item_1_month_btn);
+                offeringPrice = itemView.findViewById(R.id.offering_price);
+                offeringActivityName = itemView.findViewById(R.id.offering_name);
+                offeringBookBtn = itemView.findViewById(R.id.offering_book_btn);
 
-                bookOneClass.setOnClickListener(new View.OnClickListener() {
+                offeringBookBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent gymFinalBookingPageIntent=new Intent(itemView.getContext(), GymBookingFinalPage.class);
@@ -211,9 +209,8 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
 
         public void offerPopulate(GymOfferingModel gymOfferingModel) {
             offeringName.setText(gymOfferingModel.getOfferingName());
-            oneClassName.setText(gymOfferingModel.getOneClassName());
-            oneClassPtsAfter.setText(gymOfferingModel.getOneClassPtsAfter());
-            oneMonhPriceAfter.setText(gymOfferingModel.getOneMonthPriceAfter());
+            offeringPrice.setText(gymOfferingModel.getOfferingPrice());
+            offeringActivityName.setText(gymOfferingModel.getOfferingActivity());
         }
 
         public void facilityPopulate(GymFacilityModel gymFacilityModel) {

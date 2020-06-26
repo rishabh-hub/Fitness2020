@@ -123,7 +123,7 @@ public class CustomDialogClass extends Dialog {
     void addData()
     {
         for (int i=0;i<=6;i++)
-            {gymOfferingModels.add(new GymOfferingModel("Yoga Fit","Free Trial","free","200"));
+            {gymOfferingModels.add(new GymOfferingModel("Free Trial","Rs 499","Yoga Fit"));
         addressModels.add(new AddressModel("Silver Sunshine, 101, 9th Rd, Ram Krishna Nagar, Khar West, Mumbai, Maharashtra 400052"));}
     }
 }

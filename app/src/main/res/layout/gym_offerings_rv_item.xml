@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="15dp"
+    app:cardCornerRadius="10dp"
     android:layout_marginTop="5dp"
     android:layout_marginRight="10dp"
     android:layout_marginLeft="10dp"
@@ -11,117 +11,75 @@
     android:elevation="8dp">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center"
+
         >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/metropolismedium"
+            android:fontFamily="@font/metropolisbold"
             android:textColor="#FFFFFF"
             android:textSize="15sp"
-            android:paddingVertical="5dp"
-            android:gravity="center_vertical"
-            android:background="@color/colorPrimary"
+            android:paddingVertical="10dp"
+            android:background="@color/primaryBlue"
             android:text="Offering Name"
             android:paddingHorizontal="10dp"
             android:id="@+id/offering_rv_item_name"
             android:layout_marginBottom="5dp"/>
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginBottom="5dp"
             android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="70dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:gravity="center"
-                    android:textSize="13sp"
-                    android:textColor="#000"
-                    android:fontFamily="@font/metropolislight"
-                    android:textAlignment="center"
-                    android:text="1 Yoga Class"
-                    android:paddingVertical="5dp"
-                    android:id="@+id/offering_1_class"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:gravity="center"
-                    android:textSize="13sp"
-                    android:textColor="#000"
-                    android:fontFamily="@font/metropolislight"
-                    android:textAlignment="center"
-                    android:text="1 Month Subscription"
-                    android:paddingVertical="5dp"
-                    android:id="@+id/offering_subscription"/>
-            </LinearLayout>
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/offering_name"
                 android:layout_width="wrap_content"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:gravity="center"
-                    android:textSize="13sp"
-                    android:textColor="#000"
-                    android:fontFamily="@font/metropolislight"
-                    android:textAlignment="center"
-                    android:text="Free"
-                    android:paddingVertical="5dp"
-                    android:id="@+id/offering_pt_after"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:gravity="center"
-                    android:textSize="13sp"
-                    android:textColor="#000"
-                    android:fontFamily="@font/metropolislight"
-                    android:textAlignment="center"
-                    android:text="200"
-                    android:paddingVertical="5dp"
-                    android:id="@+id/offering_price_after"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="70dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_alignTop="@id/offering_book_btn"
+                android:fontFamily="@font/metropolisbold"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:text="1 Yoga Class"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_below="@id/offering_name"
+                    android:textColor="@color/primaryBlue"
+                    android:fontFamily="@font/metropolisbold"
+                    android:textAlignment="center"
+                    android:text="Rs 499"
+                    android:id="@+id/offering_price"/>
+
+
                 <Button
                     android:layout_width="80dp"
-                    android:layout_height="20dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/bg_button"
                     android:textColor="#fff"
-                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginVertical="5dp"
                     android:textSize="13sp"
-                    android:id="@+id/offering_item_1_day_btn"
-                    android:text="Book"/>
-                <Button
-                    android:layout_width="80dp"
-                    android:layout_height="20dp"
-                    android:background="@drawable/bg_button"
-                    android:textColor="#fff"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:gravity="center"
-                    android:textSize="13sp"
-                    android:id="@+id/offering_item_1_month_btn"
-                    android:layout_marginBottom="10dp"
+                    android:id="@+id/offering_book_btn"
                     android:text="Book"/>
 
-            </LinearLayout>
-        </LinearLayout>
+
+        </RelativeLayout>
     </LinearLayout>
 
 
