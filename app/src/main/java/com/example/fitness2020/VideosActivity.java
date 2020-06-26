@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.fitness2020.Adapters.VideosAdapter;
 import com.example.fitness2020.Models.VideoModel;
@@ -23,7 +24,7 @@ public class VideosActivity extends AppCompatActivity {
     RecyclerView passRV,workoutRV,studioRV,corporateRV;
     VideosAdapter fitnessPassVideoAdapter,dailyWorkoutVideoAdapter,studioVideoAdapter,corporateVideoAdapter;
 
-    ImageButton backButton;
+    ImageView backButton;
 
 
     @Override
