@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="150dp"
+    android:layout_width="120dp"
+    android:layout_marginHorizontal="3dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="7dp">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/top_trainer_rv_item_cardview_1"
+            app:cardElevation="1sp"
+            app:cardCornerRadius="7dp"
+            android:layout_height="100sp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/fitnesspass_rv_item_cardview1_imgvw"
+                android:scaleType="centerCrop"
+                android:background="#ccc"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/primaryBlue"
+            android:layout_below="@+id/top_trainer_rv_item_cardview_1"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/metropolisbold"
+            android:id="@+id/top_trainer_name"
+            />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

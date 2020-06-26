@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/paariBlue"
+    android:layout_marginBottom="3dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/review_head">
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_user"
+        android:id="@+id/gym_review_user_pic"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/gym_review_user_pic"
+        android:text="Ayush Sharma"
+        android:layout_centerVertical="true"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/gym_review_user_name"
+        android:fontFamily="@font/metropolisbold"/>
+            
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:textColor="@color/primaryBlue"
+            android:background="@color/primaryBlue"
+            android:layout_below="@id/review_head"
+            android:layout_marginBottom="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/line1"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/review_gym_head"
+            android:layout_below="@id/line1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:fontFamily="@font/metropolisbold"
+                android:textColor="@color/primaryBlue"
+                android:text="ABC Fitness Centre"
+                android:id="@+id/review_gym_name"
+                android:layout_alignParentStart="true"/>
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/review_gym_rating_container"
+                android:background="@drawable/bg_button"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_star_black_12dp"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.5"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="10sp"
+                    android:padding="1dp"
+                    android:id="@+id/review_gym_rating"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/review_gym_name"
+                android:textSize="11sp"
+                android:fontFamily="@font/metropolismedium"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="20/07/2020"
+                android:layout_marginTop="3dp"
+                android:id="@+id/review_gym_date"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/review_gym_review"
+            android:fontFamily="@font/metropolismedium"
+            android:textColor="@color/black"
+            android:layout_below="@id/review_gym_head"
+            android:text="@string/dummy_text"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="10dp"/>
+
+
+
+    </RelativeLayout>
+    
+
+</androidx.cardview.widget.CardView>

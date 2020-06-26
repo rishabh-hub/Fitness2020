@@ -10,13 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.fitness2020.Models.FaqModel;
 import com.example.fitness2020.Models.FitnessFragmentFreeTrialModel;
-import com.example.fitness2020.Models.PopularHorizontalRvModel;
 import com.example.fitness2020.R;
 
 import java.util.ArrayList;
-import java.util.ConcurrentModificationException;
 
 public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<FitnessFragmentFreeTrialAdapter.FitnessFragmentFreeTrialVH> {
 
@@ -36,9 +33,9 @@ public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<Fitnes
     @Override
     public FitnessFragmentFreeTrialVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if(code==1)
-            return new FitnessFragmentFreeTrialVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.fitness_fragment_freetrial_rv_xml,parent,false));
+            return new FitnessFragmentFreeTrialVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.pass_fragment_top_fitness_centre_rv_item,parent,false));
         else
-            return new FitnessFragmentFreeTrialVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.pass_fragment_fitnesspass_rv_item,parent,false));
+            return new FitnessFragmentFreeTrialVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.pass_fragment_live_workout_rv_item,parent,false));
 
     }
 
