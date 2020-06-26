@@ -22,6 +22,7 @@ import com.example.fitness2020.Models.AddressModel;
 import com.example.fitness2020.Models.GymActivitiesModel;
 import com.example.fitness2020.Models.GymFacilityModel;
 import com.example.fitness2020.Models.GymOfferingModel;
+import com.example.fitness2020.Models.GymReviewModel;
 import com.example.fitness2020.Models.ReviewModel;
 import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.Models.VideoModel;
@@ -39,7 +40,7 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
     ArrayList<GymActivitiesModel> gymActivitiesModels;
     ArrayList<GymFacilityModel> facilityModels;
     ArrayList<GymOfferingModel> offeringModels;
-    ArrayList<ReviewModel> reviewModels;
+    ArrayList<GymReviewModel> gymReviewModels;
     ArrayList<AddressModel> addressModels;
     CustomDialogClass customDialogClass;
 
@@ -51,12 +52,12 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
         this.gymActivitiesModels = gymActivitiesModels;
     }
 
-    public GymAdapter(Context context, int code, ArrayList<GymFacilityModel> facilityModels, ArrayList<GymOfferingModel> offeringModels, ArrayList<ReviewModel> reviewModels,ArrayList<AddressModel> addressModels) {
+    public GymAdapter(Context context, int code, ArrayList<GymFacilityModel> facilityModels, ArrayList<GymOfferingModel> offeringModels, ArrayList<GymReviewModel> gymReviewModels,ArrayList<AddressModel> addressModels) {
         this.context = context;
         this.code = code;
         this.facilityModels = facilityModels;
         this.offeringModels = offeringModels;
-        this.reviewModels = reviewModels;
+        this.gymReviewModels=gymReviewModels;
         this.addressModels=addressModels;
 
     }
@@ -78,7 +79,8 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
         else if(code==5)
             return new GymAdapterVH((LayoutInflater.from(parent.getContext()).inflate(R.layout.gym_facility_rv_item,parent,false)));
         else if (code==6)
-            return new GymAdapterVH((LayoutInflater.from(parent.getContext()).inflate(R.layout.review_rv_item,parent,false)));
+            return new GymAdapterVH((LayoutInflater.from(parent.getContext()).inflate(R.layout.gym_review_rv_item_layout,parent,false)));
+        //Add new Review model rv item here
 
         else
             return new GymAdapterVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.single_address_layout,parent,false));
@@ -99,7 +101,7 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
         else if(code==5)
             holder.facilityPopulate(facilityModels.get(position));
         else if (code ==6)
-            holder.reviewPopulate(reviewModels.get(position));
+            holder.reviewPopulate(gymReviewModels.get(position));
 
         else
             {
@@ -122,14 +124,14 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
         else if (code==5)
             return facilityModels.size();
         else if (code==6)
-            return reviewModels.size();
+            return gymReviewModels.size();
         else
             return addressModels.size();
     }
 
     public class GymAdapterVH extends RecyclerView.ViewHolder
     {
-        ImageView gymImage, gymVideo;
+        ImageView gymImage, gymVideo,reviewPersonImage;
         TextView gymActivity,offeringName,offeringPrice,offeringActivityName,gymAddress;
         TextView facility,reviewProduct,reviewPerson,reviewDesc;
         Button offeringBookBtn;
@@ -217,10 +219,11 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
             facility.setText(gymFacilityModel.getFacility());
         }
 
-        public void reviewPopulate(ReviewModel reviewModel) {
-            reviewPerson.setText(reviewModel.getName());
-            reviewProduct.setText(reviewModel.getProduct());
-            reviewDesc.setText(reviewModel.getDescription());
+        public void reviewPopulate(GymReviewModel gymReviewModel) {
+//            reviewPerson.setText(gymReviewModel.getUserName());
+//            reviewPersonImage.setImageResource(gymReviewModel.);
+//            reviewProduct.setText(review);
+//            reviewDesc.setText(reviewModel.getDescription());
         }
 
         public void addressPopulate(AddressModel addressModel)

@@ -62,7 +62,7 @@ public class GymActivity extends AppCompatActivity {
         attachId();
 
 
-        reviewRv.setLayoutManager(new LinearLayoutManager(GymActivity.this,LinearLayoutManager.HORIZONTAL,false));
+        reviewRv.setLayoutManager(new LinearLayoutManager(GymActivity.this,LinearLayoutManager.VERTICAL,false));
         gymPhotosRv.setLayoutManager(new LinearLayoutManager(GymActivity.this,LinearLayoutManager.HORIZONTAL,false));
         gymVideosRv.setLayoutManager(new LinearLayoutManager(GymActivity.this,LinearLayoutManager.HORIZONTAL,false));
         gymActivityRv.setLayoutManager(new LinearLayoutManager(GymActivity.this,LinearLayoutManager.HORIZONTAL,false));
