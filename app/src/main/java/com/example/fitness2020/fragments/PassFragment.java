@@ -1,10 +1,13 @@
 package com.example.fitness2020.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,9 +25,11 @@ import com.example.fitness2020.Adapters.HomePageClientAdapter;
 import com.example.fitness2020.Models.ClientModel;
 import com.example.fitness2020.Models.FitnessFragmentFreeTrialModel;
 import com.example.fitness2020.Models.PackModel;
+import com.example.fitness2020.Models.TopTrainersModel;
 import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.R;
+import com.example.fitness2020.WebinarTabActivity;
 
 import java.util.ArrayList;
 
@@ -42,7 +47,7 @@ public class PassFragment extends Fragment {
     HomePageClientAdapter clientAdapter;
 
     RecyclerView topTrainerRv;
-    ArrayList<FitnessFragmentFreeTrialModel> topTrainerModels;
+    ArrayList<TopTrainersModel> topTrainerModels;
 
     RecyclerView faqRv;
     ArrayList<FaqModel> faqs;
@@ -64,6 +69,7 @@ public class PassFragment extends Fragment {
     CardView trialCard,workoutCard,validityCard;
 
     ArrayList<TrendingRvModel> imageModels;
+    LinearLayout liveWorkoutViewMore;
 
 
     public PassFragment() {
@@ -96,12 +102,12 @@ public class PassFragment extends Fragment {
         addData();
 
         clientAdapter = new HomePageClientAdapter(clients,context);
-        fragmentFreeTrialAdapter=new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,context, topTrainerModels,1);
-        topTrainerAdapter = new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,context, topTrainerModels,0);
+        fragmentFreeTrialAdapter=new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,liveWorkoutModels, topTrainerModels,context,1);
+        topTrainerAdapter = new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,liveWorkoutModels, topTrainerModels,context,2);
         videoAdapter = new VideosAdapter(videos,dailyWorkoutVideos,studioVideos,corporateVideos,context,0);
         faqAdapter = new SubscriptionCardsAdapter(context,1,imageModels,faqs);
         membershipAdapter = new SubscriptionCardsAdapter(context,2,packModels);
-        liveWorkoutsAdapter=new FitnessFragmentFreeTrialAdapter(liveWorkoutModels,context, topTrainerModels,0);
+        liveWorkoutsAdapter=new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,liveWorkoutModels, topTrainerModels,context,0);
 
         clientRV.setAdapter(clientAdapter);
         topfitnessRv.setAdapter(fragmentFreeTrialAdapter);
@@ -120,6 +126,13 @@ public class PassFragment extends Fragment {
         membershipAdapter.notifyDataSetChanged();
         liveWorkoutsAdapter.notifyDataSetChanged();
 
+        liveWorkoutViewMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent webinarIntent=new Intent(view.getContext(), WebinarTabActivity.class);
+                startActivity(webinarIntent);
+            }
+        });
 
         return view;
     }
@@ -128,12 +141,12 @@ public class PassFragment extends Fragment {
 
         for (int i = 0; i < 10; i++)
         {
-            fragmentFreeTrialModels.add(new FitnessFragmentFreeTrialModel(R.drawable.trending_activity,"One More Rep","Mumbai,Maharashtra ,400022","Crossfit, Zumba"));
-            liveWorkoutModels.add(new FitnessFragmentFreeTrialModel(R.drawable.trending_activity,"One More Rep","Mumbai,Maharashtra ,400022","Crossfit, Zumba"));
+            fragmentFreeTrialModels.add(new FitnessFragmentFreeTrialModel(R.drawable.trending_activity,"One More Rep","Mumbai,Maharashtra ,400022","Crossfit, Zumba","4.5"));
+            liveWorkoutModels.add(new FitnessFragmentFreeTrialModel(R.drawable.trending_activity,"One More Rep","Mumbai,Maharashtra ,400022","Crossfit, Zumba","4.5"));
         }
         for (int i=0;i<5;i++)
         {
-            topTrainerModels.add(new FitnessFragmentFreeTrialModel(R.drawable.trending_activity,"Trainer Name","Gym Category","Crossfit, Zumba"));
+            topTrainerModels.add(new TopTrainersModel(R.drawable.workout_carousel_dummy,"Paari"));
             videos.add(new VideoModel(R.drawable.gym_video_dummy));
             faqs.add(new FaqModel("Q. Some Question about MemberShip?","A. Corresponding answer about MemberShip"));
         }
@@ -156,5 +169,6 @@ public class PassFragment extends Fragment {
         faqTv=view.findViewById(R.id.fitness_pass_faq_rv_heading);
         clientRV = view.findViewById(R.id.fitness_at_work_clients_rv);
         liveWorkoutsRv=view.findViewById(R.id.pass_fragment_live_workout_rv);
+        liveWorkoutViewMore=view.findViewById(R.id.pass_fragment_live_workout_viewmore);
     }
 }

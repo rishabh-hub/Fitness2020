@@ -27,6 +27,7 @@ import com.example.fitness2020.Models.ReviewModel;
 import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.R;
+import com.example.fitness2020.ReviewDialogClass;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -43,6 +44,7 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
     ArrayList<GymReviewModel> gymReviewModels;
     ArrayList<AddressModel> addressModels;
     CustomDialogClass customDialogClass;
+    ReviewDialogClass reviewDialogClass;
 
     public GymAdapter(Context context, ArrayList<TrendingRvModel> imageModels, int code, ArrayList<VideoModel> videoModels, ArrayList<GymActivitiesModel> gymActivitiesModels) {
         this.context = context;
@@ -177,7 +179,11 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
                 reviewReadMore.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //open dialog
+                        reviewDialogClass=new ReviewDialogClass(itemView.getContext(),0);
+                        reviewDialogClass.setCancelable(true);
+                        reviewDialogClass.show();
+
+                        //Dialog box should open
                     }
                 });
             }
@@ -241,6 +247,7 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
         public void addressPopulate(AddressModel addressModel)
         {
             gymAddress.setText(addressModel.getAddress());
+
         }
     }
 }
