@@ -7,4 +7,7 @@
     <string name="t_c"><![CDATA[T&C]]></string>
     <string name="dummy_long_text">lorem ipsum dolor valorant wingardium leviosa dummy text.lorem ipsum dolor valorant wingardium leviosa dummy text.lorem ipsum dolor valorant wingardium leviosa dummy text.lorem ipsum dolor valorant wingardium leviosa dummy text.lorem ipsum dolor valorant wingardium leviosa dummy text.lorem ipsum dolor valorant wingardium leviosa dummy text.</string>
     <string name="update_detail_text">Tap on details to edit them. Once editted press UPDATE to update details.</string>
+    <string name="date_explain_txt">Select the date for which you would like to book the service.</string>
+    <string name="time_explain_start">Select the prefered timing.</string>
+    <string name="mop_txt">Mode of payment is selected automatically according to your memberships. If you have no memberships, payment will be done via cash.</string>
 </resources>
