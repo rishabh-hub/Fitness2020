@@ -21,6 +21,7 @@ import com.example.fitness2020.Adapters.GymAdapter;
 import com.example.fitness2020.Models.AddressModel;
 import com.example.fitness2020.Models.GymFacilityModel;
 import com.example.fitness2020.Models.GymOfferingModel;
+import com.example.fitness2020.Models.GymReviewModel;
 import com.example.fitness2020.Models.ReviewModel;
 
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class CustomDialogClass extends Dialog {
     RecyclerView offeringsRv,gymAddressesRv;
     ArrayList<GymOfferingModel> gymOfferingModels=new ArrayList<>();
     ArrayList<GymFacilityModel> facilityModels = new ArrayList<>();
-    ArrayList<ReviewModel> reviewModels = new ArrayList<>();
+    ArrayList<GymReviewModel> reviewModels = new ArrayList<>();
     ArrayList<AddressModel> addressModels=new ArrayList<>();
     GymAdapter offeringsAdapter;
     GymAdapter addressAdapter;

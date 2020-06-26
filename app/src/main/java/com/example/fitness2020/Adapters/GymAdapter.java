@@ -133,7 +133,7 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
     {
         ImageView gymImage, gymVideo,reviewPersonImage;
         TextView gymActivity,offeringName,offeringPrice,offeringActivityName,gymAddress;
-        TextView facility,reviewProduct,reviewPerson,reviewDesc;
+        TextView facility,reviewProduct,reviewPerson,reviewDesc,reviewDate,reviewRating,reviewReadMore;
         Button offeringBookBtn;
 
         public GymAdapterVH(@NonNull final View itemView) {
@@ -167,9 +167,19 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
                 facility = itemView.findViewById(R.id.gym_facility_name);
             else if (code==6)
             {
-                reviewPerson = itemView.findViewById(R.id.review_name);
-                reviewProduct = itemView.findViewById(R.id.review_product);
-                reviewDesc = itemView.findViewById(R.id.review_desc);
+                reviewPerson = itemView.findViewById(R.id.gym_review_user_name);
+                reviewProduct = itemView.findViewById(R.id.review_gym_name);
+                reviewDesc = itemView.findViewById(R.id.review_gym_review);
+                reviewDate = itemView.findViewById(R.id.review_gym_date);
+                reviewRating = itemView.findViewById(R.id.review_gym_rating);
+                reviewReadMore = itemView.findViewById(R.id.read_more_review_btn);
+
+                reviewReadMore.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //open dialog
+                    }
+                });
             }
             else
                 {
@@ -220,10 +230,12 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
         }
 
         public void reviewPopulate(GymReviewModel gymReviewModel) {
-//            reviewPerson.setText(gymReviewModel.getUserName());
+            reviewPerson.setText(gymReviewModel.getUserName());
 //            reviewPersonImage.setImageResource(gymReviewModel.);
-//            reviewProduct.setText(review);
-//            reviewDesc.setText(reviewModel.getDescription());
+            reviewProduct.setText(gymReviewModel.getGymName());
+            reviewRating.setText(gymReviewModel.getGymRating());
+            reviewDate.setText(gymReviewModel.getReviewDate());
+            reviewDesc.setText(gymReviewModel.getGymReview());
         }
 
         public void addressPopulate(AddressModel addressModel)

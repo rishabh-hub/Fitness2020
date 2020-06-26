@@ -21,6 +21,7 @@ import com.example.fitness2020.Models.AddressModel;
 import com.example.fitness2020.Models.GymActivitiesModel;
 import com.example.fitness2020.Models.GymFacilityModel;
 import com.example.fitness2020.Models.GymOfferingModel;
+import com.example.fitness2020.Models.GymReviewModel;
 import com.example.fitness2020.Models.ReviewModel;
 import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.Models.VideoModel;
@@ -31,7 +32,7 @@ import java.util.ArrayList;
 public class GymActivity extends AppCompatActivity {
 
     RecyclerView reviewRv;
-    ArrayList<ReviewModel> reviewModels = new ArrayList<>();
+    ArrayList<GymReviewModel> reviewModels = new ArrayList<>();
     GymAdapter reviewAdapter;
     ArrayList<GymFacilityModel> facilityModels = new ArrayList<>();
     ArrayList<GymOfferingModel> offeringModels = new ArrayList<>();
@@ -138,7 +139,7 @@ public class GymActivity extends AppCompatActivity {
     {
         for (int i=0;i<=5;i++)
         {
-            reviewModels.add(new ReviewModel("XYZ", "ABC", "Very Good Product"));
+            reviewModels.add(new GymReviewModel("Rishabh Singh","Lukhnow Fitness Center","4.5","21//07/202","Some long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long review"));
             imageModels.add(new TrendingRvModel(R.drawable.gym_dummy));
             videoModels.add(new VideoModel(R.drawable.gym_video_dummy));
         }

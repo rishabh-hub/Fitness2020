@@ -6,42 +6,49 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/webGray"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".VideosActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_pack"
+        android:background="@color/webGray"
         android:elevation="4dp"
-        android:backgroundTint="#88000000"
         android:backgroundTintMode="src_atop"
         android:layout_alignParentTop="true"
         android:id="@+id/container1">
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:gravity="center_vertical"
-            android:id="@+id/video_activity_container1"
-            android:orientation="horizontal">
-            <ImageButton
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@drawable/ic_left_arrow"
-                android:backgroundTint="@color/white"
-                android:layout_marginStart="5dp"
-                android:id="@+id/videos_activity_back_btn"/>
-            <TextView
-                android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/primaryBlue"
+            android:id="@+id/videos_tlbr_rellay"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:text="Videos"/>
+                android:id="@+id/videos_activity_back_btn"
+                android:src="@drawable/ic_chevron_left_white_24dp"
+                android:tint="@color/white"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"
+                />
 
-        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Videos"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/metropolisbold"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/bookings_header_tv"
+                />
+        </RelativeLayout>
+
+
 
         <TextView
             android:layout_width="match_parent"
@@ -50,8 +57,8 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
             android:textSize="17sp"
-            android:textColor="#fff"
-            android:layout_below="@+id/video_activity_container1"
+            android:textColor="@color/primaryBlue"
+            android:layout_below="@+id/videos_tlbr_rellay"
             android:fontFamily="@font/metropolisblack"
             android:text="Fitness Pass"
             android:id="@+id/video_page_fitnesspass_txt"/>
@@ -69,7 +76,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/secondryBlue"
+        android:background="@color/white"
         android:elevation="4dp"
         android:layout_marginTop="5dp"
         android:layout_below="@id/container1"
@@ -95,7 +102,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/secondryBlue"
+        android:background="@color/white"
         android:elevation="4dp"
         android:layout_marginTop="5dp"
         android:layout_below="@id/container2"
@@ -121,7 +128,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/secondryBlue"
+        android:background="@color/white"
         android:layout_marginTop="5dp"
         android:elevation="4dp"
         android:layout_marginBottom="5dp"
