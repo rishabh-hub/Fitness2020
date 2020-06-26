@@ -4,9 +4,10 @@
     android:layout_height="20dp"
     android:paddingHorizontal="10dp"
     android:background="@drawable/bg_button"
-    android:backgroundTint="#1A2565"
+    android:backgroundTint="@color/hoodBlue"
     android:textColor="#fff"
     android:text="Yoga"
+    android:textSize="13sp"
     android:layout_marginHorizontal="3dp"
     android:id="@+id/gym_activity_rv_activity">
 

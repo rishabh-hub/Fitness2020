@@ -78,9 +78,9 @@
                 app:tabGravity="fill"
                 app:tabSelectedTextColor="#fff"
                 app:tabIndicatorColor="#fff"
-                app:tabTextColor="#777"
+                app:tabTextColor="@color/paariBlue"
                 app:tabIconTint="#FFAB00"
-                app:tabIndicatorHeight="3sp"
+                app:tabIndicator="@drawable/scroll_indicator"
                 android:fillViewport="true"
                 android:layout_marginBottom="5dp"
                 >
