@@ -43,7 +43,6 @@ public class HomeLiveTab extends Fragment {
     HomeTrendingRVAdapter adapter;
     HomeTrendingRVAdapter banner2Adapter;
     HomePopularRVAdapter homePopularRVAdapter;
-    RecyclerView trendingRv;
     RecyclerView banner2Rv;
     RecyclerView popularRv;
     ArrayList<PopularRvModel> popularRvModels;
@@ -53,8 +52,8 @@ public class HomeLiveTab extends Fragment {
     RecyclerView liveMembershiRv;
     RecyclerView liveTrendingRv;
     RecyclerView liveWebinarRv1, liveWebinarRv2,liveWebinarRv3;
-    RecyclerView liveReviewRv;
-    ArrayList<ReviewModel> liveReviewModel;
+    RecyclerView trendingRv;//
+    ArrayList<TrendingRvModel> trendingRvModels1;//
     ArrayList<TrendingRvModel> liveTopBannerModel;
     ArrayList<PackModel> packModels;
     ArrayList<TrendingRvModel> liveTrendingModel;
@@ -67,7 +66,7 @@ public class HomeLiveTab extends Fragment {
     HomePageClientAdapter liveReviewAdapter;
     CarousalsAdapter1 liveWebinarAdapter1, liveWebinarAdapter2,liveWebinarAdapter3;
 
-    NewCorrectionAdapter newCorrectionAdapter;
+    NewCorrectionAdapter newCorrectionAdapter,trendingAdapter;//
     ArrayList<TrendingRvModel> webinarVideos,trendingRvModels;
     TextView webinarViewMore;
     TextView buzzingViewMoreButton;
@@ -93,7 +92,7 @@ public class HomeLiveTab extends Fragment {
         liveWebinarRv1=view.findViewById(R.id.live_webinar_rv_1);
         liveWebinarRv2=view.findViewById(R.id.live_webinar_rv_2);
         liveWebinarRv3=view.findViewById(R.id.live_webinar_rv_3);
-        liveReviewRv=view.findViewById(R.id.live_reviews_rv);
+        trendingRv=view.findViewById(R.id.live_reviews_rv);
         webinarViewMore=view.findViewById(R.id.webinar_live_view_more_btn);
         buzzingViewMoreButton=view.findViewById(R.id.live_buzzing_viewmore_btn);
 
@@ -102,7 +101,7 @@ public class HomeLiveTab extends Fragment {
         liveTrendingRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         liveWebinarRv1.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         liveWebinarRv2.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
-        liveReviewRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+        trendingRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         liveWebinarRv3.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
 
 
@@ -111,7 +110,7 @@ public class HomeLiveTab extends Fragment {
         liveTrendingModel=new ArrayList<>(3);
         liveWebinarModels1 =new ArrayList<>(3);
         liveWebinarModels2 =new ArrayList<>(3);
-        liveReviewModel=new ArrayList<>(3);
+        trendingRvModels1=new ArrayList<>(3);
         liveWebinarModels3=new ArrayList<>(3);
         trendingRvModels=new ArrayList<>(3);
         webinarVideos=new ArrayList<>(3);
@@ -123,7 +122,7 @@ public class HomeLiveTab extends Fragment {
         newCorrectionAdapter=new NewCorrectionAdapter(0,webinarVideos,trendingRvModels);//new correction  adapter
         liveWebinarAdapter1 =new CarousalsAdapter1(context,liveCompanyModels,liveVouchersModels,liveWebinarModels1,0);
         liveWebinarAdapter2 =new CarousalsAdapter1(context,liveCompanyModels,liveVouchersModels,liveWebinarModels2,0);
-        liveReviewAdapter=new HomePageClientAdapter(liveReviewModel,context,1);
+        trendingAdapter=new NewCorrectionAdapter(1,webinarVideos,trendingRvModels1);
         liveWebinarAdapter3=new CarousalsAdapter1(context,liveCompanyModels,liveVouchersModels,liveWebinarModels3,0);
 
         liveTopBannerRv.setAdapter(liveTopBannerAdapter);
@@ -131,7 +130,7 @@ public class HomeLiveTab extends Fragment {
         liveTrendingRv.setAdapter(newCorrectionAdapter);
         liveWebinarRv1.setAdapter(liveWebinarAdapter1);
         liveWebinarRv2.setAdapter(liveWebinarAdapter2);
-        liveReviewRv.setAdapter(liveReviewAdapter);
+        trendingRv.setAdapter(trendingAdapter);
         liveWebinarRv3.setAdapter(liveWebinarAdapter3);
 
         liveTopBannerAdapter.notifyDataSetChanged();
@@ -139,7 +138,7 @@ public class HomeLiveTab extends Fragment {
         newCorrectionAdapter.notifyDataSetChanged();
         liveWebinarAdapter1.notifyDataSetChanged();
         liveWebinarAdapter2.notifyDataSetChanged();
-        liveReviewAdapter.notifyDataSetChanged();
+        trendingAdapter.notifyDataSetChanged();
         liveWebinarAdapter3.notifyDataSetChanged();
 
         buzzingViewMoreButton.setOnClickListener(new View.OnClickListener() {
@@ -200,9 +199,10 @@ public class HomeLiveTab extends Fragment {
 
             liveTrendingModel.add(new TrendingRvModel(R.drawable.trending_activity));
 
+            trendingRvModels1.add(new TrendingRvModel(R.drawable.trending_activity));
 
 
-            liveReviewModel.add(new ReviewModel("Tiger Shroff","ABC GYM","lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores."));
+//            liveReviewModel.add(new ReviewModel("Tiger Shroff","ABC GYM","lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores."));
 
 
             webinarVideos.add(new TrendingRvModel(R.drawable.trending_activity));
