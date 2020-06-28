@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
-    app:cardBackgroundColor="@color/paariBlue"
-    android:layout_marginBottom="3dp"
+    app:cardBackgroundColor="@color/webGray"
+    android:layout_marginBottom="10dp"
     android:layout_height="wrap_content">
     <RelativeLayout
         android:layout_width="match_parent"

@@ -43,8 +43,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:background="@color/webGray"
-                android:elevation="10dp"
+                android:background="@color/white"
                 android:layout_height="wrap_content"
                 android:id="@+id/gym_photos_rv"
                 />
@@ -54,7 +53,6 @@
                 android:layout_below="@id/gym_photos_rv"
                 android:padding="5dp"
                 android:background="@color/white"
-                android:elevation="10dp"
                 android:id="@+id/head1">
 
             <TextView
@@ -134,7 +132,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@color/white"
-                android:elevation="10dp"
                 android:padding="10dp"
                 android:layout_below="@id/head1"
                 android:id="@+id/head2">
@@ -181,7 +178,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@color/white"
-                android:elevation="10dp"
                 android:padding="10dp"
                 android:layout_below="@id/head2"
                 android:id="@+id/head3">
@@ -237,7 +233,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingHorizontal="7dp"
-                android:elevation="10dp"
                 android:id="@+id/book_container"
                 android:background="@color/white"
                 android:gravity="center"
@@ -287,7 +282,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@color/webGray"
+                android:background="@color/white"
                 android:paddingHorizontal="10dp"
                 android:layout_marginTop="2dp"
                 android:layout_below="@id/book_container"
@@ -320,7 +315,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@color/webGray"
+                android:background="@color/white"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="2dp"
                 android:paddingHorizontal="10dp"

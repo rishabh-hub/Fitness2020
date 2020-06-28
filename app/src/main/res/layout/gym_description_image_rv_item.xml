@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/rv_item_cardview"
-    app:cardCornerRadius="20sp"
+    app:cardCornerRadius="10sp"
     android:layout_marginHorizontal="10dp"
     app:cardElevation="1sp"
     android:layout_margin="5dp"

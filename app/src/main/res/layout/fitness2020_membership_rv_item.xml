@@ -256,7 +256,7 @@
             android:backgroundTint="@color/primaryBlue"
             android:id="@+id/fitness2020_membership_refund_button"
             android:layout_marginHorizontal="10dp"
-            android:text="Apply for refund"
+            android:text="View More"
             android:textColor="#fff"
             android:textStyle="bold"/>
 

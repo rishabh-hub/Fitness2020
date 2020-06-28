@@ -27,7 +27,7 @@ import java.util.ArrayList;
 public class GymBookingFinalPage extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     TextView gymName,offeringName,offeringSubscription,netAmount;
-    EditText promoCode,groupNum;
+    EditText promoCode;
     Button payButton;
     RecyclerView dateRv,timeRv;
     ArrayList<DateModel> dateModels;
@@ -82,7 +82,8 @@ public class GymBookingFinalPage extends AppCompatActivity implements AdapterVie
 
     private void populateGroupNoSpinner() {
         ArrayList<String> groupNoData=new ArrayList<>();
-        for (int i=1;i<=25;i++)
+        groupNoData.add("On My Own");
+        for (int i=2;i<=5;i++)
         {
             groupNoData.add(""+i);
         }
@@ -100,10 +101,9 @@ public class GymBookingFinalPage extends AppCompatActivity implements AdapterVie
         timeRv=findViewById(R.id.final_booking_page_gym_time_rv);
         promoCode=findViewById(R.id.final_booking_page_gym_promoET);
         payButton=findViewById(R.id.final_booking_page_gym_book_btn);
-        groupNum = findViewById(R.id.final_booking_page_gym_groupET);
         netAmount = findViewById(R.id.final_booking_page_gym_amount);
         backButton=findViewById(R.id.final_booking_page_back_btn);
-//        groupNo=findViewById(R.id.);
+        groupNo=findViewById(R.id.squad_spinner);
     }
 
     void addData()

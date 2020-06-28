@@ -100,7 +100,7 @@ public class SubscriptionCardsAdapter extends RecyclerView.Adapter<SubscriptionC
                 packName=itemView.findViewById(R.id.pack_name);
                 packBasePrice = itemView.findViewById(R.id.pack_base_cost);
                 packFeatures = itemView.findViewById(R.id.membership_item_features);
-                packBasePrice.setPaintFlags(packBasePrice.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
+                packBasePrice.setPaintFlags(packBasePrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                 packPrice=itemView.findViewById(R.id.pack_cost);
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override

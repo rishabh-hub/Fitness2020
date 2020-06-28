@@ -15,10 +15,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primaryBlue"
+            android:textSize="17sp"
+            android:text="6 Month Subscription"
+            android:fontFamily="@font/metropolisblack"
+            android:id="@+id/gym_membership_name"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_below="@id/gym_membership_name"
+            android:id="@+id/line"
+            android:background="@color/colorPrimary"
+            android:layout_alignEnd="@id/gym_membership_image"
+            android:layout_marginVertical="10dp"/>
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/detail_container"
             android:background="@color/primaryBlue"
             android:scaleType="centerCrop"
             android:id="@+id/gym_membership_image"/>
@@ -27,16 +44,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/detail_container"
+            android:layout_below="@id/line"
             android:layout_toLeftOf="@id/gym_membership_image"
             android:layout_alignParentStart="true">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/primaryBlue"
-                android:textSize="17sp"
-                android:text="6 Month Subscription"
-                android:fontFamily="@font/metropolisblack"
-                android:id="@+id/gym_membership_name"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -104,12 +115,31 @@
             android:textColor="@color/hoodBlue"
             android:textSize="15sp"
             android:layout_alignStart="@id/gym_membership_image"
-            android:layout_below="@id/gym_membership_image"
             android:text="₹ 1299"
+            android:layout_below="@id/gym_membership_image"
             android:paddingVertical="5dp"
             android:textAlignment="center"
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/gym_membership_price"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/gym_membership_price"
+            android:orientation="horizontal">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_button"
+            android:backgroundTint="@color/primaryBlue"
+            android:layout_below="@id/gym_membership_price"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"
+            android:text="Call"
+            android:id="@+id/gym_membership_call_btn"/>
         <Button
             android:layout_width="150dp"
             android:layout_centerHorizontal="true"
@@ -118,8 +148,9 @@
             android:backgroundTint="@color/primaryBlue"
             android:layout_below="@id/gym_membership_price"
             android:textColor="@color/white"
-            android:text="Call"
-            android:id="@+id/gym_membership_call_btn"/>
+            android:text="View More"
+            android:id="@+id/gym_membership_view_more_btn"/>
+        </LinearLayout>
 
 
     </RelativeLayout>

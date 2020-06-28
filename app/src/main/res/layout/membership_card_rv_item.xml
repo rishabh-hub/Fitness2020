@@ -28,11 +28,11 @@
         android:textColor="@color/primaryBlue"
         android:id="@+id/pack_name"
         android:text="All City Pack"
-        android:textSize="17sp"
+        android:textSize="19sp"
         android:fontFamily="@font/metropolisbold"/>
 
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="7dp"
@@ -45,13 +45,14 @@
                 android:fontFamily="@font/metropolismedium"
                 android:id="@+id/membership_item_features"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textColor="@color/primaryBlue"
                 android:text="Free Webinars "/>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentBottom="true"
                 >
 
             <TextView
@@ -92,7 +93,7 @@
                 android:id="@+id/pack_cost"
                 android:text="₹2499"/>
             </RelativeLayout>
-        </LinearLayout>
+        </RelativeLayout>
 
 </RelativeLayout>
 

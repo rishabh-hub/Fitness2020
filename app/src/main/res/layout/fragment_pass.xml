@@ -22,7 +22,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentTop="true"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/webGray"
     android:backgroundTintMode="src_atop"
     android:id="@+id/head_banner">
     <androidx.recyclerview.widget.RecyclerView
