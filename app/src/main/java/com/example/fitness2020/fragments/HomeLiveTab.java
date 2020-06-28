@@ -195,7 +195,7 @@ public class HomeLiveTab extends Fragment {
 
             liveTopBannerModel.add(new TrendingRvModel(R.drawable.workout_carousel_dummy));
 
-            packModels.add(new PackModel("Unlimited Workouts",99));
+            packModels.add(new PackModel("Unlimited Workouts",4000,2499,"Free webinar sessions"));
 
             liveTrendingModel.add(new TrendingRvModel(R.drawable.trending_activity));
 

@@ -240,7 +240,7 @@ public class HomeAtTheStudioTab extends Fragment {
 //             webinarModels.add(new WebinarModel("Functional Training","9:00 AM - 10:00 AM","INTERMEDIATE","Zumba/Crossfit",R.drawable.gym_dummy));
              vouchersModels.add(new VouchersModel("Flat 50% OFF","Gym Company","4","Till Jun '20",R.drawable.gym_voucher,"FREE"));
              companyModels.add(new CompanyModel(R.drawable.company_logo));
-            packModels.add(new PackModel("Unlimited Workouts",99));
+            packModels.add(new PackModel("Unlimited Workouts",4000,2499,"Free webinar sessions"));
             topBannerModel.add(new TrendingRvModel(R.drawable.workout_carousel_dummy));
 
         }
