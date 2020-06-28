@@ -1,4 +1,4 @@
-package com.example.fitness2020.fragments;
+package com.example.fitness2020;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,13 +10,9 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
-import com.example.fitness2020.Adapters.FitnessFragmentFreeTrialAdapter;
 import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
 import com.example.fitness2020.Models.FaqModel;
-import com.example.fitness2020.Models.FitnessFragmentFreeTrialModel;
 import com.example.fitness2020.Models.TrendingRvModel;
-import com.example.fitness2020.R;
-import com.example.fitness2020.TrialMembershipBooking;
 
 import java.util.ArrayList;
 

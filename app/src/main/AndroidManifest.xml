@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".FitAtWorkForm"></activity>
         <activity android:name=".NumberVerificationActivity" />
-        <activity android:name=".fragments.BookingLiveTab" />
+<!--        <activity android:name=".fragments.BookingLiveTab" />-->
         <activity android:name=".EventsInternalActivity" />
         <activity android:name=".VideosActivity" />
         <activity android:name=".WebinarTabActivity" />
@@ -26,8 +26,8 @@
         <activity android:name=".MembershipActivity" />
         <activity android:name=".TrialMembershipBooking" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".fragments.ValidityCardActivity" />
-        <activity android:name=".fragments.TrialCardActivity" />
+        <activity android:name=".ValidityCardActivity" />
+        <activity android:name=".TrialCardActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".BookingsActivity" />
         <activity android:name=".SignupNewActivity">

@@ -1,4 +1,4 @@
-package com.example.fitness2020.fragments;
+package com.example.fitness2020;
 
 import android.os.Bundle;
 
@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
 import com.example.fitness2020.Models.FaqModel;
 import com.example.fitness2020.Models.TrendingRvModel;
-import com.example.fitness2020.R;
 
 import java.util.ArrayList;
 

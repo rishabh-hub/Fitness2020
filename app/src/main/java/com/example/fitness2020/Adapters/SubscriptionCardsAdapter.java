@@ -15,7 +15,7 @@ import com.example.fitness2020.Models.FaqModel;
 import com.example.fitness2020.Models.PackModel;
 import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.R;
-import com.example.fitness2020.fragments.TrialCardActivity;
+import com.example.fitness2020.TrialCardActivity;
 
 import java.util.ArrayList;
 
