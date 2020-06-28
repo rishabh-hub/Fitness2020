@@ -70,7 +70,6 @@ public class VideosActivity extends AppCompatActivity {
         dailyWorkoutVideoAdapter=new VideosAdapter(fitnessPassVideos,dailyWorkoutVideos,studioVideos,corporateVideos,VideosActivity.this,2);
         studioVideoAdapter=new VideosAdapter(fitnessPassVideos,dailyWorkoutVideos,studioVideos,corporateVideos,VideosActivity.this,3);
         corporateVideoAdapter=new VideosAdapter(fitnessPassVideos,dailyWorkoutVideos,studioVideos,corporateVideos,VideosActivity.this,4);
-
     }
 
     private void setLayoutManagers() {

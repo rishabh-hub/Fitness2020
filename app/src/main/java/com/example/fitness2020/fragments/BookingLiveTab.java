@@ -76,7 +76,8 @@ public class BookingLiveTab extends Fragment {
 
     private void addData() {
         for (int i=0;i<6;i++)
-            liveBookings.add(new BookingsLiveModel(R.drawable.gym_dummy,"Functional Training","21 August,2020","7:00 AM","Live on: Zoom","Gold","76 seats available","https://zoom.class","functrain@zoom.in","zomFunc"));
+            liveBookings.add(new BookingsLiveModel(R.drawable.gym_dummy,"Functional Training","21 August,2020","7:00 AM","Live on: Zoom","Gold","Zumba","https://zoom.class","functrain@zoom.in","zomFunc"));
+        //Here add text Zoom id: and Zoom password: before id and password
     }
 
     private void setLayoutManager() {

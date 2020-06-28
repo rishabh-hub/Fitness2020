@@ -15,14 +15,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.fitness2020.BookingsActivity;
 import com.example.fitness2020.Models.BookingsEventsModel;
 import com.example.fitness2020.Models.BookingsLiveModel;
 import com.example.fitness2020.Models.BookingsModel;
 import com.example.fitness2020.Models.BookingsVoucherModel;
 import com.example.fitness2020.R;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -110,9 +107,9 @@ public class BookingsActivityAdapter extends RecyclerView.Adapter<BookingsActivi
     {
         ImageView liveImage,studioImage,studioDirection;
         TextView liveCategory,liveName,liveTime,liveDate,liveClassType,liveZoomId,liveZoomPassword,liveSeats;
-        TextView studioNameTop,studioDate,studioTime,studioActivity,studioCode,studioOrderId,studioStatus,studioName,studioAddress,studioPurchaseDetail;
+        TextView studioNameTop,studioDate,studioTime,studioActivity,studioCode,studioOrderId,studioStatus,studioAddress,studioPurchaseDetail;
         Button studioCall,studioViewDetails;
-        ImageButton liveIcon;
+        Button liveIcon;
         public BookingsActivityAdapterRvVH(@NonNull View itemView) {
             super(itemView);
 
@@ -129,6 +126,23 @@ public class BookingsActivityAdapter extends RecyclerView.Adapter<BookingsActivi
                 liveSeats=itemView.findViewById(R.id.booking_live_no_of_seats);
                 liveIcon=itemView.findViewById(R.id.booking_live_start_button);
 
+
+                liveClassType.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+//                        Intent sendIntent
+                        //add intent to send to zoom or instagram
+                    }
+                });
+                liveIcon.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+//                        Intent sendIntent
+
+                        //add intent to send to zoom or instagram.
+                    }
+                });
+
             }
             else if (code==1)
             {
@@ -141,7 +155,6 @@ public class BookingsActivityAdapter extends RecyclerView.Adapter<BookingsActivi
                 studioCode=itemView.findViewById(R.id.bookings_rv_item_code);
                 studioOrderId=itemView.findViewById(R.id.bookings_rv_item_orderid);
                 studioStatus=itemView.findViewById(R.id.bookings_rv_item_status);
-                studioName=itemView.findViewById(R.id.bookings_rv_item_address1);
                 studioAddress=itemView.findViewById(R.id.bookings_rv_item_address2);
                 studioPurchaseDetail=itemView.findViewById(R.id.bookings_rv_item_purchase_detail);
                 studioCall=itemView.findViewById(R.id.booking_call_button);
@@ -167,7 +180,7 @@ public class BookingsActivityAdapter extends RecyclerView.Adapter<BookingsActivi
             liveClassType.setText(bookingsLiveModel.getClassType());
             liveZoomId.setText(bookingsLiveModel.getZoomId());
             liveZoomPassword.setText(bookingsLiveModel.getZoomPassword());
-            liveSeats.setText(bookingsLiveModel.getSeats());
+            liveSeats.setText(bookingsLiveModel.getActivity());
 
 
         }
@@ -182,7 +195,6 @@ public class BookingsActivityAdapter extends RecyclerView.Adapter<BookingsActivi
             studioCode.setText(bookingsModel.getCode());
             studioOrderId.setText(Integer.toString(bookingsModel.getBookingId()));
             studioStatus.setText(bookingsModel.getStatus());
-            studioName.setText(bookingsModel.getProductName());
             studioAddress.setText(bookingsModel.getAddress2());
             studioPurchaseDetail.setText(bookingsModel.getPurchaseDetails());
             studioCall.setOnClickListener(new View.OnClickListener() {
