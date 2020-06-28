@@ -131,12 +131,15 @@
             android:textSize="15sp"
             android:id="@+id/booking_live_no_of_seats"/>
 
-        <ImageButton
-            android:layout_width="30dp"
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:background="@color/primaryBlue"
+            android:paddingHorizontal="10dp"
+            android:background="@drawable/bg_button"
+            android:textColor="@color/white"
             android:id="@+id/booking_live_start_button"
             android:layout_alignParentEnd="true"
+            android:text="Instagram"
             android:layout_alignBottom="@id/booking_live_no_of_seats"
             android:layout_marginRight="10dp"/>
 

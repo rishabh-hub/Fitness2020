@@ -87,7 +87,7 @@ public class PassFragment extends Fragment {
         topTrainerRv.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
         videoRV.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         faqRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
-        membershipRV.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
+        membershipRV.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         liveWorkoutsRv.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
 
 
@@ -154,7 +154,7 @@ public class PassFragment extends Fragment {
             clients.add(new ClientModel(R.drawable.ic_person_outline_black_24dp));
         for (int i=0;i<6;i++)
         {
-            packModels.add(new PackModel("Unlimited Workouts",99));
+            packModels.add(new PackModel("Unlimited Workouts",4000,2499,"Get unlimited webinar sessions"));
         }
     }
 

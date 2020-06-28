@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
 <ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_marginBottom="60dp"
+    android:id="@+id/pass_scroll_page"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@color/webGray"
+    android:background="@color/white"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <RelativeLayout
@@ -20,7 +29,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:layout_margin="10dp"
         android:id="@+id/fitness_pass_video_rv"/>
 </RelativeLayout>
 
@@ -29,7 +37,7 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_below="@id/head_banner"
+    android:layout_below="@id/benefit_container"
     android:orientation="vertical"
     android:weightSum="3"
     android:background="@color/white"
@@ -57,21 +65,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/benefit_head"
-        android:layout_below="@id/memberships_container"
-        android:background="@color/colorPrimaryDark"
+        android:layout_below="@id/head_banner"
+        android:background="@color/white"
         android:textSize="17sp"
         android:gravity="center"
         android:paddingVertical="7dp"
         android:text="Benefits of Fitness 2020"
         android:fontFamily="@font/metropolisbold"
-        android:textColor="@color/white"/>
+        android:textColor="@color/primaryBlue"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="240dp"
         android:id="@+id/benefit_container"
         android:gravity="center"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/white"
         android:orientation="vertical"
         android:weightSum="2"
         android:layout_below="@id/benefit_head">
@@ -99,7 +107,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
+                    android:textColor="@color/primaryBlue"
                     android:textSize="12sp"
                     android:text="20 Activities 200+\nclasses to choose from"
                     android:gravity="center"
@@ -121,7 +129,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
+                    android:textColor="@color/primaryBlue"
                     android:textSize="12sp"
                     android:text="On Demand\nWorkouts"
                     android:gravity="center"
@@ -154,7 +162,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
+                    android:textColor="@color/primaryBlue"
                     android:textSize="12sp"
                     android:text="Save upto 70%\non booking"
                     android:gravity="center"
@@ -175,7 +183,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
+                    android:textColor="@color/primaryBlue"
                     android:textSize="12sp"
                     android:text="Nutrition consulting\nFitness talks"
                     android:gravity="center"
@@ -191,7 +199,7 @@
         android:layout_height="wrap_content"
         android:textSize="17sp"
         android:id="@+id/top_fitness_rv_heading"
-        android:layout_below="@id/benefit_container"
+        android:layout_below="@id/memberships_container"
         android:fontFamily="@font/metropolisbold"
         android:text="Top Fitness Centres"
         android:textColor="@color/colorPrimaryDark"
@@ -424,6 +432,20 @@
         android:layout_marginTop="5dp"
         />
 
+
+
 </RelativeLayout>
 
 </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_button"
+        android:text="Buy Fitness Pass"
+        android:textSize="17sp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/buy_fitness_pass_btn"/>
+</RelativeLayout>

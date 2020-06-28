@@ -2,6 +2,7 @@ package com.example.fitness2020.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -84,7 +85,7 @@ public class SubscriptionCardsAdapter extends RecyclerView.Adapter<SubscriptionC
         ImageView imageView;
         //define your data types
         TextView question,answer;
-        TextView packName,packPrice;
+        TextView packName,packPrice,packBasePrice,packFeatures;
 
         public SubscriptionCardsAdapterVH(@NonNull View itemView) {
             super(itemView);
@@ -97,6 +98,9 @@ public class SubscriptionCardsAdapter extends RecyclerView.Adapter<SubscriptionC
                 imageView=itemView.findViewById(R.id.rv_item_trailcard_imgvw);
             else {
                 packName=itemView.findViewById(R.id.pack_name);
+                packBasePrice = itemView.findViewById(R.id.pack_base_cost);
+                packFeatures = itemView.findViewById(R.id.membership_item_features);
+                packBasePrice.setPaintFlags(packBasePrice.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
                 packPrice=itemView.findViewById(R.id.pack_cost);
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -125,6 +129,8 @@ public class SubscriptionCardsAdapter extends RecyclerView.Adapter<SubscriptionC
         {
             packName.setText(packModel.getPackName());
             packPrice.setText("₹"+Integer.toString(packModel.getPackPrice()));
+            packBasePrice.setText("₹"+Integer.toString(packModel.getBasePrice()));
+            packFeatures.setText(packModel.getFeatues());
         }
     }
 }

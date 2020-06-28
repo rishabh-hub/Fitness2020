@@ -3,13 +3,9 @@
     android:shape="rectangle">
 
     <solid
-        android:color="@color/bookBtn"
+        android:color="@color/white"
         />
-    <gradient
-        android:startColor="@color/bookBtn"
-        android:endColor="@color/colorAccent"
-        android:angle="45"
-        />
+
 
     <corners
         android:radius="10sp"
