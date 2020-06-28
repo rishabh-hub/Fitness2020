@@ -1,11 +1,13 @@
 package com.example.fitness2020.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +19,7 @@ import com.example.fitness2020.Adapters.FitnessVideoAdapter;
 import com.example.fitness2020.Adapters.HomePageClientAdapter;
 import com.example.fitness2020.Adapters.HomePopularRVAdapter;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
+import com.example.fitness2020.FitAtWorkForm;
 import com.example.fitness2020.Models.ClientModel;
 import com.example.fitness2020.Models.PopularHorizontalRvModel;
 import com.example.fitness2020.Models.PopularRvModel;
@@ -37,6 +40,7 @@ public class HomeFitnessatWorkTab extends Fragment {
    ArrayList<VideoModel> videoModels = new ArrayList<>();
    ArrayList<ReviewModel> reviews = new ArrayList<>();
    ArrayList<ClientModel> clients = new ArrayList<>();
+   TextView getStartedButton;
 
     public HomeFitnessatWorkTab() {
     }
@@ -54,6 +58,7 @@ public class HomeFitnessatWorkTab extends Fragment {
         clientRV = view.findViewById(R.id.fitness_at_work_clients_rv);
         videoRV = view.findViewById(R.id.home_fitness_at_work_video_rv);
         reviewRV = view.findViewById(R.id.fitness_at_work_reviews_rv);
+        getStartedButton=view.findViewById(R.id.fitness_at_work_feature_4_text);
 
         reviewRV.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
         clientRV.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL,false));
@@ -77,6 +82,14 @@ public class HomeFitnessatWorkTab extends Fragment {
         reviewRV.setAdapter(reviewAdapter);
         clientRV.setAdapter(clientAdapter);
         videoRV.setAdapter(videoAdapter);
+
+        getStartedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent formIntent = new Intent(view.getContext(), FitAtWorkForm.class);
+                startActivity(formIntent);
+            }
+        });
 
 //        popularRvModels=new ArrayList<>(3);
 //        trendingRvModels=new ArrayList<TrendingRvModel>(3);
