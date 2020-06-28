@@ -1,6 +1,8 @@
 package com.example.fitness2020.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,19 +81,70 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
     public class VideosAdapterRvVH extends RecyclerView.ViewHolder
     {
         ImageView fitnessPassFragmentVideos,fitnessPassVideos,studioVideos,dailyWorkoutVideos,corporateVideos;
-        public VideosAdapterRvVH(@NonNull View itemView) {
+        public VideosAdapterRvVH(@NonNull final View itemView) {
             super(itemView);
 
-            if (code==0)
-                fitnessPassFragmentVideos=itemView.findViewById(R.id.video_large_item);
-            else if (code==1)
-                fitnessPassVideos=itemView.findViewById(R.id.video_large_item);
-            else if (code==2)
-                dailyWorkoutVideos=itemView.findViewById(R.id.home_fitness_at_work_video);
-            else if (code==3)
-                studioVideos=itemView.findViewById(R.id.home_fitness_at_work_video);
-            else
+            if (code==0) {
+                fitnessPassFragmentVideos = itemView.findViewById(R.id.video_large_item);
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("https://www.facebook.com/687024224670147/videos/734474797300124"));
+                        intent.putExtra("force_fullscreen",true);
+                        itemView.getContext().startActivity(intent);
+                    }
+                });
+            }
+            else if (code==1) {
+                fitnessPassVideos = itemView.findViewById(R.id.video_large_item);
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("https://www.facebook.com/687024224670147/videos/734474797300124"));
+                        intent.putExtra("force_fullscreen", true);
+                        itemView.getContext().startActivity(intent);
+                    }
+                });
+            }
+            else if (code==2) {
+                dailyWorkoutVideos = itemView.findViewById(R.id.home_fitness_at_work_video);
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("https://www.facebook.com/687024224670147/videos/734474797300124"));
+                        intent.putExtra("force_fullscreen",true);
+                        itemView.getContext().startActivity(intent);
+                    }
+                });
+            }
+            else if (code==3) {
+                studioVideos = itemView.findViewById(R.id.home_fitness_at_work_video);
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("https://www.facebook.com/687024224670147/videos/734474797300124"));
+                        intent.putExtra("force_fullscreen",true);
+                        itemView.getContext().startActivity(intent);
+                    }
+                });
+            }
+            else{
                 corporateVideos=itemView.findViewById(R.id.home_fitness_at_work_video);
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("https://www.facebook.com/687024224670147/videos/734474797300124"));
+                        intent.putExtra("force_fullscreen",true);
+                        itemView.getContext().startActivity(intent);
+                    }
+                });
+            }
+
         }
 
         void populateFitnessPassFragment(VideoModel videoModel)
