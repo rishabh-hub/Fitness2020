@@ -75,7 +75,7 @@ public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<Fitnes
         TextView gymName,gymAddress,category,gymRating;
         ImageView bannerImageview;
         TextView bannerGymName;
-        TextView bannerGymCategory;
+        TextView bannerGymCategory,bannerGymRating;
         ImageView trainerImage;
         TextView trainerName;
 
@@ -93,6 +93,7 @@ public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<Fitnes
                 bannerImageview = itemView.findViewById(R.id.fitnesspass_rv_item_cardview1_imgvw);
                 bannerGymName=itemView.findViewById(R.id.fitnesspass_rv_item1_cardview_gym_name);
                 bannerGymCategory=itemView.findViewById(R.id.fitnesspass_rv_item1_cardview_category);
+                bannerGymRating=itemView.findViewById(R.id.live_workout_rating);
 //                bannerGymSchedule=itemView.findViewById(R.id.banner2_rv_item_cardview_gym_schedule);
             }
 
@@ -118,6 +119,7 @@ public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<Fitnes
             bannerImageview.setImageResource(fitnessFragmentFreeTrialModel.getImageId());
             bannerGymName.setText(fitnessFragmentFreeTrialModel.getGymName());
             bannerGymCategory.setText(fitnessFragmentFreeTrialModel.getCategory());
+            bannerGymRating.setText(fitnessFragmentFreeTrialModel.getRating());
         }
 
         public void populateTrainers(TopTrainersModel topTrainersModel) {

@@ -7,11 +7,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fitness2020.Adapters.DateTimeAdapter;
 import com.example.fitness2020.Models.DateModel;
@@ -20,7 +24,7 @@ import com.example.fitness2020.Models.TimeModel;
 import java.sql.Time;
 import java.util.ArrayList;
 
-public class GymBookingFinalPage extends AppCompatActivity {
+public class GymBookingFinalPage extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     TextView gymName,offeringName,offeringSubscription,netAmount;
     EditText promoCode,groupNum;
@@ -30,6 +34,7 @@ public class GymBookingFinalPage extends AppCompatActivity {
     ArrayList<TimeModel> timeModels;
     DateTimeAdapter timeAdapter,dateAdapter;
     ImageView backButton;
+    Spinner groupNo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +75,20 @@ public class GymBookingFinalPage extends AppCompatActivity {
             }
         });
 
+        populateGroupNoSpinner();
+
+        groupNo.setOnItemSelectedListener(this);
+    }
+
+    private void populateGroupNoSpinner() {
+        ArrayList<String> groupNoData=new ArrayList<>();
+        for (int i=1;i<=25;i++)
+        {
+            groupNoData.add(""+i);
+        }
+        ArrayAdapter<String> groupNoAdapter=new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,groupNoData);
+        groupNoAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        groupNo.setAdapter(groupNoAdapter);
     }
 
     void attachId()
@@ -84,6 +103,7 @@ public class GymBookingFinalPage extends AppCompatActivity {
         groupNum = findViewById(R.id.final_booking_page_gym_groupET);
         netAmount = findViewById(R.id.final_booking_page_gym_amount);
         backButton=findViewById(R.id.final_booking_page_back_btn);
+//        groupNo=findViewById(R.id.);
     }
 
     void addData()
@@ -93,6 +113,20 @@ public class GymBookingFinalPage extends AppCompatActivity {
             timeModels.add(new TimeModel("10:00-11:00"));
             dateModels.add(new DateModel("2 June"));
         }
+
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//        if(parent.getId()==R.id.)
+//        {
+//            Toast.makeText(this, "Selected "+parent.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+//        }
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
 
     }
 }

@@ -28,7 +28,6 @@ public class ProfileActivity extends AppCompatActivity implements  AdapterView.O
     EditText emailId,phoneNo,profileName,anniversary,dateOfBirth,age;
     Spinner gender;
     Button updateButton;
-
     Calendar calendar=Calendar.getInstance();
 
 

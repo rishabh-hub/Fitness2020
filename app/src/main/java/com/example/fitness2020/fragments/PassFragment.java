@@ -71,6 +71,7 @@ public class PassFragment extends Fragment {
     ArrayList<TrendingRvModel> imageModels;
     LinearLayout liveWorkoutViewMore;
 
+    Button buyFitnessPasssButton;
 
     public PassFragment() {
     }
@@ -170,5 +171,6 @@ public class PassFragment extends Fragment {
         clientRV = view.findViewById(R.id.fitness_at_work_clients_rv);
         liveWorkoutsRv=view.findViewById(R.id.pass_fragment_live_workout_rv);
         liveWorkoutViewMore=view.findViewById(R.id.pass_fragment_live_workout_viewmore);
+        buyFitnessPasssButton=view.findViewById(R.id.buy_fitness_pass_btn);
     }
 }
