@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
 import com.example.fitness2020.Adapters.FitnessFragmentFreeTrialAdapter;
@@ -26,6 +27,7 @@ public class TrialCardActivity extends AppCompatActivity {
     ArrayList<TrendingRvModel> imageModels;
     SubscriptionCardsAdapter imageRvAdapter;
     RelativeLayout membershipcard1,membershipcard2,membershipcard3,membershipcard4;
+    ImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +77,12 @@ public class TrialCardActivity extends AppCompatActivity {
 
         imageRvAdapter.notifyDataSetChanged();
 
-
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     void attachId()
@@ -85,6 +92,7 @@ public class TrialCardActivity extends AppCompatActivity {
         membershipcard2 = findViewById(R.id.trial_membership_2);
         membershipcard3 = findViewById(R.id.trial_membership_3);
         membershipcard4 = findViewById(R.id.trial_membership_4);
+        backButton=findViewById(R.id.memberships_page_back_btn);
     }
 
     void addData()
