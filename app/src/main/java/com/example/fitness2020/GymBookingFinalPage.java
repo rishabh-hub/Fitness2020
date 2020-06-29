@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.example.fitness2020.Adapters.DateTimeAdapter;
 import com.example.fitness2020.Models.DateModel;
 import com.example.fitness2020.Models.TimeModel;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.sql.Time;
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public class GymBookingFinalPage extends AppCompatActivity implements AdapterVie
 
     TextView gymName,offeringName,offeringSubscription,netAmount;
     EditText promoCode;
+    TextInputLayout promo;
     Button payButton;
     RecyclerView dateRv,timeRv;
     ArrayList<DateModel> dateModels;
@@ -42,6 +44,16 @@ public class GymBookingFinalPage extends AppCompatActivity implements AdapterVie
         setContentView(R.layout.activity_gym_booking_final_page);
 
         attachId();
+
+        promo.setEndIconOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                promo.clearFocus();
+                promoCode.clearFocus();
+                promoCode.setText("");
+                
+            }
+        });
 
         dateRv.setLayoutManager(new LinearLayoutManager(GymBookingFinalPage.this,LinearLayoutManager.HORIZONTAL,false));
         timeRv.setLayoutManager(new LinearLayoutManager(GymBookingFinalPage.this,LinearLayoutManager.HORIZONTAL,false));
@@ -104,6 +116,7 @@ public class GymBookingFinalPage extends AppCompatActivity implements AdapterVie
         netAmount = findViewById(R.id.final_booking_page_gym_amount);
         backButton=findViewById(R.id.final_booking_page_back_btn);
         groupNo=findViewById(R.id.squad_spinner);
+        promo = findViewById(R.id.promo_layout);
     }
 
     void addData()
