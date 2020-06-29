@@ -9,6 +9,7 @@
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="10dp"
         android:elevation="8dp"
         android:id="@+id/login_slider_tab_layout"
@@ -16,9 +17,8 @@
         app:tabIndicatorGravity="center"
         app:tabIndicator="@drawable/selected_dot"
         app:tabGravity="center"
+        android:layout_marginBottom="40dp"
         app:tabBackground="@drawable/tab_selector"
-        android:layout_alignParentTop="true"
-        app:tabIndicatorColor="@color/colorPrimary"
         >
 
         <com.google.android.material.tabs.TabItem
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:fontFamily="@font/metropolismedium"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/primaryBlue"
             android:textAlignment="center"
             android:text="Connect to Fitness 2020"/>
         <TextView
@@ -77,7 +77,7 @@
             android:layout_height="1dp"
             android:layout_marginVertical="5dp"
             android:layout_marginHorizontal="10dp"
-            android:background="@color/colorPrimary"/>
+            android:background="@color/primaryBlue"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -101,16 +101,7 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="55dp"
-        android:textColor="#fff"
-        android:text="Or Login via fb/email"
-        android:textSize="17sp"
-        android:layout_marginLeft="40dp"
-        android:id="@+id/login_with_id_btn"/>
+
 
 
 

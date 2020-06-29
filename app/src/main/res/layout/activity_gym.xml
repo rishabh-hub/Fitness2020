@@ -10,7 +10,7 @@
     tools:context=".GymActivity">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:background="@color/primaryBlue"
         android:elevation="10dp"
         android:id="@+id/gym_activity_container"
@@ -59,16 +59,17 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/gym_tab_name"
-                android:fontFamily="@font/metropolisbold"
+                android:fontFamily="@font/metropolisblack"
                 android:textColor="@color/primaryBlue"
                 android:textSize="20sp"
+                android:padding="8dp"
                 android:text="Krav Maga Global"
                 android:layout_toLeftOf="@id/gym_map_btn"
                 android:paddingTop="5dp"
                 android:paddingHorizontal="10dp"/>
             <ImageButton
                 android:layout_width="30dp"
-                android:layout_height="24dp"
+                android:layout_height="30dp"
                 android:background= "@drawable/ic_location"
                 android:layout_alignBottom="@id/gym_tab_name"
                 android:paddingTop="15dp"
@@ -84,7 +85,7 @@
                 android:textSize="13sp"
                 android:text="Silver Sunshine, 101, 9th Rd, Ram Krishna Nagar, Khar West, Mumbai, Maharashtra 400052"
                 android:layout_below="@id/gym_tab_name"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginHorizontal="10dp"
                 />
             <Button
@@ -98,7 +99,7 @@
                 android:textSize="8sp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="3dp"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="8dp"/>
 
             <ScrollView
                 android:id="@+id/rv_container"
@@ -113,8 +114,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/gym_more_address_btn"
-                    android:paddingHorizontal="10dp"
-                    android:layout_marginTop="3dp"
+                    android:paddingHorizontal="5dp"
+                    android:layout_marginTop="5dp"
                     android:orientation="horizontal" />
             </ScrollView>
             </RelativeLayout>
@@ -156,7 +157,7 @@
                 android:textSize="13sp"
                 android:text="Krav Maga Global is headed by Master Eyal Yanilov, the right hand student of the creator of the Krav Maga system Imi Litchenfeld. As the Krav Maga system came of age and the system rapidly spread across the world through an ever increasing number of schools, largely due to the continuous"
                 android:layout_below="@id/gym_tab_desc_head"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="8dp"
                 android:maxLines="4"
                 android:layout_marginHorizontal="10dp"
                 />
@@ -170,7 +171,7 @@
                 android:layout_below="@id/gym_tab_desc"
                 android:textSize="8sp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="8dp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -202,7 +203,7 @@
                 android:textSize="13sp"
                 android:text="1. First thing\n2. Second Thing"
                 android:layout_below="@id/gym_tab_ttr_head"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="8dp"
                 android:maxLines="4"
                 android:layout_marginHorizontal="10dp"
                 />
@@ -217,7 +218,7 @@
                 android:textSize="8sp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="8dp"
                 />
             </LinearLayout>
 <!--            <TextView-->
@@ -259,7 +260,7 @@
                     android:textSize="13sp"
                     android:text="Get 1 complementary class at Krav Maga Global"
                     android:layout_below="@id/gym_tab_pass_head"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="8dp"
                     android:textAlignment="center"
                     android:maxLines="4"
                     android:layout_marginHorizontal="10dp"
@@ -305,7 +306,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/gym_tab_videos_rv"
-                android:layout_marginVertical="5dp"
+                android:layout_marginVertical="8dp"
                 android:layout_below="@id/gym_tab_video_head"
                 android:orientation="horizontal"
                 />
@@ -342,7 +343,7 @@
                 android:id="@+id/gym_tab_reviews_rv"
                 android:layout_below="@+id/gym_tab_reviews"
                 android:orientation="horizontal"
-                android:layout_marginVertical="5dp"
+                android:layout_marginVertical="8dp"
                 />
             </LinearLayout>
 

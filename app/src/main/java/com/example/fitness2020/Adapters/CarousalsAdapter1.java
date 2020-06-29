@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -80,9 +81,10 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
     public class CarouslasAdapter1VH extends RecyclerView.ViewHolder
     {
         ImageView partnersImage,voucherImage,webinarImage;
-        TextView webinarHead,webinarTiming,webinarLevel,webinarActivity,voucherTheme,voucherCompany, noOfCoupons,voucherValidity,voucherPrice;
+        TextView webinarHead,webinarTiming,webinarLevel,webinarActivity,voucherTheme,voucherCompany, noOfCoupons,voucherValidity,voucherPrice,webinarRating;
         Button webinarBookBtn;
         RelativeLayout card;
+        LinearLayout rating;
 
         public CarouslasAdapter1VH(@NonNull View itemView) {
             super(itemView);
@@ -95,6 +97,8 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
                 webinarActivity=itemView.findViewById(R.id.webinar_activities);
                 card = itemView.findViewById(R.id.card);
                 webinarBookBtn = itemView.findViewById(R.id.webinar_book_btn);
+                webinarRating = itemView.findViewById(R.id.webinar_rating);
+                rating = itemView.findViewById(R.id.webinar_rating_linlay);
             }
 
             else if (code==1)
@@ -117,6 +121,7 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
         {
             if(code2==1)
                { webinarImage.setVisibility(View.GONE);
+               rating.setVisibility(View.GONE);
                card.setBackground(itemView.getContext().getDrawable(R.color.white));
                webinarHead.setTextColor(itemView.getContext().getResources().getColor(R.color.primaryBlue));
                webinarTiming.setTextColor(itemView.getContext().getResources().getColor(R.color.colorPrimaryDark));
@@ -136,6 +141,7 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
                 webinarBookBtn.setBackgroundTintList(itemView.getContext().getResources().getColorStateList(R.color.primaryBlue));
                 webinarBookBtn.setTextColor(itemView.getContext().getResources().getColor(R.color.white));
             }
+            webinarRating.setText(webinarModel.getRating());
             webinarActivity.setText(webinarModel.getActivity());
             webinarTiming.setText(webinarModel.getTiming());
             webinarHead.setText(webinarModel.getHeader());

@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:fillViewport="true"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:theme="@style/Theme.MaterialComponents"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".GymBookingFinalPage">
-
+    android:layout_width="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -44,6 +33,25 @@
 
     </RelativeLayout>
 
+
+
+    <ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+        android:layout_below="@id/gym_internal_activity_tlbr_rellay"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:theme="@style/Theme.MaterialComponents"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".GymBookingFinalPage">
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +59,7 @@
             android:text="Activity:"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_below="@id/gym_internal_activity_tlbr_rellay"
+            android:layout_alignParentTop="true"
             android:id="@+id/activity"
             android:fontFamily="@font/metropolisbold"
             android:textSize="17sp"
@@ -63,7 +71,7 @@
             android:text="Yoga"
             android:fontFamily="@font/metropolisbold"
             android:layout_marginTop="10dp"
-            android:layout_below="@id/gym_internal_activity_tlbr_rellay"
+            android:layout_alignParentTop="true"
             android:layout_toRightOf="@id/activity"
             android:id="@+id/final_booking_page_gym_activity"
             android:textSize="17sp"
@@ -199,17 +207,18 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:background="@color/webGray"
+        android:background="@drawable/bg_textview"
         app:boxStrokeColor="@color/primaryBlue"
         app:boxStrokeWidth="2dp"
         app:endIconMode="clear_text"
+        android:layout_marginHorizontal="40dp"
         android:gravity="center"
+        android:layout_marginTop="20dp"
         app:endIconTint="@color/primaryBlue"
         android:textAlignment="center"
         android:layout_below="@id/squad"
-        android:paddingTop="5dp"
+        android:paddingVertical="5dp"
         app:hintTextColor="@color/primaryBlue"
         android:id="@+id/promo_layout"
         android:textColorHint="@color/primaryBlue"
@@ -219,15 +228,15 @@
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:hint="Promo Code"
         android:gravity="center"
         android:layout_below="@id/squad"
         android:layout_marginHorizontal="20dp"
         android:textAlignment="center"
-        android:background="@color/webGray"
+        android:background="#00F3F4F9"
         android:paddingVertical="7dp"
-        android:layout_marginVertical="10dp"
+        android:inputType="number"
         android:id="@+id/final_booking_page_gym_promoET"
         android:textStyle="bold"
         android:textSize="14sp"
@@ -274,8 +283,10 @@
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <RadioButton
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primaryBlue"
+            >
+            <com.google.android.material.radiobutton.MaterialRadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:text="Free Trial"
@@ -284,7 +295,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/metropolisbold"
                 android:id="@+id/free_trial_radio_btn"/>
-            <RadioButton
+            <com.google.android.material.radiobutton.MaterialRadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:text="Unlimited Workout"
@@ -293,7 +304,7 @@
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/metropolisbold"
                 android:id="@+id/unlimited_workout_radio_btn"/>
-            <RadioButton
+            <com.google.android.material.radiobutton.MaterialRadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:text="Points"
@@ -302,7 +313,7 @@
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/metropolisbold"
                 android:id="@+id/points_radio_btn"/>
-            <RadioButton
+            <com.google.android.material.radiobutton.MaterialRadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:text="Cash"
@@ -330,7 +341,9 @@
         android:text="Net Amount: "
         android:layout_below="@id/line6"
         android:id="@+id/amount"
+        android:gravity="center"
         android:layout_marginStart="10dp"
+        android:layout_alignBottom="@id/final_booking_page_gym_amount"
         android:fontFamily="@font/metropolisblack"
         android:textSize="17sp"
         android:textColor="@color/colorPrimaryDark"/>
@@ -350,7 +363,7 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:background="@drawable/bg_button"
         android:layout_below="@id/amount"
         android:layout_marginVertical="20dp"
@@ -360,16 +373,6 @@
         android:elevation="12dp"
         android:id="@+id/final_booking_page_gym_book_btn"/>
 
-
-
-
-
-
-
-
-
-
-
-
 </RelativeLayout>
 </ScrollView>
+</RelativeLayout>

@@ -5,15 +5,25 @@ public class WebinarModel {
     private String header;
     private String timing;
     private String level;
+    private String rating;
     private String activity;
     private int webinarImageUrl;
 
-    public WebinarModel(String header, String timing, String level, String activity,int webinarImageUrl) {
+    public WebinarModel(String header, String timing, String level, String activity,int webinarImageUrl,String rating) {
         this.header = header;
         this.timing = timing;
         this.level = level;
         this.activity = activity;
         this.webinarImageUrl=webinarImageUrl;
+        this.rating = rating;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 
     public String getHeader() {

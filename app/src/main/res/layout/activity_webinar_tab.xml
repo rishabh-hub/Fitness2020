@@ -11,9 +11,9 @@
         android:id="@+id/webinar_appbar"
         android:background="@color/primaryBlue"
         >
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_margin="10dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
@@ -27,12 +27,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
+                android:textSize="20sp"
+                android:gravity="center"
                 android:layout_marginStart="15dp"
                 android:textColor="@color/white"
                 android:text="Webinars"/>
 
-        </LinearLayout>
+        </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,13 +44,16 @@
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
                 android:background="@drawable/ic_left_arrow"
+                android:layout_marginStart="8dp"
                 android:backgroundTint="@color/white"
                 android:layout_marginVertical="2dp"
                 android:id="@+id/webinar_internal_date_back_btn"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="fill_parent"
                 android:layout_height="30dp"
+                android:paddingHorizontal="5dp"
                 android:layout_marginVertical="2dp"
                 android:layout_centerVertical="true"
                 android:id="@+id/webinar_date_selected_rv"
@@ -59,6 +63,8 @@
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:layout_marginVertical="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="8dp"
                 android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/ic_right_arrow"

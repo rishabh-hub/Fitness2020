@@ -15,8 +15,40 @@
         android:layout_height="match_parent"
         android:id="@+id/card"
         android:background="#00004768">
+        <LinearLayout
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:elevation="4dp"
+            android:layout_margin="5dp"
+            android:id="@+id/webinar_rating_linlay"
+            android:background="@drawable/bg_button"
+            >
 
-    <ImageView
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star_black_12dp"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.5"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="10sp"
+                android:padding="1dp"
+                android:id="@+id/webinar_rating"
+                />
+        </LinearLayout>
+
+
+        <ImageView
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="#FFFFFF"

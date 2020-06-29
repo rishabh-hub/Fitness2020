@@ -103,7 +103,7 @@
         android:background="@drawable/bg_button"
         android:backgroundTint="@color/primaryBlue"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:textSize="17sp"
         android:fontFamily="@font/metropolisbold"
         android:textColor="@color/white"
