@@ -89,13 +89,23 @@
                 android:layout_marginHorizontal="10dp"
                 />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/address_container"
+                    android:layout_below="@id/gym_tab_address">
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:layout_below="@id/gym_tab_address"
                     android:id="@+id/gym_address_rv"
+                    android:layoutAnimation="@anim/layout_animation"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
                     />
+
+                </LinearLayout>
 
 
             <Button
@@ -105,7 +115,7 @@
                 android:background="@drawable/bg_textview"
                 android:textColor="@color/primaryBlue"
                 android:id="@+id/gym_more_address_btn"
-                android:layout_below="@id/gym_address_rv"
+                android:layout_below="@id/address_container"
                 android:textSize="8sp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="3dp"
@@ -211,7 +221,7 @@
                 android:fontFamily="@font/metropolismedium"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="13sp"
-                android:text="1. First thing\n2. Second Thing"
+                android:text="1. First thing\n2. Second Thing\n3.Third thing\n4. Fourth thing\n5. Fifth Thing"
                 android:layout_below="@id/gym_tab_ttr_head"
                 android:layout_marginTop="8dp"
                 android:maxLines="4"

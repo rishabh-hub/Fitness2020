@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import android.animation.ObjectAnimator;
 import android.app.ActivityManager;
 import android.content.Intent;
 import android.net.Uri;
@@ -13,6 +14,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,12 +47,18 @@ public class GymActivity extends AppCompatActivity {
     GymAdapter gymVideosAdapter,gymActivityAdapter;
 
     Button gymBookButton;
+    View view;
     ImageButton mapsButton;
     TextView gymAddress;
     public CustomDialogClass customDialogClass,customDialogClass1;
-    private String address;
+    private Boolean rvIsOpen = false;
 
     ImageButton backButton;
+    LinearLayout addressContainer;
+
+    TextView desc,thingsToRemember;
+    TextView descViewMore,ttrViewMore,addressViewMore;
+
     RecyclerView gymAddressViewMore;
     GymAdapter addressAdapter;
     ArrayList<AddressModel> addressModels;
@@ -70,6 +78,8 @@ public class GymActivity extends AppCompatActivity {
         gymActivityRv.setLayoutManager(new LinearLayoutManager(GymActivity.this,LinearLayoutManager.HORIZONTAL,false));
         gymAddressViewMore.setLayoutManager(new LinearLayoutManager(GymActivity.this,LinearLayoutManager.VERTICAL,false));
 
+
+
         imageModels=new ArrayList<>(3);
         videoModels=new ArrayList<>(3);
         gymActivitiesModels=new ArrayList<>(3);
@@ -84,19 +94,17 @@ public class GymActivity extends AppCompatActivity {
         gymActivityAdapter=new GymAdapter(GymActivity.this,imageModels,3,videoModels,gymActivitiesModels);
         addressAdapter=new GymAdapter(GymActivity.this,7,facilityModels,offeringModels,reviewModels,addressModels);
 
+
         reviewRv.setAdapter(reviewAdapter);
         gymPhotosRv.setAdapter(gymPhotosAdapter);
         gymVideosRv.setAdapter(gymVideosAdapter);
         gymActivityRv.setAdapter(gymActivityAdapter);
-        gymAddressViewMore.setAdapter(addressAdapter);
-
 
 
         reviewAdapter.notifyDataSetChanged();
         gymPhotosAdapter.notifyDataSetChanged();
         gymVideosAdapter.notifyDataSetChanged();
         gymActivityAdapter.notifyDataSetChanged();
-        addressAdapter.notifyDataSetChanged();
 
         gymBookButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,6 +134,27 @@ public class GymActivity extends AppCompatActivity {
             }
         });
 
+        addressViewMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cycleRVViewExpansion(gymAddressViewMore,addressViewMore);
+
+            }
+        });
+
+        ttrViewMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cycleTextViewExpansion(thingsToRemember,ttrViewMore);
+            }
+        });
+
+        descViewMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cycleTextViewExpansion(desc,descViewMore);
+            }
+        });
     }
 
     void attachId()
@@ -140,7 +169,13 @@ public class GymActivity extends AppCompatActivity {
         gymAddress=findViewById(R.id.gym_tab_address);
         backButton=findViewById(R.id.gym_activity_back_btn);
         gymAddressViewMore=findViewById(R.id.gym_address_rv);
-    }
+        addressViewMore = findViewById(R.id.gym_more_address_btn);
+        descViewMore = findViewById(R.id.gym_more_desc_btn);
+        ttrViewMore = findViewById(R.id.gym_more_ttr_btn);
+        desc = findViewById(R.id.gym_tab_desc);
+        thingsToRemember = findViewById(R.id.gym_tab_ttr);
+        addressContainer = findViewById(R.id.address_container);
+   }
 
     void addData()
     {
@@ -157,6 +192,33 @@ public class GymActivity extends AppCompatActivity {
         for(int i=0;i<=8;i++)
             gymActivitiesModels.add(new GymActivitiesModel("Crossfit"));
 
+    }
+
+    private void cycleTextViewExpansion(TextView tv,TextView txt){
+        int collapsedMaxLines = 4;
+        String text = tv.getMaxLines()==collapsedMaxLines?"Less":"More";
+        ObjectAnimator animation = ObjectAnimator.ofInt(tv, "maxLines", tv.getMaxLines() == collapsedMaxLines? tv.getLineCount() : collapsedMaxLines);
+        txt.setText(text);
+        animation.setDuration(150).start();
+    }
+    private void cycleRVViewExpansion(RecyclerView rv,TextView txt){
+        String less = "less";
+        String more = "more";
+        if(!rvIsOpen)
+        {
+            gymAddress.setVisibility(View.GONE);
+            rv.setVisibility(View.VISIBLE);
+            rv.setAdapter(addressAdapter);
+            rv.scheduleLayoutAnimation();
+            addressAdapter.notifyDataSetChanged();
+            txt.setText("Less");
+        }
+        else {
+            gymAddress.setVisibility(View.VISIBLE);
+            txt.setText("More");
+            rv.setVisibility(View.GONE);
+        }
+        rvIsOpen = !rvIsOpen;
     }
 
 }
