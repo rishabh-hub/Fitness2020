@@ -31,7 +31,7 @@
             android:text="Fitness@99"
             android:layout_marginLeft="30dp"
             android:fontFamily="@font/metropolisbold"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:id="@+id/collections_internal_main_head"/>
     </androidx.appcompat.widget.Toolbar>
 
