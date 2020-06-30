@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -41,6 +42,7 @@ import com.example.fitness2020.PopularActivity;
 import com.example.fitness2020.R;
 import com.example.fitness2020.VideosActivity;
 
+import java.security.spec.PSSParameterSpec;
 import java.util.ArrayList;
 
 public class HomeAtTheStudioTab extends Fragment {
@@ -76,6 +78,7 @@ public class HomeAtTheStudioTab extends Fragment {
     TextView vouchersViewMoreButton,popularViewMoreButton,videosViewMoreButton;
     NewCorrectionAdapter newCorrectionAdapter;
     ArrayList<TrendingRvModel> trendingRvModels,webinarVideos;
+    CardView getFitNow;
 
     public HomeAtTheStudioTab() {
     }
@@ -108,6 +111,7 @@ public class HomeAtTheStudioTab extends Fragment {
         popularViewMoreButton=view.findViewById(R.id.home_fragment_explore_tab_more_popular_btn);
         vouchersViewMoreButton=view.findViewById(R.id.home_fragment_explore_tab_more_voucher_btn);
         videosViewMoreButton=view.findViewById(R.id.home_fragment_explore_tab_more_videos_btn);
+        getFitNow=view.findViewById(R.id.popular_gym_start_card);
 
         populateFilterSpinner();
 
@@ -219,6 +223,14 @@ public class HomeAtTheStudioTab extends Fragment {
             public void onClick(View v) {
                 Intent videoIntent=new Intent(view.getContext(), VideosActivity.class);
                 startActivity(videoIntent);
+            }
+        });
+
+        getFitNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.getInstance().loadFragment(new PassFragment());
+                MainActivity.getInstance().bottomNavigationView.setSelectedItemId(R.id.fitness_pass);
             }
         });
 

@@ -35,14 +35,16 @@ public class MainActivity extends AppCompatActivity{
     FrameLayout frameLayout;
     ImageView userImage;
     DrawerLayout drawerLayout;
-    BottomNavigationView bottomNavigationView;
+    public BottomNavigationView bottomNavigationView;
     TextView location;
+    private static  MainActivity instance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        instance=this;
         attachId();
 
         if (getIntent().getIntExtra("code",0)==1)
@@ -124,7 +126,7 @@ public class MainActivity extends AppCompatActivity{
 
 
 
-    void loadFragment(Fragment fragment)
+    public void loadFragment(Fragment fragment)
     {
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout,fragment);
@@ -148,5 +150,9 @@ public class MainActivity extends AppCompatActivity{
         Intent intent = new Intent(MainActivity.this,ChangePasswordActivity.class);
         startActivity(intent);
         drawerLayout.closeDrawer(Gravity.RIGHT);
+    }
+
+    public static MainActivity getInstance(){
+        return instance;
     }
 }
