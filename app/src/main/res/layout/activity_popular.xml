@@ -32,7 +32,7 @@
             android:layout_marginLeft="30dp"
             android:fontFamily="@font/metropolisbold"
             android:textSize="20sp"
-            android:id="@+id/top_fitness_centres_main_head"/>
+            android:id="@+id/popular_page_main_head"/>
     </androidx.appcompat.widget.Toolbar>
 
 

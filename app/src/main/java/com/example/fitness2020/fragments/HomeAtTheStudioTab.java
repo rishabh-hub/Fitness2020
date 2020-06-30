@@ -37,6 +37,7 @@ import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.Models.VouchersModel;
 import com.example.fitness2020.Models.WebinarModel;
+import com.example.fitness2020.PopularActivity;
 import com.example.fitness2020.R;
 import com.example.fitness2020.VideosActivity;
 
@@ -199,7 +200,8 @@ public class HomeAtTheStudioTab extends Fragment {
         popularViewMoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent popularIntent=new Intent(view.getContext(),);
+                Intent popularIntent=new Intent(view.getContext(), PopularActivity.class);
+                startActivity(popularIntent);
             }
         });
 
