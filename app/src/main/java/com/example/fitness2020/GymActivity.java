@@ -41,7 +41,6 @@ public class GymActivity extends AppCompatActivity {
     ArrayList<TrendingRvModel> imageModels;
     ArrayList<VideoModel> videoModels;
     ArrayList<GymActivitiesModel> gymActivitiesModels;
-    ArrayList<AddressModel> addressModels;
     GymAdapter gymPhotosAdapter;
     GymAdapter gymVideosAdapter,gymActivityAdapter;
 
@@ -52,7 +51,9 @@ public class GymActivity extends AppCompatActivity {
     private String address;
 
     ImageButton backButton;
-
+    RecyclerView gymAddressViewMore;
+    GymAdapter addressAdapter;
+    ArrayList<AddressModel> addressModels;
 
 
     @Override
@@ -67,12 +68,13 @@ public class GymActivity extends AppCompatActivity {
         gymPhotosRv.setLayoutManager(new LinearLayoutManager(GymActivity.this,LinearLayoutManager.HORIZONTAL,false));
         gymVideosRv.setLayoutManager(new LinearLayoutManager(GymActivity.this,LinearLayoutManager.HORIZONTAL,false));
         gymActivityRv.setLayoutManager(new LinearLayoutManager(GymActivity.this,LinearLayoutManager.HORIZONTAL,false));
-
+        gymAddressViewMore.setLayoutManager(new LinearLayoutManager(GymActivity.this,LinearLayoutManager.VERTICAL,false));
 
         imageModels=new ArrayList<>(3);
         videoModels=new ArrayList<>(3);
         gymActivitiesModels=new ArrayList<>(3);
         reviewModels=new ArrayList<>(3);
+        addressModels=new ArrayList<>(3);
 
         addData();
 
@@ -80,17 +82,21 @@ public class GymActivity extends AppCompatActivity {
         gymPhotosAdapter =new GymAdapter(GymActivity.this,imageModels,1,videoModels,gymActivitiesModels);
         gymVideosAdapter=new GymAdapter(GymActivity.this,imageModels,2,videoModels,gymActivitiesModels);
         gymActivityAdapter=new GymAdapter(GymActivity.this,imageModels,3,videoModels,gymActivitiesModels);
+        addressAdapter=new GymAdapter(GymActivity.this,7,facilityModels,offeringModels,reviewModels,addressModels);
 
         reviewRv.setAdapter(reviewAdapter);
         gymPhotosRv.setAdapter(gymPhotosAdapter);
         gymVideosRv.setAdapter(gymVideosAdapter);
         gymActivityRv.setAdapter(gymActivityAdapter);
+        gymAddressViewMore.setAdapter(addressAdapter);
+
 
 
         reviewAdapter.notifyDataSetChanged();
         gymPhotosAdapter.notifyDataSetChanged();
         gymVideosAdapter.notifyDataSetChanged();
         gymActivityAdapter.notifyDataSetChanged();
+        addressAdapter.notifyDataSetChanged();
 
         gymBookButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,6 +139,7 @@ public class GymActivity extends AppCompatActivity {
         mapsButton=findViewById(R.id.gym_map_btn);
         gymAddress=findViewById(R.id.gym_tab_address);
         backButton=findViewById(R.id.gym_activity_back_btn);
+        gymAddressViewMore=findViewById(R.id.gym_address_rv);
     }
 
     void addData()
@@ -142,6 +149,8 @@ public class GymActivity extends AppCompatActivity {
             reviewModels.add(new GymReviewModel("Rishabh Singh","Lukhnow Fitness Center","4.5","21//07/202","Some long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long review"));
             imageModels.add(new TrendingRvModel(R.drawable.gym_dummy));
             videoModels.add(new VideoModel(R.drawable.gym_video_dummy));
+            addressModels.add(new AddressModel("Silver Sunshine, 101, 9th Rd, Ram Krishna Nagar, Khar West, Mumbai, Maharashtra 400052"));
+
         }
 
 
