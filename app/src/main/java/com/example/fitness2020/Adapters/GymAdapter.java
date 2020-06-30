@@ -132,11 +132,12 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
             return addressModels.size();
     }
 
-    private void cycleTextViewExpansion(TextView tv){
-        int collapsedMaxLines = 3;
-        ObjectAnimator animation = ObjectAnimator.ofInt(tv, "maxLines",
-                tv.getMaxLines() == collapsedMaxLines? tv.getLineCount() : collapsedMaxLines);
-        animation.setDuration(200).start();
+    private void cycleTextViewExpansion(TextView tv,TextView txt){
+        int collapsedMaxLines = 4;
+        String text = tv.getMaxLines()==collapsedMaxLines?"View Less":"View More";
+        ObjectAnimator animation = ObjectAnimator.ofInt(tv, "maxLines", tv.getMaxLines() == collapsedMaxLines? tv.getLineCount() : collapsedMaxLines);
+        txt.setText(text);
+        animation.setDuration(150).start();
     }
 
     public class GymAdapterVH extends RecyclerView.ViewHolder
@@ -198,7 +199,7 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
                 reviewReadMore.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        cycleTextViewExpansion(reviewDesc);
+                        cycleTextViewExpansion(reviewDesc,reviewReadMore);
                     }
                 });
             }

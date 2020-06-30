@@ -122,7 +122,7 @@
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:fontFamily="@font/metropolisbold"
-            android:text="Read More"
+            android:text="View More"
             android:layout_below="@id/review_gym_review"
             android:layout_marginStart="10dp"
             android:textColor="@color/primaryBlue"
