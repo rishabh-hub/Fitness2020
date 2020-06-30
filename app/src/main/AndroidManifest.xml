@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TopFitnessCentres"></activity>
+        <activity android:name=".PopularActivity"></activity>
+        <activity android:name=".TopFitnessCentres" />
         <activity android:name=".FitAtWorkForm" />
         <activity android:name=".NumberVerificationActivity" /> <!-- <activity android:name=".fragments.BookingLiveTab" /> -->
         <activity android:name=".EventsInternalActivity" />
