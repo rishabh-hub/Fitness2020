@@ -90,7 +90,7 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(Intent.ACTION_VIEW,
-                                Uri.parse("https://www.facebook.com/687024224670147/videos/734474797300124"));
+                                Uri.parse("https://youtu.be/N91yhOqCRQ0"));
                         intent.putExtra("force_fullscreen",true);
                         itemView.getContext().startActivity(intent);
                     }
@@ -102,7 +102,7 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(Intent.ACTION_VIEW,
-                                Uri.parse("https://www.facebook.com/687024224670147/videos/734474797300124"));
+                                Uri.parse("https://youtu.be/N91yhOqCRQ0"));
                         intent.putExtra("force_fullscreen", true);
                         itemView.getContext().startActivity(intent);
                     }
@@ -114,7 +114,7 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(Intent.ACTION_VIEW,
-                                Uri.parse("https://www.facebook.com/687024224670147/videos/734474797300124"));
+                                Uri.parse("https://youtu.be/N91yhOqCRQ0"));
                         intent.putExtra("force_fullscreen",true);
                         itemView.getContext().startActivity(intent);
                     }
@@ -126,7 +126,7 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(Intent.ACTION_VIEW,
-                                Uri.parse("https://www.facebook.com/687024224670147/videos/734474797300124"));
+                                Uri.parse("https://youtu.be/N91yhOqCRQ0"));
                         intent.putExtra("force_fullscreen",true);
                         itemView.getContext().startActivity(intent);
                     }
@@ -138,7 +138,7 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(Intent.ACTION_VIEW,
-                                Uri.parse("https://www.facebook.com/687024224670147/videos/734474797300124"));
+                                Uri.parse("https://youtu.be/N91yhOqCRQ0"));
                         intent.putExtra("force_fullscreen",true);
                         itemView.getContext().startActivity(intent);
                     }
