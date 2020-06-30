@@ -29,6 +29,7 @@ import com.example.fitness2020.Models.TopTrainersModel;
 import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.R;
+import com.example.fitness2020.TopFitnessCentres;
 import com.example.fitness2020.WebinarTabActivity;
 
 import java.util.ArrayList;
@@ -72,6 +73,7 @@ public class PassFragment extends Fragment {
     LinearLayout liveWorkoutViewMore;
 
     Button buyFitnessPasssButton;
+    LinearLayout topFitnessViewMore;
 
     public PassFragment() {
     }
@@ -135,6 +137,13 @@ public class PassFragment extends Fragment {
             }
         });
 
+        topFitnessViewMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent topFitnessIntent=new Intent(view.getContext(), TopFitnessCentres.class);
+                startActivity(topFitnessIntent);
+            }
+        });
         return view;
     }
 
@@ -172,5 +181,6 @@ public class PassFragment extends Fragment {
         liveWorkoutsRv=view.findViewById(R.id.pass_fragment_live_workout_rv);
         liveWorkoutViewMore=view.findViewById(R.id.pass_fragment_live_workout_viewmore);
         buyFitnessPasssButton=view.findViewById(R.id.buy_fitness_pass_btn);
+        topFitnessViewMore=view.findViewById(R.id.pass_fragment_top_fitness_view_more_container);
     }
 }

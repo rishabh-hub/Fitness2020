@@ -1,6 +1,7 @@
 package com.example.fitness2020.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,11 +11,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitness2020.GymActivity;
 import com.example.fitness2020.Models.FaqModel;
 import com.example.fitness2020.Models.FitnessFragmentFreeTrialModel;
 import com.example.fitness2020.Models.PopularHorizontalRvModel;
 import com.example.fitness2020.Models.TopTrainersModel;
 import com.example.fitness2020.R;
+import com.example.fitness2020.TopFitnessCentres;
 
 import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
@@ -49,9 +52,17 @@ public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<Fitnes
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FitnessFragmentFreeTrialVH holder, int position) {
-        if(code==1)
+    public void onBindViewHolder(@NonNull final FitnessFragmentFreeTrialVH holder, int position) {
+        if(code==1) {
             holder.populate(fitnessFragmentFreeTrialModels.get(position));
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent topFitnessIntent=new Intent(holder.itemView.getContext(), GymActivity.class);
+                    holder.itemView.getContext().startActivity(topFitnessIntent);
+                }
+            });
+        }
         else if (code==0)
             holder.populateBanner(fitnessPassModels.get(position));
         else
@@ -72,7 +83,7 @@ public class FitnessFragmentFreeTrialAdapter extends RecyclerView.Adapter<Fitnes
     public class FitnessFragmentFreeTrialVH extends RecyclerView.ViewHolder
     {
         ImageView imageView;
-        TextView gymName,gymAddress,category,gymRating;
+        TextView gymName,gymAddress,category,gymRating,gymViewMore;
         ImageView bannerImageview;
         TextView bannerGymName;
         TextView bannerGymCategory,bannerGymRating;

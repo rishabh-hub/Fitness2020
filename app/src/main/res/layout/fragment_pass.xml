@@ -231,6 +231,7 @@
                 android:gravity="center"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="5dp"
+                android:id="@+id/pass_fragment_top_fitness_view_more_container"
                 android:layout_toRightOf="@id/pass_fragment_top_fitness_rv"
                 android:orientation="horizontal">
                 <TextView
