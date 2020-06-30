@@ -70,10 +70,11 @@ public class PassFragment extends Fragment {
     CardView trialCard,workoutCard,validityCard;
 
     ArrayList<TrendingRvModel> imageModels;
-    LinearLayout liveWorkoutViewMore;
+    TextView liveWorkoutViewMore;
+
 
     Button buyFitnessPasssButton;
-    LinearLayout topFitnessViewMore;
+    TextView topFitnessViewMore;
 
     public PassFragment() {
     }
@@ -179,8 +180,8 @@ public class PassFragment extends Fragment {
         faqTv=view.findViewById(R.id.fitness_pass_faq_rv_heading);
         clientRV = view.findViewById(R.id.fitness_at_work_clients_rv);
         liveWorkoutsRv=view.findViewById(R.id.pass_fragment_live_workout_rv);
-        liveWorkoutViewMore=view.findViewById(R.id.pass_fragment_live_workout_viewmore);
+        liveWorkoutViewMore=view.findViewById(R.id.live_workout_rv_more_btn);
+        topFitnessViewMore = view.findViewById(R.id.top_fitness_rv_more_btn);
         buyFitnessPasssButton=view.findViewById(R.id.buy_fitness_pass_btn);
-        topFitnessViewMore=view.findViewById(R.id.pass_fragment_top_fitness_view_more_container);
     }
 }

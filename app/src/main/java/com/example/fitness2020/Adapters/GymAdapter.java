@@ -1,5 +1,6 @@
 package com.example.fitness2020.Adapters;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -131,6 +132,13 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
             return addressModels.size();
     }
 
+    private void cycleTextViewExpansion(TextView tv){
+        int collapsedMaxLines = 3;
+        ObjectAnimator animation = ObjectAnimator.ofInt(tv, "maxLines",
+                tv.getMaxLines() == collapsedMaxLines? tv.getLineCount() : collapsedMaxLines);
+        animation.setDuration(200).start();
+    }
+
     public class GymAdapterVH extends RecyclerView.ViewHolder
     {
         ImageView gymImage, gymVideo,reviewPersonImage;
@@ -176,14 +184,21 @@ public class GymAdapter extends RecyclerView.Adapter<GymAdapter.GymAdapterVH> {
                 reviewRating = itemView.findViewById(R.id.review_gym_rating);
                 reviewReadMore = itemView.findViewById(R.id.read_more_review_btn);
 
+//                reviewReadMore.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        reviewDialogClass=new ReviewDialogClass(itemView.getContext(),0);
+//                        reviewDialogClass.setCancelable(true);
+//                        reviewDialogClass.show();
+//
+//                        //Dialog box should open
+//                    }
+//                });
+
                 reviewReadMore.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        reviewDialogClass=new ReviewDialogClass(itemView.getContext(),0);
-                        reviewDialogClass.setCancelable(true);
-                        reviewDialogClass.show();
-
-                        //Dialog box should open
+                        cycleTextViewExpansion(reviewDesc);
                     }
                 });
             }
