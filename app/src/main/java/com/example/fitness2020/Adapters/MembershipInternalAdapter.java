@@ -1,5 +1,6 @@
 package com.example.fitness2020.Adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.fitness2020.Models.BenefitsModel;
 import com.example.fitness2020.Models.MembershipInternalModel;
 import com.example.fitness2020.R;
+import com.example.fitness2020.TrialCardActivity;
+import com.example.fitness2020.TrialMembershipBooking;
 
 import java.util.ArrayList;
 
@@ -32,6 +35,7 @@ public class MembershipInternalAdapter extends RecyclerView.Adapter<MembershipIn
         if (code==0)
         {
             return new MembershipInternalAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.membership_internal_rv_item_layout,parent,false));
+
         }
 
         else
@@ -41,11 +45,18 @@ public class MembershipInternalAdapter extends RecyclerView.Adapter<MembershipIn
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MembershipInternalAdapterRvVH holder, int position) {
+    public void onBindViewHolder(@NonNull final MembershipInternalAdapterRvVH holder, int position) {
 
         if (code==0)
         {
             holder.populateMemberships(membershipInternalModels.get(position));
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent(holder.itemView.getContext(), TrialMembershipBooking.class);
+                    holder.itemView.getContext().startActivity(intent);
+                }
+            });
         }
 
         else
