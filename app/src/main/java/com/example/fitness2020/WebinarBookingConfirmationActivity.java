@@ -10,5 +10,7 @@ public class WebinarBookingConfirmationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webinar_booking_confirmation);
+
+
     }
 }

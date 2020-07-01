@@ -26,6 +26,9 @@ public class WebinarBookDialog extends Dialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //check if the user has a fitness pass only then open the activity
+        //otherwise display the other dialog box.which has xml name webinar_not_a_member_dialog
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
