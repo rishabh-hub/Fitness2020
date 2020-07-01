@@ -90,6 +90,13 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent locationIntent=new Intent(MainActivity.this,LocationActivity.class);
+                startActivity(locationIntent);
+            }
+        });
 
     }
 
