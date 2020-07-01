@@ -19,7 +19,7 @@ public class WebinarBookDialog extends Dialog {
 
     public WebinarBookDialog(@NonNull Context context) {
         super(context);
-        context=this.context;
+        this.context=context;
     }
 
     @Override
@@ -30,9 +30,8 @@ public class WebinarBookDialog extends Dialog {
         //otherwise display the other dialog box.which has xml name webinar_not_a_member_dialog
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-        setContentView(R.layout.);
+        setContentView(R.layout.webinar_confirmation_dialog);
 
         attachId();
 
@@ -41,6 +40,7 @@ public class WebinarBookDialog extends Dialog {
             public void onClick(View v) {
                 Intent webinarBookingItent=new Intent(context,WebinarBookingConfirmationActivity.class);
                 context.startActivity(webinarBookingItent);
+                dismiss();
             }
         });
 
@@ -53,7 +53,7 @@ public class WebinarBookDialog extends Dialog {
     }
 
     private void attachId() {
-        yesButton=findViewById(R.id.);
-        noButton=findViewById(R.id.);
+        yesButton=findViewById(R.id.webinar_confirm_positive_btn);
+        noButton=findViewById(R.id.webinar_confirm_negative_btn);
     }
 }
