@@ -17,6 +17,7 @@ import com.example.fitness2020.Models.CompanyModel;
 import com.example.fitness2020.Models.VouchersModel;
 import com.example.fitness2020.Models.WebinarModel;
 import com.example.fitness2020.R;
+import com.example.fitness2020.WebinarBookDialog;
 
 import java.util.ArrayList;
 
@@ -86,7 +87,7 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
         RelativeLayout card;
         LinearLayout rating;
 
-        public CarouslasAdapter1VH(@NonNull View itemView) {
+        public CarouslasAdapter1VH(@NonNull final View itemView) {
             super(itemView);
             if (code==0)
             {
@@ -99,6 +100,15 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
                 webinarBookBtn = itemView.findViewById(R.id.webinar_book_btn);
                 webinarRating = itemView.findViewById(R.id.webinar_rating);
                 rating = itemView.findViewById(R.id.webinar_rating_linlay);
+
+                webinarBookBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        WebinarBookDialog webinarBookDialog=new WebinarBookDialog(itemView.getContext());
+                        webinarBookDialog.setCancelable(true);
+                        webinarBookDialog.show();
+                    }
+                });
             }
 
             else if (code==1)
