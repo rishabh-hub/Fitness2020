@@ -79,14 +79,14 @@
         android:layout_below="@id/number_page_tlbr_rellay"
         android:textColorHint="@color/primaryBlue"
         app:hintTextColor="@color/primaryBlue"
-        android:hint="Enter Phone Number"
+        android:hint="+91 xxxxxxxxxx"
         android:id="@+id/et"
         >
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint=" Enter Phone Number"
+            android:hint="+91 xxxxxxxxxx"
             android:singleLine="true"
             android:inputType="phone"
             android:textColor="@color/primaryBlue"
