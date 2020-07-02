@@ -87,7 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:id="@+id/profile_page_name_et"
-        android:hint="Ayush Sharma"
+        android:hint="Enter Full Name"
         android:fontFamily="@font/metropolisbold"
         android:inputType="textPersonName"
         android:layout_toRightOf="@id/tv_name"
@@ -96,7 +96,7 @@
         android:layout_alignStart="@id/profile_page_mobile_et"
         android:textSize="15sp"
         android:backgroundTint="#00FFFFFF"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColorHint="#737070"
         android:textColor="@color/primaryBlue"
         />
 
@@ -115,7 +115,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:id="@+id/profile_page_age_et"
-                android:hint="17"
+                android:hint="Enter Age"
                 android:fontFamily="@font/metropolisbold"
                 android:singleLine="true"
                 android:inputType="number"
@@ -125,7 +125,7 @@
                 android:layout_alignStart="@id/profile_page_mobile_et"
                 android:textSize="15sp"
                 android:backgroundTint="#00FFFFFF"
-                android:textColorHint="@color/colorPrimaryDark"
+                android:textColorHint="#737070"
                 android:textColor="@color/primaryBlue"
                 />
 
@@ -170,7 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:id="@+id/profile_page_mobile_et"
-                android:hint="+91 9318458933"
+                android:hint="+91 xxxxxxxxxx"
                 android:fontFamily="@font/metropolisbold"
                 android:singleLine="true"
                 android:inputType="phone"
@@ -180,7 +180,7 @@
                 android:layout_marginRight="10dp"
                 android:textSize="15sp"
                 android:backgroundTint="#00FFFFFF"
-                android:textColorHint="@color/colorPrimaryDark"
+                android:textColorHint="#737070"
                 android:textColor="@color/primaryBlue"
                 />
 
@@ -199,7 +199,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:id="@+id/profile_page_email_et"
-                android:hint="ayush@gmail.com"
+                android:hint="xxxxx@xxx.xx"
                 android:fontFamily="@font/metropolisbold"
                 android:singleLine="true"
                 android:inputType="textEmailAddress"
@@ -209,7 +209,7 @@
                 android:layout_alignStart="@id/profile_page_mobile_et"
                 android:textSize="15sp"
                 android:backgroundTint="#00FFFFFF"
-                android:textColorHint="@color/colorPrimaryDark"
+                android:textColorHint="#737070"
                 android:textColor="@color/primaryBlue"
                 />
             <TextView
@@ -227,7 +227,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:id="@+id/profile_page_bday_et"
-                android:hint="17/01/1945"
+                android:hint="dd/mm/yyyy"
                 android:fontFamily="@font/metropolisbold"
                 android:singleLine="true"
                 android:inputType="none"
@@ -238,7 +238,7 @@
                 android:layout_alignStart="@id/profile_page_mobile_et"
                 android:textSize="15sp"
                 android:backgroundTint="#00FFFFFF"
-                android:textColorHint="@color/colorPrimaryDark"
+                android:textColorHint="#737070"
                 android:textColor="@color/primaryBlue"
                 />
 
@@ -257,7 +257,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:id="@+id/profile_page_anniversary_et"
-                android:hint="17/01/1998"
+                android:hint="dd/mm/yyyy"
                 android:fontFamily="@font/metropolisbold"
                 android:singleLine="true"
                 android:inputType="none"
@@ -268,7 +268,7 @@
                 android:layout_alignStart="@id/profile_page_mobile_et"
                 android:textSize="15sp"
                 android:backgroundTint="#00FFFFFF"
-                android:textColorHint="@color/colorPrimaryDark"
+                android:textColorHint="#737070"
                 android:textColor="@color/primaryBlue"
                 />
 
