@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+
 public class VideoInternalPage extends AppCompatActivity {
 
     ImageButton backButton;
@@ -27,6 +29,9 @@ public class VideoInternalPage extends AppCompatActivity {
                 finish();
             }
         });
+
+        String url = "https://img.youtube.com/vi/"+"N91yhOqCRQ0"+"/0.jpg";//in the second "" we have to put the youtube video id as N91yhOqCRQ0 in https://youtu.be/N91yhOqCRQ0
+        Glide.with(this).load(url).into(videoThumbnail);
 
         videoThumbnail.setOnClickListener(new View.OnClickListener() {
             @Override
