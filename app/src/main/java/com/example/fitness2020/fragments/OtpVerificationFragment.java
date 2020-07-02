@@ -41,9 +41,14 @@ public class OtpVerificationFragment extends Fragment {
         confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadFragment(new NameFragment());
+//                loadFragment(new NameFragment());
+                Intent intent = new Intent(getContext(),MainActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
-        });
+
+       });
+
 
 
         backButton.setOnClickListener(new View.OnClickListener() {

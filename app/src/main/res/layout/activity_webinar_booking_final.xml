@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/gym_internal_activity_tlbr_rellay"
+        android:background="@color/webGray"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/webinar_booking_page_back_btn"
+            android:src="@drawable/ic_chevron_left_white_24dp"
+            android:tint="@color/primaryBlue"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking Details"
+            android:textSize="20sp"
+            android:textColor="@color/primaryBlue"
+            android:fontFamily="@font/metropolisbold"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/membership_activity_header_tv"
+            />
+
+    </RelativeLayout>
+
+
+
+    <ScrollView android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:layout_below="@id/gym_internal_activity_tlbr_rellay"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:theme="@style/Theme.MaterialComponents"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            tools:context=".WebinarBookingFinalActivity">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Booking for:"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentTop="true"
+                android:id="@+id/offer"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="17sp"
+                android:textColor="@color/colorPrimaryDark"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:fontFamily="@font/metropolisbold"
+                android:text="Functional Training"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/offer"
+                android:id="@+id/final_booking_page_webinar_name"
+                android:textSize="17sp"
+                android:textColor="@color/bookBtn"/>
+
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:padding="5dp"
+                android:layout_below="@id/final_booking_page_webinar_name"
+                android:id="@+id/line1"
+                android:layout_marginVertical="10dp"
+                android:background="@color/webGray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Select Date"
+                android:layout_below="@id/line1"
+                android:id="@+id/date"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="17sp"
+                android:textColor="@color/primaryBlue"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/date_explain_txt"
+                android:layout_below="@id/date"
+                android:id="@+id/date_explain"
+                android:fontFamily="@font/metropolismedium"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/final_booking_page_webinar_date_rv"
+                android:layout_below="@id/date_explain"
+                android:orientation="horizontal"
+                android:padding="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Select Time"
+                android:layout_marginStart="10dp"
+                android:layout_below="@id/final_booking_page_webinar_date_rv"
+                android:id="@+id/time"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="17sp"
+                android:textColor="@color/primaryBlue"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:text="@string/time_explain_start"
+                android:layout_below="@id/time"
+                android:layout_marginStart="10dp"
+                android:id="@+id/time_explain"
+                android:fontFamily="@font/metropolismedium"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/final_booking_page_webinar_time_rv"
+                android:layout_below="@id/time_explain"
+                android:orientation="horizontal"
+                android:padding="5dp"/>
+
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_button"
+                android:layout_below="@id/final_booking_page_webinar_time_rv"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:text="Confirm Booking"
+                android:textColor="#fff"
+                android:elevation="12dp"
+                android:id="@+id/final_booking_page_webinar_book_btn"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -38,7 +38,7 @@ public class WebinarBookDialog extends Dialog {
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent webinarBookingItent=new Intent(context,WebinarBookingConfirmationActivity.class);
+                Intent webinarBookingItent=new Intent(context,WebinarBookingFinalActivity.class);
                 context.startActivity(webinarBookingItent);
                 dismiss();
             }
