@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.fitness2020.MainActivity;
+import com.example.fitness2020.NameFragment;
 import com.example.fitness2020.R;
 
 public class OtpVerificationFragment extends Fragment {
@@ -40,8 +41,7 @@ public class OtpVerificationFragment extends Fragment {
         confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mainIntent=new Intent(view.getContext(), MainActivity.class);
-                startActivity(mainIntent);
+                loadFragment(new NameFragment());
             }
         });
 
