@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.R;
+import com.example.fitness2020.VideoInternalPage;
 
 import java.util.ArrayList;
 
@@ -49,19 +50,23 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
     }
 
     @Override
-    public void onBindViewHolder(@NonNull VideosAdapterRvVH holder, int position) {
+    public void onBindViewHolder(@NonNull final VideosAdapterRvVH holder, int position) {
 
-        if (code==0)
+        if (code==0) {
             holder.populateFitnessPassFragment(fitnesspassVideos.get(position));
-
-        else if (code==1)
-        holder.populateFitnessPass(fitnesspassVideos.get(position));
-        else if (code==2)
+        }
+        else if (code==1) {
+            holder.populateFitnessPass(fitnesspassVideos.get(position));
+        }
+        else if (code==2) {
             holder.populateDailyWrokout(dailyWorkoutVideos.get(position));
-        else if (code==3)
+        }
+        else if (code==3) {
             holder.populateStudio(studioVideos.get(position));
-        else
+        }
+        else {
             holder.populateCorporate(corporateVideos.get(position));
+        }
     }
 
     @Override
@@ -89,10 +94,12 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(Intent.ACTION_VIEW,
-                                Uri.parse("https://youtu.be/N91yhOqCRQ0"));
-                        intent.putExtra("force_fullscreen",true);
-                        itemView.getContext().startActivity(intent);
+//                        Intent intent = new Intent(Intent.ACTION_VIEW,
+//                                Uri.parse("https://youtu.be/N91yhOqCRQ0"));
+//                        intent.putExtra("force_fullscreen",true);
+//                        itemView.getContext().startActivity(intent);
+                        Intent videoInternalIntent=new Intent(itemView.getContext(), VideoInternalPage.class);
+                        itemView.getContext().startActivity(videoInternalIntent);
                     }
                 });
             }
@@ -101,10 +108,8 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(Intent.ACTION_VIEW,
-                                Uri.parse("https://youtu.be/N91yhOqCRQ0"));
-                        intent.putExtra("force_fullscreen", true);
-                        itemView.getContext().startActivity(intent);
+                        Intent videoInternalIntent=new Intent(itemView.getContext(), VideoInternalPage.class);
+                        itemView.getContext().startActivity(videoInternalIntent);
                     }
                 });
             }
@@ -113,10 +118,8 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(Intent.ACTION_VIEW,
-                                Uri.parse("https://youtu.be/N91yhOqCRQ0"));
-                        intent.putExtra("force_fullscreen",true);
-                        itemView.getContext().startActivity(intent);
+                        Intent videoInternalIntent=new Intent(itemView.getContext(), VideoInternalPage.class);
+                        itemView.getContext().startActivity(videoInternalIntent);
                     }
                 });
             }
@@ -125,10 +128,8 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(Intent.ACTION_VIEW,
-                                Uri.parse("https://youtu.be/N91yhOqCRQ0"));
-                        intent.putExtra("force_fullscreen",true);
-                        itemView.getContext().startActivity(intent);
+                        Intent videoInternalIntent=new Intent(itemView.getContext(), VideoInternalPage.class);
+                        itemView.getContext().startActivity(videoInternalIntent);
                     }
                 });
             }
@@ -137,10 +138,8 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(Intent.ACTION_VIEW,
-                                Uri.parse("https://youtu.be/N91yhOqCRQ0"));
-                        intent.putExtra("force_fullscreen",true);
-                        itemView.getContext().startActivity(intent);
+                        Intent videoInternalIntent=new Intent(itemView.getContext(), VideoInternalPage.class);
+                        itemView.getContext().startActivity(videoInternalIntent);
                     }
                 });
             }
