@@ -11,6 +11,6 @@
         android:radius="10sp"
         />
     <solid
-        android:color="@color/webGray"/>
+        android:color="@color/white"/>
 
 </shape>

@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/primaryBlue"
+        android:background="@color/webGray"
         android:elevation="10dp"
         android:id="@+id/membership_page_toolbar"
         android:gravity="center_vertical"
@@ -21,7 +21,7 @@
             android:layout_height="20dp"
             android:background="@drawable/ic_left_arrow"
             android:layout_marginStart="10dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/primaryBlue"
             android:id="@+id/memberships_page_back_btn"/>
 
         <TextView
@@ -29,8 +29,8 @@
             android:layout_height="wrap_content"
             android:text="Unlimited Trials"
             android:textSize="20sp"
-            android:textColor="#fff"
-            android:fontFamily="@font/metropolisbold"
+            android:textColor="@color/primaryBlue"
+            android:fontFamily="@font/metropolisblack"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:id="@+id/membership_activity_header_tv"
@@ -61,7 +61,7 @@
         android:gravity="center"
         android:textColor="@color/primaryBlue"
         android:id="@+id/membership_heading"
-        android:fontFamily="@font/metropolisblack"
+        android:fontFamily="@font/metropolisbold"
         android:text="Our Memberships"
         android:layout_margin="10dp"/>
 
