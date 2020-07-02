@@ -25,6 +25,17 @@ public class LocationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_location);
 
         attachId();
+        locationSearch.setIconifiedByDefault(true);
+        locationSearch.setFocusable(true);
+        locationSearch.setIconified(false);
+        locationSearch.requestFocusFromTouch();
+        locationSearch.setOnCloseListener(new SearchView.OnCloseListener() {
+            @Override
+            public boolean onClose() {
+                finish();
+                return false;
+            }
+        });
 
         popularLocations.setLayoutManager(new LinearLayoutManager(LocationActivity.this,LinearLayoutManager.VERTICAL,false));
 

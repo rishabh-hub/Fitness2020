@@ -13,10 +13,11 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         app:searchIcon="@drawable/ic_search_black_24dp"
-        app:searchHintIcon="@drawable/ic_search_black_24dp"
         app:queryHint="Search for gyms, workouts etc"
         android:id="@+id/location_searvh_view"
-        android:backgroundTint="@color/colorPrimaryDark"/>
+        android:focusedByDefault="true"
+        android:outlineSpotShadowColor="@color/primaryBlue"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

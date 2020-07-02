@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.MaterialComponents"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_page_tlbr_rellay"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name_page_back_btn"
+            android:src="@drawable/ic_chevron_left_white_24dp"
+            android:tint="@color/primaryBlue"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/otp_back"
+            android:id="@+id/otp_card"
+            android:layout_below="@id/name_page_back_btn"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:padding="15dp"
+            android:src="@drawable/ic_name"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/metropolisblack"
+            android:textColor="@color/primaryBlue"
+            android:textSize="20sp"
+            android:id="@+id/head"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/otp_card"
+            android:layout_marginHorizontal="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp"
+            android:textAlignment="center"
+            android:text="What should we call you?"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/metropolismedium"
+            android:textColor="@color/primaryBlue"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/head"
+            android:layout_marginHorizontal="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp"
+            android:textAlignment="center"
+            android:text="Please enter your full name."
+            />
+
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:backgroundTint="@color/primaryBlue"
+        app:boxStrokeColor="@color/primaryBlue"
+        app:boxStrokeWidth="2dp"
+        android:focusedByDefault="true"
+        android:layout_below="@id/name_page_tlbr_rellay"
+        android:textColorHint="@color/primaryBlue"
+        app:hintTextColor="@color/primaryBlue"
+        android:hint="First Name"
+        android:id="@+id/et1"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:singleLine="true"
+            android:inputType="number"
+            android:textColor="@color/primaryBlue"
+            android:id="@+id/first_name_et"
+            android:padding="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:backgroundTint="@color/primaryBlue"
+        app:boxStrokeColor="@color/primaryBlue"
+        app:boxStrokeWidth="2dp"
+        android:focusedByDefault="true"
+        android:layout_below="@id/et1"
+        android:textColorHint="@color/primaryBlue"
+        app:hintTextColor="@color/primaryBlue"
+        android:hint="Last Name"
+        android:id="@+id/et"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            android:singleLine="true"
+            android:inputType="number"
+            android:textColor="@color/primaryBlue"
+            android:id="@+id/last_name_et"
+            android:padding="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et"
+        android:background="@drawable/bg_button"
+        android:backgroundTint="@color/primaryBlue"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:textSize="17sp"
+        android:fontFamily="@font/metropolisbold"
+        android:textColor="@color/white"
+        android:text="Submit"
+        android:id="@+id/submit_name_button"/>
+
+
+
+
+
+</RelativeLayout>
