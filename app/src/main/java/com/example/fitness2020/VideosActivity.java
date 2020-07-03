@@ -20,6 +20,7 @@ public class VideosActivity extends AppCompatActivity {
     ArrayList<VideoModel> dailyWorkoutVideos = new ArrayList<>();
     ArrayList<VideoModel> studioVideos = new ArrayList<>();
     ArrayList<VideoModel> corporateVideos = new ArrayList<>();
+    ArrayList<VideoModel> membership = new ArrayList<>();
 //    ArrayList<VideosActivity> fitnesspassFragmentVideos=new ArrayList<>();
     RecyclerView passRV,workoutRV,studioRV,corporateRV;
     VideosAdapter fitnessPassVideoAdapter,dailyWorkoutVideoAdapter,studioVideoAdapter,corporateVideoAdapter;
@@ -66,10 +67,10 @@ public class VideosActivity extends AppCompatActivity {
     }
 
     private void initAdapter() {
-        fitnessPassVideoAdapter=new VideosAdapter(fitnessPassVideos,dailyWorkoutVideos,studioVideos,corporateVideos,VideosActivity.this,1);
-        dailyWorkoutVideoAdapter=new VideosAdapter(fitnessPassVideos,dailyWorkoutVideos,studioVideos,corporateVideos,VideosActivity.this,2);
-        studioVideoAdapter=new VideosAdapter(fitnessPassVideos,dailyWorkoutVideos,studioVideos,corporateVideos,VideosActivity.this,3);
-        corporateVideoAdapter=new VideosAdapter(fitnessPassVideos,dailyWorkoutVideos,studioVideos,corporateVideos,VideosActivity.this,4);
+        fitnessPassVideoAdapter=new VideosAdapter(fitnessPassVideos,dailyWorkoutVideos,studioVideos,corporateVideos,membership,VideosActivity.this,1);
+        dailyWorkoutVideoAdapter=new VideosAdapter(fitnessPassVideos,dailyWorkoutVideos,studioVideos,corporateVideos,membership,VideosActivity.this,2);
+        studioVideoAdapter=new VideosAdapter(fitnessPassVideos,dailyWorkoutVideos,studioVideos,corporateVideos,membership,VideosActivity.this,3);
+        corporateVideoAdapter=new VideosAdapter(fitnessPassVideos,dailyWorkoutVideos,studioVideos,corporateVideos,membership,VideosActivity.this,4);
     }
 
     private void setLayoutManagers() {

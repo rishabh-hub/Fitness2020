@@ -19,17 +19,19 @@ import java.util.ArrayList;
 
 public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdapterRvVH> {
 
-    ArrayList<VideoModel> fitnesspassVideos,dailyWorkoutVideos,studioVideos,corporateVideos;
+    ArrayList<VideoModel> fitnesspassVideos,dailyWorkoutVideos,studioVideos,corporateVideos,memberships;
     Context context;
     int code;
 
-    public VideosAdapter(ArrayList<VideoModel> fitnesspassVideos, ArrayList<VideoModel> dailyWorkoutVideos, ArrayList<VideoModel> studioVideos, ArrayList<VideoModel> corporateVideos, Context context,int code) {
+
+    public VideosAdapter(ArrayList<VideoModel> fitnesspassVideos, ArrayList<VideoModel> dailyWorkoutVideos, ArrayList<VideoModel> studioVideos, ArrayList<VideoModel> corporateVideos, ArrayList<VideoModel> memberships, Context context, int code) {
         this.fitnesspassVideos = fitnesspassVideos;
         this.dailyWorkoutVideos = dailyWorkoutVideos;
         this.studioVideos = studioVideos;
         this.corporateVideos = corporateVideos;
+        this.memberships = memberships;
         this.context = context;
-        this.code=code;
+        this.code = code;
     }
 
     @NonNull
@@ -45,8 +47,10 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
             return new VideosAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.fitness_at_work_video_rv_item,parent,false));
         else if (code==3)
             return new VideosAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.fitness_at_work_video_rv_item,parent,false));
-        else
+        else if (code==4)
             return new VideosAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.fitness_at_work_video_rv_item,parent,false));
+        else
+            return new VideosAdapterRvVH(LayoutInflater.from(parent.getContext()).inflate(R.layout.video_large_layout,parent,false));
     }
 
     @Override
@@ -64,8 +68,12 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
         else if (code==3) {
             holder.populateStudio(studioVideos.get(position));
         }
-        else {
+        else if (code==4){
             holder.populateCorporate(corporateVideos.get(position));
+        }
+        else
+        {
+            holder.populateMemberships(memberships.get(position));
         }
     }
 
@@ -79,13 +87,15 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
             return dailyWorkoutVideos.size();
         else if (code==3)
             return studioVideos.size();
-        else
+        else if (code==4)
             return corporateVideos.size();
+        else
+            return memberships.size();
     }
 
     public class VideosAdapterRvVH extends RecyclerView.ViewHolder
     {
-        ImageView fitnessPassFragmentVideos,fitnessPassVideos,studioVideos,dailyWorkoutVideos,corporateVideos;
+        ImageView fitnessPassFragmentVideos,fitnessPassVideos,studioVideos,dailyWorkoutVideos,corporateVideos,memnershipImage;
         public VideosAdapterRvVH(@NonNull final View itemView) {
             super(itemView);
 
@@ -133,7 +143,7 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
                     }
                 });
             }
-            else{
+            else if (code==4){
                 corporateVideos=itemView.findViewById(R.id.home_fitness_at_work_video);
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -142,6 +152,10 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
                         itemView.getContext().startActivity(videoInternalIntent);
                     }
                 });
+            }
+            else
+            {
+                memnershipImage=itemView.findViewById(R.id.video_large_item);
             }
 
         }
@@ -168,6 +182,10 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
         void populateCorporate(VideoModel videoModel)
         {
             corporateVideos.setImageResource(videoModel.getVideoImageResource());
+        }
+
+        public void populateMemberships(VideoModel videoModel) {
+            memnershipImage.setImageResource(videoModel.getVideoImageResource());
         }
     }
 }

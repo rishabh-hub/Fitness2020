@@ -33,6 +33,7 @@ public class VideoInternalPage extends AppCompatActivity {
         String url = "https://img.youtube.com/vi/"+"N91yhOqCRQ0"+"/0.jpg";//in the second "" we have to put the youtube video id as N91yhOqCRQ0 in https://youtu.be/N91yhOqCRQ0
         Glide.with(this).load(url).into(videoThumbnail);
 
+
         videoThumbnail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -21,12 +21,14 @@ import com.example.fitness2020.Adapters.HomePopularRVAdapter;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
 import com.example.fitness2020.Adapters.NewCorrectionAdapter;
 import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
+import com.example.fitness2020.Adapters.VideosAdapter;
 import com.example.fitness2020.Models.CompanyModel;
 import com.example.fitness2020.Models.PackModel;
 import com.example.fitness2020.Models.PopularHorizontalRvModel;
 import com.example.fitness2020.Models.PopularRvModel;
 import com.example.fitness2020.Models.ReviewModel;
 import com.example.fitness2020.Models.TrendingRvModel;
+import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.Models.VouchersModel;
 import com.example.fitness2020.Models.WebinarModel;
 import com.example.fitness2020.R;
@@ -55,14 +57,14 @@ public class HomeLiveTab extends Fragment {
     RecyclerView trendingRv;//
     ArrayList<TrendingRvModel> trendingRvModels1;//
     ArrayList<TrendingRvModel> liveTopBannerModel;
-    ArrayList<PackModel> packModels;
+    ArrayList<VideoModel> packModels,dailyWorkoutVideos,studioVideos,corporateVideos,fitnessPassVideos;
     ArrayList<TrendingRvModel> liveTrendingModel;
     ArrayList<WebinarModel> liveWebinarModels1, liveWebinarModels2,liveWebinarModels3;
     ArrayList<VouchersModel> liveVouchersModels;
     ArrayList<CompanyModel> liveCompanyModels;
     HomeTrendingRVAdapter liveTrendingRvAdapter;
     HomeTrendingRVAdapter liveTopBannerAdapter;
-    SubscriptionCardsAdapter liveMembershipAdapter;
+    VideosAdapter liveMembershipAdapter;
     HomePageClientAdapter liveReviewAdapter;
     CarousalsAdapter1 liveWebinarAdapter1, liveWebinarAdapter2,liveWebinarAdapter3;
 
@@ -87,7 +89,7 @@ public class HomeLiveTab extends Fragment {
 
 
         liveTopBannerRv=view.findViewById(R.id.live_workout_rv);
-        liveMembershiRv=view.findViewById(R.id.live_membership_rv);
+        liveMembershiRv=view.findViewById(R.id.live_membership_rv);//membership rv
         liveTrendingRv=view.findViewById(R.id.live_trending_rv);//This is for videos
         liveWebinarRv1=view.findViewById(R.id.live_webinar_rv_1);
         liveWebinarRv2=view.findViewById(R.id.live_webinar_rv_2);
@@ -118,7 +120,7 @@ public class HomeLiveTab extends Fragment {
         addData();
 
         liveTopBannerAdapter=new HomeTrendingRVAdapter(liveTopBannerModel,context,1,popularHorizontalRvModels);
-        liveMembershipAdapter=new SubscriptionCardsAdapter(context,2,packModels);
+        liveMembershipAdapter=new VideosAdapter(fitnessPassVideos,dailyWorkoutVideos,studioVideos,corporateVideos,packModels,context,5);
         newCorrectionAdapter=new NewCorrectionAdapter(0,webinarVideos,trendingRvModels);//new correction  adapter
         liveWebinarAdapter1 =new CarousalsAdapter1(context,liveCompanyModels,liveVouchersModels,liveWebinarModels1,0);
         liveWebinarAdapter2 =new CarousalsAdapter1(context,liveCompanyModels,liveVouchersModels,liveWebinarModels2,0);
@@ -195,7 +197,7 @@ public class HomeLiveTab extends Fragment {
 
             liveTopBannerModel.add(new TrendingRvModel(R.drawable.workout_carousel_dummy));
 
-            packModels.add(new PackModel("Unlimited Workouts",4000,2499,"Free webinar sessions"));
+            packModels.add(new VideoModel(R.drawable.gym_video_dummy));
 
             liveTrendingModel.add(new TrendingRvModel(R.drawable.trending_activity));
 

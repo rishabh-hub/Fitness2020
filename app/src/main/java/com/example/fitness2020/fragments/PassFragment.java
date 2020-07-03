@@ -62,7 +62,7 @@ public class PassFragment extends Fragment {
     ArrayList<FitnessFragmentFreeTrialModel> liveWorkoutModels;
 
     RecyclerView videoRV;
-    ArrayList<VideoModel> videos,dailyWorkoutVideos,studioVideos,corporateVideos;
+    ArrayList<VideoModel> videos,dailyWorkoutVideos,studioVideos,corporateVideos,membership;
     VideosAdapter videoAdapter;
 
     FitnessFragmentFreeTrialAdapter fragmentFreeTrialAdapter, topTrainerAdapter,liveWorkoutsAdapter;
@@ -108,7 +108,7 @@ public class PassFragment extends Fragment {
         clientAdapter = new HomePageClientAdapter(clients,context);
         fragmentFreeTrialAdapter=new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,liveWorkoutModels, topTrainerModels,context,1);
         topTrainerAdapter = new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,liveWorkoutModels, topTrainerModels,context,2);
-        videoAdapter = new VideosAdapter(videos,dailyWorkoutVideos,studioVideos,corporateVideos,context,0);
+        videoAdapter = new VideosAdapter(videos,dailyWorkoutVideos,studioVideos,corporateVideos,membership,context,0);
         faqAdapter = new SubscriptionCardsAdapter(context,1,imageModels,faqs);
         membershipAdapter = new SubscriptionCardsAdapter(context,2,packModels);
         liveWorkoutsAdapter=new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,liveWorkoutModels, topTrainerModels,context,0);
