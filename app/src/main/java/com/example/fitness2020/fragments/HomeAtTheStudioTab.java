@@ -53,14 +53,12 @@ public class HomeAtTheStudioTab extends Fragment {
     HomeTrendingRVAdapter adapter;
     HomeTrendingRVAdapter banner2Adapter,topBannerAdapter;
     HomePopularRVAdapter homePopularRVAdapter,adapter2;
-    SubscriptionCardsAdapter membershipAdapter;
     CarousalsAdapter1 voucherAdapter,companyAdapter;
     CollectionsAdapter videoAdapter,collectionsAdapter;
     RecyclerView trendingRv;
     RecyclerView banner2Rv;
     RecyclerView popularRv;
     RecyclerView popularVerticalRv,popularVerticalRV2,popularRV3,popularRV4;
-    RecyclerView membershipRV;
     RecyclerView companyRv,vouchersRv;
     RecyclerView topBannerRv;
     RecyclerView collectionsRv;
@@ -97,7 +95,6 @@ public class HomeAtTheStudioTab extends Fragment {
         trendingRv=view.findViewById(R.id.home_trending_rv);
         popularRv=view.findViewById(R.id.home_trending_rv_1);
         banner2Rv=view.findViewById(R.id.home_banner2_rv);
-        membershipRV=view.findViewById(R.id.explore_membership_rv);
         filterSpinner=view.findViewById(R.id.filter_spinner);
         popularVerticalRv=view.findViewById(R.id.home_popular_vertical_rv);
         popularVerticalRV2 = view.findViewById(R.id.home_trending_rv_3);
@@ -139,7 +136,6 @@ public class HomeAtTheStudioTab extends Fragment {
         popularRV4.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         trendingRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         popularVerticalRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
-        membershipRV.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         popularVerticalRV2.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         companyRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         vouchersRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
@@ -168,7 +164,6 @@ public class HomeAtTheStudioTab extends Fragment {
         newCorrectionAdapter=new NewCorrectionAdapter(1,webinarVideos,trendingRvModels);
         adapter2=new HomePopularRVAdapter(popularRvModels,context);
         banner2Adapter=new HomeTrendingRVAdapter(trendingRvModels,context,2,popularHorizontalRvModels);
-        membershipAdapter = new SubscriptionCardsAdapter(context,2,packModels);
         voucherAdapter=new CarousalsAdapter1(context,companyModels,vouchersModels,webinarModels,2);
         companyAdapter=new CarousalsAdapter1(context,companyModels,vouchersModels,webinarModels,1);
         topBannerAdapter=new HomeTrendingRVAdapter(topBannerModel,context,1,popularHorizontalRvModels);
@@ -182,7 +177,6 @@ public class HomeAtTheStudioTab extends Fragment {
         trendingRv.setAdapter(newCorrectionAdapter);
         banner2Rv.setAdapter(banner2Adapter);
         popularVerticalRv.setAdapter(homePopularRVAdapter);
-        membershipRV.setAdapter(membershipAdapter);
         popularVerticalRV2.setAdapter(adapter2);
         vouchersRv.setAdapter(voucherAdapter);
         companyRv.setAdapter(companyAdapter);
@@ -193,7 +187,6 @@ public class HomeAtTheStudioTab extends Fragment {
         homePopularRVAdapter.notifyDataSetChanged();
         newCorrectionAdapter.notifyDataSetChanged();
         banner2Adapter.notifyDataSetChanged();
-        membershipAdapter.notifyDataSetChanged();
         adapter2.notifyDataSetChanged();
         voucherAdapter.notifyDataSetChanged();
         companyAdapter.notifyDataSetChanged();
