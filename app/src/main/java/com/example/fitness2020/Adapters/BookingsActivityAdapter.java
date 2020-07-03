@@ -153,7 +153,6 @@ public class BookingsActivityAdapter extends RecyclerView.Adapter<BookingsActivi
                 studioTime=itemView.findViewById(R.id.bookings_rv_item_time);
                 studioActivity=itemView.findViewById(R.id.bookings_rv_item_activity);
                 studioCode=itemView.findViewById(R.id.bookings_rv_item_code);
-                studioOrderId=itemView.findViewById(R.id.bookings_rv_item_orderid);
                 studioStatus=itemView.findViewById(R.id.bookings_rv_item_status);
                 studioAddress=itemView.findViewById(R.id.bookings_rv_item_address2);
                 studioPurchaseDetail=itemView.findViewById(R.id.bookings_rv_item_purchase_detail);

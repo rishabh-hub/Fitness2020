@@ -81,7 +81,6 @@ public class BookingsAdapter extends RecyclerView.Adapter<BookingsAdapter.Bookin
                 productName=itemView.findViewById(R.id.bookings_rv_item_product_name);
                 purchaseDate=itemView.findViewById(R.id.bookings_rv_item_date);
                 bookingCode=itemView.findViewById(R.id.bookings_rv_item_code);
-                bookingId=itemView.findViewById(R.id.bookings_rv_item_orderid);
                 status=itemView.findViewById(R.id.bookings_rv_item_status);
 //                address1=itemView.findViewById(R.id.bookings_rv_item_address1);
                 address2=itemView.findViewById(R.id.bookings_rv_item_address2);
@@ -122,7 +121,6 @@ public class BookingsAdapter extends RecyclerView.Adapter<BookingsAdapter.Bookin
 //            memberGymImage.setImageResource(membershipModel.getImageID());
 //            memberGymName.setText(membershipModel.getGymName());
 //            memberPurchaseDate.setText(membershipModel.getPurchaseDate());
-//            memberOrderID.setText(membershipModel.getOrder());
 //            memberAmount.setText(membershipModel.getAmount());
 //            memberDiscount.setText(membershipModel.getDiscount());
 //            memberPayableAmount.setText(membershipModel.getAmountPayable());

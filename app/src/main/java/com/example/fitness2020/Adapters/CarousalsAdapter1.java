@@ -132,24 +132,9 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
             if(code2==1)
                { webinarImage.setVisibility(View.GONE);
                rating.setVisibility(View.GONE);
-               card.setBackground(itemView.getContext().getDrawable(R.color.white));
-               webinarHead.setTextColor(itemView.getContext().getResources().getColor(R.color.primaryBlue));
-               webinarTiming.setTextColor(itemView.getContext().getResources().getColor(R.color.colorPrimaryDark));
-               webinarLevel.setBackgroundTintList(itemView.getContext().getResources().getColorStateList(R.color.colorPrimaryDark));
-               webinarLevel.setTextColor(itemView.getContext().getResources().getColor(R.color.white));
-               webinarActivity.setTextColor(itemView.getContext().getResources().getColor(R.color.mullaGreen));
-               webinarBookBtn.setBackgroundTintList(itemView.getContext().getResources().getColorStateList(R.color.paariBlue));
                }
             else {
-                card.setBackground(itemView.getContext().getDrawable(R.color.white));
-                webinarHead.setTextColor(itemView.getContext().getResources().getColor(R.color.primaryBlue));
                 webinarImage.setImageResource(webinarModel.getWebinarImageUrl());
-                webinarTiming.setTextColor(itemView.getContext().getResources().getColor(R.color.primaryBlue));
-                webinarLevel.setBackgroundTintList(itemView.getContext().getResources().getColorStateList(R.color.mullaGreen));
-                webinarLevel.setTextColor(itemView.getContext().getResources().getColor(R.color.white));
-                webinarActivity.setTextColor(itemView.getContext().getResources().getColor(R.color.mullaGreen));
-                webinarBookBtn.setBackgroundTintList(itemView.getContext().getResources().getColorStateList(R.color.primaryBlue));
-                webinarBookBtn.setTextColor(itemView.getContext().getResources().getColor(R.color.white));
             }
             webinarRating.setText(webinarModel.getRating());
             webinarActivity.setText(webinarModel.getActivity());

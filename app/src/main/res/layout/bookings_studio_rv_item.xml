@@ -57,6 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/bookings_rv_item_date_tv"
                 android:layout_alignStart="@id/bookings_rv_item_activity"
+
                 android:layout_below="@+id/bookings_rv_item_product_name"
                 android:id="@+id/bookings_rv_item_date"
                 android:textColor="#000"
@@ -78,10 +79,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/bookings_rv_item_code_tv"
+                android:layout_toRightOf="@id/bookings_rv_item_time_tv"
                 android:layout_alignStart="@id/bookings_rv_item_activity"
                 android:layout_below="@id/bookings_rv_item_date"
-                android:layout_centerVertical="true"
                 android:textColor="#000"
                 android:layout_marginVertical="3dp"
                 android:id="@+id/bookings_rv_item_time"
@@ -108,27 +108,7 @@
                 android:id="@+id/bookings_rv_item_activity"
                 />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/bookings_rv_item_activity_tv"
-                android:layout_toEndOf="@id/bookings_rv_item_imgvw"
-                android:id="@+id/bookings_rv_item_code_tv"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_marginVertical="3dp"
-                android:text="Code: "
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/bookings_rv_item_code_tv"
-                android:layout_alignStart="@id/bookings_rv_item_activity"
-                android:layout_below="@id/bookings_rv_item_activity"
-                android:textColor="#000"
-                android:layout_marginVertical="3dp"
-                android:id="@+id/bookings_rv_item_code"
-                />
+
 
         </RelativeLayout>
 
@@ -150,14 +130,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/bookings_rv_item_orderid_tv"
-                    android:text="Order Id: "
+                    android:text="Code: "
                     android:textColor="@color/colorPrimaryDark"
                     android:fontFamily="@font/metropolissemibold"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/bookings_rv_item_orderid"
+                    android:id="@+id/bookings_rv_item_code"
                     android:textColor="#000000"
                     android:fontFamily="@font/metropolissemibold"
                     android:layout_toRightOf="@id/bookings_rv_item_orderid_tv"

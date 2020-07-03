@@ -7,7 +7,7 @@
     app:cardCornerRadius="5dp"
     android:layout_marginHorizontal="10dp"
     android:elevation="8dp"
-    app:cardBackgroundColor="#555"
+    app:cardBackgroundColor="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="4dp">
     <RelativeLayout
@@ -62,10 +62,10 @@
             android:textSize="15sp"
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/webinar_head"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/primaryBlue"
             android:layout_below="@id/webinar_card_back_image"
             android:text="Functional Training"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"/>
 
         <TextView
@@ -94,11 +94,11 @@
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/webinar_level"
             android:layout_below="@id/webinar_timing"
-            android:textColor="#FF6D00"
+            android:textColor="@color/colorPrimaryDark"
             android:background="@drawable/bg_button"
-            android:backgroundTint="#fff"
+            android:backgroundTint="@color/webGray"
             android:text="INTERMEDIATE"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="1dp"/>
         <TextView
             android:layout_width="wrap_content"
@@ -107,23 +107,23 @@
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/webinar_activities"
             android:layout_below="@id/webinar_level"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/mullaGreen"
             android:text="Crossfit/Zumba"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="3dp"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:background="@drawable/bg_button"
-            android:backgroundTint="#FFFFFF"
+            android:backgroundTint="@color/primaryBlue"
             android:layout_alignParentEnd="true"
             android:layout_alignBottom="@id/webinar_activities"
             android:text="Book Now"
             android:textSize="12sp"
             android:textStyle="bold"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/white"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="5dp"
             android:id="@+id/webinar_book_btn"/>
