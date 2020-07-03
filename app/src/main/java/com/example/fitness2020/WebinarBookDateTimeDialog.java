@@ -3,8 +3,6 @@ package com.example.fitness2020;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -12,12 +10,12 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 
-public class WebinarBookDialog extends Dialog {
+public class WebinarBookDateTimeDialog extends Dialog {
 
-    Button yesButton,noButton;
+    Button confirmBtn;
     Context context;
 
-    public WebinarBookDialog(@NonNull Context context) {
+    public WebinarBookDateTimeDialog(@NonNull Context context) {
         super(context);
         this.context=context;
     }
@@ -31,30 +29,21 @@ public class WebinarBookDialog extends Dialog {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        setContentView(R.layout.webinar_confirmation_dialog);
+        setContentView(R.layout.activity_webinar_booking_final);
 
         attachId();
 
-        yesButton.setOnClickListener(new View.OnClickListener() {
+        confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                WebinarBookDateTimeDialog webinarBookDateTimeDialog=new WebinarBookDateTimeDialog(context);
-                webinarBookDateTimeDialog.setCancelable(true);
-                webinarBookDateTimeDialog.show();
-                dismiss();
-            }
-        });
-
-        noButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),WebinarBookingConfirmationActivity.class);
+                getContext().startActivity(intent);
                 dismiss();
             }
         });
     }
 
     private void attachId() {
-        yesButton=findViewById(R.id.webinar_confirm_positive_btn);
-        noButton=findViewById(R.id.webinar_confirm_negative_btn);
+        confirmBtn = findViewById(R.id.final_booking_page_webinar_book_btn);
     }
 }
