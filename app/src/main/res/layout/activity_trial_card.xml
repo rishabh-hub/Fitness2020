@@ -72,65 +72,7 @@
         android:nestedScrollingEnabled="false"/>
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/trial_container_3"
-        android:layout_below="@id/membership_internal_rv"
-        android:orientation="horizontal"
-        android:gravity="center"
-        >
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:background="@drawable/bg_textview"
-            app:boxStrokeColor="@color/primaryBlue"
-            app:boxStrokeWidth="2dp"
-            app:endIconMode="clear_text"
-            android:layout_marginHorizontal="40dp"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            app:endIconTint="@color/primaryBlue"
-            android:textAlignment="center"
-            android:paddingVertical="5dp"
-            app:hintTextColor="@color/primaryBlue"
-            android:id="@+id/promo_layout"
-            android:textColorHint="@color/primaryBlue"
-            >
-
-
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:hint="Promo Code"
-                android:gravity="center"
-                android:layout_below="@id/squad"
-                android:layout_marginHorizontal="20dp"
-                android:textAlignment="center"
-                android:background="#00F3F4F9"
-                android:paddingVertical="7dp"
-                android:inputType="number"
-                android:id="@+id/membership_internal_promoET"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                android:textColor="@color/bookBtn"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:textColor="@color/primaryBlue"
-            android:padding="8sp"
-            android:layout_below="@id/promo_layout"
-            android:text="Enter promo code to avail exciting offers. "
-            android:textAlignment="center"/>
-
-    </RelativeLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -138,7 +80,7 @@
         android:textSize="19sp"
         android:textColor="@color/colorPrimaryDark"
         android:id="@+id/membership_benefit_heading"
-        android:layout_below="@id/trial_container_3"
+        android:layout_below="@id/membership_internal_rv"
         android:fontFamily="@font/metropolisblack"
         android:text="Benefits"
         android:layout_margin="10dp"/>
