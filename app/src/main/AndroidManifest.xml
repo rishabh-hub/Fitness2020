@@ -30,7 +30,6 @@
         <activity android:name=".MembershipActivity" />
         <activity android:name=".TrialMembershipBooking" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".ValidityCardActivity" />
         <activity android:name=".TrialCardActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".BookingsActivity" />
