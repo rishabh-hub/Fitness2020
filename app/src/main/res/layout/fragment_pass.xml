@@ -370,8 +370,10 @@
         android:id="@+id/fitness_pass_faq_rv_heading"
         android:layout_below="@id/fitness_at_work_clients"
         android:fontFamily="@font/metropolisbold"
+        android:textColor="@color/colorPrimaryDark"
         android:text="FAQs"
-        android:layout_margin="10dp"/>
+        android:background="@color/webGray"
+        android:padding="10dp"/>
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -380,7 +382,8 @@
         android:id="@+id/fitness_pass_faq_rv"
         android:layout_below="@id/fitness_pass_faq_rv_heading"
         android:orientation="vertical"
-        android:layout_marginTop="5dp"
+        android:background="@color/webGray"
+        android:paddingTop="5dp"
         />
 
 

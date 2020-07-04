@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
     android:layout_height="20dp"
     android:paddingHorizontal="10dp"
-    android:background="@drawable/bg_button"
-    android:backgroundTint="@color/hoodBlue"
-    android:textColor="#fff"
+    android:background="@drawable/bg_textview"
+    android:textColor="@color/primaryBlue"
     android:text="Yoga"
-    android:textSize="13sp"
+    android:textSize="12sp"
+    android:gravity="center"
     android:layout_marginHorizontal="3dp"
     android:id="@+id/gym_activity_rv_activity">
 

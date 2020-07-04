@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -16,6 +17,8 @@ import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
+
+import static android.content.ContentValues.TAG;
 
 public class WebinarBookDateTimeDialog extends Dialog {
 
@@ -58,16 +61,15 @@ public class WebinarBookDateTimeDialog extends Dialog {
             }
         });
 
-        dateGroup=new ChipGroup(getContext());
-        timeGroup=new ChipGroup(getContext());
 
         timeGroup.isSingleSelection();
         dateGroup.isSingleSelection();
 
-        for (int i=0;i<=dateModels.size()-1;i++)
+        for (DateModel d:dateModels)
         {
-            date=dateModels.get(i).getDate();
-            Chip chip=new Chip(getContext());
+            date=d.getDate();
+            Log.i(TAG, "onCreate:  "+date);
+            Chip chip=new Chip(dateGroup.getContext());
             chip.setText(date);
             dateGroup.addView(chip);
         }
@@ -75,10 +77,11 @@ public class WebinarBookDateTimeDialog extends Dialog {
         for (int i=0;i<=timeModels.size()-1;i++)
         {
             time=timeModels.get(i).getTime();
-            Chip chip=new Chip(getContext());
-            chip.setText(date);
+            Chip chip=new Chip(timeGroup.getContext());
+            chip.setText(time);
             timeGroup.addView(chip);
         }
+
     }
 
     private void addData() {

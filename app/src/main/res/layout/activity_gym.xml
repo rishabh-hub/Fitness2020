@@ -108,18 +108,18 @@
                 </LinearLayout>
 
 
-            <Button
+            <TextView
                 android:layout_width="50dp"
                 android:layout_height="20dp"
                 android:text="More"
-                android:background="@drawable/bg_textview"
                 android:textColor="@color/primaryBlue"
                 android:id="@+id/gym_more_address_btn"
                 android:layout_below="@id/address_container"
-                android:textSize="8sp"
+                android:textSize="13sp"
+                android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="3dp"
-                android:layout_marginTop="8dp"/>
+                />
 
             <ScrollView
                 android:id="@+id/rv_container"
@@ -135,7 +135,6 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/gym_more_address_btn"
                     android:paddingHorizontal="5dp"
-                    android:layout_marginTop="5dp"
                     android:orientation="horizontal" />
             </ScrollView>
             </RelativeLayout>
@@ -181,15 +180,15 @@
                 android:maxLines="4"
                 android:layout_marginHorizontal="10dp"
                 />
-            <Button
+            <TextView
                 android:layout_width="50dp"
                 android:layout_height="20dp"
                 android:text="More"
-                android:background="@drawable/bg_textview"
+                android:textStyle="bold"
                 android:textColor="@color/primaryBlue"
                 android:id="@+id/gym_more_desc_btn"
                 android:layout_below="@id/gym_tab_desc"
-                android:textSize="8sp"
+                android:textSize="13sp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="8dp"/>
             </LinearLayout>
@@ -227,15 +226,16 @@
                 android:maxLines="4"
                 android:layout_marginHorizontal="10dp"
                 />
-            <Button
+            <TextView
                 android:layout_width="50dp"
                 android:layout_height="20dp"
                 android:text="More"
-                android:background="@drawable/bg_textview"
+                android:textStyle="bold"
+                android:background="@color/white"
                 android:textColor="@color/primaryBlue"
                 android:id="@+id/gym_more_ttr_btn"
                 android:layout_below="@id/gym_tab_ttr"
-                android:textSize="8sp"
+                android:textSize="13sp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
