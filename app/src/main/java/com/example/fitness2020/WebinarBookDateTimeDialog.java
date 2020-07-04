@@ -3,6 +3,7 @@ package com.example.fitness2020;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -70,6 +71,8 @@ public class WebinarBookDateTimeDialog extends Dialog {
             date=d.getDate();
             Log.i(TAG, "onCreate:  "+date);
             Chip chip=new Chip(dateGroup.getContext());
+//            chip.setBackground(getContext().getResources().getDrawable(R.drawable.bg_textview));
+            chip.setChipBackgroundColorResource(R.color.primaryBlue);
             chip.setText(date);
             dateGroup.addView(chip);
         }
@@ -78,6 +81,7 @@ public class WebinarBookDateTimeDialog extends Dialog {
         {
             time=timeModels.get(i).getTime();
             Chip chip=new Chip(timeGroup.getContext());
+            chip.setChipBackgroundColorResource(R.color.primaryBlue);
             chip.setText(time);
             timeGroup.addView(chip);
         }

@@ -136,14 +136,24 @@
         android:textSize="14sp"
         android:textColor="@color/colorPrimaryDark"/>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:id="@+id/final_booking_page_gym_date_rv"
-        android:layout_below="@id/date_explain"
-        android:orientation="horizontal"
-        android:padding="5dp"/>
+        android:id="@+id/chip_group_1"
+        android:layout_below="@+id/date_explain">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/final_booking_page_gym_date_chipgrp"
+            android:layout_below="@id/date_explain"
+            app:singleLine="true"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:padding="5dp">
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
 
     <TextView
         android:layout_width="wrap_content"
@@ -152,7 +162,7 @@
         android:layout_marginTop="10dp"
         android:text="Select Time"
         android:layout_marginStart="10dp"
-        android:layout_below="@id/final_booking_page_gym_date_rv"
+        android:layout_below="@id/chip_group_1"
         android:id="@+id/time"
         android:fontFamily="@font/metropolisbold"
         android:textSize="17sp"
@@ -169,14 +179,24 @@
         android:textSize="14sp"
         android:textColor="@color/colorPrimaryDark"/>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:id="@+id/final_booking_page_gym_time_rv"
-        android:layout_below="@id/time_explain"
-        android:orientation="horizontal"
-        android:padding="5dp"/>
+        android:id="@+id/chip_group_2"
+        android:layout_below="@+id/time_explain">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/final_booking_page_gym_time_chipgrp"
+            android:layout_below="@id/date_explain"
+            app:singleLine="true"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:padding="5dp">
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
 
 
     <TextView
@@ -185,7 +205,7 @@
         android:padding="5dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
-        android:layout_below="@id/final_booking_page_gym_time_rv"
+        android:layout_below="@id/chip_group_2"
         android:id="@+id/squad"
         android:background="@drawable/squad"
         android:fontFamily="@font/metropolisbold"
