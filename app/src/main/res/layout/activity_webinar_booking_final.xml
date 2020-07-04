@@ -104,13 +104,13 @@
                 android:textSize="14sp"
                 android:textColor="@color/colorPrimaryDark"/>
 
-            <androidx.recyclerview.widget.RecyclerView
+            <com.google.android.material.chip.ChipGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:id="@+id/final_booking_page_webinar_date_rv"
+                android:id="@+id/final_booking_page_webinar_date_chipgrp"
                 android:layout_below="@id/date_explain"
-                android:orientation="horizontal"
+                app:singleLine="true"
                 android:padding="5dp"/>
 
             <TextView
@@ -120,7 +120,7 @@
                 android:layout_marginTop="10dp"
                 android:text="Select Time"
                 android:layout_marginStart="10dp"
-                android:layout_below="@id/final_booking_page_webinar_date_rv"
+                android:layout_below="@id/final_booking_page_webinar_date_chipgrp"
                 android:id="@+id/time"
                 android:fontFamily="@font/metropolisbold"
                 android:textSize="17sp"
@@ -137,13 +137,13 @@
                 android:textSize="14sp"
                 android:textColor="@color/colorPrimaryDark"/>
 
-            <androidx.recyclerview.widget.RecyclerView
+            <com.google.android.material.chip.ChipGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:id="@+id/final_booking_page_webinar_time_rv"
+                android:id="@+id/final_booking_page_webinar_time_chipgrp"
                 android:layout_below="@id/time_explain"
-                android:orientation="horizontal"
+                app:singleLine="true"
                 android:padding="5dp"/>
 
 
@@ -153,7 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_button"
-                android:layout_below="@id/final_booking_page_webinar_time_rv"
+                android:layout_below="@id/final_booking_page_webinar_time_chipgrp"
                 android:layout_marginVertical="20dp"
                 android:layout_marginHorizontal="10dp"
                 android:text="Confirm Booking"
