@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
@@ -22,10 +23,14 @@ import android.widget.Toast;
 import com.example.fitness2020.Adapters.DateTimeAdapter;
 import com.example.fitness2020.Models.DateModel;
 import com.example.fitness2020.Models.TimeModel;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.sql.Time;
 import java.util.ArrayList;
+
+import static android.content.ContentValues.TAG;
 
 public class GymBookingFinalPage extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -39,6 +44,9 @@ public class GymBookingFinalPage extends AppCompatActivity implements AdapterVie
     DateTimeAdapter timeAdapter,dateAdapter;
     ImageView backButton;
     Spinner groupNo;
+    ChipGroup dateGroup,timeGroup;
+    String date,time;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,22 +67,43 @@ public class GymBookingFinalPage extends AppCompatActivity implements AdapterVie
             }
         });
 
-        dateRv.setLayoutManager(new LinearLayoutManager(GymBookingFinalPage.this,LinearLayoutManager.HORIZONTAL,false));
-        timeRv.setLayoutManager(new LinearLayoutManager(GymBookingFinalPage.this,LinearLayoutManager.HORIZONTAL,false));
+//        dateRv.setLayoutManager(new LinearLayoutManager(GymBookingFinalPage.this,LinearLayoutManager.HORIZONTAL,false));
+//        timeRv.setLayoutManager(new LinearLayoutManager(GymBookingFinalPage.this,LinearLayoutManager.HORIZONTAL,false));
 
         timeModels=new ArrayList<>(3);
         dateModels=new ArrayList<>(3);
 
         addData();
 
-        timeAdapter=new DateTimeAdapter(GymBookingFinalPage.this,1,dateModels,timeModels);
-        dateAdapter=new DateTimeAdapter(GymBookingFinalPage.this,0,dateModels,timeModels);
+//        timeAdapter=new DateTimeAdapter(GymBookingFinalPage.this,1,dateModels,timeModels);
+//        dateAdapter=new DateTimeAdapter(GymBookingFinalPage.this,0,dateModels,timeModels);
 
-        dateRv.setAdapter(dateAdapter);
-        timeRv.setAdapter(timeAdapter);
+//        dateRv.setAdapter(dateAdapter);
+//        timeRv.setAdapter(timeAdapter);
+//
+//        dateAdapter.notifyDataSetChanged();
+//        timeAdapter.notifyDataSetChanged();
 
-        dateAdapter.notifyDataSetChanged();
-        timeAdapter.notifyDataSetChanged();
+
+        timeGroup.isSingleSelection();
+        dateGroup.isSingleSelection();
+
+        for (DateModel d:dateModels)
+        {
+            date=d.getDate();
+            Log.i(TAG, "onCreate:  "+date);
+            Chip chip=new Chip(dateGroup.getContext());
+            chip.setText(date);
+            dateGroup.addView(chip);
+        }
+
+        for (int i=0;i<=timeModels.size()-1;i++)
+        {
+            time=timeModels.get(i).getTime();
+            Chip chip=new Chip(timeGroup.getContext());
+            chip.setText(time);
+            timeGroup.addView(chip);
+        }
 
         payButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,14 +142,17 @@ public class GymBookingFinalPage extends AppCompatActivity implements AdapterVie
 //        gymName=findViewById(R.id.final_booking_page_gym_name);
         offeringName=findViewById(R.id.final_booking_page_gym_activity);
         offeringSubscription=findViewById(R.id.final_booking_page_gym_offer);
-        dateRv=findViewById(R.id.final_booking_page_gym_date_rv);
-        timeRv=findViewById(R.id.final_booking_page_gym_time_rv);
+//        dateRv=findViewById(R.id.final_booking_page_gym_date_rv);
+//        timeRv=findViewById(R.id.final_booking_page_gym_time_rv);
         promoCode=findViewById(R.id.final_booking_page_gym_promoET);
         payButton=findViewById(R.id.final_booking_page_gym_book_btn);
         netAmount = findViewById(R.id.final_booking_page_gym_amount);
         backButton=findViewById(R.id.final_booking_page_back_btn);
         groupNo=findViewById(R.id.squad_spinner);
         promo = findViewById(R.id.promo_layout);
+        dateGroup=findViewById(R.id.final_booking_page_gym_date_chipgrp);
+        timeGroup=findViewById(R.id.final_booking_page_gym_time_chipgrp);
+
     }
 
     void addData()

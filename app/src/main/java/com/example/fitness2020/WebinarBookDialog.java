@@ -41,7 +41,7 @@ public class WebinarBookDialog extends Dialog {
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                WebinarBookDateTimeDialog webinarBookDateTimeDialog=new WebinarBookDateTimeDialog(context,R.style.Theme_MaterialComponents_NoActionBar);
+                WebinarBookDateTimeDialog webinarBookDateTimeDialog=new WebinarBookDateTimeDialog(context,R.style.Theme_MaterialComponents_Dialog);
                 webinarBookDateTimeDialog.setCancelable(true);
                 webinarBookDateTimeDialog.show();
                 dismiss();
