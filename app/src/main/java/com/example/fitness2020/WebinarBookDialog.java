@@ -12,10 +12,13 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 
+import com.google.android.material.chip.ChipGroup;
+
 public class WebinarBookDialog extends Dialog {
 
     Button yesButton,noButton;
     Context context;
+
 
     public WebinarBookDialog(@NonNull Context context) {
         super(context);
@@ -38,7 +41,7 @@ public class WebinarBookDialog extends Dialog {
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                WebinarBookDateTimeDialog webinarBookDateTimeDialog=new WebinarBookDateTimeDialog(context);
+                WebinarBookDateTimeDialog webinarBookDateTimeDialog=new WebinarBookDateTimeDialog(context,R.style.Theme_MaterialComponents_NoActionBar);
                 webinarBookDateTimeDialog.setCancelable(true);
                 webinarBookDateTimeDialog.show();
                 dismiss();

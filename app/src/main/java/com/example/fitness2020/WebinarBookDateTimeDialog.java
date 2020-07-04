@@ -10,13 +10,25 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 
+import com.example.fitness2020.Models.DateModel;
+import com.example.fitness2020.Models.TimeModel;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
+
+import java.util.ArrayList;
+
 public class WebinarBookDateTimeDialog extends Dialog {
 
     Button confirmBtn;
     Context context;
+    ChipGroup dateGroup,timeGroup;
+    ArrayList<TimeModel> timeModels;
+    ArrayList<DateModel> dateModels;
+    String date,time;
 
-    public WebinarBookDateTimeDialog(@NonNull Context context) {
-        super(context);
+
+    public WebinarBookDateTimeDialog(@NonNull Context context, int themeResId) {
+        super(context, themeResId);
         this.context=context;
     }
 
@@ -33,6 +45,10 @@ public class WebinarBookDateTimeDialog extends Dialog {
 
         attachId();
 
+        initArrayList();
+
+        addData();
+
         confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,9 +57,46 @@ public class WebinarBookDateTimeDialog extends Dialog {
                 dismiss();
             }
         });
+
+        dateGroup=new ChipGroup(getContext());
+        timeGroup=new ChipGroup(getContext());
+
+        timeGroup.isSingleSelection();
+        dateGroup.isSingleSelection();
+
+        for (int i=0;i<=dateModels.size()-1;i++)
+        {
+            date=dateModels.get(i).getDate();
+            Chip chip=new Chip(getContext());
+            chip.setText(date);
+            dateGroup.addView(chip);
+        }
+
+        for (int i=0;i<=timeModels.size()-1;i++)
+        {
+            time=timeModels.get(i).getTime();
+            Chip chip=new Chip(getContext());
+            chip.setText(date);
+            timeGroup.addView(chip);
+        }
+    }
+
+    private void addData() {
+        for(int i=0;i<=9;i++)
+        {
+            timeModels.add(new TimeModel("9:00"));
+            dateModels.add(new DateModel("20 July"));
+        }
+    }
+
+    private void initArrayList() {
+        dateModels=new ArrayList<>(3);
+        timeModels=new ArrayList<>(3);
     }
 
     private void attachId() {
         confirmBtn = findViewById(R.id.final_booking_page_webinar_book_btn);
+        dateGroup=findViewById(R.id.final_booking_page_webinar_date_chipgrp);
+        timeGroup=findViewById(R.id.final_booking_page_webinar_time_chipgrp);
     }
 }
