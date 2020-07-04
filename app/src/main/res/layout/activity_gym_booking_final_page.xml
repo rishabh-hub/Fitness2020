@@ -140,6 +140,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/chip_group_1"
+        android:paddingHorizontal="10dp"
         android:layout_below="@+id/date_explain">
 
         <com.google.android.material.chip.ChipGroup
@@ -180,20 +181,21 @@
         android:textColor="@color/colorPrimaryDark"/>
 
     <HorizontalScrollView
+        android:id="@+id/chip_group_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/chip_group_2"
+        android:paddingHorizontal="10dp"
         android:layout_below="@+id/time_explain">
 
         <com.google.android.material.chip.ChipGroup
+            android:id="@+id/final_booking_page_gym_time_chipgrp"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:id="@+id/final_booking_page_gym_time_chipgrp"
             android:layout_below="@id/date_explain"
-            app:singleLine="true"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:padding="5dp">
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            app:singleLine="true">
 
         </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>
