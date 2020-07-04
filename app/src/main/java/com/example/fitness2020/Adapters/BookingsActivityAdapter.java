@@ -31,6 +31,7 @@ public class BookingsActivityAdapter extends RecyclerView.Adapter<BookingsActivi
     ArrayList<BookingsLiveModel> liveModels;
     ArrayList<BookingsVoucherModel> voucherModels;
     ArrayList<BookingsEventsModel> eventsModels;
+    String phno;
 
     public BookingsActivityAdapter(Context context, int code, ArrayList<BookingsModel> studioModels, ArrayList<BookingsLiveModel> liveModels, ArrayList<BookingsVoucherModel> voucherModels, ArrayList<BookingsEventsModel> eventsModels) {
         this.context = context;
@@ -107,7 +108,7 @@ public class BookingsActivityAdapter extends RecyclerView.Adapter<BookingsActivi
     {
         ImageView liveImage,studioImage,studioDirection;
         TextView liveCategory,liveName,liveTime,liveDate,liveClassType,liveZoomId,liveZoomPassword,liveSeats;
-        TextView studioNameTop,studioDate,studioTime,studioActivity,studioCode,studioOrderId,studioStatus,studioAddress,studioPurchaseDetail;
+        TextView studioNameTop,studioDate,studioTime,studioActivity,studioCode,studioStatus,studioAddress,studioPurchaseDetail;
         Button studioCall,studioViewDetails;
         Button liveIcon;
         public BookingsActivityAdapterRvVH(@NonNull View itemView) {
@@ -192,15 +193,17 @@ public class BookingsActivityAdapter extends RecyclerView.Adapter<BookingsActivi
             studioTime.setText(bookingsModel.getTime());
             studioActivity.setText(bookingsModel.getActivity());
             studioCode.setText(bookingsModel.getCode());
-            studioOrderId.setText(Integer.toString(bookingsModel.getBookingId()));
+//            studioOrderId.setText(Integer.toString(bookingsModel.getBookingId()));
             studioStatus.setText(bookingsModel.getStatus());
             studioAddress.setText(bookingsModel.getAddress2());
             studioPurchaseDetail.setText(bookingsModel.getPurchaseDetails());
+            phno=bookingsModel.getContact1();
             studioCall.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Intent callIntent
-                }
+                    Uri number= Uri.parse("tel:"+phno);
+                    Intent callIntent = new Intent(Intent.ACTION_DIAL,number);
+                    itemView.getContext().startActivity(callIntent);                }
             });
             studioViewDetails.setOnClickListener(new View.OnClickListener() {
                 @Override
