@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_marginLeft="10dp"
+android:layout_marginRight="10dp"
+android:layout_marginTop="2dp"
+android:layout_marginBottom="8dp"
+android:padding="10dp"
+android:elevation="8dp"
+app:cardBackgroundColor="#fff"
+android:layout_height="wrap_content"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+app:cardCornerRadius="15dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_close_24px"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/gym_membership_dialog_cut_btn"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primaryBlue"
+        android:textSize="17sp"
+        android:text="6 Month Subscription"
+        android:fontFamily="@font/metropolisblack"
+        android:id="@+id/gym_membership_name_dialog"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_below="@id/gym_membership_name_dialog"
+        android:id="@+id/line"
+        android:background="@color/colorPrimary"
+        android:layout_alignEnd="@id/gym_membership_image"
+        android:layout_marginVertical="10dp"/>
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/detail_container"
+        android:background="@color/primaryBlue"
+        android:scaleType="centerCrop"
+        android:id="@+id/gym_membership_image_dialog"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/detail_container"
+        android:layout_below="@id/line"
+        android:layout_toLeftOf="@id/gym_membership_image"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hoodBlue"
+            android:textSize="15sp"
+            android:text="ABC Fitness Centre"
+            android:fontFamily="@font/metropolisbold"
+            android:id="@+id/gym_membership_gym_name_dialog"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="13sp"
+            android:text="221 Baker Street, New Delhi-110067"
+            android:fontFamily="@font/metropolismedium"
+            android:id="@+id/gym_membership_gym_address_dialog"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="Start: "
+                android:fontFamily="@font/metropolisbold"
+                android:id="@+id/gym_membership_gym_start_date_tv"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="21 Jan 2021"
+                android:fontFamily="@font/metropolismedium"
+                android:id="@+id/gym_membership_gym_start_date_dialog"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="End: "
+                android:fontFamily="@font/metropolisbold"
+                android:id="@+id/gym_membership_gym_end_date_tv"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginLeft="8dp"
+                android:text="21 Aug 2021"
+                android:fontFamily="@font/metropolismedium"
+                android:id="@+id/gym_membership_gym_end_date_dialog"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/hoodBlue"
+        android:textSize="15sp"
+        android:layout_alignStart="@id/gym_membership_image_dialog"
+        android:text="₹ 1299"
+        android:layout_below="@id/gym_membership_image_dialog"
+        android:paddingVertical="5dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/metropolisbold"
+        android:id="@+id/gym_membership_price_dialog"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="1"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/gym_membership_price_dialog"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button"
+            android:backgroundTint="@color/primaryBlue"
+            android:layout_below="@id/gym_membership_price"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"
+            android:text="Call"
+            android:id="@+id/gym_membership_call_btn_dialog"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+</androidx.cardview.widget.CardView>

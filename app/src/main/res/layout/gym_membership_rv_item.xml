@@ -69,14 +69,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:text="Start: "
-                android:fontFamily="@font/metropolisbold"
-                android:id="@+id/gym_membership_gym_start_date_tv"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:text="Start: "
+                    android:fontFamily="@font/metropolisbold"
+                    android:id="@+id/gym_membership_gym_start_date_tv"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -130,27 +130,28 @@
             android:layout_below="@id/gym_membership_price"
             android:orientation="horizontal">
 
-        <Button
-            android:layout_width="150dp"
-            android:layout_centerHorizontal="true"
-            android:layout_height="30dp"
-            android:background="@drawable/bg_button"
-            android:backgroundTint="@color/primaryBlue"
-            android:layout_below="@id/gym_membership_price"
-            android:layout_marginRight="20dp"
-            android:textColor="@color/white"
-            android:text="Call"
-            android:id="@+id/gym_membership_call_btn"/>
-        <Button
-            android:layout_width="150dp"
-            android:layout_centerHorizontal="true"
-            android:layout_height="30dp"
-            android:background="@drawable/bg_button"
-            android:backgroundTint="@color/primaryBlue"
-            android:layout_below="@id/gym_membership_price"
-            android:textColor="@color/white"
-            android:text="Details"
-            android:id="@+id/gym_membership_view_more_btn"/>
+            <Button
+                android:layout_width="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_button"
+                android:backgroundTint="@color/primaryBlue"
+                android:layout_below="@id/gym_membership_price"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                android:text="Call"
+                android:id="@+id/gym_membership_call_btn"/>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_below="@id/gym_membership_price"
+                android:textStyle="bold"
+                android:textColor="@color/primaryBlue"
+                android:text="Details"
+                android:id="@+id/gym_membership_view_more_btn"/>
         </LinearLayout>
 
 
