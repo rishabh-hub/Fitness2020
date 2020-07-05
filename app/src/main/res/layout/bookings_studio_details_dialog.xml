@@ -246,7 +246,7 @@
             android:text="Location "
             android:textColor="@color/white"
             android:layout_weight="1"
-            android:textSize="12sp"
+            android:textSize="11sp"
             android:fontFamily="@font/metropolisbold"
             />
 
@@ -254,7 +254,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/bookings_dialog_address"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="10dp"
             android:textColor="@color/webGray"
             android:text="221 Baker Street, New Delhi"
             android:layout_weight="1"
@@ -291,7 +291,7 @@
             android:text="Purchase Detail"
             android:textColor="@color/white"
             android:layout_weight="1"
-            android:textSize="12sp"
+            android:textSize="11sp"
             android:fontFamily="@font/metropolisbold"
             />
 
