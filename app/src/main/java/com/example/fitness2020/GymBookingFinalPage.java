@@ -139,11 +139,8 @@ public class GymBookingFinalPage extends AppCompatActivity implements AdapterVie
 
     void attachId()
     {
-//        gymName=findViewById(R.id.final_booking_page_gym_name);
         offeringName=findViewById(R.id.final_booking_page_gym_activity);
         offeringSubscription=findViewById(R.id.final_booking_page_gym_offer);
-//        dateRv=findViewById(R.id.final_booking_page_gym_date_rv);
-//        timeRv=findViewById(R.id.final_booking_page_gym_time_rv);
         promoCode=findViewById(R.id.final_booking_page_gym_promoET);
         payButton=findViewById(R.id.final_booking_page_gym_book_btn);
         netAmount = findViewById(R.id.final_booking_page_gym_amount);

@@ -30,6 +30,7 @@ import com.example.fitness2020.Models.TrendingRvModel;
 import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.R;
 import com.example.fitness2020.TopFitnessCentres;
+import com.example.fitness2020.TrialCardActivity;
 import com.example.fitness2020.WebinarTabActivity;
 
 import java.util.ArrayList;
@@ -143,6 +144,15 @@ public class PassFragment extends Fragment {
             public void onClick(View v) {
                 Intent topFitnessIntent=new Intent(view.getContext(), TopFitnessCentres.class);
                 startActivity(topFitnessIntent);
+            }
+        });
+
+        buyFitnessPasssButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent buyFitnessPassIntent=new Intent(view.getContext(), TrialCardActivity.class);
+                startActivity(buyFitnessPassIntent);
             }
         });
         return view;
