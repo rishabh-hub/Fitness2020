@@ -94,7 +94,6 @@ public class GymBookingFinalPage extends AppCompatActivity implements AdapterVie
             Log.i(TAG, "onCreate:  "+date);
             Chip chip=new Chip(dateGroup.getContext());
             chip.setText(date);
-            chip.setChipBackgroundColorResource(R.color.primaryBlue);
             dateGroup.addView(chip);
         }
 
@@ -103,7 +102,6 @@ public class GymBookingFinalPage extends AppCompatActivity implements AdapterVie
             time=timeModels.get(i).getTime();
             Chip chip=new Chip(timeGroup.getContext());
             chip.setText(time);
-            chip.setChipBackgroundColorResource(R.color.primaryBlue);
             timeGroup.addView(chip);
         }
 
