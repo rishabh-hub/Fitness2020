@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginTop="2dp"
-    android:layout_marginBottom="8dp"
     android:padding="10dp"
     android:elevation="8dp"
     app:cardBackgroundColor="#fff"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="15dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -27,9 +22,9 @@
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:scaleType="centerCrop"
-        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/gym_photo"
-        android:layout_alignTop="@id/membership_gym_order_tv"
+        android:layout_below="@id/line"
         android:layout_margin="10dp"
         android:id="@+id/membership_gym_photo"/>
     <TextView
@@ -51,8 +46,8 @@
         android:layout_below="@id/fitness2020_membership_name_dialog"
         android:id="@+id/line"
         android:layout_alignStart="@id/fitness2020_membership_name_dialog"
+        android:layout_alignEnd="@id/fitness2020_membership_dialog_cut_btn"
         android:background="@color/colorPrimary"
-        android:layout_alignEnd="@id/membership_gym_photo"
         android:layout_marginVertical="10dp"/>
 
 
@@ -60,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@id/fitness2020_membership_name_dialog"
-        android:layout_below="@id/line"
+        android:layout_below="@id/membership_gym_photo"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="15dp"
         android:textStyle="bold"
@@ -245,6 +240,7 @@
             android:layout_height="35dp"
             android:layout_weight="1"
             android:gravity="center"
+            android:textSize="12dp"
             android:background="@drawable/bg_button"
             android:id="@+id/fitness2020_membership_support_btn_dialog"
             android:layout_marginHorizontal="10dp"

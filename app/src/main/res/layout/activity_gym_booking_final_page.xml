@@ -201,7 +201,7 @@
     </HorizontalScrollView>
 
 
-    <TextView
+    <ImageView
         android:layout_width="150dp"
         android:layout_height="90dp"
         android:padding="5dp"
@@ -209,7 +209,8 @@
         android:layout_marginStart="10dp"
         android:layout_below="@id/chip_group_2"
         android:id="@+id/squad"
-        android:background="@drawable/squad"
+        android:src="@drawable/ic_team"
+        android:tint="@color/primaryBlue"
         android:fontFamily="@font/metropolisbold"
         android:textSize="17sp"
         android:textColor="@color/primaryBlue"/>
