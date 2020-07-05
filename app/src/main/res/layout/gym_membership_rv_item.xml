@@ -28,7 +28,7 @@
             android:layout_height="1.5dp"
             android:layout_below="@id/gym_membership_name"
             android:id="@+id/line"
-            android:background="@color/colorPrimary"
+            android:background="@color/primaryBlue"
             android:layout_alignEnd="@id/gym_membership_image"
             android:layout_marginVertical="10dp"/>
         <ImageView

@@ -41,7 +41,7 @@
         android:layout_below="@id/fitness2020_membership_name"
         android:id="@+id/line"
         android:layout_alignStart="@id/fitness2020_membership_name"
-        android:background="@color/colorPrimary"
+        android:background="@color/primaryBlue"
         android:layout_alignEnd="@id/membership_gym_photo"
         android:layout_marginVertical="10dp"/>
 
