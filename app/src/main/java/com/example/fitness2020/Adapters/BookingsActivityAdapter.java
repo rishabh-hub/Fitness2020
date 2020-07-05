@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitness2020.DetailsDialog;
 import com.example.fitness2020.Models.BookingsEventsModel;
 import com.example.fitness2020.Models.BookingsLiveModel;
 import com.example.fitness2020.Models.BookingsModel;
@@ -161,6 +162,7 @@ public class BookingsActivityAdapter extends RecyclerView.Adapter<BookingsActivi
                 studioCall=itemView.findViewById(R.id.booking_call_button);
                 studioViewDetails=itemView.findViewById(R.id.booking_details_button);
                 studioViewDetails.setPaintFlags(studioViewDetails.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+
             }
             else if (code==2)
             {
@@ -210,7 +212,10 @@ public class BookingsActivityAdapter extends RecyclerView.Adapter<BookingsActivi
             studioViewDetails.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Intent viewIntent
+
+                    DetailsDialog detailsDialog=new DetailsDialog(context,R.style.Theme_MaterialComponents_Dialog,0);
+                    detailsDialog.setCancelable(true);
+                    detailsDialog.show();
                 }
             });
             studioDirection.setOnClickListener(new View.OnClickListener() {

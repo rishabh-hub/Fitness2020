@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitness2020.DetailsDialog;
 import com.example.fitness2020.Models.Fitness2020Model;
 import com.example.fitness2020.Models.GymMembershipModel;
 import com.example.fitness2020.R;
@@ -78,9 +79,9 @@ public class MembershipActivityAdapter extends RecyclerView.Adapter<MembershipAc
     public class MembershipActivityRvVH extends RecyclerView.ViewHolder
     {
         ImageView gymImage,fitnessImage;
-        TextView fitness2020Membershipame,gymMembershipName,gymPrice,gymName,gymStartDate,gymEndDate,fitness2020Price,freeTrialExpiry,webinarExpiry,voucherExpiry,pointsExpiry,autoDebitDate,gymAddress;
-        Button fitness2020ContactButton,gymContactButton, fitness2020RefundButton,stopPaymentbutton;
-
+        TextView fitness2020Membershipame,gymMembershipName,gymPrice,gymName,gymStartDate,gymEndDate,fitness2020Price,freeTrialExpiry,webinarExpiry,voucherExpiry,pointsExpiry,autoDebitDate,gymAddress,detailsButton;
+        Button fitness2020ContactButton,gymContactButton,stopPaymentbutton;
+        TextView gymMembershipViewMoreButton;
 
         public MembershipActivityRvVH(@NonNull final View itemView) {
             super(itemView);
@@ -95,8 +96,17 @@ public class MembershipActivityAdapter extends RecyclerView.Adapter<MembershipAc
                 pointsExpiry=itemView.findViewById(R.id.fitness2020_points_expiry);
                 autoDebitDate=itemView.findViewById(R.id.fitness2020_debit_date);
                 fitness2020ContactButton=itemView.findViewById(R.id.fitness2020_membership_support_btn);
-                fitness2020RefundButton =itemView.findViewById(R.id.fitness2020_membership_refund_button);
+                detailsButton =itemView.findViewById(R.id.fitness2020_membership_refund_button);
                 stopPaymentbutton=itemView.findViewById(R.id.stop_fitness2020_membership_btn);
+
+                detailsButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        DetailsDialog detailsDialog=new DetailsDialog(itemView.getContext(),R.style.Theme_MaterialComponents_Dialog,1);
+                        detailsDialog.setCancelable(true);
+                        detailsDialog.show();
+                    }
+                });
 
                 fitness2020ContactButton.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -118,12 +128,23 @@ public class MembershipActivityAdapter extends RecyclerView.Adapter<MembershipAc
                 gymEndDate = itemView.findViewById(R.id.gym_membership_gym_end_date);
                 gymAddress = itemView.findViewById(R.id.gym_membership_gym_address);
                 gymContactButton = itemView.findViewById(R.id.gym_membership_call_btn);
+                gymMembershipViewMoreButton=itemView.findViewById(R.id.gym_membership_view_more_btn);
                 gymContactButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Uri number= Uri.parse("tel:"+phno1);
                         Intent callIntent = new Intent(Intent.ACTION_DIAL,number);
                         itemView.getContext().startActivity(callIntent);
+                    }
+                });
+
+                gymMembershipViewMoreButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        DetailsDialog detailsDialog=new DetailsDialog(itemView.getContext(),R.style.Theme_MaterialComponents_Dialog,2);
+                        detailsDialog.setCancelable(true);
+                        detailsDialog.show();
                     }
                 });
             }

@@ -26,7 +26,7 @@
         android:src="@drawable/gym_photo"
         android:layout_below="@id/line"
         android:layout_margin="10dp"
-        android:id="@+id/membership_gym_photo"/>
+        android:id="@+id/membership_gym_photo_dialog"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

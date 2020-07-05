@@ -37,7 +37,7 @@ public class TrialCardActivity extends AppCompatActivity {
 
         attachId();
 
-        membershipRv.setLayoutManager(new GridLayoutManager(TrialCardActivity.this,2,GridLayoutManager.VERTICAL,false));
+        membershipRv.setLayoutManager(new LinearLayoutManager(TrialCardActivity.this,LinearLayoutManager.VERTICAL,false));
         benefitsRv.setLayoutManager(new LinearLayoutManager(TrialCardActivity.this,LinearLayoutManager.VERTICAL,false));
 
         membershipInternalModels=new ArrayList<>(3);
