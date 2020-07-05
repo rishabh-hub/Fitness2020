@@ -2,6 +2,7 @@ package com.example.fitness2020.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -108,8 +109,8 @@ public class BookingsActivityAdapter extends RecyclerView.Adapter<BookingsActivi
     {
         ImageView liveImage,studioImage,studioDirection;
         TextView liveCategory,liveName,liveTime,liveDate,liveClassType,liveZoomId,liveZoomPassword,liveSeats;
-        TextView studioNameTop,studioDate,studioTime,studioActivity,studioCode,studioStatus,studioAddress,studioPurchaseDetail;
-        Button studioCall,studioViewDetails;
+        TextView studioNameTop,studioDate,studioTime,studioActivity,studioCode,studioStatus,studioAddress,studioPurchaseDetail,studioViewDetails;
+        Button studioCall;
         Button liveIcon;
         public BookingsActivityAdapterRvVH(@NonNull View itemView) {
             super(itemView);
@@ -159,6 +160,7 @@ public class BookingsActivityAdapter extends RecyclerView.Adapter<BookingsActivi
                 studioPurchaseDetail=itemView.findViewById(R.id.bookings_rv_item_purchase_detail);
                 studioCall=itemView.findViewById(R.id.booking_call_button);
                 studioViewDetails=itemView.findViewById(R.id.booking_details_button);
+                studioViewDetails.setPaintFlags(studioViewDetails.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
             }
             else if (code==2)
             {

@@ -296,6 +296,20 @@
                 android:text="@string/update_detail_text"
                 android:layout_below="@id/tv_anniversary"
                 android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryBlue"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/skip_profile_text"
+                    android:fontFamily="@font/metropolismedium"
+                    android:text="Skip for now"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="right"/>
             </RelativeLayout>
 
 
