@@ -232,13 +232,13 @@
         android:layout_below="@id/fitness2020_debit_date_dialog"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
-        android:weightSum="2"
+        android:weightSum="3"
         android:paddingVertical="3dp"
         android:gravity="center">
         <Button
             android:layout_width="0dp"
             android:layout_height="35dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:gravity="center"
             android:textSize="12dp"
             android:background="@drawable/bg_button"
