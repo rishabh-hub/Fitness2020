@@ -15,8 +15,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_close_24px"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/fitness2020_membership_dialog_cut_btn"
+        />
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:scaleType="centerCrop"
         android:layout_alignParentEnd="true"
         android:src="@drawable/gym_photo"
@@ -24,9 +33,10 @@
         android:layout_margin="10dp"
         android:id="@+id/membership_gym_photo"/>
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_toRightOf="@id/fitness2020_membership_dialog_cut_btn"
         android:layout_alignParentTop="true"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
@@ -34,13 +44,13 @@
         android:textSize="17sp"
         android:text="6 Month Subscription"
         android:fontFamily="@font/metropolisblack"
-        android:id="@+id/fitness2020_membership_name"/>
+        android:id="@+id/fitness2020_membership_name_dialog"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1.5dp"
-        android:layout_below="@id/fitness2020_membership_name"
+        android:layout_below="@id/fitness2020_membership_name_dialog"
         android:id="@+id/line"
-        android:layout_alignStart="@id/fitness2020_membership_name"
+        android:layout_alignStart="@id/fitness2020_membership_name_dialog"
         android:background="@color/colorPrimary"
         android:layout_alignEnd="@id/membership_gym_photo"
         android:layout_marginVertical="10dp"/>
@@ -49,7 +59,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@id/fitness2020_membership_name"
+        android:layout_alignStart="@id/fitness2020_membership_name_dialog"
         android:layout_below="@id/line"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="15dp"
@@ -67,13 +77,13 @@
         android:textSize="15dp"
         android:fontFamily="@font/metropolisbold"
         android:text="₹499"
-        android:id="@+id/membership_gym_price"/>
+        android:id="@+id/membership_gym_price_dialog"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@id/fitness2020_membership_name"
-        android:layout_below="@id/membership_gym_price"
+        android:layout_alignStart="@id/fitness2020_membership_name_dialog"
+        android:layout_below="@id/membership_gym_price_dialog"
         android:layout_marginTop="5dp"
         android:textSize="17sp"
         android:fontFamily="@font/metropolisbold"
@@ -121,10 +131,10 @@
         />
 
     <TextView
-        android:id="@+id/fitness2020_voucher_expiry"
+        android:id="@+id/fitness2020_voucher_expiry_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@id/fitness2020_live_workout_expiry"
+        android:layout_alignStart="@id/fitness2020_live_workout_expiry_dialog"
         android:layout_alignBottom="@id/voucher_expiry_tv"
         android:layout_toRightOf="@id/voucher_expiry_tv"
         android:fontFamily="@font/metropolisbold"
@@ -148,12 +158,12 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/free_trial_expiry_tv"
         android:layout_alignBottom="@id/free_trial_expiry_tv"
-        android:layout_alignStart="@id/fitness2020_live_workout_expiry"
+        android:layout_alignStart="@id/fitness2020_live_workout_expiry_dialog"
         android:textSize="14sp"
         android:fontFamily="@font/metropolisbold"
         android:textColor="@color/black"
         android:text="21 Jan 2021"
-        android:id="@+id/fitness2020_free_trial_expiry"
+        android:id="@+id/fitness2020_free_trial_expiry_dialog"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -165,7 +175,7 @@
         android:fontFamily="@font/metropolisbold"
         android:textColor="@color/black"
         android:text="21 Jan 2021"
-        android:id="@+id/fitness2020_live_workout_expiry"
+        android:id="@+id/fitness2020_live_workout_expiry_dialog"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -177,19 +187,19 @@
         android:layout_marginLeft="15sp"
         android:textColor="@color/black"
         android:text="21 Jan 2021"
-        android:id="@+id/fitness2020_voucher_net_expiryy"
+        android:id="@+id/fitness2020_voucher_net_expiry_dialog"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/points_expiry_tv"
         android:layout_alignBottom="@id/points_expiry_tv"
-        android:layout_alignStart="@id/fitness2020_live_workout_expiry"
+        android:layout_alignStart="@id/fitness2020_live_workout_expiry_dialog"
         android:textSize="14sp"
         android:fontFamily="@font/metropolisbold"
         android:textColor="@color/black"
         android:text="21 Jan 2021"
-        android:id="@+id/fitness2020_points_expiry"
+        android:id="@+id/fitness2020_points_expiry_dialog"
         />
 
     <TextView
@@ -215,41 +225,28 @@
         android:fontFamily="@font/metropolisbold"
         android:textColor="@color/black"
         android:text="15 Jan 2021"
-        android:id="@+id/fitness2020_debit_date"
+        android:id="@+id/fitness2020_debit_date_dialog"
         />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_alignBottom="@id/fitness2020_debit_date"
-        android:background="@drawable/bg_button"
-        android:layout_alignParentEnd="true"
-        android:layout_marginHorizontal="10dp"
-        android:backgroundTint="@color/primaryBlue"
-        android:textSize="10sp"
-        android:text="Stop Payment"
-        android:paddingHorizontal="10dp"
-        android:textColor="#fff"
-        android:id="@+id/stop_fitness2020_membership_btn"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bookings_rv_item_comtainer8"
         android:orientation="horizontal"
-        android:layout_below="@id/fitness2020_debit_date"
+        android:layout_below="@id/fitness2020_debit_date_dialog"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
-        android:weightSum="3"
+        android:weightSum="2"
         android:paddingVertical="3dp"
         android:gravity="center">
         <Button
             android:layout_width="0dp"
             android:layout_height="35dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:gravity="center"
             android:background="@drawable/bg_button"
-            android:id="@+id/fitness2020_membership_support_btn"
+            android:id="@+id/fitness2020_membership_support_btn_dialog"
             android:layout_marginHorizontal="10dp"
             android:text="contact support"
             android:textColor="@color/white"
@@ -258,13 +255,14 @@
             android:layout_width="0dp"
             android:layout_height="35dp"
             android:layout_weight="1"
-            android:background="@color/white"
             android:gravity="center"
-            android:id="@+id/fitness2020_membership_refund_button"
+            android:background="@color/white"
+            android:id="@+id/fitness2020_membership_refund_btn_dialog"
             android:layout_marginHorizontal="10dp"
-            android:text="Details"
+            android:text="Ask For Refund"
             android:textColor="@color/primaryBlue"
             android:textStyle="bold"/>
+
 
 
     </LinearLayout>

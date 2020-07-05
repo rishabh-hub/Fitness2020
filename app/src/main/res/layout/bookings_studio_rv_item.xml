@@ -40,6 +40,14 @@
                 android:id="@+id/bookings_rv_item_product_name"
                 android:text="Booking Name"
                 />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryBlue"
+                android:layout_below="@id/bookings_rv_item_product_name"
+                android:layout_toRightOf="@id/bookings_rv_item_imgvw"
+                android:layout_marginHorizontal="10dp"/>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -49,7 +57,8 @@
                 android:id="@+id/bookings_rv_item_date_tv"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/colorPrimaryDark"
-                android:layout_marginVertical="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="10dp"
                 android:text="Date: "
                 />
             <TextView
@@ -62,7 +71,8 @@
                 android:id="@+id/bookings_rv_item_date"
                 android:textColor="#000"
                 android:maxLines="2"
-                android:layout_marginVertical="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="10dp"
                 />
 
             <TextView
@@ -116,7 +126,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/bookings_rv_item_comtainer2"
-            android:orientation="horizontal"
+            android:orientation="vertical"
+            android:padding="8dp"
             android:layout_below="@id/bookings_rv_item_container1"
             android:layout_marginTop="10dp"
             android:weightSum="2"
@@ -139,6 +150,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/bookings_rv_item_code"
                     android:textColor="#000000"
+                    android:text="1241225125125"
+                    android:layout_alignParentEnd="true"
                     android:fontFamily="@font/metropolissemibold"
                     android:layout_toRightOf="@id/bookings_rv_item_orderid_tv"
                     />
@@ -148,6 +161,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 >
                 <TextView
@@ -162,6 +176,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/bookings_rv_item_status"
+                    android:text="REDEEMED"
+                    android:layout_alignParentEnd="true"
                     android:layout_toRightOf="@id/bookings_rv_item_status_tv"
                     android:textColor="@color/primaryBlue"
                     android:fontFamily="@font/metropolissemibold"
@@ -178,18 +194,17 @@
             android:layout_below="@id/bookings_rv_item_comtainer2"
             android:layout_marginTop="5dp"
             android:weightSum="2"
-            android:padding="3dp"
+            android:padding="8dp"
             android:gravity="center"
             >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/bookings_rv_item_address2_tv"
-            android:text="Location "
-            android:textColor="#000"
+            android:text="Location: "
+            android:textColor="@color/colorPrimaryDark"
             android:layout_weight="1"
-            android:textSize="12sp"
-            android:fontFamily="@font/metropolismedium"
+            android:fontFamily="@font/metropolissemibold"
             />
 
         <TextView
@@ -213,40 +228,37 @@
 
 
         <LinearLayout
+            android:id="@+id/bookings_rv_item_comtainer7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bookings_rv_item_comtainer7"
-            android:orientation="horizontal"
             android:layout_below="@id/bookings_rv_item_comtainer4"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="6dp"
             android:layout_marginBottom="10dp"
-            android:weightSum="2"
-            android:padding="3dp"
             android:gravity="center"
-            >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bookings_rv_item_purchase_detail_tv"
-            android:text="Purchase Detail"
-            android:textColor="#000"
-            android:layout_weight="1"
-            android:textSize="12sp"
-            android:fontFamily="@font/metropolismedium"
-            />
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:weightSum="2">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bookings_rv_item_purchase_detail"
-            android:layout_marginLeft="30dp"
-            android:textColor="#000"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="12sp"
-            android:text="Free Trial"
-            android:fontFamily="@font/metropolislight"
-            />
+            <TextView
+                android:id="@+id/bookings_rv_item_purchase_detail_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/metropolissemibold"
+                android:text="Purchase Detail: "
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/bookings_rv_item_purchase_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/metropolislight"
+                android:gravity="center"
+                android:text="Free Trial"
+                android:textColor="#000"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -258,13 +270,13 @@
             android:layout_below="@id/bookings_rv_item_comtainer7"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:weightSum="2"
+            android:weightSum="3"
             android:padding="3dp"
             android:gravity="center">
             <Button
                 android:layout_width="0dp"
                 android:layout_height="35dp"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@drawable/bg_button"
                 android:backgroundTint="@color/primaryBlue"
                 android:id="@+id/booking_call_button"
