@@ -116,29 +116,47 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:orientation="vertical"
                         android:layout_marginHorizontal="7dp"
                         android:gravity="center">
 
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/ic_weightlifting"
+                        android:tint="@color/colorPrimary"
+                        android:src="@drawable/sports"
                         android:id="@+id/home_fragment_explore_tab_activities_cardvw_imgvw1"
                         />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sports"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="11sp"
+                            android:textStyle="bold"/>
 
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="7dp"
+                    android:orientation="vertical"
                     android:gravity="center">
 
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/ic_swimming"
+                        android:src="@drawable/kickboxing"
+                        android:tint="@color/colorPrimary"
                         android:id="@+id/home_fragment_explore_tab_activities_cardvw_imgvw2"
                         />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kick Boxing"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="11sp"
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 
@@ -147,45 +165,72 @@
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="7dp"
                     android:layout_weight="1"
+                    android:orientation="vertical"
                     android:gravity="center">
 
 
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/ic_cycle"
+                        android:tint="@color/colorPrimary"
+                        android:src="@drawable/gym"
                         android:id="@+id/home_fragment_explore_tab_activities_cardvw_imgvw3"
                         />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gym"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="11sp"
+                        android:textStyle="bold"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="7dp"
+                    android:orientation="vertical"
                     android:gravity="center">
 
 
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/ic_rings"
+                        android:src="@drawable/swimming"
+                        android:tint="@color/colorPrimary"
                         android:id="@+id/home_fragment_explore_tab_activities_cardvw_imgvw4"
                         />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Swimming"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="11sp"
+                        android:textStyle="bold"/>
                 </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginHorizontal="7dp"
+                        android:orientation="vertical"
                         android:gravity="center">
 
 
                             <ImageView
                                 android:layout_width="40dp"
+                                android:tint="@color/colorPrimary"
                                 android:layout_height="40dp"
-                                android:src="@drawable/ic_tennis"
+                                android:src="@drawable/yoga"
                                 android:id="@+id/home_fragment_explore_tab_activities_cardvw_imgvw5"
                                 />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yoga"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="11sp"
+                            android:textStyle="bold"/>
 
                     </LinearLayout>
 
@@ -193,29 +238,47 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginHorizontal="7dp"
+                        android:orientation="vertical"
                         android:gravity="center">
 
 
                             <ImageView
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/ic_karate"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/gymnastic"
                                 android:id="@+id/home_fragment_explore_tab_activities_cardvw_imgvw6"
                                 />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gymnastics"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="11sp"
+                            android:textStyle="bold"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginHorizontal="7dp"
+                        android:orientation="vertical"
                         android:gravity="center">
 
 
                             <ImageView
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/ic_rhythmic_gymnastics"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/dance"
                                 android:id="@+id/home_fragment_explore_tab_activities_cardvw_imgvw7"
                                 />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dance"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="11sp"
+                            android:textStyle="bold"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -236,7 +299,7 @@
                     android:textSize="10sp"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/primaryBlue"
                     android:layout_marginLeft="2dp"
                     android:layout_marginVertical="13sp"
                     android:id="@+id/home_fragment_explore_tab_activities_btn"
@@ -245,7 +308,7 @@
                         android:layout_width="7dp"
                         android:layout_height="7dp"
                         android:layout_marginLeft="1dp"
-                        android:tint="@color/colorPrimary"
+                        android:tint="@color/primaryBlue"
                         android:src="@drawable/ic_right_arrow"/>
                 </LinearLayout>
 
