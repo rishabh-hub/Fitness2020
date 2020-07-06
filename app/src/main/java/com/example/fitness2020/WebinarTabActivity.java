@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
@@ -20,10 +21,14 @@ import com.example.fitness2020.fragments.EventsFragment;
 import com.example.fitness2020.fragments.HomeAtTheStudioTab;
 import com.example.fitness2020.fragments.HomeLiveTab;
 import com.example.fitness2020.fragments.MorningFragmentTab;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
+
+import static android.content.ContentValues.TAG;
 
 public class WebinarTabActivity extends AppCompatActivity {
 
@@ -36,6 +41,9 @@ public class WebinarTabActivity extends AppCompatActivity {
     ArrayList<TimeModel> timeModels=new ArrayList<>();
     RecyclerView dateRv;
     DateTimeAdapter dateAdapter;
+    ChipGroup dateGroup;
+    String date;
+
 
 
     @Override
@@ -46,18 +54,22 @@ public class WebinarTabActivity extends AppCompatActivity {
         attachId();
 
         loadFragment(new MorningFragmentTab());
-        dateRv.setLayoutManager(new LinearLayoutManager(WebinarTabActivity.this,LinearLayoutManager.HORIZONTAL,false));
 
         timeModels=new ArrayList<>(3);
         dateModels=new ArrayList<>(3);
 
         addData();
 
-        dateAdapter=new DateTimeAdapter(WebinarTabActivity.this,0,dateModels,timeModels);
 
-        dateRv.setAdapter(dateAdapter);
+        for (DateModel d:dateModels)
+        {
+            date=d.getDate();
+            Log.i(TAG, "onCreate:  "+date);
+            Chip chip=new Chip(dateGroup.getContext());
+            chip.setText(date);
+            dateGroup.addView(chip);
+        }
 
-        dateAdapter.notifyDataSetChanged();
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,12 +107,12 @@ public class WebinarTabActivity extends AppCompatActivity {
 
     void attachId()
     {
-        dateRv=findViewById(R.id.webinar_date_selected_rv);
         morningTab=findViewById(R.id.webinar_tab_morning);
         eveningTab=findViewById(R.id.webinar_tab_evening);
         timeSlotTab=findViewById(R.id.webinar_tab_layout);
         frameLayout = findViewById(R.id.webinar_frame);
         back = findViewById(R.id.webinar_internal_back_btn);
+        dateGroup=findViewById(R.id.webinar_internal_date_chipgrp);
     }
 
     void loadFragment(Fragment fragment)
@@ -113,7 +125,7 @@ public class WebinarTabActivity extends AppCompatActivity {
 
     void addData()
     {
-        for (int i=0;i<4;i++)
+        for (int i=0;i<9;i++)
         dateModels.add(new DateModel("2 June"));
     }
 }
