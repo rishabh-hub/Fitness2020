@@ -15,20 +15,21 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
             <ImageButton
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@drawable/ic_left_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_chevron_left_white_24dp"
                 android:backgroundTint="@color/white"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="10dp"
                 android:id="@+id/webinar_internal_back_btn"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/metropolisbold"
                 android:gravity="center"
                 android:layout_marginStart="15dp"
                 android:textColor="@color/white"
@@ -52,7 +53,6 @@
                 <com.google.android.material.chip.ChipGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:id="@+id/webinar_internal_date_chipgrp"
                     android:layout_below="@id/date_explain"
                     app:singleLine="true"
@@ -103,6 +103,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/webinar_appbar"
         android:id="@+id/webinar_frame"/>
 
 </RelativeLayout>

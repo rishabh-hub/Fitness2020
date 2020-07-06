@@ -16,7 +16,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="8dp"
         android:padding="5dp"
         android:elevation="8dp"
         android:id="@+id/webinar_morning_activity_rv"
