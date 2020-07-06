@@ -167,7 +167,7 @@ public class PassFragment extends Fragment {
         }
         for (int i=0;i<5;i++)
         {
-            topTrainerModels.add(new TopTrainersModel(R.drawable.workout_carousel_dummy,"Paari"));
+            topTrainerModels.add(new TopTrainersModel(R.drawable.webinar,"Paari"));
             videos.add(new VideoModel(R.drawable.gym_video_dummy));
             faqs.add(new FaqModel("Q. Some Question about MemberShip?","A. Corresponding answer about MemberShip"));
         }

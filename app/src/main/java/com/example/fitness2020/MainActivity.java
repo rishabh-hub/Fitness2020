@@ -6,6 +6,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -38,6 +39,19 @@ public class MainActivity extends AppCompatActivity{
     public BottomNavigationView bottomNavigationView;
     TextView location;
     private static  MainActivity instance;
+
+    @Override
+    public void onBackPressed() {
+        int seletedItemId = bottomNavigationView.getSelectedItemId();
+        if (R.id.home != seletedItemId) {
+            setHomeItem(MainActivity.this);
+        } else {
+            super.onBackPressed();
+        }
+    }
+    public  void setHomeItem(Activity activity) {
+        bottomNavigationView.setSelectedItemId(R.id.home);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
