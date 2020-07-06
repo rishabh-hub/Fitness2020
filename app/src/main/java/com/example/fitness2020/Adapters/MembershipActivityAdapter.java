@@ -2,6 +2,7 @@ package com.example.fitness2020.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -98,6 +99,7 @@ public class MembershipActivityAdapter extends RecyclerView.Adapter<MembershipAc
                 fitness2020ContactButton=itemView.findViewById(R.id.fitness2020_membership_support_btn);
                 detailsButton =itemView.findViewById(R.id.fitness2020_membership_refund_button);
                 stopPaymentbutton=itemView.findViewById(R.id.stop_fitness2020_membership_btn);
+                detailsButton.setPaintFlags(detailsButton.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
                 detailsButton.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -129,6 +131,7 @@ public class MembershipActivityAdapter extends RecyclerView.Adapter<MembershipAc
                 gymAddress = itemView.findViewById(R.id.gym_membership_gym_address);
                 gymContactButton = itemView.findViewById(R.id.gym_membership_call_btn);
                 gymMembershipViewMoreButton=itemView.findViewById(R.id.gym_membership_view_more_btn);
+                gymMembershipViewMoreButton.setPaintFlags(gymMembershipViewMoreButton.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
                 gymContactButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

@@ -11,9 +11,11 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitness2020.MainActivity;
 import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.R;
 import com.example.fitness2020.VideoInternalPage;
+import com.example.fitness2020.fragments.PassFragment;
 
 import java.util.ArrayList;
 
@@ -186,6 +188,14 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosAdap
 
         public void populateMemberships(VideoModel videoModel) {
             memnershipImage.setImageResource(videoModel.getVideoImageResource());
+
+            memnershipImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    MainActivity.getInstance().loadFragment(new PassFragment());
+                    MainActivity.getInstance().bottomNavigationView.setSelectedItemId(R.id.fitness_pass);
+                }
+            });
         }
     }
 }

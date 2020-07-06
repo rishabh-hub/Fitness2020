@@ -3,6 +3,8 @@ package com.example.fitness2020;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,13 +26,11 @@ import java.util.Locale;
 public class ProfileActivity extends AppCompatActivity implements  AdapterView.OnItemSelectedListener {
 
     ImageView backButton,profilePhoto;
-    TextView logoutButton;
+    TextView logoutButton,skipButton;
     EditText emailId,phoneNo,profileName,anniversary,dateOfBirth,age;
     Spinner gender;
     Button updateButton;
     Calendar calendar=Calendar.getInstance();
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,9 @@ public class ProfileActivity extends AppCompatActivity implements  AdapterView.O
         setContentView(R.layout.activity_profile);
 
         attachId();
+
+
+        skipButton.setPaintFlags(skipButton.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,6 +112,22 @@ public class ProfileActivity extends AppCompatActivity implements  AdapterView.O
             }
         });
 
+        updateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(ProfileActivity.this,MainActivity.class);
+                startActivity(mainIntent);
+            }
+        });
+
+        skipButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(ProfileActivity.this,MainActivity.class);
+                startActivity(mainIntent);
+            }
+        });
+
         populateGenderSpinner();
         gender.setOnItemSelectedListener(this);
 
@@ -131,6 +150,7 @@ public class ProfileActivity extends AppCompatActivity implements  AdapterView.O
         gender=findViewById(R.id.gender_spinner);
         updateButton=findViewById(R.id.profile_update_button);
         profilePhoto = findViewById(R.id.profile_page_photo);
+        skipButton=findViewById(R.id.skip_profile_text);
     }
     private void updateLabel1() {
         String myFormat = "dd/MM/yyyy"; //In which you need put here
