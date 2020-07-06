@@ -15,7 +15,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
             <ImageButton
@@ -46,6 +46,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/chip_group_1"
                 android:paddingHorizontal="10dp"
+                android:scrollbars="none"
                 android:layout_below="@+id/date_explain">
 
                 <com.google.android.material.chip.ChipGroup

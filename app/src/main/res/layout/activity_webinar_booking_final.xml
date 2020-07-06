@@ -112,6 +112,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/chip_group_1"
                 android:paddingHorizontal="10dp"
+                android:scrollbars="none"
                 android:layout_below="@+id/date_explain">
 
             <com.google.android.material.chip.ChipGroup
@@ -155,6 +156,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/chip_group_2"
+                android:scrollbars="none"
                 android:paddingHorizontal="10dp"
                 android:layout_below="@+id/time_explain">
 

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
     <RelativeLayout
@@ -40,12 +42,9 @@
     android:layout_width="match_parent"
     android:fillViewport="true"
     android:orientation="vertical"
-        android:layout_below="@id/gym_internal_activity_tlbr_rellay"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+        android:layout_below="@id/gym_internal_activity_tlbr_rellay">
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
     android:layout_width="match_parent"
     android:theme="@style/Theme.MaterialComponents.Light"
     android:layout_height="match_parent"
@@ -140,6 +139,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/chip_group_1"
+        android:scrollbars="none"
         android:paddingHorizontal="10dp"
         android:layout_below="@+id/date_explain">
 
@@ -168,23 +168,24 @@
         android:fontFamily="@font/metropolisbold"
         android:textSize="17sp"
         android:textColor="@color/primaryBlue"/>
+
     <TextView
+        android:id="@+id/time_explain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/time"
+        android:fontFamily="@font/metropolismedium"
         android:paddingHorizontal="5dp"
         android:text="@string/time_explain_start"
-        android:layout_below="@id/time"
-        android:layout_marginStart="10dp"
-        android:id="@+id/time_explain"
-        android:fontFamily="@font/metropolismedium"
-        android:textSize="14sp"
-        android:textColor="@color/colorPrimaryDark"/>
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp" />
 
     <HorizontalScrollView
         android:id="@+id/chip_group_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="10dp"
+        android:scrollbars="none"
         android:layout_below="@+id/time_explain">
 
         <com.google.android.material.chip.ChipGroup
