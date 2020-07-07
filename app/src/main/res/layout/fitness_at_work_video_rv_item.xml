@@ -2,6 +2,27 @@
 <RelativeLayout android:layout_height="match_parent"
     android:layout_width="250dp"
     xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_play1"
+        android:tint="@color/webGray"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="5dp"
+        android:text="video"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_button"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:backgroundTint="#B4484848"
+        android:fontFamily="@font/metropolislight"
+        android:textSize="11sp"/>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
