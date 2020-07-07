@@ -1,13 +1,22 @@
 package com.example.fitness2020;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Activity;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -31,6 +40,8 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.ArrayList;
 
+import static android.app.Notification.EXTRA_NOTIFICATION_ID;
+
 public class MainActivity extends AppCompatActivity{
 
     FrameLayout frameLayout;
@@ -53,6 +64,7 @@ public class MainActivity extends AppCompatActivity{
         bottomNavigationView.setSelectedItemId(R.id.home);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +85,28 @@ public class MainActivity extends AppCompatActivity{
 
         bottomNavigationView.setItemIconTintList(null);
 
+        Intent intent = new Intent(this, GymActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+
+
+        //we can pass only bitmap image in bigPicture
+        //setAutoCancel removes notification when it is clicked
+
+        Bitmap bitmap= BitmapFactory.decodeResource(getResources(),R.drawable.brand_video_dummy);
+
+        NotificationCompat.Builder builder=new NotificationCompat.Builder(this,"Fitness 2020")
+                .setSmallIcon(R.mipmap.ic_launcher_round).setContentTitle("Title")
+                .setContentText("Hello World").setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(bitmap)).setContentIntent(pendingIntent).setAutoCancel(true);
+
+        createNotificationChannel();
+
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+
+        int notificationId=12345;
+// notificationId is a unique int for each notification that you must define
+        notificationManager.notify(notificationId, builder.build());
 
 
         userImage.setOnClickListener(new View.OnClickListener() {
@@ -177,4 +211,21 @@ public class MainActivity extends AppCompatActivity{
     public static MainActivity getInstance(){
         return instance;
     }
+
+    private void createNotificationChannel() {
+        // Create the NotificationChannel, but only on API 26+ because
+        // the NotificationChannel class is new and not in the support library
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "Fitness";
+            String description = "Description";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("Fitness 2020", name, importance);
+            channel.setDescription(description);
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
+
 }
