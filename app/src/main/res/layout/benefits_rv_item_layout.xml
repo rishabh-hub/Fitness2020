@@ -13,11 +13,6 @@
     android:fontFamily="@font/metropolisbold"
     android:id="@+id/benefit"
     />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorPrimaryDark"
-        android:layout_below="@id/benefit"
-        android:layout_marginHorizontal="40dp"/>
+
 </RelativeLayout>
 

@@ -127,8 +127,7 @@ public class GymBookingFinalPage extends AppCompatActivity implements AdapterVie
 
     private void populateGroupNoSpinner() {
         ArrayList<String> groupNoData=new ArrayList<>();
-        groupNoData.add("On My Own");
-        for (int i=2;i<=5;i++)
+        for (int i=1;i<=5;i++)
         {
             groupNoData.add(""+i);
         }
