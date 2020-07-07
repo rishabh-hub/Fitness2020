@@ -32,6 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:padding="8dp"
             android:layout_marginBottom="5dp"
             android:orientation="horizontal">
 
@@ -66,18 +67,19 @@
                     android:id="@+id/offering_price"/>
 
 
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="20dp"
-                    android:background="@drawable/bg_button"
-                    android:textColor="#fff"
-                    android:layout_alignParentEnd="true"
-                    android:gravity="center"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginVertical="5dp"
-                    android:textSize="13sp"
-                    android:id="@+id/offering_book_btn"
-                    android:text="Book"/>
+            <Button
+                android:id="@+id/offering_book_btn"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginVertical="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:text="Book"
+                android:textColor="#fff"
+                android:textSize="13sp" />
 
 
         </RelativeLayout>

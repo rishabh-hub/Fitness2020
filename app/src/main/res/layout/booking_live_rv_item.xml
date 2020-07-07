@@ -139,7 +139,7 @@
             android:textColor="@color/white"
             android:id="@+id/booking_live_start_button"
             android:layout_alignParentEnd="true"
-            android:text="Instagram"
+            android:text="Join Class"
             android:layout_alignBottom="@id/booking_live_no_of_seats"
             android:layout_marginRight="10dp"/>
 

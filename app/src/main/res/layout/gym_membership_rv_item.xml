@@ -14,7 +14,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:padding="18dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,27 +61,29 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="13sp"
+                android:layout_marginTop="5dp"
                 android:text="221 Baker Street, New Delhi-110067"
                 android:fontFamily="@font/metropolismedium"
                 android:id="@+id/gym_membership_gym_address"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="8dp"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="15sp"
                     android:text="Start: "
-                    android:fontFamily="@font/metropolisbold"
+                    android:fontFamily="@font/metropolismedium"
                     android:id="@+id/gym_membership_gym_start_date_tv"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"
                     android:text="21 Jan 2021"
                     android:fontFamily="@font/metropolismedium"
                     android:id="@+id/gym_membership_gym_start_date"/>
@@ -93,17 +95,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="15sp"
+                    android:layout_marginTop="5dp"
                     android:text="End: "
-                    android:fontFamily="@font/metropolisbold"
+                    android:fontFamily="@font/metropolismedium"
                     android:id="@+id/gym_membership_gym_end_date_tv"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:layout_marginLeft="8dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
                     android:text="21 Aug 2021"
                     android:fontFamily="@font/metropolismedium"
                     android:id="@+id/gym_membership_gym_end_date"/>

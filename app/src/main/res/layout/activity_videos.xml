@@ -67,7 +67,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:elevation="4dp"
+        android:paddingTop="15sp"
+        android:paddingHorizontal="8dp"
+        android:paddingBottom="8dp"
         android:layout_below="@id/container1"
         android:id="@+id/container2">
         <TextView
@@ -92,8 +94,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:elevation="4dp"
         android:layout_marginTop="5dp"
+        android:padding="8dp"
         android:layout_below="@id/container2"
         android:id="@+id/container3">
         <TextView
@@ -119,8 +121,8 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:layout_marginTop="5dp"
-        android:elevation="4dp"
         android:layout_marginBottom="5dp"
+        android:padding="8dp"
         android:layout_below="@id/container3"
         android:id="@+id/container4">
         <TextView
@@ -141,11 +143,11 @@
             android:nestedScrollingEnabled="true"
             android:layout_marginHorizontal="5dp"/>
     </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/container4"
-        android:id="@+id/container5"></RelativeLayout>
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/container4"-->
+<!--        android:id="@+id/container5"></RelativeLayout>-->
 
 </RelativeLayout>
 </ScrollView>
