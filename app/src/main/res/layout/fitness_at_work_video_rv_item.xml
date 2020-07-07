@@ -8,6 +8,7 @@
         android:layout_height="25dp"
         android:src="@drawable/ic_play1"
         android:tint="@color/webGray"
+        android:elevation="8dp"
         android:layout_centerInParent="true"/>
 
     <TextView
