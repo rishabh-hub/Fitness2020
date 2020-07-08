@@ -19,7 +19,7 @@
         android:paddingHorizontal="5dp"
         android:text="video"
         android:layout_margin="10dp"
-        android:textColor="@color/white"
+        android:textColor="@color/paariBlue"
         android:background="@drawable/bg_button"
         android:elevation="4dp"
         android:gravity="center"
