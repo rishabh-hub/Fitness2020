@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Activity;
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity{
 
         NotificationCompat.Builder builder=new NotificationCompat.Builder(this,"Fitness 2020")
                 .setSmallIcon(R.mipmap.ic_launcher_round).setContentTitle("Title")
-                .setContentText("Hello World").setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setContentText("Hello World").setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(bitmap)).setContentIntent(pendingIntent).setAutoCancel(true);
 
         createNotificationChannel();
@@ -218,7 +219,7 @@ public class MainActivity extends AppCompatActivity{
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = "Fitness";
             String description = "Description";
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            int importance = NotificationManager.IMPORTANCE_HIGH;
             NotificationChannel channel = new NotificationChannel("Fitness 2020", name, importance);
             channel.setDescription(description);
             // Register the channel with the system; you can't change the importance
