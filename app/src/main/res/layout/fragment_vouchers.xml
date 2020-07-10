@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:fillViewport="true"
-    android:background="@color/primaryBlue"
+    android:background="@color/webGray"
     android:layout_height="match_parent">
 
     <RelativeLayout
@@ -54,16 +54,18 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/voucher_rv_2"
+            android:layout_marginTop="15dp"
             android:layout_below="@id/voucher_rv_1"
             >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="15dp"
                 android:text="Pleasure"
                 android:fontFamily="@font/metropolisbold"
                 android:textSize="17sp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/colorPrimaryDark"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -76,16 +78,18 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/voucher_rv_3"
+            android:layout_marginTop="15dp"
             android:layout_below="@id/voucher_rv_2"
             >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="15dp"
                 android:text="Health"
                 android:fontFamily="@font/metropolisbold"
                 android:textSize="17sp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/colorPrimaryDark"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -98,16 +102,18 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/voucher_rv_4"
+            android:layout_marginTop="15dp"
             android:layout_below="@id/voucher_rv_3"
             >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="15dp"
                 android:text="Experiences"
                 android:fontFamily="@font/metropolisbold"
                 android:textSize="17sp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/colorPrimaryDark"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -121,16 +127,18 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/voucher_rv_5"
+            android:layout_marginTop="15dp"
             android:layout_below="@id/voucher_rv_4"
             >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="15dp"
                 android:text="Shopping"
                 android:fontFamily="@font/metropolisbold"
                 android:textSize="17sp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/colorPrimaryDark"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -143,16 +151,18 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/voucher_rv_6"
+            android:layout_marginTop="15dp"
             android:layout_below="@id/voucher_rv_5"
             >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="15dp"
                 android:text="Travel"
                 android:fontFamily="@font/metropolisbold"
                 android:textSize="17sp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/colorPrimaryDark"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

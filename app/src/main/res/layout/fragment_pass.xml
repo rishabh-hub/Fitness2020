@@ -304,12 +304,64 @@
 
 
     </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/trending_container"
+        android:layout_below="@id/free_trial_rv_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_pack"
+        android:backgroundTint="#88000000"
+        android:backgroundTintMode="src_atop"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Daily Workouts"
+                android:id="@+id/live_buzzing_tv"
+                android:fontFamily="@font/metropolisblack"
+                android:textSize="17sp"
+                android:textColor="#FFFFFF"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textAlignment="textEnd"
+                android:layout_marginTop="5dp"
+                android:text="View More"
+                android:id="@+id/pass_buzzing_viewmore_btn"
+                android:fontFamily="@font/metropolisbold"
+                android:textSize="15sp"
+                android:textColor="#FFFFFF"/>
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/pass_trending_rv"
+            android:paddingHorizontal="5dp"
+            android:layout_marginBottom="15dp"
+            />
+    </LinearLayout>
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="17sp"
         android:id="@+id/fitness_pass_rv_heading"
-        android:layout_below="@id/free_trial_rv_container"
+        android:layout_below="@id/trending_container"
         android:fontFamily="@font/metropolisblack"
         android:textColor="@color/colorPrimaryDark"
         android:text="Top Trainers"
