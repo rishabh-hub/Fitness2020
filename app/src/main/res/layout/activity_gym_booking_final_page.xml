@@ -316,7 +316,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="17sp"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/metropolisbold"
+                android:fontFamily="@font/metropolismedium"
                 android:id="@+id/free_trial_radio_btn"/>
             <com.google.android.material.radiobutton.MaterialRadioButton
                 android:layout_width="wrap_content"
@@ -325,7 +325,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="17sp"
                 android:layout_marginTop="5dp"
-                android:fontFamily="@font/metropolisbold"
+                android:fontFamily="@font/metropolismedium"
                 android:id="@+id/unlimited_workout_radio_btn"/>
             <com.google.android.material.radiobutton.MaterialRadioButton
                 android:layout_width="wrap_content"
@@ -334,7 +334,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="17sp"
                 android:layout_marginTop="5dp"
-                android:fontFamily="@font/metropolisbold"
+                android:fontFamily="@font/metropolismedium"
                 android:id="@+id/points_radio_btn"/>
             <com.google.android.material.radiobutton.MaterialRadioButton
                 android:layout_width="wrap_content"
@@ -343,7 +343,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="17sp"
                 android:layout_marginTop="5dp"
-                android:fontFamily="@font/metropolisbold"
+                android:fontFamily="@font/metropolismedium"
                 android:id="@+id/cash_radio_btn"/>
         </RadioGroup>
 
