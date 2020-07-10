@@ -235,11 +235,11 @@
                     android:id="@+id/fitness_at_work_reviews">
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/live_reviews_rv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingHorizontal="3dp"
                         android:orientation="horizontal"
-                        android:id="@+id/live_reviews_rv"/>
+                        android:paddingHorizontal="3dp" />
 
 
                 </RelativeLayout>
