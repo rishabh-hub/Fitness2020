@@ -123,60 +123,70 @@
         </RelativeLayout>
 
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/code_container"
                 android:layout_marginTop="18dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
                 android:layout_below="@id/bookings_rv_item_container1"
                 >
 
                 <TextView
                     android:id="@+id/bookings_rv_item_orderid_tv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/metropolissemibold"
+                    android:fontFamily="@font/metropolisbold"
                     android:text="Code: "
                     android:textColor="@color/colorPrimaryDark" />
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:id="@+id/bookings_rv_item_code"
                     android:textColor="#000000"
                     android:text="1241225125125"
                     android:layout_alignParentEnd="true"
+                    android:textAlignment="textStart"
                     android:fontFamily="@font/metropolissemibold"
                     android:layout_toRightOf="@id/bookings_rv_item_orderid_tv"
                     />
-            </RelativeLayout>
+            </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/code_container"
                 android:layout_marginTop="8dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
                 android:id="@+id/status_container"
                 android:gravity="center"
                 >
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:id="@+id/bookings_rv_item_status_tv"
                     android:textColor="@color/colorPrimaryDark"
                     android:text="Status: "
-                    android:fontFamily="@font/metropolissemibold"
+                    android:fontFamily="@font/metropolisbold"
                     />
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/bookings_rv_item_status"
                     android:text="REDEEMED"
+                    android:layout_weight="1"
+                    android:textAlignment="textStart"
                     android:layout_alignParentEnd="true"
                     android:layout_toRightOf="@id/bookings_rv_item_status_tv"
                     android:textColor="@color/primaryBlue"
                     android:fontFamily="@font/metropolissemibold"
                     />
-            </RelativeLayout>
+            </LinearLayout>
 
 
         <LinearLayout
@@ -190,26 +200,25 @@
             android:gravity="center"
             >
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/bookings_rv_item_address2_tv"
             android:text="Location: "
             android:textColor="@color/colorPrimaryDark"
             android:layout_weight="1"
-            android:fontFamily="@font/metropolissemibold"
+            android:fontFamily="@font/metropolisbold"
             />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/bookings_rv_item_address2"
-            android:layout_marginLeft="30dp"
             android:textColor="#000"
             android:text="221 Baker Street, New Delhi"
             android:layout_weight="1"
             android:textSize="12sp"
             android:fontFamily="@font/metropolislight"
-            android:gravity="center"
+            android:gravity="start"
             />
             <ImageView
                 android:layout_width="20dp"
@@ -226,28 +235,28 @@
             android:layout_below="@id/bookings_rv_item_comtainer4"
             android:layout_marginTop="6dp"
             android:layout_marginBottom="10dp"
-            android:gravity="center"
+            android:gravity="start"
+            android:weightSum="2"
             android:orientation="horizontal"
             android:layout_marginVertical="8dp"
-            android:weightSum="2">
+            >
 
             <TextView
                 android:id="@+id/bookings_rv_item_purchase_detail_tv"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/metropolissemibold"
+                android:fontFamily="@font/metropolisbold"
                 android:text="Purchase Detail: "
                 android:textColor="@color/colorPrimaryDark" />
 
             <TextView
                 android:id="@+id/bookings_rv_item_purchase_detail"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/metropolislight"
-                android:gravity="center"
+                android:gravity="start"
                 android:text="Free Trial"
                 android:textColor="#000"
                 android:textSize="12sp" />

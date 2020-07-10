@@ -253,7 +253,7 @@
             android:background="@color/white"
             android:id="@+id/fitness2020_membership_refund_btn_dialog"
             android:layout_marginHorizontal="10dp"
-            android:text="Ask For Refund"
+            android:text="Refund"
             android:textColor="@color/primaryBlue"
             android:textStyle="bold"/>
 

@@ -131,7 +131,7 @@
         android:text="@string/date_explain_txt"
         android:layout_below="@id/date"
         android:id="@+id/date_explain"
-        android:fontFamily="@font/metropolismedium"
+        android:fontFamily="@font/metropolislight"
         android:textSize="14sp"
         android:textColor="@color/colorPrimaryDark"/>
 
@@ -175,7 +175,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/time"
         android:layout_marginStart="10dp"
-        android:fontFamily="@font/metropolismedium"
+        android:fontFamily="@font/metropolislight"
         android:paddingHorizontal="5dp"
         android:text="@string/time_explain_start"
         android:textColor="@color/colorPrimaryDark"
@@ -220,13 +220,13 @@
         android:id="@+id/squad_spinner"
         android:layout_width="300dp"
         android:layout_height="40dp"
+        android:background="@color/webGray"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="10dp"
         android:layout_alignBottom="@id/squad"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginBottom="5dp"
         android:layout_toEndOf="@id/squad"
-        android:backgroundTint="@color/primaryBlue"
         android:elevation="5dp"
         android:gravity="center" />
 
@@ -300,7 +300,7 @@
             android:text="@string/mop_txt"
             android:layout_below="@id/time"
             android:id="@+id/mop_explain_txt"
-            android:fontFamily="@font/metropolismedium"
+            android:fontFamily="@font/metropolislight"
             android:textSize="14sp"
             android:textColor="@color/colorPrimaryDark"/>
 

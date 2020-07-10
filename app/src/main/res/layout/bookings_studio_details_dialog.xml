@@ -61,6 +61,8 @@
                 android:layout_alignEnd="@id/booking_dialog_cut_btn"
                 android:layout_marginVertical="10dp"/>
 
+
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,13 +71,14 @@
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/metropolisbold"
                 android:textColor="@color/colorPrimaryDark"
-                android:layout_marginBottom="3dp"
                 android:layout_marginTop="10dp"
+                android:textSize="12sp"
                 android:text="Date: "
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="12sp"
                 android:layout_toRightOf="@id/bookings_dialog_date_tv"
                 android:layout_alignStart="@id/bookings_dialog_activity"
                 android:layout_alignBottom="@id/bookings_dialog_date_tv"
@@ -83,30 +86,30 @@
                 android:textColor="#000"
                 android:maxLines="2"
                 android:text="21/09/21"
-                android:layout_marginVertical="3dp"
                 />
 
             <TextView
+                android:id="@+id/bookings_dialog_time_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/bookings_dialog_date_tv"
-                android:id="@+id/bookings_dialog_time_tv"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/metropolisbold"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_marginVertical="3dp"
                 android:text="Time: "
-                />
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/bookings_dialog_time_tv"
                 android:layout_alignStart="@id/bookings_dialog_activity"
-                android:layout_below="@id/bookings_dialog_date"
                 android:textColor="#000"
+                android:textSize="12sp"
                 android:text="7:30 PM"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
                 android:layout_alignBottom="@id/bookings_dialog_time_tv"
-                android:layout_marginVertical="3dp"
                 android:id="@+id/bookings_dialog_time"
                 />
             <TextView
@@ -115,21 +118,23 @@
                 android:layout_below="@id/bookings_dialog_time_tv"
                 android:id="@+id/bookings_dialog_activity_tv"
                 android:layout_marginLeft="10dp"
+                android:textSize="12sp"
                 android:fontFamily="@font/metropolisbold"
                 android:textColor="@color/colorPrimaryDark"
-                android:layout_marginVertical="3dp"
+                android:layout_marginTop="10dp"
                 android:text="Activity: "
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/bookings_dialog_activity_tv"
-                android:layout_below="@id/bookings_dialog_time"
-                android:layout_marginHorizontal="10dp"
                 android:textColor="#000"
+                android:textSize="12sp"
+                android:layout_alignStart="@id/bookings_dialog_purchase_detail"
                 android:text="Functional Training"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
                 android:layout_alignBottom="@id/bookings_dialog_activity_tv"
-                android:layout_marginVertical="3dp"
                 android:id="@+id/bookings_dialog_activity"
                 />
             <TextView
@@ -138,23 +143,157 @@
                 android:layout_below="@id/bookings_dialog_activity_tv"
                 android:id="@+id/bookings_dialog_orderid_tv"
                 android:layout_marginLeft="10dp"
+                android:textSize="12sp"
                 android:fontFamily="@font/metropolisbold"
                 android:textColor="@color/colorPrimaryDark"
-                android:layout_marginVertical="3dp"
+                android:layout_marginTop="10dp"
                 android:text="OrderID: "
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/bookings_dialog_orderid_tv"
-                android:layout_below="@id/bookings_dialog_activity"
-                android:layout_marginHorizontal="10dp"
                 android:textColor="#000"
+                android:layout_alignStart="@id/bookings_dialog_purchase_detail"
                 android:text="AO14014"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
+                android:textSize="12sp"
                 android:layout_alignBottom="@id/bookings_dialog_orderid_tv"
-                android:layout_marginVertical="3dp"
                 android:id="@+id/bookings_dialog_orderid"
                 />
+
+            <TextView
+                android:id="@+id/bookings_rv_item_code_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bookings_dialog_orderid_tv"
+                android:fontFamily="@font/metropolisbold"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:layout_alignStart="@id/bookings_dialog_orderid_tv"
+                android:text="Code: "
+                android:textColor="@color/colorPrimaryDark" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookings_dialog_code"
+                android:textColor="@color/black"
+                android:text="12021935"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
+                android:fontFamily="@font/metropolissemibold"
+                android:layout_alignBottom="@id/bookings_rv_item_code_tv"
+                android:layout_alignStart="@id/bookings_dialog_purchase_detail"
+                android:layout_alignParentEnd="true"
+                />
+
+
+            <TextView
+                android:id="@+id/bookings_rv_item_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bookings_rv_item_code_tv"
+                android:layout_alignStart="@id/bookings_dialog_orderid_tv"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/metropolisbold"
+                android:text="Status: "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookings_dialog_status"
+                android:layout_toRightOf="@id/bookings_rv_item_status_tv"
+                android:textColor="@color/primaryBlue"
+                android:layout_alignStart="@id/bookings_dialog_purchase_detail"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
+                android:textSize="12sp"
+                android:layout_alignBottom="@id/bookings_rv_item_status_tv"
+                android:text="REDEEMED"
+                android:fontFamily="@font/metropolissemibold"
+                />
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookings_rv_item_address2_tv"
+                android:text="Location: "
+                android:layout_below="@id/bookings_rv_item_status_tv"
+                android:layout_alignStart="@id/bookings_dialog_orderid_tv"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:fontFamily="@font/metropolisbold"
+                />
+
+            <TextView
+                android:id="@+id/bookings_dialog_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_alignBottom="@id/bookings_rv_item_address2_tv"
+                android:layout_alignStart="@id/bookings_dialog_purchase_detail"
+                android:fontFamily="@font/metropolislight"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
+                android:textSize="12sp"
+                android:layout_toLeftOf="@id/booking_dialog_locate_btn"
+                android:text="221 Baker Street, New Delhi"
+                android:textColor="@color/black"
+/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:foregroundGravity="right"
+                android:src="@drawable/ic_location"
+                android:layout_alignBottom="@id/bookings_dialog_address"
+
+                android:id="@+id/booking_dialog_locate_btn"/>
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookings_rv_item_purchase_detail_tv"
+                android:text="Purchase Detail:"
+                android:layout_below="@id/bookings_rv_item_address2_tv"
+                android:layout_alignStart="@id/bookings_dialog_orderid_tv"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:fontFamily="@font/metropolisbold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookings_dialog_purchase_detail"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:layout_toRightOf="@id/bookings_rv_item_purchase_detail_tv"
+                android:layout_alignBottom="@id/bookings_rv_item_purchase_detail_tv"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
+                android:text="Free Trial"
+                android:textSize="12sp"
+                android:fontFamily="@font/metropolislight"
+                />
+
 
 
 
@@ -163,151 +302,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bookings_rv_item_comtainer2"
-            android:orientation="vertical"
-            android:padding="8dp"
-            android:layout_below="@id/bookings_rv_item_container1"
-            android:layout_marginTop="10dp"
-            android:weightSum="2"
-            >
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                >
-
-                <TextView
-                    android:id="@+id/bookings_rv_item_code_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/metropolissemibold"
-                    android:text="Code: "
-                    android:textColor="@color/colorPrimaryDark" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/bookings_dialog_code"
-                    android:textColor="@color/black"
-                    android:text="12021935"
-                    android:layout_marginLeft="15sp"
-                    android:fontFamily="@font/metropolissemibold"
-                    android:layout_toRightOf="@id/bookings_rv_item_code_tv"
-                    android:layout_alignParentEnd="true"
-                    />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/bookings_rv_item_status_tv"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:text="Status: "
-                    android:fontFamily="@font/metropolissemibold"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/bookings_dialog_status"
-                    android:layout_toRightOf="@id/bookings_rv_item_status_tv"
-                    android:textColor="@color/primaryBlue"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginLeft="15sp"
-                    android:text="REDEEMED"
-                    android:fontFamily="@font/metropolissemibold"
-                    />
-            </RelativeLayout>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/bookings_rv_item_comtainer4"
-            android:orientation="horizontal"
-            android:layout_below="@id/bookings_rv_item_comtainer2"
-            android:paddingHorizontal="8dp"
-            android:weightSum="2"
-            android:gravity="center"
-            >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bookings_rv_item_address2_tv"
-            android:text="Location "
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_weight="1"
-            android:fontFamily="@font/metropolissemibold"
-            />
-
-            <TextView
-                android:id="@+id/bookings_dialog_address"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/metropolismedium"
-                android:text="221 Baker Street, New Delhi"
-                android:textColor="@color/black"
-                android:textSize="12sp" />
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_location"
-                android:id="@+id/booking_dialog_locate_btn"/>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/bookings_rv_item_comtainer7"
-            android:orientation="horizontal"
-            android:layout_below="@id/bookings_rv_item_comtainer4"
-            android:layout_marginBottom="10dp"
-            android:weightSum="2"
-            android:padding="8dp"
-            android:gravity="center"
-            >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bookings_rv_item_purchase_detail_tv"
-            android:text="Purchase Detail"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_weight="1"
-            android:fontFamily="@font/metropolissemibold"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bookings_dialog_purchase_detail"
-            android:layout_marginLeft="30dp"
-            android:textColor="@color/black"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textSize="12sp"
-            android:text="Free Trial"
-            android:fontFamily="@font/metropolismedium"
-            />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/bookings_rv_item_comtainer8"
             android:orientation="horizontal"
-            android:layout_below="@id/bookings_rv_item_comtainer7"
-            android:layout_marginTop="5dp"
+            android:layout_below="@id/bookings_rv_item_container1"
+            android:layout_marginTop="15dp"
             android:layout_marginBottom="5dp"
             android:weightSum="2"
             android:padding="3dp"
