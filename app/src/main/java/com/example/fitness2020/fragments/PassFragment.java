@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitness2020.Adapters.FitnessFragmentFreeTrialAdapter;
+import com.example.fitness2020.Adapters.NewCorrectionAdapter;
 import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
 import com.example.fitness2020.Adapters.VideosAdapter;
 import com.example.fitness2020.Models.FaqModel;
@@ -31,6 +32,7 @@ import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.R;
 import com.example.fitness2020.TopFitnessCentres;
 import com.example.fitness2020.TrialCardActivity;
+import com.example.fitness2020.VideosActivity;
 import com.example.fitness2020.WebinarTabActivity;
 
 import java.util.ArrayList;
@@ -43,6 +45,10 @@ public class PassFragment extends Fragment {
     RecyclerView membershipRV;
     SubscriptionCardsAdapter membershipAdapter;
     ArrayList<PackModel> packModels;
+    NewCorrectionAdapter workoutsForDayAdapter;
+    ArrayList <TrendingRvModel> workoutFotDayModels,trendingRvModels;
+    RecyclerView workoutForDayRv;
+    TextView workoutForDayViewMoreButton;
 
     RecyclerView clientRV;
     ArrayList<ClientModel> clients = new ArrayList<>();
@@ -94,8 +100,7 @@ public class PassFragment extends Fragment {
         faqRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         membershipRV.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false));
         liveWorkoutsRv.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
-
-
+        workoutForDayRv.setLayoutManager(new LinearLayoutManager(view.getContext(),LinearLayoutManager.HORIZONTAL,false));
 
         fragmentFreeTrialModels=new ArrayList<>(3);
         topTrainerModels = new ArrayList<>(3);
@@ -103,6 +108,7 @@ public class PassFragment extends Fragment {
         faqs=new ArrayList<>(3);
         packModels = new ArrayList<>(3);
         liveWorkoutModels=new ArrayList<>(3);
+        workoutFotDayModels=new ArrayList<>(3);
 
         addData();
 
@@ -113,6 +119,7 @@ public class PassFragment extends Fragment {
         faqAdapter = new SubscriptionCardsAdapter(context,1,imageModels,faqs);
         membershipAdapter = new SubscriptionCardsAdapter(context,2,packModels);
         liveWorkoutsAdapter=new FitnessFragmentFreeTrialAdapter(fragmentFreeTrialModels,liveWorkoutModels, topTrainerModels,context,0);
+        workoutsForDayAdapter=new NewCorrectionAdapter(0,workoutFotDayModels,trendingRvModels);
 
         clientRV.setAdapter(clientAdapter);
         topfitnessRv.setAdapter(fragmentFreeTrialAdapter);
@@ -121,7 +128,7 @@ public class PassFragment extends Fragment {
         faqRv.setAdapter(faqAdapter);
         membershipRV.setAdapter(membershipAdapter);
         liveWorkoutsRv.setAdapter(liveWorkoutsAdapter);
-
+        workoutForDayRv.setAdapter(workoutsForDayAdapter);
 
         clientAdapter.notifyDataSetChanged();
         fragmentFreeTrialAdapter.notifyDataSetChanged();
@@ -130,6 +137,7 @@ public class PassFragment extends Fragment {
         faqAdapter.notifyDataSetChanged();
         membershipAdapter.notifyDataSetChanged();
         liveWorkoutsAdapter.notifyDataSetChanged();
+        workoutsForDayAdapter.notifyDataSetChanged();
 
         liveWorkoutViewMore.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -155,6 +163,14 @@ public class PassFragment extends Fragment {
                 startActivity(buyFitnessPassIntent);
             }
         });
+
+        workoutForDayViewMoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent videosIntent=new Intent(getContext(), VideosActivity.class);
+                startActivity(videosIntent);
+            }
+        });
         return view;
     }
 
@@ -167,6 +183,7 @@ public class PassFragment extends Fragment {
         }
         for (int i=0;i<5;i++)
         {
+            workoutFotDayModels.add(new TrendingRvModel(R.drawable.trending_activity));
             topTrainerModels.add(new TopTrainersModel(R.drawable.webinar,"Paari"));
             videos.add(new VideoModel(R.drawable.gym_video_dummy));
             faqs.add(new FaqModel("Q. Some Question about MemberShip?","A. Corresponding answer about MemberShip"));
@@ -193,5 +210,7 @@ public class PassFragment extends Fragment {
         liveWorkoutViewMore=view.findViewById(R.id.live_workout_rv_more_btn);
         topFitnessViewMore = view.findViewById(R.id.top_fitness_rv_more_btn);
         buyFitnessPasssButton=view.findViewById(R.id.buy_fitness_pass_btn);
+        workoutForDayRv=view.findViewById(R.id.pass_trending_rv);
+        workoutForDayViewMoreButton=view.findViewById(R.id.pass_buzzing_viewmore_btn);
     }
 }

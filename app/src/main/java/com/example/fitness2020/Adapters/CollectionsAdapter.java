@@ -15,6 +15,7 @@ import com.example.fitness2020.CollectionInternalActivity;
 import com.example.fitness2020.Models.CollectionsModel;
 import com.example.fitness2020.Models.VideoModel;
 import com.example.fitness2020.R;
+import com.example.fitness2020.VideoInternalPage;
 
 import java.util.ArrayList;
 
@@ -99,6 +100,15 @@ public class CollectionsAdapter extends RecyclerView.Adapter<CollectionsAdapter.
         void populateVideo(VideoModel videoModel)
         {
             videoImage.setImageResource(videoModel.getVideoImageResource());
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent videoInternalIntent=new Intent(itemView.getContext(), VideoInternalPage.class);
+                    itemView.getContext().startActivity(videoInternalIntent);
+                }
+            });
+
         }
     }
 }

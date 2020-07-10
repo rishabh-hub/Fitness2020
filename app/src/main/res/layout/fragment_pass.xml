@@ -10,14 +10,11 @@
 <ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:layout_marginBottom="60dp"
-    android:id="@+id/pass_scroll_page"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pass_scroll_page">
+<RelativeLayout
     android:layout_width="match_parent"
     android:background="@color/white"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -346,13 +343,12 @@
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pass_trending_rv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:id="@+id/pass_trending_rv"
-            android:paddingHorizontal="5dp"
             android:layout_marginBottom="15dp"
-            />
+            android:orientation="horizontal"
+            android:paddingHorizontal="5dp" />
     </LinearLayout>
 
 

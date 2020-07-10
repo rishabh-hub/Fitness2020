@@ -79,6 +79,7 @@ public class TrialMembershipBooking extends AppCompatActivity implements Payment
         final Checkout co = new Checkout();
 
         try {
+
             JSONObject options = new JSONObject();
             options.put("name", "Fitness");
             options.put("description", "App Payment");
@@ -99,6 +100,7 @@ public class TrialMembershipBooking extends AppCompatActivity implements Payment
             options.put("prefill", preFill);
 
             co.open(activity, options);
+
         } catch (Exception e) {
             Toast.makeText(activity, "Error in payment: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             e.printStackTrace();

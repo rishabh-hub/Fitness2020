@@ -90,7 +90,7 @@ public class HomeLiveTab extends Fragment {
 
         liveTopBannerRv=view.findViewById(R.id.live_workout_rv);
         liveMembershiRv=view.findViewById(R.id.live_membership_rv);//membership rv
-        liveTrendingRv=view.findViewById(R.id.live_trending_rv);//This is for videos
+        liveTrendingRv=view.findViewById(R.id.live_trending_rv);//This is for videos of whats buzzing
         liveWebinarRv1=view.findViewById(R.id.live_webinar_rv_1);
         liveWebinarRv2=view.findViewById(R.id.live_webinar_rv_2);
         liveWebinarRv3=view.findViewById(R.id.live_webinar_rv_3);
@@ -121,7 +121,7 @@ public class HomeLiveTab extends Fragment {
 
         liveTopBannerAdapter=new HomeTrendingRVAdapter(liveTopBannerModel,context,1,popularHorizontalRvModels);
         liveMembershipAdapter=new VideosAdapter(fitnessPassVideos,dailyWorkoutVideos,studioVideos,corporateVideos,packModels,context,5);
-        newCorrectionAdapter=new NewCorrectionAdapter(0,webinarVideos,trendingRvModels);//new correction  adapter
+        newCorrectionAdapter=new NewCorrectionAdapter(0,webinarVideos,trendingRvModels);//this is for whats buzzing videos
         liveWebinarAdapter1 =new CarousalsAdapter1(context,liveCompanyModels,liveVouchersModels,liveWebinarModels1,0);
         liveWebinarAdapter2 =new CarousalsAdapter1(context,liveCompanyModels,liveVouchersModels,liveWebinarModels2,0);
         trendingAdapter=new NewCorrectionAdapter(1,webinarVideos,trendingRvModels1);
@@ -129,7 +129,7 @@ public class HomeLiveTab extends Fragment {
 
         liveTopBannerRv.setAdapter(liveTopBannerAdapter);
         liveMembershiRv.setAdapter(liveMembershipAdapter);
-        liveTrendingRv.setAdapter(newCorrectionAdapter);
+        liveTrendingRv.setAdapter(newCorrectionAdapter);//whats buzzing
         liveWebinarRv1.setAdapter(liveWebinarAdapter1);
         liveWebinarRv2.setAdapter(liveWebinarAdapter2);
         trendingRv.setAdapter(trendingAdapter);
@@ -205,7 +205,6 @@ public class HomeLiveTab extends Fragment {
 
 
 //            liveReviewModel.add(new ReviewModel("Tiger Shroff","ABC GYM","lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores."));
-
 
             webinarVideos.add(new TrendingRvModel(R.drawable.trending_activity));
 //            trendingRvModels.add(new TrendingRvModel(R.mipmap.ic_launcher));
