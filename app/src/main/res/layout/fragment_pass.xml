@@ -9,7 +9,6 @@
 
 <ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_marginBottom="60dp"
     android:id="@+id/pass_scroll_page">
 <RelativeLayout
     android:layout_width="match_parent"
@@ -46,7 +45,8 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:text="Become a Member"
-        android:fontFamily="@font/metropolisblack"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/metropolisbold"
         android:textSize="17sp"
         android:textColor="@color/colorPrimaryDark"/>
 
@@ -67,8 +67,9 @@
         android:textSize="17sp"
         android:gravity="center"
         android:paddingVertical="7dp"
+        android:layout_marginTop="10dp"
         android:text="Benefits of Fitness 2020"
-        android:fontFamily="@font/metropolisblack"
+        android:fontFamily="@font/metropolisbold"
         android:textColor="@color/primaryBlue"/>
 
     <LinearLayout
@@ -197,7 +198,7 @@
         android:textSize="17sp"
         android:id="@+id/top_fitness_rv_heading"
         android:layout_below="@id/memberships_container"
-        android:fontFamily="@font/metropolisblack"
+        android:fontFamily="@font/metropolisbold"
         android:text="Top Fitness Centres"
         android:textColor="@color/colorPrimaryDark"
         android:padding="8dp"
@@ -253,7 +254,7 @@
         android:textSize="17sp"
         android:id="@+id/live_workouts_rv_heading"
         android:layout_below="@id/top_fitness_rv_container"
-        android:fontFamily="@font/metropolisblack"
+        android:fontFamily="@font/metropolisbold"
         android:text="Live Workouts"
         android:layout_marginTop="20dp"
         android:textColor="@color/colorPrimaryDark"
@@ -281,7 +282,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/live_workouts_rv_heading"
-        android:layout_marginBottom="3dp"
+        android:layout_marginBottom="10dp"
         android:scrollbars="none"
         android:id="@+id/free_trial_rv_container">
         <RelativeLayout
@@ -307,7 +308,8 @@
         android:layout_below="@id/free_trial_rv_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/bg_pack"
         android:backgroundTint="#88000000"
         android:backgroundTintMode="src_atop"
@@ -324,7 +326,7 @@
                 android:layout_marginTop="5dp"
                 android:text="Daily Workouts"
                 android:id="@+id/live_buzzing_tv"
-                android:fontFamily="@font/metropolisblack"
+                android:fontFamily="@font/metropolisbold"
                 android:textSize="17sp"
                 android:textColor="#FFFFFF"/>
             <TextView
@@ -358,7 +360,8 @@
         android:textSize="17sp"
         android:id="@+id/fitness_pass_rv_heading"
         android:layout_below="@id/trending_container"
-        android:fontFamily="@font/metropolisblack"
+        android:fontFamily="@font/metropolisbold"
+        android:layout_marginTop="10dp"
         android:textColor="@color/colorPrimaryDark"
         android:text="Top Trainers"
         android:padding="8dp"
@@ -396,7 +399,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/clients_heading"
         android:layout_below="@id/home_banner2_rv_container"
-        android:fontFamily="@font/metropolisblack"
+        android:fontFamily="@font/metropolisbold"
         android:text="Our Clients"
         android:padding="8dp"
         android:layout_marginTop="10dp"
@@ -445,15 +448,5 @@
 </RelativeLayout>
 
 </ScrollView>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:textColor="@color/white"
-        android:background="@drawable/bg_button"
-        android:text="Buy Fitness Pass"
-        android:textSize="17sp"
-        android:layout_marginBottom="10dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="20dp"
-        android:id="@+id/buy_fitness_pass_btn"/>
+
 </RelativeLayout>

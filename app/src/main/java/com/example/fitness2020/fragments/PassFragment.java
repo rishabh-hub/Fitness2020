@@ -155,14 +155,6 @@ public class PassFragment extends Fragment {
             }
         });
 
-        buyFitnessPasssButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent buyFitnessPassIntent=new Intent(view.getContext(), TrialCardActivity.class);
-                startActivity(buyFitnessPassIntent);
-            }
-        });
 
         workoutForDayViewMoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -209,7 +201,6 @@ public class PassFragment extends Fragment {
         liveWorkoutsRv=view.findViewById(R.id.pass_fragment_live_workout_rv);
         liveWorkoutViewMore=view.findViewById(R.id.live_workout_rv_more_btn);
         topFitnessViewMore = view.findViewById(R.id.top_fitness_rv_more_btn);
-        buyFitnessPasssButton=view.findViewById(R.id.buy_fitness_pass_btn);
         workoutForDayRv=view.findViewById(R.id.pass_trending_rv);
         workoutForDayViewMoreButton=view.findViewById(R.id.pass_buzzing_viewmore_btn);
     }
