@@ -94,6 +94,8 @@
             android:elevation="12dp"
             android:background="@color/primaryBlue"
             app:itemTextColor="@color/webGray"
+            app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+            app:itemTextAppearanceInactive="@style/BottomNavigationView"
             app:itemIconTint="@color/secondryBlue"
             app:menu="@menu/bottomnav_menu"
             android:layout_alignParentBottom="true"/>

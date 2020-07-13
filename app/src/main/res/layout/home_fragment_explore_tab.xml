@@ -319,18 +319,31 @@
             </RelativeLayout>
             </HorizontalScrollView>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginEnd="8dp"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/bg_spinner_layout"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/home_fragment_explore_tab_activities_container"
+                android:id="@+id/spinner_container">
+
 
             <Spinner
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/filter_spinner"
                 android:elevation="5sp"
-                android:layout_marginVertical="8dp"
+                android:layout_marginVertical="5dp"
                 android:layout_below="@id/home_fragment_explore_tab_activities_container"
                 android:layout_alignParentRight="true"
                 android:layout_marginStart="5sp"
                 android:gravity="center"
                 />
+            </LinearLayout>
 
 
 
@@ -344,7 +357,7 @@
         android:orientation="vertical"
         android:layout_marginHorizontal="3dp"
         android:nestedScrollingEnabled="false"
-        android:layout_below="@id/filter_spinner"
+        android:layout_below="@id/spinner_container"
         android:id="@+id/home_trending_rv_1"
         android:layout_marginTop="5sp"
         />

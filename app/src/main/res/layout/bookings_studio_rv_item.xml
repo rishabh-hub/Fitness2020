@@ -40,6 +40,13 @@
                 android:id="@+id/bookings_rv_item_product_name"
                 android:text="Booking Name"
                 />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_location"
+                android:id="@+id/booking_locate_btn"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -220,11 +227,7 @@
             android:fontFamily="@font/metropolislight"
             android:gravity="start"
             />
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_location"
-                android:id="@+id/booking_locate_btn"/>
+
         </LinearLayout>
 
 

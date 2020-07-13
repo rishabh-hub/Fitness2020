@@ -144,13 +144,14 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/top_review_heading"
                 android:layout_marginTop="5dp"
-                android:fontFamily="@font/metropolisblack"
+                android:fontFamily="@font/metropolisbold"
                 android:background="@color/webGray"
                 android:textColor="@color/primaryBlue"
                 android:layout_below="@id/fitness_at_work_feature_4"
                 android:text="Top Reviews"
                 android:paddingStart="5dp"
-                android:paddingVertical="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="5dp"
                 android:textSize="17dp"/>
 
             <RelativeLayout
@@ -158,6 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/top_review_heading"
                 android:id="@+id/fitness_at_work_reviews"
+                android:paddingBottom="20dp"
                 android:background="@color/webGray">
 
 <!--                <ImageView-->
@@ -194,7 +196,7 @@
                 android:layout_marginTop="10dp"
                 android:id="@+id/clients_heading"
                 android:layout_below="@id/fitness_at_work_reviews"
-                android:fontFamily="@font/metropolisblack"
+                android:fontFamily="@font/metropolisbold"
                 android:text="Our Clients"
                 android:padding="10dp"
                 android:textSize="17dp"/>
