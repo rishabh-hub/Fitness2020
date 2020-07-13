@@ -4,21 +4,23 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:gravity="center">
+
     <TextView
         android:id="@+id/gym_address_dialog_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textSize="13dp"
-        android:textAlignment="center"
+        android:fontFamily="@font/metropolisregular"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:text="some kind of address of some gym"
         android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold"
-        android:fontFamily="@font/metropolislight"
-        android:text="some kind of address of some gym"/>
+        android:textSize="13dp"
+        android:textStyle="bold" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/webGray"
         android:layout_marginVertical="5dp"
         android:layout_marginHorizontal="30dp"/>
 

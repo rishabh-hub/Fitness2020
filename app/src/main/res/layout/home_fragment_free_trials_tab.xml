@@ -39,10 +39,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="15dp"
+                    android:paddingTop="25dp"
+                    android:paddingBottom="10dp"
                     android:paddingHorizontal="10dp"
                     android:text="Become a Member"
-                    android:fontFamily="@font/metropolisblack"
+                    android:fontFamily="@font/metropolisbold"
                     android:textSize="17sp"
                     android:textColor="@color/colorPrimaryDark"/>
 
@@ -66,14 +67,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
+                    android:paddingTop="10dp"
                     android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="8dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="8dp"
                     android:paddingHorizontal="10dp"
                     android:text="Go Live Now"
-                    android:fontFamily="@font/metropolisblack"
+                    android:fontFamily="@font/metropolisbold"
                     android:textSize="17sp"
                     android:textColor="@color/colorPrimaryDark"/>
                     <TextView
@@ -112,6 +115,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/bg_pack"
                 android:backgroundTint="#88000000"
                 android:backgroundTintMode="src_atop"
@@ -128,7 +132,7 @@
                         android:layout_marginTop="5dp"
                         android:text="Daily Workouts"
                         android:id="@+id/live_buzzing_tv"
-                        android:fontFamily="@font/metropolisblack"
+                        android:fontFamily="@font/metropolisbold"
                         android:textSize="17sp"
                         android:textColor="#FFFFFF"/>
                     <TextView
@@ -160,6 +164,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginTop="20dp"
                 android:layout_below="@id/trending_container"
                 android:id="@+id/evening_rv_container">
 
@@ -189,6 +194,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginTop="20dp"
                 android:layout_below="@id/evening_rv_container"
                 android:id="@+id/tomorrow_rv_container">
 
@@ -217,6 +223,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
@@ -224,7 +231,7 @@
                     android:paddingVertical="5dp"
                     android:layout_marginHorizontal="10dp"
                     android:text="Trending"
-                    android:fontFamily="@font/metropolisblack"
+                    android:fontFamily="@font/metropolisbold"
                     android:textSize="17sp"
                     android:textColor="@color/colorPrimaryDark"/>
 

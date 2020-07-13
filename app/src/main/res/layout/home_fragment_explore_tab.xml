@@ -46,10 +46,10 @@
                 android:text="Trending"
                 android:textSize="24sp"
                 android:textColor="@color/colorPrimaryDark"
-                android:fontFamily="@font/metropolisblack"
+                android:fontFamily="@font/metropolisbold"
                 android:id="@+id/home_trending_tv"
                 android:layout_below="@id/home_trending_rv_1"
-                android:layout_marginTop="5sp"
+                android:layout_marginTop="25dp"
                 android:layout_marginStart="10sp"
                 />
 
@@ -80,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/home_fragment_explore_tab_activities_container"
                 android:fillViewport="true"
+                android:layout_marginTop="20dp"
                 android:scrollbars="none"
                 android:layout_below="@id/membership_container">
 
@@ -324,6 +325,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/filter_spinner"
                 android:elevation="5sp"
+                android:layout_marginVertical="8dp"
                 android:layout_below="@id/home_fragment_explore_tab_activities_container"
                 android:layout_alignParentRight="true"
                 android:layout_marginStart="5sp"
@@ -355,10 +357,10 @@
                 android:text="Popular"
                 android:textSize="24sp"
                 android:textColor="@color/colorPrimaryDark"
-                android:fontFamily="@font/metropolisblack"
+                android:fontFamily="@font/metropolisbold"
                 android:layout_below="@id/home_popular_vertical_rv"
                 android:id="@+id/home_popular_tv"
-                android:layout_marginTop="3sp"
+                android:layout_marginTop="25sp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginStart="10sp"
                 />
@@ -479,7 +481,7 @@
                 android:nestedScrollingEnabled="false"
                 android:layout_below="@id/home_trending_rv"
                 android:id="@+id/home_popular_vertical_rv"
-                android:layout_marginTop="5sp"
+                android:layout_marginTop="20sp"
                 />
 
 <!--            vertical rv 2-->
@@ -491,7 +493,7 @@
                 android:layout_marginHorizontal="3dp"
                 android:layout_below="@id/home_banner2_rv_container"
                 android:id="@+id/home_trending_rv_3"
-                android:layout_marginTop="5sp"
+                android:layout_marginTop="20sp"
                 />
 
 
@@ -501,10 +503,11 @@
                 android:text="Collections"
                 android:textSize="24sp"
                 android:textColor="@color/colorPrimaryDark"
-                android:fontFamily="@font/metropolisblack"
+                android:fontFamily="@font/metropolisbold"
                 android:layout_below="@id/home_trending_rv_3"
                 android:id="@+id/home_collections_head"
-                android:layout_marginVertical="3sp"
+                android:layout_marginBottom="3sp"
+                android:layout_marginTop="25dp"
                 android:layout_marginStart="10sp"
                 />
 
@@ -540,10 +543,11 @@
                 android:text="Vouchers"
                 android:textSize="24sp"
                 android:textColor="@color/colorPrimaryDark"
-                android:fontFamily="@font/metropolisblack"
+                android:fontFamily="@font/metropolisbold"
                 android:layout_below="@id/explore_main_offer_card_container"
                 android:id="@+id/home_vouchers_head"
-                android:layout_marginVertical="3sp"
+                android:layout_marginBottom="3sp"
+                android:layout_marginTop="25dp"
                 android:layout_marginStart="10sp"
                 />
 
@@ -609,7 +613,7 @@
                 android:layout_marginHorizontal="3dp"
                 android:layout_below="@id/explore_voucher_container"
                 android:id="@+id/home_trending_rv_4"
-                android:layout_marginTop="5sp"
+                android:layout_marginTop="20sp"
                 />
 
             <TextView
@@ -619,9 +623,10 @@
                 android:textSize="24sp"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_below="@id/home_trending_rv_4"
-                android:fontFamily="@font/metropolisblack"
+                android:fontFamily="@font/metropolisbold"
                 android:id="@+id/home_videos_head"
-                android:layout_marginVertical="3sp"
+                android:layout_marginBottom="3sp"
+                android:layout_marginTop="25dp"
                 android:layout_marginStart="10sp"
                 />
 
@@ -677,7 +682,7 @@
                 android:nestedScrollingEnabled="false"
                 android:layout_below="@id/explore_brand_videos_container"
                 android:id="@+id/home_trending_rv_5"
-                android:layout_marginTop="5sp"
+                android:layout_marginTop="20sp"
                 />
 
 
@@ -701,7 +706,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_alignParentStart="true"
-                        android:layout_marginTop="5sp"
+                        android:layout_marginTop="20dp"
                         android:id="@+id/explore_partners_rv"
                         />
 

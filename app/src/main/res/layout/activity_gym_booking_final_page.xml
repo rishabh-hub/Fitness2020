@@ -110,7 +110,7 @@
         android:padding="5dp"
         android:layout_below="@id/final_booking_page_gym_offer"
         android:id="@+id/line1"
-        android:layout_marginVertical="10dp"
+        android:layout_marginVertical="15dp"
         android:background="@color/webGray"/>
     <TextView
         android:layout_width="wrap_content"
@@ -272,7 +272,7 @@
         android:padding="5dp"
         android:layout_below="@id/promo_layout"
         android:id="@+id/line5"
-        android:layout_marginVertical="10dp"
+        android:layout_marginVertical="15dp"
         android:background="@color/webGray"/>
 
     <LinearLayout
@@ -316,7 +316,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="17sp"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/metropolismedium"
+                android:fontFamily="@font/metropolisregular"
                 android:id="@+id/free_trial_radio_btn"/>
             <com.google.android.material.radiobutton.MaterialRadioButton
                 android:layout_width="wrap_content"
@@ -325,7 +325,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="17sp"
                 android:layout_marginTop="5dp"
-                android:fontFamily="@font/metropolismedium"
+                android:fontFamily="@font/metropolisregular"
                 android:id="@+id/unlimited_workout_radio_btn"/>
             <com.google.android.material.radiobutton.MaterialRadioButton
                 android:layout_width="wrap_content"
@@ -334,7 +334,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="17sp"
                 android:layout_marginTop="5dp"
-                android:fontFamily="@font/metropolismedium"
+                android:fontFamily="@font/metropolisregular"
                 android:id="@+id/points_radio_btn"/>
             <com.google.android.material.radiobutton.MaterialRadioButton
                 android:layout_width="wrap_content"
@@ -343,7 +343,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="17sp"
                 android:layout_marginTop="5dp"
-                android:fontFamily="@font/metropolismedium"
+                android:fontFamily="@font/metropolisregular"
                 android:id="@+id/cash_radio_btn"/>
         </RadioGroup>
 
