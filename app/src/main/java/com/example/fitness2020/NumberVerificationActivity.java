@@ -17,7 +17,6 @@ public class NumberVerificationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_number_verification);
 
-
         loadFragment(new PhoneNumberFragment());
 
     }
