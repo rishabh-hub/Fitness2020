@@ -71,7 +71,6 @@ public class HomeFragment extends Fragment {
         viewPager.setAdapter(homePageAdapter);
 
 
-
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
