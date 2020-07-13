@@ -2,14 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/home"
-        android:title="HOME"
-        android:titleCondensed="Home"
+        android:title="Home"
         android:icon="@drawable/ic_home"
         />
 
     <item
         android:id="@+id/fitness_pass"
-        android:title="FITNESS PASS"
+        android:title="Fitness Pass"
         android:icon="@drawable/ic_pass"
         />
     <item
@@ -19,7 +18,7 @@
         />
     <item
         android:id="@+id/vouchers"
-        android:title="VOUCHERS"
+        android:title="Vouchers"
         android:icon="@drawable/ic_coupon"
         />
 
