@@ -52,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_alignParentBottom="true"
+                android:paddingTop="7dp"
                 >
 
             <TextView
@@ -92,7 +92,32 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/pack_cost"
                 android:text="₹2499"/>
+
+
+
             </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="5dp"
+                android:textColor="@color/primaryBlue"
+                android:text="Book Now"
+                android:textSize="17sp"
+                android:layout_toLeftOf="@id/arrow"
+                android:fontFamily="@font/metropolisbold"/>
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="12dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/ic_right_arrow"
+                android:backgroundTint="@color/primaryBlue"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/arrow"/>
         </RelativeLayout>
 
 </RelativeLayout>
