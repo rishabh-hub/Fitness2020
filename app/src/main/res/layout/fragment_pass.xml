@@ -192,12 +192,230 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/how_to_container"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/memberships_container"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:text="Enjoy live classes! Here's how"
+            android:textAlignment="center"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/metropolisbold"
+            android:textColor="@color/colorPrimaryDark"/>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardBackgroundColor="@color/webGray"
+                        app:cardCornerRadius="12dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/head"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="42dp"
+                                android:fontFamily="@font/metropolisbold"
+                                android:text="Step 1"
+                                android:textAlignment="center"
+                                android:textColor="@color/primaryBlue"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/head"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginHorizontal="8dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="20dp"
+                                android:fontFamily="@font/metropolisregular"
+                                android:text="Select a membership"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="13sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerHorizontal="true"
+                        app:cardBackgroundColor="@color/primaryBlue"
+                        app:cardCornerRadius="35dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_membership"
+                            android:padding="12dp"
+                            android:tint="@color/white"/>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_marginHorizontal="8dp"
+                        app:cardCornerRadius="12dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardBackgroundColor="@color/webGray"
+                        android:layout_marginTop="40dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/head2"
+                                android:layout_marginTop="42dp"
+                                android:text="Step 2"
+                                android:textSize="17sp"
+                                android:textAlignment="center"
+                                android:textColor="@color/primaryBlue"
+                                android:fontFamily="@font/metropolisbold"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/head2"
+                                android:layout_marginTop="10dp"
+                                android:text="Get updates on live classes on Whatsapp"
+                                android:textSize="13sp"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:fontFamily="@font/metropolisregular"
+                                android:textAlignment="center"/>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        app:cardCornerRadius="35dp"
+                        android:layout_centerHorizontal="true"
+                        app:cardBackgroundColor="@color/primaryBlue"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_whatsapp"
+                            android:padding="13dp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardBackgroundColor="@color/webGray"
+                        android:layout_marginTop="40dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/head3"
+                                android:layout_marginTop="42dp"
+                                android:text="Step 3"
+                                android:textSize="17sp"
+                                android:textAlignment="center"
+                                android:textColor="@color/primaryBlue"
+                                android:fontFamily="@font/metropolisbold"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/head3"
+                                android:layout_marginTop="10dp"
+                                android:text="Go live and workout now!"
+                                android:textSize="13sp"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:fontFamily="@font/metropolisregular"
+                                android:textAlignment="center"/>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        app:cardCornerRadius="35dp"
+                        android:layout_centerHorizontal="true"
+                        app:cardBackgroundColor="@color/primaryBlue"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_exercise"
+                            android:padding="12dp"
+                            android:tint="@color/white"/>
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="17sp"
         android:id="@+id/top_fitness_rv_heading"
-        android:layout_below="@id/memberships_container"
+        android:layout_below="@id/how_to_container"
         android:fontFamily="@font/metropolisbold"
         android:text="Top Fitness Centres"
         android:textColor="@color/colorPrimaryDark"
