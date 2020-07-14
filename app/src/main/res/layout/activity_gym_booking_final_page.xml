@@ -216,19 +216,28 @@
         android:fontFamily="@font/metropolisbold"
         android:textSize="17sp"
         android:textColor="@color/primaryBlue"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginEnd="8dp"
+        android:layout_marginVertical="8dp"
+        android:background="@drawable/bg_spinner_layout"
+        android:layout_toEndOf="@id/squad"
+        android:layout_alignBottom="@id/squad"
+        android:id="@+id/spinner_container">
     <Spinner
         android:id="@+id/squad_spinner"
-        android:layout_width="300dp"
+        android:layout_width="80dp"
         android:layout_height="40dp"
-        android:background="@color/webGray"
-        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:dropDownVerticalOffset="50dp"
+        android:dropDownWidth="80dp"
         android:layout_marginStart="10dp"
-        android:layout_alignBottom="@id/squad"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="5dp"
-        android:layout_toEndOf="@id/squad"
-        android:elevation="5dp"
+        android:layout_marginVertical="3dp"
         android:gravity="center" />
+    </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
