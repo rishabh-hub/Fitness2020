@@ -39,8 +39,38 @@
         android:layout_below="@id/head"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/textcontainer"
         android:textSize="15sp"
         android:paddingHorizontal="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Follow our instagram profile to be able to acces the class"
+        android:layout_above="@id/follow_button"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/metropolisbold"
+        android:id="@+id/text_container_1"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:id="@+id/follow_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:background="@drawable/bg_button"
+        android:text="Follow us"
+        android:textColor="@color/white"
+        android:fontFamily="@font/metropolisbold"
+        android:padding="15dp"
+        />
 
 
 </RelativeLayout>
