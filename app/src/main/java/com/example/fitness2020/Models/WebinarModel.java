@@ -8,14 +8,24 @@ public class WebinarModel {
     private String rating;
     private String activity;
     private int webinarImageUrl;
+    private int bookings;
 
-    public WebinarModel(String header, String timing, String level, String activity,int webinarImageUrl,String rating) {
+    public WebinarModel(String header, String timing, String level, String activity,int webinarImageUrl,String rating,int bookings) {
         this.header = header;
         this.timing = timing;
         this.level = level;
         this.activity = activity;
         this.webinarImageUrl=webinarImageUrl;
         this.rating = rating;
+        this.bookings = bookings;
+    }
+
+    public int getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(int bookings) {
+        this.bookings = bookings;
     }
 
     public String getRating() {

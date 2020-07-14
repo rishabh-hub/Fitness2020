@@ -217,11 +217,11 @@ public class HomeLiveTab extends Fragment {
 
         for (int i=0;i<3;++i)
         {
-            liveWebinarModels1.add(new WebinarModel("Functional Training","9:00 - 10:00","INTERMEDIATE","Crossfit/Zumba",R.drawable.gym_dummy,"4.3"));
+            liveWebinarModels1.add(new WebinarModel("Functional Training","9:00 - 10:00","INTERMEDIATE","Crossfit/Zumba",R.drawable.gym_dummy,"4.3",70));
 
-            liveWebinarModels2.add(new WebinarModel("Functional Training 2","10:00 - 11:00","ADVANCED","Swimming",R.drawable.gym_dummy,"2.7"));
+            liveWebinarModels2.add(new WebinarModel("Functional Training 2","10:00 - 11:00","ADVANCED","Swimming",R.drawable.gym_dummy,"2.7",120));
 
-            liveWebinarModels3.add(new WebinarModel("Functional Training","9:00 - 10:00","INTERMEDIATE","Crossfit/Zumba",R.drawable.gym_dummy,"3.6"));
+            liveWebinarModels3.add(new WebinarModel("Functional Training","9:00 - 10:00","INTERMEDIATE","Crossfit/Zumba",R.drawable.gym_dummy,"3.6",20));
         }
 
     }

@@ -15,6 +15,34 @@
         android:layout_height="match_parent"
         android:id="@+id/card"
         android:background="#00004768">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:elevation="1dp"
+            android:id="@+id/booking_number_container"
+            android:gravity="center_vertical"
+            android:background="#86000000"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="#388E3C"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120 people have booked so far"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/metropolismedium"
+                android:textSize="12sp"
+                android:paddingVertical="5dp"
+                android:textColor="@color/white"
+                android:id="@+id/webinar_bookings_made"/>
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="35dp"
             android:layout_height="wrap_content"
@@ -64,7 +92,9 @@
             android:id="@+id/webinar_head"
             android:textColor="@color/primaryBlue"
             android:layout_below="@id/webinar_card_back_image"
-            android:text="Functional Training"
+            android:text="Functional Training with narghis fakri"
+            android:layout_toLeftOf="@id/webinar_timing"
+            android:layout_alignParentStart="true"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"/>
 
@@ -75,7 +105,7 @@
             android:gravity="center"
             android:fontFamily="@font/metropolismedium"
             android:id="@+id/webinar_timing"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorPrimaryDark"
             android:padding="5dp"
             android:layout_marginRight="10dp"
             android:textStyle="bold"
@@ -93,13 +123,13 @@
             android:paddingHorizontal="6dp"
             android:fontFamily="@font/metropolisbold"
             android:id="@+id/webinar_level"
-            android:layout_below="@id/webinar_timing"
+            android:layout_below="@id/webinar_head"
             android:textColor="@color/colorPrimaryDark"
             android:background="@drawable/bg_button"
             android:backgroundTint="@color/webGray"
             android:text="INTERMEDIATE"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="1dp"/>
+            android:layout_marginTop="3dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -110,6 +140,8 @@
             android:textColor="@color/mullaGreen"
             android:text="Crossfit/Zumba"
             android:layout_marginBottom="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@id/webinar_book_btn"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="3dp"/>
 

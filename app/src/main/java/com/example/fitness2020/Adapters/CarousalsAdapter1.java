@@ -82,10 +82,10 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
     public class CarouslasAdapter1VH extends RecyclerView.ViewHolder
     {
         ImageView partnersImage,voucherImage,webinarImage;
-        TextView webinarHead,webinarTiming,webinarLevel,webinarActivity,voucherTheme,voucherCompany, noOfCoupons,voucherValidity,voucherPrice,webinarRating;
+        TextView webinarHead,webinarTiming,webinarLevel,webinarActivity,voucherTheme,voucherCompany, noOfCoupons,voucherValidity,voucherPrice,webinarRating,webinarBookings;
         Button webinarBookBtn;
         RelativeLayout card;
-        LinearLayout rating;
+        LinearLayout rating,booking;
 
         public CarouslasAdapter1VH(@NonNull final View itemView) {
             super(itemView);
@@ -100,6 +100,8 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
                 webinarBookBtn = itemView.findViewById(R.id.webinar_book_btn);
                 webinarRating = itemView.findViewById(R.id.webinar_rating);
                 rating = itemView.findViewById(R.id.webinar_rating_linlay);
+                webinarBookings = itemView.findViewById(R.id.webinar_bookings_made);
+                booking = itemView.findViewById(R.id.booking_number_container);
 
                 webinarBookBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -132,11 +134,13 @@ public class    CarousalsAdapter1 extends RecyclerView.Adapter<CarousalsAdapter1
             if(code2==1)
                { webinarImage.setVisibility(View.GONE);
                rating.setVisibility(View.GONE);
+               booking.setVisibility(View.GONE);
                }
             else {
                 webinarImage.setImageResource(webinarModel.getWebinarImageUrl());
+                webinarRating.setText(webinarModel.getRating());
+                webinarBookings.setText(Integer.toString(webinarModel.getBookings())+" people have booked so far");
             }
-            webinarRating.setText(webinarModel.getRating());
             webinarActivity.setText(webinarModel.getActivity());
             webinarTiming.setText(webinarModel.getTiming());
             webinarHead.setText(webinarModel.getHeader());

@@ -79,7 +79,7 @@ public class EveningFragmentTab extends Fragment {
     {
         for (int i=0;i<=6;i++)
         {
-            webinarModels.add(new WebinarModel("Functional Training", "21:00 - 22:00", "ZOOM", "Crossfit/Zumba", R.drawable.gym_dummy,"3.3"));
+            webinarModels.add(new WebinarModel("Functional Training", "21:00 - 22:00", "ZOOM", "Crossfit/Zumba", R.drawable.gym_dummy,"3.3",40));
             gymActivitiesModels.add(new GymActivitiesModel("Crossfit"));
         }
     }
