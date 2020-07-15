@@ -33,7 +33,7 @@ public class WebinarBookingConfirmationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Uri uri=Uri.parse("http://instagram.com/kabhimemekabhipun");
+                Uri uri=Uri.parse("https://www.instagram.com/oauth/authorize?client_id=1486092204916874&redirect_uri=https://httpstat.us/200&scope=user_profile,user_media&response_type=code");
                 Intent instaIntent=new Intent(Intent.ACTION_VIEW,uri);
 
                 startActivity(instaIntent);

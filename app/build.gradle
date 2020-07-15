@@ -53,4 +53,5 @@ dependencies {
     //razorpay
     implementation 'com.razorpay:checkout:1.5.2'
 
+    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
 }

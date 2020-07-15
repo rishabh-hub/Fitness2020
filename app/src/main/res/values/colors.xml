@@ -17,6 +17,10 @@
     <color name="paariBlue">#7eb2dd</color>
     <color name="mullaGreen">#068d9d</color>
 
+    <color name="com_facebook_button_background_color_focused_disabled">#fff</color>
+    <color name="com_facebook_button_background_color_focused">#fff</color>
+    <color name="com_facebook_button_border_color_focused">#fff</color>
+
 
 
 </resources>
