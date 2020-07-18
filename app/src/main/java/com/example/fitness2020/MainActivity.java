@@ -106,34 +106,35 @@ public class MainActivity extends AppCompatActivity{
                 .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(bitmap)).setContentIntent(pendingIntent).setAutoCancel(true);
 
 
-        Notification notification=builder.build();
+//        Notification notification=builder.build();
 
         int notificationId=12345;
 
 
-        Intent notificationIntent = new Intent(this, MyNotificationPublisher.class);
-        notificationIntent.putExtra(MyNotificationPublisher.NOTIFICATION_ID, notificationId);
-        notificationIntent.putExtra(MyNotificationPublisher.NOTIFICATION, notification);
-        PendingIntent pendingIntent1 = PendingIntent.getBroadcast(this, notificationId, notificationIntent, PendingIntent.FLAG_CANCEL_CURRENT);
-
-
-        Calendar cur_cal = new GregorianCalendar();
-        cur_cal.setTimeInMillis(System.currentTimeMillis());
-
-        Calendar calendar=Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY,22);
-        calendar.set(Calendar.MINUTE,10);
-
-
-        long futureInMillis = SystemClock.elapsedRealtime() + 10000;
-        AlarmManager alarmManager = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
-        alarmManager.set(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(), pendingIntent1);
-//        createNotificationChannel();
+//        Intent notificationIntent = new Intent(this, MyNotificationPublisher.class);
+//        notificationIntent.putExtra(MyNotificationPublisher.NOTIFICATION_ID, notificationId);
+//        notificationIntent.putExtra(MyNotificationPublisher.NOTIFICATION, notification);
+//        PendingIntent pendingIntent1 = PendingIntent.getBroadcast(this, notificationId, notificationIntent, PendingIntent.FLAG_CANCEL_CURRENT);
 //
-//        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
 //
-//// notificationId is a unique int for each notification that you must define
-//        notificationManager.notify(notificationId, builder.build());
+//        Calendar cur_cal = new GregorianCalendar();
+//        cur_cal.setTimeInMillis(System.currentTimeMillis());
+//
+//        Calendar calendar=Calendar.getInstance();
+//        calendar.set(Calendar.HOUR_OF_DAY,22);
+//        calendar.set(Calendar.MINUTE,10);
+//
+//
+//        long futureInMillis = SystemClock.elapsedRealtime() + 10000;
+//        AlarmManager alarmManager = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+//        alarmManager.set(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(), pendingIntent1);
+
+        createNotificationChannel();
+
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+
+// notificationId is a unique int for each notification that you must define
+        notificationManager.notify(notificationId, builder.build());
 
 
         userImage.setOnClickListener(new View.OnClickListener() {
@@ -239,20 +240,20 @@ public class MainActivity extends AppCompatActivity{
         return instance;
     }
 
-//    private void createNotificationChannel() {
-//        // Create the NotificationChannel, but only on API 26+ because
-//        // the NotificationChannel class is new and not in the support library
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-//            CharSequence name = "Fitness";
-//            String description = "Description";
-//            int importance = NotificationManager.IMPORTANCE_HIGH;
-//            NotificationChannel channel = new NotificationChannel("Fitness 2020", name, importance);
-//            channel.setDescription(description);
-//            // Register the channel with the system; you can't change the importance
-//            // or other notification behaviors after this
-//            NotificationManager notificationManager = getSystemService(NotificationManager.class);
-//            notificationManager.createNotificationChannel(channel);
-//        }
-//    }
+    private void createNotificationChannel() {
+        // Create the NotificationChannel, but only on API 26+ because
+        // the NotificationChannel class is new and not in the support library
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "Fitness";
+            String description = "Description";
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            NotificationChannel channel = new NotificationChannel("Fitness 2020", name, importance);
+            channel.setDescription(description);
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
 
 }
