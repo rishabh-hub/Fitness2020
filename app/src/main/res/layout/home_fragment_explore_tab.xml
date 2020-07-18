@@ -170,7 +170,9 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:tint="@color/primaryBlue"
+                        android:background="@drawable/round_card"
+                        android:padding="5dp"
+                        android:tint="@color/white"
                         android:tintMode="src_atop"
                         android:src="@drawable/gym"
                         android:id="@+id/home_fragment_explore_tab_activities_cardvw_imgvw3"

@@ -79,6 +79,22 @@
                     android:fontFamily="@font/metropolisbold"
                     android:textSize="17sp"
                     android:textColor="@color/colorPrimaryDark"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="8dp"
+                        android:paddingHorizontal="10dp"
+                        android:text="Morning"
+                        android:fontFamily="@font/metropolisbold"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorPrimaryDark"/>
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
@@ -90,14 +106,7 @@
                         android:textSize="15sp"
                         android:textColor="@color/bookBtn"/>
                 </LinearLayout>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="Morning"
-                    android:fontFamily="@font/metropolisbold"
-                    android:textSize="17sp"
-                    android:textColor="@color/colorPrimaryDark"/>
+
 
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -168,16 +177,31 @@
                 android:layout_below="@id/trending_container"
                 android:id="@+id/evening_rv_container">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:text="Evening"
-                android:layout_below="@id/trending_container"
-                android:fontFamily="@font/metropolisbold"
-                android:textSize="17sp"
-                android:id="@+id/evening_txt"
-                android:textColor="@color/colorPrimaryDark"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="8dp"
+                        android:paddingHorizontal="10dp"
+                        android:text="Evening"
+                        android:fontFamily="@font/metropolisbold"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="View More"
+                        android:id="@+id/webinar_live_view_more_btn_2"
+                        android:textAlignment="textEnd"
+                        android:fontFamily="@font/metropolisbold"
+                        android:textSize="15sp"
+                        android:textColor="@color/bookBtn"/>
+                </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_below="@id/evening_txt"
@@ -198,15 +222,31 @@
                 android:layout_below="@id/evening_rv_container"
                 android:id="@+id/tomorrow_rv_container">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="Tomorrow"
-                    android:layout_below="@id/trending_container"
-                    android:fontFamily="@font/metropolisbold"
-                    android:textSize="17sp"
-                    android:textColor="@color/colorPrimaryDark"/>
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="8dp"
+                        android:paddingHorizontal="10dp"
+                        android:text="Tomorrow"
+                        android:fontFamily="@font/metropolisbold"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="View More"
+                        android:id="@+id/webinar_live_view_more_btn_3"
+                        android:textAlignment="textEnd"
+                        android:fontFamily="@font/metropolisbold"
+                        android:textSize="15sp"
+                        android:textColor="@color/bookBtn"/>
+                </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
@@ -222,8 +262,10 @@
                 android:layout_below="@id/tomorrow_rv_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="20dp"
+                android:paddingTop="10dp"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"

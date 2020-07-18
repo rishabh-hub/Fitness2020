@@ -40,18 +40,18 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:textAlignment="center"
+                android:layout_width="match_parent"
                 android:fontFamily="@font/metropolismedium"
                 android:id="@+id/membership_item_features"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
+                android:textSize="13sp"
+                android:layout_marginRight="70dp"
                 android:textColor="@color/primaryBlue"
                 android:text="Free Webinars "/>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:paddingTop="7dp"
                 >
 
@@ -75,14 +75,14 @@
                     android:layout_alignBaseline="@id/starting_at"
                     android:fontFamily="@font/metropolismedium"
                     android:layout_toLeftOf="@id/pack_cost"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginRight="10dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/pack_base_cost"
                     android:text="₹4000"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:textAlignment="center"
-                android:textSize="17sp"
+                android:textSize="20sp"
                 android:textColor="@color/primaryBlue"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
@@ -96,7 +96,6 @@
 
 
             </RelativeLayout>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -111,14 +110,17 @@
 
             <TextView
                 android:layout_width="10dp"
-                android:layout_height="12dp"
-                android:layout_marginBottom="5dp"
+                android:layout_height="15dp"
                 android:background="@drawable/ic_right_arrow"
                 android:backgroundTint="@color/primaryBlue"
                 android:layout_alignParentBottom="true"
+                android:layout_marginBottom="3dp"
                 android:layout_alignParentEnd="true"
                 android:id="@+id/arrow"/>
+
+
         </RelativeLayout>
+
 
 </RelativeLayout>
 
