@@ -123,7 +123,12 @@ public class ProfileActivity extends AppCompatActivity implements  AdapterView.O
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mainIntent = new Intent(ProfileActivity.this,MainActivity.class);
+                Intent mainIntent = null;
+                try {
+                    mainIntent = new Intent(ProfileActivity.this,Class.forName("com.example.fitness2020.MainActivity"));
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
                 startActivity(mainIntent);
             }
         });

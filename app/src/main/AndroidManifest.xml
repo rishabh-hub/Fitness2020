@@ -34,14 +34,6 @@
         <activity android:name=".GymBookingFinalPage" />
         <activity android:name=".CollectionInternalActivity" />
         <activity android:name=".GymActivity" >
-            <intent-filter android:autoVerify="true">
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="http" android:host="www.exampleabc.com" />
-                <data android:scheme="https" />
-            </intent-filter>
-
         </activity>
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".ReferEarn" />
@@ -49,7 +41,15 @@
         <activity android:name=".TrialMembershipBooking" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".TrialCardActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity" >
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="www.exampleabc.com?key=studio" />
+                <data android:scheme="https" />
+            </intent-filter>
+        </activity>
         <activity android:name=".BookingsActivity" />
         <activity android:name=".SignupNewActivity">
             <intent-filter>

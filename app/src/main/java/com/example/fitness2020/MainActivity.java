@@ -19,6 +19,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity{
     public BottomNavigationView bottomNavigationView;
     TextView location;
     private static  MainActivity instance;
+    String nav = "";
 
     @Override
     public void onBackPressed() {
@@ -79,6 +81,18 @@ public class MainActivity extends AppCompatActivity{
 
         instance=this;
         attachId();
+
+        try {
+            Uri data = getIntent().getData();
+            nav = data.getQueryParameter("studio");
+            Toast.makeText(MainActivity.this,nav,Toast.LENGTH_LONG).show();
+        }
+        catch (NullPointerException nu){
+            Toast.makeText(MainActivity.this,"HA",Toast.LENGTH_LONG).show();
+        }
+
+
+
 
         if (getIntent().getIntExtra("code",0)==1)
 
