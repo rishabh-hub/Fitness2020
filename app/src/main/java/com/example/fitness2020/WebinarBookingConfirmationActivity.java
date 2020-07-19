@@ -35,7 +35,7 @@ public class WebinarBookingConfirmationActivity extends AppCompatActivity {
 
 //                Uri uri=Uri.parse("https://www.instagram.com/oauth/authorize?client_id=1486092204916874&redirect_uri=https://httpstat.us/200&scope=user_profile,user_media&response_type=code");
 
-                Uri uri=Uri.parse("http://www.exampleabc.com");
+                Uri uri=Uri.parse("http://www.exampleabc.com?key=studio");
                 Intent instaIntent=new Intent(Intent.ACTION_VIEW,uri);
 
                 startActivity(instaIntent);

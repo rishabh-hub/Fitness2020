@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity{
 
         try {
             Uri data = getIntent().getData();
-            nav = data.getQueryParameter("studio");
+            nav = data.getQueryParameter("key");
             Toast.makeText(MainActivity.this,nav,Toast.LENGTH_LONG).show();
         }
         catch (NullPointerException nu){

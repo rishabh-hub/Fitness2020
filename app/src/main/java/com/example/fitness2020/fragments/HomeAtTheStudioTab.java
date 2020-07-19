@@ -119,7 +119,7 @@ public class HomeAtTheStudioTab extends Fragment {
                 Context context1=parent.getContext();
                 if(parent.getId()==R.id.filter_spinner)
                 {
-                    Toast.makeText(context1, "Selected "+parent.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context1, "Selected "+parent.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
                 }
 
             }
