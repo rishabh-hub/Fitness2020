@@ -276,8 +276,9 @@ public class HomeAtTheStudioTab extends Fragment {
             packModels.add(new PackModel("Unlimited Workouts",4000,2499,"Free webinar sessions"));
             topBannerModel.add(new TrendingRvModel(R.drawable.workout_carousel_dummy));
 
-            activityModels1.add(new ActivityModel("Zumba",R.drawable.ic_rhythmic_gymnastics));
         }
+        for(int i=0;i<7;i++)
+            activityModels1.add(new ActivityModel("Gym",R.drawable.ic_exercise));
 
     }
 

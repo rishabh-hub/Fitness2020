@@ -49,8 +49,8 @@ public class ActivityDialog extends Dialog {
     }
 
     private void addData() {
-        for (int i=0;i<9;i++)
-        activityModels.add(new ActivityModel("Zumba",R.drawable.ic_rhythmic_gymnastics));
+        for (int i=0;i<20;i++)
+        activityModels.add(new ActivityModel("Gym",R.drawable.ic_exercise));
     }
 
     private void attachId() {

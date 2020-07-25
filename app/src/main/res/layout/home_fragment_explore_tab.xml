@@ -94,12 +94,12 @@
 
 
                 <LinearLayout
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     >
                     <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/activity_filter_rv"
                         android:orientation="horizontal"/>
@@ -112,6 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:layout_centerVertical="true"
                     android:layout_marginRight="5dp"
                     android:layout_toRightOf="@id/activity_container"
                     android:id="@+id/view_more_activity"
