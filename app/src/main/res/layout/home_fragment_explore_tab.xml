@@ -114,6 +114,7 @@
                     android:gravity="center"
                     android:layout_marginRight="5dp"
                     android:layout_toRightOf="@id/activity_container"
+                    android:id="@+id/view_more_activity"
                     android:orientation="horizontal">
 
                 <TextView

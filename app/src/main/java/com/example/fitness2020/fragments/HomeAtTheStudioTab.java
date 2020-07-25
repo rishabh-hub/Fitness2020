@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,13 +22,18 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitness2020.ActivityDialog;
+import com.example.fitness2020.Adapters.ActivityAdapter;
 import com.example.fitness2020.Adapters.CarousalsAdapter1;
 import com.example.fitness2020.Adapters.CollectionsAdapter;
 import com.example.fitness2020.Adapters.HomePopularRVAdapter;
 import com.example.fitness2020.Adapters.HomeTrendingRVAdapter;
 import com.example.fitness2020.Adapters.NewCorrectionAdapter;
 import com.example.fitness2020.Adapters.SubscriptionCardsAdapter;
+import com.example.fitness2020.CustomDialogClass;
+import com.example.fitness2020.GymActivity;
 import com.example.fitness2020.MainActivity;
+import com.example.fitness2020.Models.ActivityModel;
 import com.example.fitness2020.Models.CollectionsModel;
 import com.example.fitness2020.Models.CompanyModel;
 import com.example.fitness2020.Models.PackModel;
@@ -41,6 +47,7 @@ import com.example.fitness2020.Models.WebinarModel;
 import com.example.fitness2020.PopularActivity;
 import com.example.fitness2020.R;
 import com.example.fitness2020.VideosActivity;
+import com.facebook.appevents.suggestedevents.ViewOnClickListener;
 
 import java.security.spec.PSSParameterSpec;
 import java.util.ArrayList;
@@ -77,6 +84,11 @@ public class HomeAtTheStudioTab extends Fragment {
     NewCorrectionAdapter newCorrectionAdapter;
     ArrayList<TrendingRvModel> trendingRvModels,webinarVideos;
     CardView getFitNow;
+    LinearLayout viewMoreActivity;
+    ActivityDialog activityDialog;
+    RecyclerView activityRv;
+    ArrayList<ActivityModel> activityModels,activityModels1;
+    ActivityAdapter activityAdapter;
 
     public HomeAtTheStudioTab() {
     }
@@ -109,6 +121,8 @@ public class HomeAtTheStudioTab extends Fragment {
         vouchersViewMoreButton=view.findViewById(R.id.home_fragment_explore_tab_more_voucher_btn);
         videosViewMoreButton=view.findViewById(R.id.home_fragment_explore_tab_more_videos_btn);
         getFitNow=view.findViewById(R.id.popular_gym_start_card);
+        viewMoreActivity=view.findViewById(R.id.view_more_activity);
+        activityRv=view.findViewById(R.id.activity_filter_rv);
 
         populateFilterSpinner();
 
@@ -142,8 +156,7 @@ public class HomeAtTheStudioTab extends Fragment {
         topBannerRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         collectionsRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         videoRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
-
-
+        activityRv.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
 
 
         popularRvModels=new ArrayList<>(3);
@@ -156,6 +169,7 @@ public class HomeAtTheStudioTab extends Fragment {
         topBannerModel=new ArrayList<>(3);
         collectionsModels=new ArrayList<>(3);
         videoModels=new ArrayList<>(3);
+        activityModels1=new ArrayList<>(3);
 
         addData();
 
@@ -169,7 +183,7 @@ public class HomeAtTheStudioTab extends Fragment {
         topBannerAdapter=new HomeTrendingRVAdapter(topBannerModel,context,1,popularHorizontalRvModels);
         collectionsAdapter=new CollectionsAdapter(context,0,collectionsModels,videoModels);
         videoAdapter=new CollectionsAdapter(context,1,collectionsModels,videoModels);
-
+        activityAdapter=new ActivityAdapter(activityModels,activityModels1,1);
 
         popularRv.setAdapter(homePopularRVAdapter);
         popularRV3.setAdapter(homePopularRVAdapter);
@@ -183,6 +197,7 @@ public class HomeAtTheStudioTab extends Fragment {
         topBannerRv.setAdapter(topBannerAdapter);
         collectionsRv.setAdapter(collectionsAdapter);
         videoRv.setAdapter(videoAdapter);
+        activityRv.setAdapter(activityAdapter);
 
         homePopularRVAdapter.notifyDataSetChanged();
         newCorrectionAdapter.notifyDataSetChanged();
@@ -193,6 +208,7 @@ public class HomeAtTheStudioTab extends Fragment {
         topBannerAdapter.notifyDataSetChanged();
         collectionsAdapter.notifyDataSetChanged();
         videoAdapter.notifyDataSetChanged();
+        activityAdapter.notifyDataSetChanged();
 
         popularViewMoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -227,6 +243,16 @@ public class HomeAtTheStudioTab extends Fragment {
             }
         });
 
+        viewMoreActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                activityDialog=new ActivityDialog(view.getContext());
+                activityDialog.setCancelable(true);
+                activityDialog.show();
+            }
+        });
+
         return view;
     }
 
@@ -250,6 +276,7 @@ public class HomeAtTheStudioTab extends Fragment {
             packModels.add(new PackModel("Unlimited Workouts",4000,2499,"Free webinar sessions"));
             topBannerModel.add(new TrendingRvModel(R.drawable.workout_carousel_dummy));
 
+            activityModels1.add(new ActivityModel("Zumba",R.drawable.ic_rhythmic_gymnastics));
         }
 
     }
