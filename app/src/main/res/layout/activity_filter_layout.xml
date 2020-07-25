@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="7dp"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round_card"
+        android:backgroundTint="@color/white"
+        android:padding="5dp"
+        android:tint="@color/colorPrimary"
+        android:tintMode="src_atop"
+        android:src="@drawable/gym"
+        android:id="@+id/activity_filter_icon"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gym"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="11sp"
+        android:id="@+id/activity_filter_name"
+        android:textStyle="bold"/>
+</LinearLayout>

@@ -37,7 +37,6 @@ public class WebinarBookingConfirmationActivity extends AppCompatActivity {
 
                 Uri uri=Uri.parse("http://www.exampleabc.com?key=studio");
                 Intent instaIntent=new Intent(Intent.ACTION_VIEW,uri);
-
                 startActivity(instaIntent);
 
             }
