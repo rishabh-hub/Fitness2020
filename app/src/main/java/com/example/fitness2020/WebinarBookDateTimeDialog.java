@@ -9,12 +9,14 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.Checkable;
 
 import androidx.annotation.NonNull;
 
 import com.example.fitness2020.Models.DateModel;
 import com.example.fitness2020.Models.TimeModel;
 import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipDrawable;
 import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
@@ -66,13 +68,22 @@ public class WebinarBookDateTimeDialog extends Dialog {
         timeGroup.isSingleSelection();
         dateGroup.isSingleSelection();
 
+
+
+
+
         for (DateModel d:dateModels)
         {
             date=d.getDate();
             Log.i(TAG, "onCreate:  "+date);
             Chip chip=new Chip(dateGroup.getContext());
-//            chip.setBackground(getContext().getResources().getDrawable(R.drawable.bg_textview));
-            chip.setChipBackgroundColorResource(R.color.primaryBlue);
+//            chip.setChipBackgroundColorResource(R.color.bg_chip_state_list);
+//            chip.setChipBackgroundColor(getContext().getResources().getColorStateList(R.color.bg_chip_state_list));
+            ChipDrawable chipDrawable = ChipDrawable.createFromAttributes(getContext(),
+                    null,
+                    0,
+                    R.style.CustomChipChoice);
+            chip.setChipDrawable(chipDrawable);
             chip.setText(date);
             dateGroup.addView(chip);
         }
@@ -81,7 +92,12 @@ public class WebinarBookDateTimeDialog extends Dialog {
         {
             time=timeModels.get(i).getTime();
             Chip chip=new Chip(timeGroup.getContext());
-            chip.setChipBackgroundColorResource(R.color.primaryBlue);
+//            chip.setChipBackgroundColorResource(R.color.bg_chip_state_list);
+            ChipDrawable chipDrawable = ChipDrawable.createFromAttributes(getContext(),
+                    null,
+                    0,
+                    R.style.CustomChipChoice);
+            chip.setChipDrawable(chipDrawable);
             chip.setText(time);
             timeGroup.addView(chip);
         }

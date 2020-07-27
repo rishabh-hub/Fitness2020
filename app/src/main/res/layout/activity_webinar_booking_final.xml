@@ -119,10 +119,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:id="@+id/final_booking_page_webinar_date_chipgrp"
                 android:layout_below="@id/date_explain"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
                 app:singleLine="true"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
+                app:singleSelection="true"
                 android:padding="5dp">
 
             </com.google.android.material.chip.ChipGroup>
@@ -167,7 +170,10 @@
                 android:id="@+id/final_booking_page_webinar_time_chipgrp"
                 android:layout_below="@id/time_explain"
                 app:singleLine="true"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:clickable="true"
+                android:focusable="true"
+                app:singleSelection="true"
+                style="@style/CustomChipChoice"
                 android:padding="5dp"/>
             </HorizontalScrollView>
 
